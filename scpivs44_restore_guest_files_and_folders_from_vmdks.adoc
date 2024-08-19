@@ -1,0 +1,173 @@
+---
+sidebar: sidebar 
+permalink: scpivs44_restore_guest_files_and_folders_from_vmdks.html 
+keywords:  
+summary: Você pode restaurar um ou mais arquivos ou pastas de um VMDK em um sistema operacional convidado do Windows. 
+---
+= Restaure arquivos e pastas de convidados a partir de VMDKs
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Você pode restaurar um ou mais arquivos ou pastas de um VMDK em um sistema operacional convidado do Windows.
+
+.Sobre esta tarefa
+Por padrão, o disco virtual conetado está disponível por 24 horas e, em seguida, é automaticamente desconetado. Você pode escolher no assistente para que a sessão seja excluída automaticamente quando a operação de restauração for concluída, ou excluir manualmente a sessão de restauração de arquivo convidado a qualquer momento, ou estender o tempo na página *Configuração de convidado*.
+
+O desempenho de restauração de arquivos ou pastas de convidado depende de dois fatores: O tamanho dos arquivos ou pastas que estão sendo restaurados; e o número de arquivos ou pastas que estão sendo restaurados. Restaurar um grande número de arquivos de tamanho pequeno pode levar um tempo mais longo do que o previsto em comparação com a restauração de um pequeno número de arquivos de tamanho grande, se o conjunto de dados a ser restaurado for do mesmo tamanho.
+
+
+IMPORTANT: Apenas uma operação de conexão ou restauração pode ser executada ao mesmo tempo em uma VM. Não é possível executar operações de conexão paralela ou restauração na mesma VM.
+
+
+IMPORTANT: O recurso de restauração de convidados permite visualizar e restaurar o sistema e arquivos ocultos e exibir arquivos criptografados. Não tente substituir um ficheiro de sistema existente ou restaurar ficheiros encriptados para uma pasta encriptada. Durante a operação de restauração, os atributos ocultos, do sistema e criptografados dos arquivos convidados não são mantidos no arquivo restaurado. A visualização ou navegação de partições reservadas pode causar um erro.
+
+.Passos
+. Na janela atalhos do cliente vSphere, selecione *hosts and clusters* e selecione uma VM.
+. Clique com o botão direito do Mouse na VM e selecione *Plug-in SnapCenter para VMware vSphere* > *Restauração de arquivos convidados*.
+. Na página *Restore Scope*, especifique o backup que contém o disco virtual que você deseja anexar, fazendo o seguinte:
++
+.. Na tabela *Nome da cópia de segurança*, selecione a cópia de segurança que contém o disco virtual que pretende anexar.
+.. Na tabela *VMDK*, selecione o disco virtual que contém os arquivos ou pastas que deseja restaurar.
+.. Na tabela *Locations*, selecione o local, principal ou secundário, do disco virtual que você deseja anexar.
+
+
+. Na página *Detalhes do hóspede*, faça o seguinte.
++
+.. Escolha onde anexar o disco virtual:
++
+|===
+| Selecione esta opção... | Se... 
+
+
+| Use a VM convidada  a| 
+Você deseja anexar o disco virtual à VM que você clicou com o botão direito antes de iniciar o assistente e, em seguida, selecione a credencial para a VM que você clicou com o botão direito.
+
+
+NOTE: As credenciais já devem ser criadas para a VM.
+
+
+
+| Use a VM proxy de restauração de arquivo convidado  a| 
+Você deseja anexar o disco virtual a uma VM proxy e, em seguida, selecione a VM proxy.
+
+
+NOTE: A VM proxy deve ser configurada antes de iniciar a operação de conexão e restauração.
+
+|===
+.. Selecione a opção *Enviar notificação por e-mail*.
++
+Essa opção é necessária se você quiser ser notificado quando a operação de conexão for concluída e o disco virtual estiver disponível. O e-mail de notificação inclui o nome do disco virtual, o nome da VM e a nova letra da unidade atribuída para o VMDK.
+
++
+
+TIP: Ative esta opção porque uma restauração de arquivo convidado é uma operação assíncrona e pode haver uma latência de tempo para estabelecer uma sessão de convidado para você.
+
++
+Essa opção usa as configurações de e-mail configuradas quando você configura o cliente VMware vSphere no vCenter.
+
+
+
+. Revise o resumo e clique em *Finish*.
++
+Antes de clicar em *Finish*, você pode voltar para qualquer página do assistente e alterar as informações.
+
+. Aguarde até que a operação de ligação seja concluída.
++
+Pode ver o progresso da operação no monitor de trabalhos do Painel de instrumentos ou pode aguardar a notificação por correio eletrónico.
+
+. Para localizar os arquivos que você deseja restaurar a partir do disco virtual anexado, selecione *Plug-in SnapCenter para VMware vSphere* na janela atalhos do cliente vSphere.
+. No painel do navegador esquerdo selecione *Restauração de arquivo convidado* > *Configuração de convidado*.
++
+Na tabela Monitor de sessão do convidado, você pode exibir informações adicionais sobre uma sessão clicando em *... *na coluna direita.
+
+. Selecione a sessão de restauração de arquivo convidado para o disco virtual listado no e-mail de notificação.
++
+Todas as partições recebem uma letra de unidade, incluindo partições reservadas do sistema. Se um VMDK tiver várias partições, você poderá selecionar uma unidade específica selecionando a unidade na lista suspensa no campo da unidade na parte superior da página de navegação do arquivo convidado.
+
+. Clique no ícone *Procurar ficheiros* para ver uma lista de ficheiros e pastas no disco virtual.
++
+Quando você clica duas vezes em uma pasta para procurar e selecionar arquivos individuais, pode haver uma latência de tempo ao buscar a lista de arquivos porque a operação de busca é executada no tempo de execução.
+
++
+Para uma navegação mais fácil, você pode usar filtros em sua string de pesquisa. Os filtros são expressões Perl sensíveis a maiúsculas e minúsculas sem espaços. A cadeia de pesquisa padrão é `.`*. A tabela a seguir mostra alguns exemplos de expressões de pesquisa Perl.
+
++
+|===
+| Esta expressão... | Procura... 
+
+
+| . | Qualquer caractere, exceto um caractere de nova linha. 
+
+
+| .* | Qualquer string. Este é o padrão. 
+
+
+| a | O personagem a.. 
+
+
+| ab | A string ab. 
+
+
+| a [barra vertical] b | O caráter a ou b.. 
+
+
+| a* | Zero ou mais instâncias do caractere a.. 
+
+
+| a mais | Uma ou mais instâncias do caractere a.. 
+
+
+| a? | Zero ou uma instância do caractere a.. 
+
+
+| a [x] | Exatamente x número de instâncias do caractere a.. 
+
+
+| a [x] | Pelo menos x número de instâncias do caractere a.. 
+
+
+| a [x,y] | Pelo menos x número de instâncias do caractere a e no máximo y número. 
+
+
+| * | Escapa de um personagem especial. 
+|===
++
+A página de navegação de arquivo convidado exibe todos os arquivos e pastas ocultos, além de todos os outros arquivos e pastas.
+
+. Selecione um ou mais arquivos ou pastas que você deseja restaurar e clique em *Selecionar local de restauração*.
++
+Os arquivos e pastas a serem restaurados são listados na tabela Arquivo(s) selecionado(s).
+
+. Na página *Selecionar local de restauração*, especifique o seguinte:
++
+|===
+| Opção | Descrição 
+
+
+| Restaurar para o caminho | Introduza o caminho de partilha UNC para o convidado onde os ficheiros selecionados serão restaurados. IPv4 exemplo `\\10.60.136.65\c$`: IPv6 exemplo: `\\fd20-8b1e-b255-832e--61.ipv6-literal.net\C\restore` 
+
+
+| Se existirem ficheiros originais  a| 
+Selecione a ação a ser executada se o arquivo ou pasta a ser restaurado já existir no destino de restauração: Sempre sobrescrever ou sempre pular.
+
+
+NOTE: Se a pasta já existir, o conteúdo da pasta será mesclado com a pasta existente.
+
+
+
+| Desconetar sessão de convidado após a restauração bem-sucedida | Selecione esta opção se desejar que a sessão de restauração de arquivo convidado seja excluída quando a operação de restauração for concluída. 
+|===
+. Clique em *Restaurar*.
++
+Pode ver o progresso da operação de restauro no monitor de trabalhos do painel de instrumentos ou pode aguardar a notificação por correio eletrónico. O tempo necessário para que a notificação por e-mail seja enviada depende do tempo que a operação de restauração leva para ser concluída.
+
++
+O e-mail de notificação contém um anexo com a saída da operação de restauração. Se a operação de restauração falhar, abra o anexo para obter informações adicionais.
+
+

@@ -1,0 +1,33 @@
+---
+sidebar: sidebar 
+permalink: scpivs44_protect_data_overview.html 
+keywords:  
+summary: Todas as operações de backup são executadas em grupos de recursos, que podem conter qualquer combinação de uma ou mais VMs e datastores. Você pode fazer backup sob demanda ou de acordo com um cronograma de proteção definido. 
+---
+= Fluxo de trabalho de proteção de dados
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Use o cliente SnapCenter vSphere para executar operações de proteção de dados de VMs, VMDKs e armazenamentos de dados. Todas as operações de backup são executadas em grupos de recursos, que podem conter qualquer combinação de uma ou mais VMs e datastores. Você pode fazer backup sob demanda ou de acordo com um cronograma de proteção definido.
+
+Quando você faz backup de um datastore, você está fazendo backup de todas as VMs nesse datastore.
+
+As operações de backup e restauração não podem ser executadas simultaneamente no mesmo grupo de recursos.
+
+Você deve analisar as informações sobre o que o plug-in do SnapCenter para VMware vSphere faz e não oferece suporte. link:scpivs44_deployment_planning_and_requirements.html["Planejamento e requisitos de implantação"]
+
+Nas configurações do MetroCluster:
+
+* O plug-in do SnapCenter para VMware vSphere pode não ser capaz de detetar uma relação de proteção após um failover.  https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/Unable_to_detect_SnapMirror_or_SnapVault_relationship_after_MetroCluster_failover["Artigo da KB: Não é possível detetar a relação SnapMirror ou SnapVault após o failover do MetroCluster"^]Consulte para obter mais informações.
+* Se os backups falharem com o erro `Unable to discover resources on SCV: <xxx>…` das VMs NFS e VMFS após o switchover/troca de volta, reinicie os serviços SnapCenter VMware a partir do console de manutenção.
+
+
+A figura do fluxo de trabalho a seguir mostra a sequência na qual você deve executar operações de backup:
+
+image:scpivs44_image13.png["Fluxo de trabalho de operações de backup"]

@@ -1,0 +1,63 @@
+---
+sidebar: sidebar 
+permalink: scpivs44_restore_vmdks_from_backups.html 
+keywords:  
+summary: Você pode restaurar VMDKs existentes, ou VMDKs excluídos ou separados, a partir de um backup primário ou secundário de VMs tradicionais ou VMs VVol. 
+---
+= Restaure VMDKs a partir de backups
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Você pode restaurar VMDKs existentes, ou VMDKs excluídos ou separados, a partir de um backup primário ou secundário de VMs tradicionais ou VMs VVol.
+
+É possível restaurar um ou mais discos de máquina virtual (VMDKs) em uma VM para o mesmo datastore.
+
+
+TIP: Para melhorar o desempenho das operações de restauração em ambientes NFS, habilite o VMware Application vStorage API for Array Integration (VAAI).
+
+.Antes de começar
+* Tem de existir uma cópia de segurança.
++
+Você deve ter criado um backup da VM usando o plug-in do SnapCenter para VMware vSphere.
+
+* A VM não deve estar em trânsito.
++
+A VM que você deseja restaurar não deve estar em um estado de vMotion ou Storage vMotion.
+
+
+
+.Sobre esta tarefa
+* Se o VMDK for excluído ou desconetado da VM, a operação de restauração anexará o VMDK à VM.
+* Uma operação de restauração pode falhar se a camada de storage do FabricPool onde a VM está localizada não estiver disponível.
+* As operações de conexão e restauração conetam VMDKs usando o controlador SCSI padrão. No entanto, quando são feitos backup de VMDKs conectados a uma VM com disco NVMe, as operações de conexão e restauração usam a controladora NVMe, se disponível.
+
+
+.Passos
+. Na GUI do cliente do VMware vSphere, clique em *Menu* na barra de ferramentas e selecione *VMs e modelos* na lista suspensa.
+. No painel do navegador esquerdo, clique com o botão direito do Mouse em uma VM, selecione *Plug-in SnapCenter para VMware vSphere* na lista suspensa e selecione *Restaurar* na lista suspensa secundária.
+. No assistente *Restaurar*, na página Selecionar cópia de segurança, selecione a cópia de segurança da qual pretende restaurar.
++
+Você pode pesquisar um nome de backup específico ou um nome de backup parcial ou filtrar a lista de backup clicando no ícone de filtro e selecionando um intervalo de data e hora, selecionando se deseja backups que contenham snapshots VMware, se deseja backups montados e local primário ou secundário. Clique em *OK* para retornar ao assistente.
+
+. Na página *Selecionar escopo*, selecione o destino de restauração.
++
+|===
+| Para restaurar para... | Especifique o destino de restauração... 
+
+
+| O datastore original | Selecione *particular disk* na lista suspensa e clique em *Next*. Na tabela de seleção do datastore, você pode selecionar ou desmarcar qualquer VMDKs. 
+
+
+| Um datastore alternativo em um local alternativo | Clique no datastore de destino e selecione um datastore diferente na lista. 
+|===
+. Na página *Selecionar local*, selecione a captura Instantânea que deseja restaurar (primária ou secundária).
+. Revise a página Resumo e clique em *Finish*.
+. Opcional: Monitore o progresso da operação clicando em *Recent Tasks* na parte inferior da tela.
+. Atualize a tela para exibir informações atualizadas.
+

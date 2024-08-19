@@ -1,0 +1,137 @@
+---
+sidebar: sidebar 
+permalink: scpivs44_restore_vms_from_backups.html 
+keywords:  
+summary: Ao restaurar uma VM, você pode substituir o conteúdo existente pela cópia de backup selecionada ou fazer uma cópia da VM. 
+---
+= Restaure VMs de backups
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Ao restaurar uma VM, você pode substituir o conteúdo existente pela cópia de backup selecionada ou fazer uma cópia da VM.
+
+Você pode restaurar as VMs para os seguintes locais:
+
+* Restaurar a localização original
++
+** Para o datastore original montado no host ESXi original (isso substitui a VM original)
+
+
+* Restaurar para local alternativo
++
+** Para um datastore diferente montado no host ESXi original
+** Para o datastore original montado em um host ESXi diferente que é gerenciado pelo mesmo vCenter
+** Para um datastore diferente montado em um host ESXi diferente que é gerenciado pelo mesmo vCenter
+** Para um datastore diferente montado em um host ESXi diferente que é gerenciado por um vCenter diferente no modo vinculado
+
+
+
+
+
+NOTE: Você não pode restaurar VMs vVol para um host alternativo.
+
+
+NOTE: O fluxo de trabalho de restauração a seguir não é suportado: Adicione uma VM de armazenamento, execute um backup dessa VM, exclua a VM de armazenamento e adicione um cluster que inclua essa mesma VM de armazenamento e tente restaurar o backup original.
+
+
+TIP: Para melhorar o desempenho das operações de restauração em ambientes NFS, habilite o VMware Application vStorage API for Array Integration (VAAI).
+
+.Antes de começar
+* Tem de existir uma cópia de segurança.
++
+Você deve ter criado um backup da VM usando o plug-in do SnapCenter para VMware vSphere antes de restaurar a VM.
+
++
+
+NOTE: As operações de restauração não podem ser concluídas com êxito se houver snapshots da VM que foram executados por outro software que não o plug-in do SnapCenter para VMware vSphere.
+
+* O datastore de destino deve estar pronto.
++
+** O datastore de destino para a operação de restauração deve ter espaço suficiente para acomodar uma cópia de todos os arquivos VM (por exemplo: vmdk, vmx, vmsd).
+** O datastore de destino não deve conter arquivos VM obsoletos de falhas de operação de restauração anteriores. Os arquivos obsoletos têm o formato de nome `restore_xxx_xxxxxx_<filename>` .
+
+
+* A VM não deve estar em trânsito.
++
+A VM que você deseja restaurar não deve estar em um estado de vMotion ou Storage vMotion.
+
+* Erros de configuração DE HA
++
+Certifique-se de que não há erros de configuração de HA exibidos na tela Resumo do host do vCenter ESXi antes de restaurar backups para um local diferente.
+
+* Restaurar para locais diferentes
++
+** Ao restaurar para um local diferente, o plug-in do SnapCenter para VMware vSphere deve estar em execução no vCenter que é o destino para a operação de restauração. O datastore de destino deve ter espaço suficiente.
+** O vCenter de destino no campo Restaurar para local alternativo deve ser resolvível pelo DNS.
+
+
+
+
+.Sobre esta tarefa
+* A VM não está registada e registada novamente
++
+A operação de restauração para VMs desRegistra a VM original, restaura a VM de uma Snapshot de backup e Registra a VM restaurada com o mesmo nome e configuração no mesmo servidor ESXi. Você deve adicionar manualmente as VMs a grupos de recursos após a restauração.
+
+* Restaurando datastores
++
+Você não pode restaurar um datastore, mas pode restaurar qualquer VM no datastore.
+
+* Restaurando VMs VVol
++
+** Armazenamentos de dados da VVol que abrangem VMs não são suportados. Como os VMDKs anexados em um armazenamento de dados vVol que abrange VM não são copiados, as VMs restauradas conterão apenas VMDKs parciais.
+** Você não pode restaurar um vVol para um host alternativo.
+** O reequilíbrio automático da VVol não é suportado.
+
+
+* Falhas de snapshot de consistência do VMware para uma VM
++
+Mesmo que um snapshot de consistência do VMware para uma VM falhe, a VM é, no entanto, feita uma cópia de segurança. Você pode exibir as entidades contidas na cópia de backup no assistente de restauração e usá-la para operações de restauração.
+
+* Uma operação de restauração pode falhar se a camada de storage do FabricPool onde a VM está localizada não estiver disponível.
+
+
+.Passos
+. Na GUI do cliente do VMware vSphere, clique em *Menu* na barra de ferramentas e selecione *VMs e modelos* na lista suspensa.
++
+
+NOTE: Se você estiver restaurando uma VM excluída, as credenciais de VM de storage que foram adicionadas ao plug-in do SnapCenter para VMware vSphere devem ser `vsadmin` ou uma conta de usuário que tenha todas as mesmas Privileges que `vsadmin`. O host deve estar em um sistema de storage que esteja executando o ONTAP 8.2.2 ou posterior.
+
+. No painel do navegador esquerdo, clique com o botão direito do Mouse em uma VM, selecione *Plug-in SnapCenter para VMware vSphere* na lista suspensa e selecione *Restaurar* na lista suspensa secundária para iniciar o assistente.
+. No assistente *Restore*, na página *Select Backup*, selecione o instantâneo de backup que você deseja restaurar.
++
+Você pode pesquisar um nome de backup específico ou um nome de backup parcial ou filtrar a lista de backup clicando no ícone de filtro e selecionando um intervalo de data e hora, selecionando se deseja backups que contenham snapshots VMware, se deseja backups montados e o local. Clique em *OK* para retornar ao assistente.
+
+. Na página *Selecionar escopo*, selecione *Máquina virtual inteira* no campo *Restaurar escopo*, selecione o local de restauração e insira as informações de destino onde o backup deve ser montado.
++
+No campo *nome da VM*, se existir o mesmo nome da VM, o novo formato de nome da VM será `<vm_name>_<timestamp>`.
+
++
+Ao restaurar backups parciais, a operação de restauração ignora a página *Selecionar escopo*.
+
+. Na página *Select Location* (Selecionar local), selecione o local para o datastore restaurado.
++
+No plug-in do SnapCenter para VMware vSphere 4,5 e posterior, é possível selecionar o storage secundário para o FlexGroup volumes.
+
+. Revise a página Resumo e clique em *Finish*.
+. Opcional: Monitore o progresso da operação clicando em *Recent Tasks* na parte inferior da tela.
++
+Atualize a tela para exibir informações atualizadas.
+
+
+
+.Depois de terminar
+* Alterar endereço IP
++
+Se você restaurou para um local diferente, então você deve alterar o endereço IP da VM recém-criada para evitar um conflito de endereço IP quando os endereços IP estáticos são configurados.
+
+* Adicione VMs restauradas a grupos de recursos
++
+Embora as VMs sejam restauradas, elas não são adicionadas automaticamente aos grupos de recursos anteriores. Portanto, você deve adicionar manualmente as VMs restauradas aos grupos de recursos apropriados.
+
+

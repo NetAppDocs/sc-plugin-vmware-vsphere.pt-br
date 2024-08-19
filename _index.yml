@@ -1,0 +1,51 @@
+---
+indexpage:
+  title: Plug-in do SnapCenter para documentação do VMware vSphere
+  summary: O plug-in do SnapCenter para VMware vSphere (SCV) é um dispositivo virtual
+    baseado em Linux. Como autônomo, ele oferece operações de backup e restauração
+    rápidas, com uso eficiente de espaço, consistentes com falhas e consistentes com
+    VM para VMs, armazenamentos de dados e VMDKs. Ele também funciona com o servidor
+    SnapCenter para dar suporte a operações de backup e restauração baseadas em aplicativos
+    em ambientes VMware para plug-ins específicos de aplicativos do SnapCenter.
+  keywords: SnapCenter Plug-in for VMware vSphere, SCV
+  lead: O plug-in do SnapCenter para VMware vSphere (SCV) é um dispositivo virtual
+    baseado em Linux. Como autônomo, ele oferece operações de backup e restauração
+    rápidas, com uso eficiente de espaço, consistentes com falhas e consistentes com
+    VM para VMs, armazenamentos de dados e VMDKs. Ele também funciona com o servidor
+    SnapCenter para dar suporte a operações de backup e restauração baseadas em aplicativos
+    em ambientes VMware para plug-ins específicos de aplicativos do SnapCenter. Esta
+    biblioteca de documentação descreve o plug-in do SnapCenter para VMware vSphere
+    versões 6,0.
+  tiles:
+  - title: Comece agora
+    links:
+    - title: Notas de versão
+      url: https://library.netapp.com/ecm/ecm_download_file/ECMLP3322664
+    - title: Saiba mais sobre SCV
+      url: "/scpivs44_concepts_overview.html"
+    - title: Requisitos de implantação
+      url: "/scpivs44_deployment_planning_and_requirements.html"
+    - title: Início rápido
+      url: "/scpivs44_quick_start_overview.html"
+  - title: Proteja VMs, VMDKs e armazenamentos de dados
+    links:
+    - title: Proteja seus dados
+      url: "/scpivs44_protect_data_overview.html"
+    - title: Restaurar backups
+      url: "/scpivs44_restore_from_backups_overview.html"
+    - title: Use APIS REST
+      url: "/scpivs44_rest_apis_overview.html"
+  - title: Blogs & comunidade
+    links:
+    - title: NetApp blog – SCV
+      url: https://blog.netapp.com/tag/snapcenter/
+    - title: Comunidade NetApp – SCV
+      url: https://community.netapp.com/t5/forums/filteredbylabelpage/board-id/backup-and-restore-discussions/label-name/snapcenter
+  - title: Mais recursos
+    links:
+    - title: Documentação do software SnapCenter
+      url: https://docs.netapp.com/us-en/snapcenter/index.html
+    - title: Documentação para versões anteriores da SCV
+      url: https://mysupport.netapp.com/documentation/productlibrary/index.html?productID=63240
+    - title: Base de Conhecimento NetApp – SCV
+      url: https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter

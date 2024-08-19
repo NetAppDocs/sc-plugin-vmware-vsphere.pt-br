@@ -1,0 +1,26 @@
+---
+sidebar: sidebar 
+permalink: scpivs44_licensing.html 
+keywords:  
+summary: Esta seção fornece informações de licenciamento para o plug-in do SnapCenter para VMware vSphere. 
+---
+= Licenciamento
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+O plug-in do SnapCenter para VMware vSphere é um produto gratuito se você estiver usando os seguintes sistemas de storage:
+
+* FAS
+* AFF
+* Cloud Volumes ONTAP
+* ONTAP Select
+* ASA
+
+
+É recomendado, mas não obrigatório, que você adicione licenças padrão do SnapCenter a destinos secundários. Se as licenças padrão do SnapCenter não estiverem habilitadas em sistemas secundários, você não poderá usar o SnapCenter após executar uma operação de failover. No entanto, é necessária uma licença FlexClone em storage secundário para executar operações de montagem e montagem. É necessária uma licença SnapRestore para executar operações de restauração.

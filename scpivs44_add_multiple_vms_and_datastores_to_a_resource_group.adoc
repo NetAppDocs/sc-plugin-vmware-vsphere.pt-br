@@ -1,0 +1,48 @@
+---
+sidebar: sidebar 
+permalink: scpivs44_add_multiple_vms_and_datastores_to_a_resource_group.html 
+keywords:  
+summary: Você pode adicionar vários recursos a um grupo de recursos existente usando o assistente de edição de grupo de recursos do cliente VMware vSphere do SnapCenter. 
+---
+= Adicione várias VMs e datastores a um grupo de recursos
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Usando o assistente de edição de grupo de recursos do cliente VMware vSphere do SnapCenter, você pode adicionar vários recursos a um grupo de recursos existente.
+
+Um grupo de recursos pode conter um dos seguintes:
+
+* Qualquer combinação de VMs tradicionais e armazenamentos de dados SAN e nas (armazenamentos de dados da evolução não suportados).
+* Um datastore FlexGroup (não há suporte para spanning VMs).
+* Um ou mais armazenamentos de dados FlexVol (com suporte a VMs estendidas).
+* Uma ou mais VMs da Vevolve.
+* Todas as VMs VVol com uma tag vSphere especificada.
+* Todas as VMs VVol em uma pasta especificada.
+
+
+
+NOTE: As VMs da Vevolve que abrangem vários datastores da Vevolve não são suportadas porque a SnapCenter só faz o backup de vVols no datastore principal, selecionado e da Vevolve.
+
+.Passos
+. No painel de navegação esquerdo do plug-in SCV, clique em *grupos de recursos*, selecione um grupo de recursos e clique  em *Editar grupo de image:scpivs44_image39.png["ícone de edição"]recursos* para iniciar o assistente.
+. Na página *recurso*, faça o seguinte:
++
+.. No campo datastores, navegue até as VMs ou armazenamentos de dados que você deseja adicionar.
+.. Na lista entidades disponíveis, selecione uma ou mais VMs ou armazenamentos de dados que deseja adicionar ao grupo de recursos e clique em *>* para mover sua seleção para a lista entidades selecionadas. Clique em *>>* para mover todas as entidades disponíveis.
++
+Por padrão, a lista entidades disponíveis exibe o objeto Datacenter. Você pode clicar em um datastore para exibir as VMs dentro do datastore e adicioná-las ao grupo de recursos.
+
++
+Quando você clica em *Avançar*, o sistema primeiro verifica se o SnapCenter gerencia e é compatível com o armazenamento no qual as VMs ou armazenamentos de dados selecionados estão localizados. Se a mensagem `Some entities are not SnapCenter compatible` for exibida, uma VM ou datastore selecionado não será compatível com o SnapCenter. link:scpivs44_create_resource_groups_for_vms_and_datastores.html#manage-compatibility-check-failures["Gerenciar falhas de verificação de compatibilidade"]Consulte para obter mais informações.
+
+
+
+. Repita a etapa 2 para cada VM ou datastore que você deseja adicionar.
+. Clique em *Next* até chegar à página *Summary* e, em seguida, revise o resumo e clique em *Finish*.
+

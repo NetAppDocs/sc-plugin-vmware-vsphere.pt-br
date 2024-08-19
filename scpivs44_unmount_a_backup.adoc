@@ -1,0 +1,31 @@
+---
+sidebar: sidebar 
+permalink: scpivs44_unmount_a_backup.html 
+keywords:  
+summary: Você pode desmontar um backup quando não precisar mais acessar os arquivos no datastore. 
+---
+= Desmonte um backup
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Você pode desmontar um backup quando não precisar mais acessar os arquivos no datastore.
+
+Se um backup for listado como montado na GUI do cliente VMware vSphere, mas não estiver listado na tela desmontar backup, será necessário usar a API REST `/backup/{backup-Id}/cleanup` para limpar os datastores fora de uso e, em seguida, tentar o procedimento desmontar novamente.
+
+Se você tentar montar uma cópia de backup de um armazenamento de dados NFS em uma VM de armazenamento (SVM) com o volume raiz em uma relação de espelhamento de compartilhamento de carga e encontrar o erro `You may have reached the maximum number of NFS volumes configured in the vCenter. Check the vSphere Client for any error messages.` para evitar esse problema, altere a configuração de volumes máximos navegando para *ESX* > *Manage* > *Settings* > *Advance System Settings** e alterando o valor NFS.MaxVolumes. O valor máximo é 256.
+
+.Passos
+. Na página atalhos de cliente do VMware vSphere, selecione *Storage*.
+. No painel do navegador esquerdo, clique com o botão direito do Mouse em um datastore, selecione *Plug-in SnapCenter para VMware vSphere* na lista suspensa e selecione *Desmontar* na lista suspensa secundária.
++
+
+IMPORTANT: Certifique-se de selecionar o datastore correto para desmontar. Caso contrário, você pode causar um impactos no trabalho de produção.
+
+. Na caixa de diálogo *Unmount cloned datastore*, selecione um datastore, marque a caixa de seleção *Unmount the cloned datastore* e clique em *Unmount*.
+

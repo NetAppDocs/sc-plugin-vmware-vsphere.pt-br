@@ -1,0 +1,49 @@
+---
+sidebar: sidebar 
+permalink: scpivs44_rest_api_workflow__restore_vms.html 
+keywords:  
+summary: Para executar operações de restauração de backups de VM usando o plug-in do SnapCenter para APIs REST do VMware vSphere, você deve seguir a sequência prescrita de chamadas de API REST. 
+---
+= Fluxo de trabalho da API REST para restaurar VMs
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Para executar operações de restauração de backups de VM usando o plug-in do SnapCenter para APIs REST do VMware vSphere, você deve seguir a sequência prescrita de chamadas de API REST.
+
+Para cada API REST, adicione `\https://<server>:<port>` na frente da API REST para formar um endpoint completo.
+
+|===
+| Passo | API REST | Comentários 
+
+
+| 1 | Vá para `\http://<vCenter-IP>/mob` | Encontre a VM moref no URL de objetos gerenciados da VMware. Observe o *moref* para a VM que você deseja restaurar. 
+
+
+| 2 | `/4.1/vm/{moref}/backups` | `Get VM Backups` Obtém uma lista de backups para a VM especificada. Passe o *moref* a partir do passo 1. Observe o *backupId* do backup que você deseja restaurar. 
+
+
+| 3 | `/4.1/vm/backups/{backupId}/
+snapshotlocations` | `Get snapshot locations` Obtém o local do instantâneo para o backup especificado. Passe o *backupId* do passo 2. Observe as informações *snapshotLocationsList*. 
+
+
+| 4 | `/4.1/vm/{moref}/backups/
+availableesxhosts` | `Get available ESX Hosts` obtém as informações do host no qual o backup é armazenado. Observe as informações *AvailableEsxHostsList*. 
+
+
+| 5 | `/4.1/vm/{moref}/backups/
+{backupId}/restore`  a| 
+`Restore a VM from a backup` restaura o backup especificado. Passe as informações das etapas 3 e 4 no atributo *restoreLocations*.
+
+
+NOTE: Se o backup da VM for um backup parcial, defina o `restartVM` parâmetro como "false".
+
+
+NOTE: Não é possível restaurar uma VM que seja um modelo.
+
+|===

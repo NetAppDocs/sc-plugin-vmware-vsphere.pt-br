@@ -1,0 +1,35 @@
+---
+sidebar: sidebar 
+permalink: scpivs44_back_up_resource_groups_on_demand.html 
+keywords:  
+summary: As operações de backup são executadas em todos os recursos definidos em um grupo de recursos. Se um grupo de recursos tiver uma política anexada e uma programação configurada, os backups ocorrerão automaticamente de acordo com a programação. 
+---
+= Faça backup de grupos de recursos sob demanda
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+As operações de backup são executadas em todos os recursos definidos em um grupo de recursos. Se um grupo de recursos tiver uma política anexada e uma programação configurada, os backups ocorrerão automaticamente de acordo com a programação.
+
+.Antes de começar
+Você deve ter criado um grupo de recursos com uma política anexada.
+
+
+IMPORTANT: Não inicie uma tarefa de backup sob demanda quando uma tarefa para fazer backup do plug-in do SnapCenter para o banco de dados MySQL do VMware vSphere já estiver em execução. Use o console de manutenção para ver a programação de backup configurada para o banco de dados MySQL.
+
+.Sobre esta tarefa
+Em versões anteriores do Virtual Storage Console (VSC), você pode executar um backup sob demanda sem ter uma tarefa de backup configurada para uma VM ou datastore. No entanto, para o plug-in do SnapCenter para VMware vSphere, as VMs e os datastores devem estar em um grupo de recursos antes que você possa executar os backups.
+
+.Passos
+. No painel de navegação esquerdo do plug-in SCV, clique em *grupos de recursos*, selecione um grupo de recursos e selecione image:scpivs44_image38.png["Ícone de reprodução"] *Executar agora* para iniciar o backup.
+. Se o grupo de recursos tiver várias políticas configuradas, na caixa de diálogo *Backup Now*, selecione a política que deseja usar para essa operação de backup.
+. Clique em *OK* para iniciar a cópia de segurança.
+. Opcional: Monitore o progresso da operação clicando em *tarefas recentes* na parte inferior da janela ou no painel *Monitor de tarefas* para obter mais detalhes. .Resultado
+
+
+Se a operação do quiesce falhar em qualquer uma das VMs no backup, o backup será concluído com um aviso e será marcado como não consistente VM, mesmo que a diretiva selecionada tenha a consistência da VM selecionada. Neste caso, é possível que algumas das VMs tenham sido silenciadas com sucesso. No monitor de trabalhos, os detalhes da VM com falha mostrarão o quiesce como falhou.

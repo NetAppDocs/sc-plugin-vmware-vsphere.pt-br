@@ -1,0 +1,42 @@
+---
+sidebar: sidebar 
+permalink: scpivs44_ontap_rbac_features_in_snapcenter.html 
+keywords:  
+summary: 'O plug-in do SnapCenter para VMware vSphere funciona com o vCenter Server RBAC, o SnapCenter RBAC (quando necessário para dar suporte a operações baseadas em aplicações) e o ONTAP RBAC para determinar quais tarefas do SnapCenter um usuário específico pode executar em objetos em um sistema de storage específico.' 
+---
+= Recursos RBAC do ONTAP no plug-in do SnapCenter para VMware vSphere
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+
+NOTE: O ONTAP RBAC aplica-se apenas a tarefas consistentes com aplicativos do servidor SnapCenter (aplicativo em VMDK).
+
+[role="lead"]
+Os controles de acesso baseados em função (RBAC) do ONTAP permitem controlar o acesso a sistemas de storage específicos e as ações que um usuário pode executar nesses sistemas de storage. O plug-in do SnapCenter para VMware vSphere funciona com o vCenter Server RBAC, o SnapCenter RBAC (quando necessário para dar suporte a operações baseadas em aplicações) e o ONTAP RBAC para determinar quais tarefas do SnapCenter um usuário específico pode executar em objetos em um sistema de storage específico.
+
+O SnapCenter usa as credenciais que você configurou (nome de usuário e senha) para autenticar cada sistema de armazenamento e determinar quais operações podem ser executadas nesse sistema de armazenamento. O plug-in do SnapCenter para VMware vSphere usa um conjunto de credenciais para cada sistema de storage. Essas credenciais determinam todas as tarefas que podem ser executadas nesse sistema de storage. Em outras palavras, as credenciais são para SnapCenter, não para um usuário individual do SnapCenter.
+
+O ONTAP RBAC se aplica apenas a acessar sistemas de storage e executar tarefas do SnapCenter relacionadas ao storage, como backup de VMs. Se você não tiver o ONTAP RBAC Privileges apropriado para um sistema de storage específico, não poderá executar nenhuma tarefa em um objeto vSphere hospedado nesse sistema de storage.
+
+Cada sistema de storage tem um conjunto de ONTAP Privileges associado.
+
+O RBAC do ONTAP e o vCenter Server oferece os seguintes benefícios:
+
+* Segurança
++
+O administrador pode controlar quais usuários podem executar quais tarefas em um nível de objeto do vCenter Server refinado e em um nível de sistema de armazenamento.
+
+* Informações de auditoria
++
+Em muitos casos, o SnapCenter fornece uma trilha de auditoria no sistema de armazenamento que permite rastrear eventos de volta para o usuário do vCenter que realizou as modificações de armazenamento.
+
+* Usabilidade
++
+Você pode manter as credenciais do controlador em um só lugar.
+
+

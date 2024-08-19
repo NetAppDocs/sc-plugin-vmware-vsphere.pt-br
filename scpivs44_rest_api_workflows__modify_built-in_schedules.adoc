@@ -1,0 +1,36 @@
+---
+sidebar: sidebar 
+permalink: scpivs44_rest_api_workflows__modify_built-in_schedules.html 
+keywords:  
+summary: Para modificar programações incorporadas para tarefas de cliente VMware vSphere usando o plug-in SnapCenter para APIs REST do VMware vSphere, você deve seguir a sequência prescrita de chamadas de API REST. 
+---
+= Fluxo de trabalho da API REST para modificar programações incorporadas
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Para modificar programações incorporadas para tarefas de cliente VMware vSphere usando o plug-in SnapCenter para APIs REST do VMware vSphere, você deve seguir a sequência prescrita de chamadas de API REST.
+
+Os horários integrados são os horários que são fornecidos como parte do produto; por exemplo, o cronograma de despejo de banco de dados MySQL. Você pode modificar as seguintes programações:
+`Schedule-DatabaseDump`
+`Schedule-PurgeBackups`
+`Schedule-AsupDataCollection`
+`Schedule-ComputeStorageSaving`
+`Schedule-PurgeJobs`
+
+Para cada API REST, adicione `\https://<server>:<port>` na frente da API REST para formar um endpoint completo.
+
+|===
+| Passo | API REST | Comentários 
+
+
+| 1 | `/4.1/schedules` | `Get all built-in` as programações obtém uma lista das programações de trabalho que foram originalmente fornecidas no produto. Observe o nome do cronograma que você deseja modificar e a expressão cron associada. 
+
+
+| 2 | `/4.1/schedules` | `Modify any built-in schedule` altera a programação nomeada. Passe o nome do cronograma da Etapa 1 e crie uma nova expressão cron para o cronograma. 
+|===

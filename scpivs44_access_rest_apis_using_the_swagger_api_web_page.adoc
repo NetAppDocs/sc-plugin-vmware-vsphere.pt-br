@@ -1,0 +1,50 @@
+---
+sidebar: sidebar 
+permalink: scpivs44_access_rest_apis_using_the_swagger_api_web_page.html 
+keywords:  
+summary: As APIs REST são expostas por meio da página da Web do Swagger. Você pode acessar a página da Web do Swagger para exibir o servidor SnapCenter ou o plug-in do SnapCenter para APIs REST do VMware vSphere, bem como emitir manualmente uma chamada de API. Use o plug-in do SnapCenter para APIs REST do VMware vSphere para executar operações de proteção em VMs e armazenamentos de dados. 
+---
+= Acesse APIs REST usando a página da Web da API Swagger
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+As APIs REST são expostas por meio da página da Web do Swagger. Você pode acessar a página da Web do Swagger para exibir o servidor SnapCenter ou o plug-in do SnapCenter para APIs REST do VMware vSphere, bem como emitir manualmente uma chamada de API. Use o plug-in do SnapCenter para APIs REST do VMware vSphere para executar operações em VMs e armazenamentos de dados.
+
+O plug-in tem diferentes páginas da web do Swagger das páginas da web do Swagger do servidor SnapCenter.
+
+.Antes de começar
+Para o plug-in do SnapCenter para APIs REST do VMware vSphere, você deve saber o endereço IP ou o nome do host do plug-in do SnapCenter para VMware vSphere.
+
+
+NOTE: O plug-in suporta apenas APIs REST com o objetivo de integrar aplicativos de terceiros e não oferece suporte a cmdlets do PowerShell ou CLI.
+
+.Passos
+. Em um navegador, insira o URL para acessar a página da Web do plug-in Swagger:
++
+`\https://<SCV_IP>:8144/api/swagger-ui/index.html`
+
++
+
+IMPORTANT: Não use os seguintes carateres no URL da API REST: , %, e &.
+
++
+.Exemplo
+Acesse o plug-in do SnapCenter para APIs REST do VMware vSphere:
+
++
+`\https://<SCV_IP>:8144/api/swagger-ui/index.html`
+
++
+`\https://OVAhost:8144/api/swagger-ui/index.html`
+
++
+Use o mecanismo de autenticação do vCenter para gerar o token.
+
+. Clique em um tipo de recurso de API para exibir as APIs nesse tipo de recurso.
+

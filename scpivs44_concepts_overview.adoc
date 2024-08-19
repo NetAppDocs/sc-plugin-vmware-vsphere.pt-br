@@ -1,0 +1,78 @@
+---
+sidebar: sidebar 
+permalink: scpivs44_concepts_overview.html 
+keywords:  
+summary: 'O plug-in do SnapCenter vSphere é um dispositivo virtual autônomo (formato aberto de dispositivo virtual) que fornece serviços de proteção de dados para VMs e armazenamentos de dados, além de oferecer suporte a serviços de proteção de dados para plug-ins baseados em aplicações SnapCenter. Este documento descreve como implantar e usar o plug-in do SnapCenter para VMware vSphere e inclui informações de início rápido.' 
+---
+= Visão geral do produto
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+:firstname: [.lead]
+:author: [.lead]
+:authorinitials: [
+:authors: [.lead]
+:revnumber: 
+:revdate: and supports data protection services for SnapCenter application-based plug-ins. This document describes how to deploy and use SnapCenter Plug-in for VMware vSphere and includes quick start information.
+
+
+O plug-in do SnapCenter para VMware vSphere é implantado como um dispositivo virtual baseado em Linux.
+
+O plug-in do SnapCenter para VMware vSphere adiciona a seguinte funcionalidade ao seu ambiente:
+
+* Suporte para operações de proteção de dados consistentes com falhas e consistentes com VM.
++
+Você pode usar a GUI do cliente do VMware vSphere no vCenter para todas as operações de backup e restauração de máquinas virtuais VMware (VMs tradicionais e VMs vVol), VMDKs e datastores. Para VMs Vevolve (VMs em datastores Vevolve), apenas backups consistentes com falhas são suportados. Você também pode restaurar VMs e VMDKs e restaurar arquivos e pastas que residem em um sistema operacional convidado.
+
++
+Ao fazer backup de VMs, VMDKs e armazenamentos de dados, o plug-in não oferece suporte a RDMs. As tarefas de backup para VMs ignoram RDMs. Se você precisar fazer backup de RDMs, use um plug-in baseado em aplicativos do SnapCenter.
+
++
+O plug-in do SnapCenter para VMware vSphere inclui um banco de dados MySQL que contém o plug-in do SnapCenter para metadados do VMware vSphere. Para proteção de dados consistente com VM e com falhas, você não precisa instalar o servidor SnapCenter.
+
+* Suporte para operações de proteção de dados consistentes com aplicações (aplicação em VMDK/RDM).
++
+Você pode usar a GUI do SnapCenter e os plug-ins apropriados da aplicação SnapCenter para todas as operações de backup e restauração de bancos de dados e sistemas de arquivos em storage primário e secundário em VMs.
+
++
+O SnapCenter aproveita de forma nativa o plug-in do SnapCenter para VMware vSphere para todas as operações de proteção de dados em VMDKs, mapeamentos de dispositivos brutos (RDMs) e armazenamentos de dados NFS. Depois que o dispositivo virtual é implantado, o plug-in manipula todas as interações com o vCenter. O plug-in do SnapCenter vSphere é compatível com todos os plug-ins baseados em aplicativos do SnapCenter.
+
++
+O SnapCenter não oferece suporte a snapshots únicos de bancos de dados e VMs juntos. Os backups de VMs e bancos de dados devem ser agendados e executados de forma independente, o que cria snapshots separados, mesmo que os bancos de dados e as VMs estejam hospedados no mesmo volume. Programe os backups dos aplicativos de banco de dados usando a GUI do SnapCenter; programe os backups da VM e do datastore usando a GUI do cliente VMware vSphere.
+
+* As ferramentas VMware são necessárias para snapshots consistentes com VM
++
+Se as ferramentas VMware não estiverem instaladas e em execução, o sistema de arquivos não será encerrado e um Snapshot consistente com falhas será criado.
+
+* O VMware Storage vMotion é necessário para operações de restauração em ambientes SAN (VMFS)
++
+O fluxo de trabalho de restauração do sistema de arquivos VMware (VMFS) utiliza o recurso VMware Storage vMotion. O Storage vMotion faz parte da licença padrão do vSphere, mas não está disponível com as licenças vSphere Essentials ou Essentials Plus.
+
++
+A maioria das operações de restauração em ambientes NFS usa a funcionalidade nativa do ONTAP (por exemplo, SnapRestore de arquivo único) e não exige o VMware Storage vMotion.
+
+* As ferramentas do ONTAP para o VMware vSphere são necessárias para configurar as VMs do VMware vVol.
++
+Você usa as ferramentas do ONTAP para provisionar e configurar o storage para vVols no ONTAP e no cliente da web VMware.
+
++
+Para obter mais informações, consulte https://docs.netapp.com/us-en/ontap-tools-vmware-vsphere/index.html["Ferramentas do ONTAP para VMware vSphere"^]
+
+* O plug-in do SnapCenter para VMware vSphere é implantado como um dispositivo virtual em uma VM Linux
++
+Embora o dispositivo virtual precise ser instalado como uma VM Linux, o plug-in do SnapCenter para VMware vSphere oferece suporte a vCenters baseados em Windows e Linux. O SnapCenter usa nativamente esse plug-in sem intervenção do usuário para se comunicar com o vCenter para oferecer suporte a plug-ins baseados em aplicativos SnapCenter que executam operações de proteção de dados em aplicativos virtualizados Windows e Linux.
+
+
+
+Além desses principais recursos, o plug-in do SnapCenter para VMware vSphere também oferece suporte a iSCSI, Fibre Channel, FCoE, NFS 3,0/4,1, VMFS 5,0/6,0 e NVMe sobre TCP.
+
+Para obter as informações mais recentes sobre versões suportadas, https://imt.netapp.com/matrix/imt.jsp?components=121034;&solution=1517&isHWU&src=IMT["Ferramenta de Matriz de interoperabilidade do NetApp"^] consulte (IMT).
+
+Para obter informações sobre os protocolos NFS e o host ESXi, consulte a documentação do vSphere Storage fornecida pela VMware.
+
+Para obter informações sobre a proteção de dados do SnapCenter, consulte as informações de proteção de dados do plug-in do SnapCenter no http://docs.netapp.com/us-en/snapcenter/index.html["Documentação do SnapCenter"^].
+
+Para obter informações sobre os caminhos de migração e atualização suportados, link:scpivs44_release_notes.html["Notas de versão do plug-in do SnapCenter para VMware vSphere"^]consulte .

@@ -1,0 +1,90 @@
+---
+sidebar: sidebar 
+permalink: scpivs44_upgrade.html 
+keywords:  
+summary: Se você estiver usando o plug-in do SnapCenter para o dispositivo virtual VMware vSphere, poderá fazer o upgrade para uma versão mais recente. 
+---
+= Atualize a partir de uma versão anterior do plug-in SnapCenter para VMware vSphere
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+
+NOTE: A atualização para o SCV 6,0 é suportada somente no VMware vCenter Server 7 atualização 1 e versões posteriores, para o VMware vCenter Server anterior à versão 7 atualização 1, você deve continuar usando o SCV 4,7. A atualização causa interrupções em versões não suportadas do VMware vCenter Server.
+
+Se você estiver usando o plug-in do SnapCenter para o dispositivo virtual VMware vSphere, poderá fazer o upgrade para uma versão mais recente. O processo de atualização desRegistra o plug-in existente e implanta um plug-in compatível apenas com o vSphere 7.0U1 e versões posteriores.
+
+
+
+== Caminhos de atualização
+
+|===
+
+
+| Se você estiver no plug-in do SnapCenter para a versão do VMware vSphere (SCV)... | Você pode atualizar diretamente o plug-in do SnapCenter para... 
+
+
+| SCV 5,0 | Atualize para a VCR 6,0 
+
+
+| SCV 4,9 | Atualize para VCS 5,0 e VCS 6,0 
+
+
+| SCV 4,8 | Atualize para VCS 4,9 e VCS 5,0 
+
+
+| SCV 4,7 | Atualize para VCS 4,8 e VCS 4,9 
+
+
+| SCV 4,6 | Atualize para VCS 4,7 e VCS 4,8 
+|===
+
+TIP: Faça backup do plug-in do SnapCenter para o VMware vSphere OVA antes de iniciar uma atualização.
+
+
+NOTE: Não é suportada a comutação da configuração da rede de estática para DHCP.
+
+.Passos
+. Prepare-se para a atualização desativando o plug-in SnapCenter para VMware vSphere.
++
+.. Faça login na GUI de gerenciamento do plug-in do SnapCenter para VMware vSphere. O endereço IP é exibido quando você implementa o plug-in do SnapCenter para VMware vSphere.
+.. Clique em *Configuração* no painel de navegação esquerdo e, em seguida, clique na opção *Serviço* na seção Detalhes do plug-in para desativar o plug-in.
+
+
+. Transfira o ficheiro de atualização `.iso`.
++
+.. Faça login no site de suporte da NetApp (https://mysupport.netapp.com/products/index.html[]).
+.. Na lista de produtos, selecione *Plug-in SnapCenter para VMware vSphere* e, em seguida, clique no botão *DOWNLOAD LATEST RELEASE*.
+.. Faça o download do arquivo de atualização do plug-in do SnapCenter para VMware vSphere `.iso` para qualquer local.
+
+
+. Instale a atualização.
++
+.. No seu navegador, navegue até o VMware vSphere vCenter.
+.. Na GUI do vCenter, clique em *vSphere client (HTML)*.
+.. Inicie sessão na página *Início de sessão único do VMware vCenter*.
+.. No painel do navegador, clique na VM que deseja atualizar e, em seguida, clique na guia *Resumo*.
+.. No painel *objetos relacionados*, clique em qualquer datastore na lista e, em seguida, clique na guia *Resumo*.
+.. Na guia *Files* do datastore selecionado, clique em qualquer pasta da lista e clique em *Upload Files*.
+.. Na tela pop-up upload, navegue até o local onde você baixou o `.iso` arquivo, clique na `.iso` imagem do arquivo e clique em *Open*. O arquivo é carregado no datastore.
+.. Navegue de volta para a VM que você deseja atualizar e clique na guia *Summary*. No painel *hardware da VM*, no campo CD/DVD, o valor deve ser "desconetado".
+.. Clique no ícone de conexão no campo CD/DVD e selecione *conetar à imagem de CD/DVD em um datastore*.
++
+image:scpivs44_image42.png["IU do vCenter"]
+
+.. No assistente, faça o seguinte:
++
+... Na coluna datastores, selecione o datastore onde você carregou o `.iso` arquivo.
+... Na coluna conteúdo, navegue até o `.iso` arquivo que você carregou, verifique se "imagem ISO" está selecionado no campo tipo de arquivo e clique em *OK*. Aguarde até que o campo mostre o status "conectado".
+
+
+.. Inicie sessão na consola de manutenção acedendo ao separador *Summary* do dispositivo virtual e, em seguida, clique na seta verde RUN (Executar) para iniciar a consola de manutenção.
+.. Introduza *2* para Configuração do sistema e, em seguida, introduza *8* para Atualização.
+.. Digite *y* para continuar e iniciar o upgrade.
+
+
+

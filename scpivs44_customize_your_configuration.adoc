@@ -1,0 +1,256 @@
+---
+sidebar: sidebar 
+permalink: scpivs44_customize_your_configuration.html 
+keywords:  
+summary: Para melhorar a eficiência operacional, você pode modificar o arquivo de configuração scbr.override para alterar os valores padrão. Esses valores controlam configurações como o número de snapshots VMware criados ou excluídos durante um backup ou o tempo antes que um script de backup pare de ser executado. 
+---
+= Personalize sua configuração
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Para melhorar a eficiência operacional, você pode modificar o `scbr.override` arquivo de configuração para alterar os valores padrão. Esses valores controlam configurações como o número de snapshots VMware criados ou excluídos durante um backup ou o tempo antes que um script de backup pare de ser executado.
+
+O `scbr.override` arquivo de configuração é usado pelo plug-in do SnapCenter para ambientes VMware vSphere que dão suporte às operações de proteção de dados baseadas na aplicação SnapCenter. Se este arquivo não existir, você deve criá-lo a partir do arquivo de modelo.
+
+
+
+== Crie o arquivo de configuração scbr.override
+
+. Vá para `/opt/netapp/scvservice/standalone_aegis/etc/scbr/scbr.override-template`.
+. Copie o `scbr.override-template` arquivo para um novo arquivo chamado `scbr.override` no `\opt\netapp\scvservice\standalone_aegis\etc\scbr` diretório.
+
+
+
+
+== Propriedades que você pode substituir
+
+* Por padrão, o modelo usa o símbolo hash para comentar as propriedades de configuração. Para usar uma propriedade para modificar um valor de configuração, você deve remover os `#` carateres.
+* Você deve reiniciar o serviço no plug-in do SnapCenter para o host VMware vSphere para que as alterações entrem em vigor.
+
+
+Você pode usar as seguintes propriedades listadas no `scbr.override` arquivo de configuração para alterar os valores padrão.
+
+* *dashboard.protected.vm.count.interval=7*
++
+Especifica o número de dias para os quais o painel exibe o status de proteção da VM.
+
++
+O valor padrão é "7".
+
+* *guestFileRestore.guest.operation.interval=5*
++
+Especifica o intervalo de tempo, em segundos, que o plug-in do SnapCenter para VMware vSphere monitora para a conclusão das operações de convidado no convidado (arquivos de disco on-line e restauração). O tempo total de espera é definido por `guestFileRestore.online.disk.timeout` e `uestFileRestore.restore.files.timeout`.
+
++
+O valor padrão é "5".
+
+* *GuestFileRestore.monitorInterval: 30*
++
+Especifica o intervalo de tempo, em minutos, que o plug-in do SnapCenter para VMware vSphere monitora para sessões de restauração de arquivos convidados expiradas. Qualquer sessão que esteja sendo executada além do tempo de sessão configurado é desconetada.
+
++
+O valor padrão é "30".
+
+* *GuestFileRestore.online.disk.timeout: 100*
++
+Especifica o tempo, em segundos, em que o plug-in do SnapCenter do VMware vSphere aguarda a conclusão de uma operação de disco on-line em uma VM convidada. Observe que há um tempo de espera adicional de 30 segundos antes que o plug-in enquetes para a conclusão da operação de disco on-line.
+
++
+O valor padrão é "100".
+
+* *GuestFileRestore.restore.files.timeout: 3600*
++
+Especifica o tempo, em segundos, em que o plug-in do SnapCenter do VMware vSphere aguarda a conclusão de uma operação de restauração de arquivos em uma VM convidada. Se o tempo for excedido, o processo é terminado e o trabalho é marcado como falhou.
+
++
+O valor predefinido é "3600" (1 hora).
+
+* *GuestFileRestore.robocopy.Directory.flags/R:0 /W:0 /ZB /CopyAll /EFSRAW /A-:SH /e /NJH /NDL /NP*
++
+Especifica os sinalizadores robocopy extras a serem usados ao copiar diretórios durante operações de restauração de arquivos convidados.
+
++
+Não remova `/NJH` ou adicione `/NJS` porque isso irá quebrar a análise da saída de restauração.
+
++
+Não permita tentativas ilimitadas (removendo o `/R` sinalizador) porque isso pode causar tentativas intermináveis para cópias com falha.
+
++
+Os valores padrão são `"/R:0 /W:0 /ZB /CopyAll /EFSRAW /A-:SH /e /NJH /NDL /NP"` .
+
+* *GuestFileRestore.robocopy.file.flags/R:0 /W:0 /ZB /CopyAll /EFSRAW /A-:SH /NJH /NJL /NP*
++
+Especifica os sinalizadores robocopy extras a serem usados ao copiar arquivos individuais durante operações de restauração de arquivos convidados.
+
++
+Não remova `/NJH` ou adicione `/NJS` porque isso irá quebrar a análise da saída de restauração.
+
++
+Não permita tentativas ilimitadas (removendo o `/R` sinalizador) porque isso pode causar tentativas intermináveis para cópias com falha.
+
++
+Os valores padrão são `"/R:0 /W:0 /ZB /CopyAll /EFSRAW /A-:SH /NJH /NDL /NP"`.
+
+* *guestFileRestore.sessionTime=1440*
++
+Especifica o tempo, em minutos, em que o plug-in do SnapCenter para VMware vSphere mantém uma sessão de restauração de arquivo convidado ativa.
+
++
+O valor predefinido é "1440" (24 horas).
+
+* *guestFileRestore.use.custom.online.disk.script=true*
++
+Especifica se deve-se usar um script personalizado para onlining discos e recuperar letras de unidade ao criar sessões de restauração de arquivos convidados. O script deve estar localizado em `[Install Path]  \etc\guestFileRestore_onlineDisk.ps1`. Um script padrão é fornecido com a instalação. Os valores `[Disk_Serial_Number]`, `[Online_Disk_Output]` e `[Drive_Output]` são substituídos no script durante o processo de anexação.
+
++
+O valor padrão é "false".
+
+* *include.esx.initiator.id.from.cluster=true*
++
+Especifica que o plug-in do SnapCenter para VMware vSphere deve incluir IDs de iniciador iSCSI e FCP de todos os hosts ESXi no cluster do aplicativo em fluxos de trabalho VMDK.
+
++
+O valor padrão é "false".
+
+* * max.concurrent.ds.storage.query.count: 15 *
++
+Especifica o número máximo de chamadas simultâneas que o plug-in do SnapCenter para VMware vSphere pode fazer ao servidor SnapCenter para descobrir o espaço físico do storage para os datastores. O plug-in faz essas chamadas quando você reinicia o serviço Linux no plug-in do SnapCenter para o host VMware vSphere VM.
+
+* *nfs.datastore.mount.retry.count: 3*
++
+Especifica o número máximo de vezes que o plug-in do SnapCenter para VMware vSphere tenta montar um volume como um armazenamento de dados NFS no vCenter.
+
++
+O valor padrão é "3".
+
+* *nfs.datastore.mount.retry.delay=60000*
++
+Especifica o tempo, em milissegundos, que o plug-in do SnapCenter do VMware vSphere aguarda entre tentativas de montar um volume como um datastore NFS no vCenter.
+
++
+O valor predefinido é "60000" (60 segundos).
+
+* *script.virtual.machine.count.variable.name Virtual_MACHINES*
++
+Especifica o nome da variável ambiental que contém a contagem de máquinas virtuais. Você deve definir a variável antes de executar qualquer script definido pelo usuário durante um trabalho de backup.
+
++
+Por exemplo, Virtual_Machines 2 significa que duas máquinas virtuais estão sendo feitas backup.
+
+* *script.virtual.machine.info.variable.name=VIRTUAL_MACHINE.%s*
++
+Fornece o nome da variável ambiental que contém informações sobre a máquina virtual nth no backup. Você deve definir essa variável antes de executar qualquer script definido pelo usuário durante um backup.
+
++
+Por exemplo, a variável ambiental VIRTUAL_MACHINE,2 fornece informações sobre a segunda máquina virtual no backup.
+
+* *script.virtual.machine.info.format= %s|%s|%s|%s|%s*
++
+Fornece informações sobre a máquina virtual. O formato para essas informações, que é definido na variável de ambiente, é o seguinte: `VM name|VM UUID| VM power state (on|off)|VM snapshot taken (true|false)|IP address(es)`
+
++
+A seguir está um exemplo das informações que você pode fornecer:
+
++
+`VIRTUAL_MACHINE.2=VM 1|564d6769-f07d-6e3b-68b1f3c29ba03a9a|POWERED_ON||true|10.0.4.2`
+
+* *storage.connection.timeout: 600000*
++
+Especifica a quantidade de tempo, em milissegundos, que o servidor SnapCenter aguarda por uma resposta do sistema de armazenamento.
+
++
+O valor predefinido é "600000" (10 minutos).
+
+* *vmware.esx.ip.kernel.ip.map*
++
+Não há valor padrão. Você usa esse valor para mapear o endereço IP ESXi para o endereço IP do VMkernel. Por padrão, o plug-in do SnapCenter para VMware vSphere usa o endereço IP do adaptador de gerenciamento do VMkernel do host ESXi. Se você quiser que o plug-in do SnapCenter para VMware vSphere use um endereço IP de adaptador VMkernel diferente, você deve fornecer um valor de substituição.
+
++
+No exemplo a seguir, o endereço IP do adaptador VMkernel de gerenciamento é 10.225.10.56; no entanto, o plug-in SnapCenter para VMware vSphere usa o endereço especificado de 10.225.11.57 e 10.225.11.58. E se o endereço IP do adaptador VMkernel de gerenciamento for 10.225.10.60, o plug-in usará o endereço 10.225.11.61.
+
++
+`vmware.esx.ip.kernel.ip.map=10.225.10.56:10.225.11.57,10.225.11.58; 10.225.10.60:10.225.11.61`
+
+* *vmware.max.concurrent.snapshots: 30*
++
+Especifica o número máximo de snapshots VMware simultâneos que o plug-in do SnapCenter para VMware vSphere executa no servidor.
+
++
+Esse número é verificado por datastore e é verificado somente se a diretiva tiver "VM consistente" selecionado. Se você estiver executando backups consistentes com falhas, essa configuração não se aplica.
+
++
+O valor padrão é "30".
+
+* *vmware.max.concurrent.snapshots.delete=30*
++
+Especifica o número máximo de operações simultâneas de exclusão de snapshot do VMware, por armazenamento de dados, que o plug-in do SnapCenter para VMware vSphere executa no servidor.
+
++
+Esse número é verificado por datastore.
+
++
+O valor padrão é "30".
+
+* *vmware.query.unresolved.retry.count: 10*
++
+Especifica o número máximo de vezes que o plug-in do SnapCenter para VMware vSphere tenta enviar uma consulta sobre volumes não resolvidos devido a erros "...limite de tempo para reter e/S...".
+
++
+O valor padrão é "10".
+
+* *vmware.quiesce.retry.count: 0*
++
+Especifica o número máximo de vezes que o plug-in do SnapCenter para VMware vSphere tenta enviar uma consulta sobre snapshots VMware por causa de erros "...limite de tempo para reter e/S..." durante um backup.
+
++
+O valor padrão é "0".
+
+* *vmware.quiesce.retry.interval=5*
++
+Especifica a quantidade de tempo, em segundos, que o plug-in do SnapCenter para VMware vSphere aguarda entre o envio das consultas referentes ao snapshot do VMware "...limite de tempo para reter erros de e/S..." durante um backup.
+
++
+O valor padrão é "5".
+
+* *vmware.query.unresolved.retry.delay= 60000*
++
+Especifica a quantidade de tempo, em milissegundos, que o plug-in do SnapCenter para VMware vSphere aguarda entre enviar as consultas sobre volumes não resolvidos por causa de erros "...limite de tempo para reter e/S...". Esse erro ocorre ao clonar um datastore VMFS.
+
++
+O valor predefinido é "60000" (60 segundos).
+
+* *vmware.reconfig.vm.retry.count: 10*
++
+Especifica o número máximo de vezes que o plug-in do SnapCenter para VMware vSphere tenta novamente enviar uma consulta sobre a reconfiguração de uma VM devido a erros "...limite de tempo para reter e/S...".
+
++
+O valor padrão é "10".
+
+* *vmware.reconfig.vm.retry.delay=30000*
++
+Especifica o tempo máximo, em milissegundos, que o plug-in do SnapCenter para VMware vSphere espera entre o envio de consultas relacionadas à reconfiguração de uma VM por causa de erros "...limite de tempo para reter e/S...".
+
++
+O valor predefinido é "30000" (30 segundos).
+
+* *vmware.rescan.hba.retry.count: 3*
++
+Especifica a quantidade de tempo, em milissegundos, que o plug-in do SnapCenter para VMware vSphere aguarda entre o envio das consultas relativas à digitalização do adaptador de barramento do host por causa de erros "...limite de tempo para reter e/S...".
+
++
+O valor padrão é "3".
+
+* *vmware.rescan.hba.retry.delay=30000*
++
+Especifica o número máximo de vezes que o plug-in do SnapCenter para VMware vSphere tenta novamente as solicitações para digitalizar novamente o adaptador de barramento do host.
+
++
+O valor padrão é "30000".
+
+

@@ -1,0 +1,28 @@
+---
+sidebar: sidebar 
+permalink: scpivs44_extend_the_time_of_a_guest_file_restore_session.html 
+keywords:  
+summary: Por padrão, um VMDK de Restauração de arquivos convidado anexado está disponível por 24 horas e, em seguida, ele é automaticamente desconetado. Você pode estender o tempo na página Configuração do convidado. 
+---
+= Estenda o tempo de uma sessão de restauração de arquivos convidados
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Por padrão, um VMDK de Restauração de arquivos convidado anexado está disponível por 24 horas e, em seguida, ele é automaticamente desconetado. Você pode estender o tempo na página *Configuração do convidado*.
+
+.Sobre esta tarefa
+Talvez você queira estender uma sessão de restauração de arquivo convidado se desejar restaurar arquivos ou pastas adicionais do VMDK anexado posteriormente. No entanto, como as sessões de restauração de arquivos Guest usam muitos recursos, estender o tempo da sessão deve ser realizado apenas ocasionalmente.
+
+.Passos
+. No cliente VMware vSphere, clique em *Restauração de arquivo convidado*.
+. Selecione uma sessão de restauração de arquivo convidado e clique no ícone estender sessão de convidado selecionada na barra de título do Monitor de sessão convidado.
++
+A sessão é prolongada por mais 24 horas.
+
+

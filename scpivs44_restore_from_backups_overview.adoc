@@ -1,0 +1,47 @@
+---
+sidebar: sidebar 
+permalink: scpivs44_restore_from_backups_overview.html 
+keywords:  
+summary: É possível restaurar VMs, VMDKs, arquivos e pastas de backups primários ou secundários. 
+---
+= Visão geral da restauração
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+É possível restaurar VMs, VMDKs, arquivos e pastas de backups primários ou secundários.
+
+* Destinos de restauração de VM
++
+Você pode restaurar VMs tradicionais para o host original, ou para um host alternativo no mesmo vCenter Server, ou para um host ESXi alternativo gerenciado pelo mesmo vCenter ou qualquer vCenter no modo vinculado.
+
++
+Você pode restaurar VMs vVol para o host original.
+
+* Destinos de restauração do VMDK
++
+É possível restaurar VMDKs em VMs tradicionais para o armazenamento de dados original ou alternativo.
+
++
+Você pode restaurar VMDKs em VMs VVol para o datastore original.
+
+
+
+Você também pode restaurar arquivos e pastas individuais em uma sessão de restauração de arquivos convidados, que anexa uma cópia de backup de um disco virtual e, em seguida, restaura os arquivos ou pastas selecionados.
+
+Não é possível restaurar o seguinte:
+
+* Armazenamentos de dados
++
+Você não pode usar o plug-in do SnapCenter para VMware vSphere para restaurar um datastore, apenas as VMs individuais no datastore.
+
+* Backups de VMs removidas
++
+Não é possível restaurar backups de VMs de armazenamento que foram removidas. Por exemplo, se você adicionar uma VM de armazenamento usando o LIF de gerenciamento e, em seguida, criar um backup e remover essa VM de armazenamento e adicionar um cluster que contém a mesma VM de armazenamento, a operação de restauração do backup falhará.
+
+

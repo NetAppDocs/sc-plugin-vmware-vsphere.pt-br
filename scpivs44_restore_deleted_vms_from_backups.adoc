@@ -1,0 +1,79 @@
+---
+sidebar: sidebar 
+permalink: scpivs44_restore_deleted_vms_from_backups.html 
+keywords:  
+summary: É possível restaurar uma VM excluída de um backup primário ou secundário do datastore para um host ESXi selecionado. 
+---
+= Restaurar VMs excluídas dos backups
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+É possível restaurar uma VM excluída de um backup primário ou secundário do datastore para um host ESXi selecionado.
+
+Você pode restaurar as VMs para os seguintes locais:
+
+* Restaurar a localização original
++
+** Para o datastore original montado no host ESXi original (isso faz uma cópia da VM)
+
+
+* Restaurar para local alternativo
++
+** Para um datastore diferente montado no host ESXi original
+** Para o datastore original montado em um host ESXi diferente que é gerenciado pelo mesmo vCenter
+** Para um datastore diferente montado em um host ESXi diferente que é gerenciado pelo mesmo vCenter
+** Para um datastore diferente montado em um host ESXi diferente que é gerenciado por um vCenter diferente no modo vinculado
+
+
+
+
+
+NOTE: Ao restaurar para um local diferente, o plug-in do SnapCenter para VMware vSphere deve estar em execução no vCenter vinculado que é o destino para a operação de restauração. O datastore de destino deve ter espaço suficiente.
+
+
+NOTE: Não é possível restaurar VMs vVol para um local alternativo.
+
+
+NOTE: Ao restaurar uma VM excluída, quaisquer tags ou pastas que foram originalmente atribuídas à VM não são restauradas.
+
+.Antes de começar
+* A conta de usuário do sistema de storage, na página sistemas de armazenamento no cliente VMware vSphere, deve ter o link:scpivs44_minimum_ontap_privileges_required.html["ONTAP Privileges mínimo necessário para ONTAP"].
+* A conta de usuário no vCenter deve ter o link:scpivs44_minimum_vcenter_privileges_required.html["Mínimo do vCenter Privileges necessário para o plug-in do SnapCenter para VMware vSphere"].
+* Tem de existir uma cópia de segurança.
++
+Você precisa ter criado um backup da VM usando o plug-in do SnapCenter para VMware vSphere antes de restaurar os VMDKs nessa VM.
+
+
+
+
+TIP: Para melhorar o desempenho das operações de restauração em ambientes NFS, habilite o VMware Application vStorage API for Array Integration (VAAI).
+
+.Sobre esta tarefa
+Você não pode restaurar um datastore, mas pode restaurar qualquer VM no datastore.
+
+Uma operação de restauração pode falhar se a camada de storage do FabricPool onde a VM está localizada não estiver disponível.
+
+.Passos
+. Clique em *Menu* e selecione a opção de menu *armazenamento*, selecione um datastore, selecione a guia *Configurar* e, em seguida, clique em *backups* na seção *Plug-in SnapCenter para VMware vSphere*.
+. Clique duas vezes em um backup para ver uma lista de todas as VMs incluídas no backup.
+. Selecione a VM excluída da lista de backup e clique em *Restaurar*.
+. No assistente *Restore*, na página *Select Backup*, selecione a cópia de backup da qual deseja restaurar.
++
+Você pode pesquisar um nome de backup específico ou um nome de backup parcial ou filtrar a lista de backup clicando no ícone de filtro e selecionando um intervalo de data e hora, selecionando se deseja backups que contenham snapshots VMware, se deseja backups montados e o local. Clique em *OK* para retornar ao assistente.
+
+. Na página *Selecionar escopo*, selecione *Máquina virtual inteira* no campo *Restaurar escopo*, selecione o local de restauração e insira as informações do host ESXi de destino onde o backup deve ser montado.
++
+O destino de restauração pode ser qualquer host ESXi que tenha sido adicionado ao SnapCenter. Essa opção restaura o conteúdo do backup selecionado no qual a VM residia de uma captura Instantânea com a hora e a data especificadas. A caixa de seleção *Restart VM* está marcada se você selecionar essa opção e a VM será ligada.
+
++
+Se você estiver restaurando uma VM em um datastore NFS em um host ESXi alternativo que esteja em um cluster ESXi, depois que a VM for restaurada, ela será registrada no host alternativo.
+
+. Na página *Selecionar local*, selecione o local do backup que você deseja restaurar (primário ou secundário).
+. Revise a página Resumo e clique em *Finish*.
+

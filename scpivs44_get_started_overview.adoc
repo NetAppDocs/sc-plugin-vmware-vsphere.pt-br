@@ -1,0 +1,19 @@
+---
+sidebar: sidebar 
+permalink: scpivs44_get_started_overview.html 
+keywords:  
+summary: Para usar os recursos do SnapCenter para proteger VMs, armazenamentos de dados e bancos de dados consistentes com aplicações em máquinas virtualizadas, é necessário implantar o plug-in do SnapCenter para VMware vSphere. 
+---
+= Visão geral da implantação
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Para usar os recursos do SnapCenter para proteger VMs, armazenamentos de dados e bancos de dados consistentes com aplicações em máquinas virtualizadas, é necessário implantar o plug-in do SnapCenter para VMware vSphere.
+
+Os usuários existentes do SnapCenter devem usar um fluxo de trabalho de implantação diferente de novos usuários do SnapCenter.

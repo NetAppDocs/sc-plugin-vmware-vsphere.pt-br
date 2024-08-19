@@ -1,0 +1,61 @@
+---
+sidebar: sidebar 
+permalink: scpivs44_rest_apis_overview.html 
+keywords:  
+summary: Você pode usar o plug-in do SnapCenter para APIs REST do VMware vSphere para executar operações comuns de proteção de dados. O plug-in tem diferentes páginas da web do Swagger do Windows SnapCenter. 
+---
+= Visão geral
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Você pode usar o plug-in do SnapCenter para APIs REST do VMware vSphere para executar operações comuns de proteção de dados. O plug-in tem diferentes páginas da web do Swagger do Windows SnapCenter.
+
+* Os workflows da API REST são documentados para as seguintes operações em VMs e armazenamentos de dados usando as APIs REST para VMware vSphere:
++
+** Adicione, modifique e exclua VMs e clusters de storage
+** Criar, modificar e excluir grupos de recursos
+** Backup de VMs, agendadas e sob demanda
+** Restaure as VMs existentes e as VMs excluídas
+** Restaure VMDKs
+** Anexe e separe VMDKs
+** Montar e desmontar datastores
+** Transfira trabalhos e gere relatórios
+** Modificar programações incorporadas
+
+
+* Operações que não são suportadas pelas REST APIs para VMware vSphere
++
+** Restauração de arquivo convidado
+** Instalação e configuração do plug-in SnapCenter para VMware vSphere
+** Atribua funções RBAC ou acesso aos usuários
+
+
+* `uri` parâmetro
++
+O `uri` parâmetro sempre retorna um valor "nulo".
+
+* Tempo limite de início de sessão
++
+O tempo limite padrão é de 120 minutos (2 horas). Você pode configurar um valor de tempo limite diferente nas configurações do vCenter.
+
+* Gerenciamento de token
++
+Para segurança, as APIs REST usam um token obrigatório que é passado com cada solicitação e é usado em todas as chamadas de API para validação de cliente. As APIS REST do VMware vSphere usam a API de autenticação VMware para obter o token. A VMware fornece o gerenciamento de token.
+
++
+Para obter o token, use `/4.1/auth/login` a API REST e forneça as credenciais do vCenter.
+
+* Designações da versão API
++
+Cada nome da API REST inclui o número da versão do SnapCenter na qual a API REST foi lançada pela primeira vez. Por exemplo, a API REST `/4.1/datastores/{moref}/backups` foi lançada pela primeira vez no SnapCenter 4,1.
+
++
+As APIs REST em versões futuras geralmente serão compatíveis com versões anteriores e serão modificadas para acomodar novos recursos conforme necessário.
+
+

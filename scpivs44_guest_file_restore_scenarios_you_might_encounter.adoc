@@ -1,0 +1,49 @@
+---
+sidebar: sidebar 
+permalink: scpivs44_guest_file_restore_scenarios_you_might_encounter.html 
+keywords:  
+summary: Ao tentar restaurar um arquivo convidado, você pode encontrar cenários em que a sessão de restauração de arquivo convidado está em branco, a operação de anexação de restauração de arquivo convidado falha ou os backups não são desanexados após a sessão de restauração de arquivo convidado ser descontinuada. 
+---
+= Cenários de restauração de arquivos convidados que você pode encontrar
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Ao tentar restaurar um arquivo de convidado, você pode encontrar qualquer um dos seguintes cenários.
+
+
+
+== Sessão de restauração de arquivo convidado está em branco
+
+Esse problema ocorre quando você cria uma sessão de restauração de arquivo convidado e, enquanto essa sessão estava ativa, o sistema operacional convidado é reinicializado. Quando isso ocorre, os VMDKs no SO convidado podem permanecer offline. Portanto, quando você tenta navegar na sessão de restauração de arquivo convidado, a lista fica em branco.
+
+Para corrigir o problema, coloque manualmente os VMDKs de volta online no SO convidado. Quando os VMDKs estiverem online, a sessão de restauração de arquivo convidado exibirá o conteúdo correto.
+
+
+
+== Falha na operação do disco de conexão de restauração de arquivo convidado
+
+Esse problema ocorre quando você inicia uma operação de restauração de arquivo convidado, mas a operação de conexão de disco falha, mesmo que as ferramentas VMware estejam sendo executadas e as credenciais Guest os estejam corretas. Se isso ocorrer, o seguinte erro é retornado:
+
+`Error while validating guest credentials, failed to access guest system using specified credentials: Verify VMWare tools is running properly on system and account used is Administrator account, Error is SystemError vix error codes = (3016, 0).`
+
+Para corrigir o problema, reinicie o serviço VMware Tools Windows no SO convidado e tente novamente a operação de restauração de arquivo convidado.
+
+
+
+== O e-mail convidado mostra ?????? Para o nome do arquivo
+
+Esse problema ocorre quando você usa o recurso de restauração de arquivo convidado para restaurar arquivos ou pastas com carateres não ingleses nos nomes e a notificação de e-mail exibe "????????" para os nomes de arquivo restaurados. O anexo de e-mail lista corretamente os nomes dos arquivos e pastas restaurados.
+
+
+
+== Os backups não são desanexados após a sessão de restauração de arquivos convidados ser descontinuada
+
+Esse problema ocorre quando você executa uma operação de restauração de arquivo convidado a partir de um backup consistente com VM. Enquanto a sessão de restauração de arquivo convidado estiver ativa, outro backup consistente com VM é executado para a mesma VM. Quando a sessão de restauração de arquivo convidado é desconetada, manual ou automaticamente após 24 horas, os backups da sessão não são desanexados.
+
+Para corrigir o problema, desanexe manualmente os VMDKs que foram anexados da sessão ativa de restauração de arquivos convidados.

@@ -1,0 +1,65 @@
+---
+sidebar: sidebar 
+permalink: scpivs44_rest_api_workflows__attach_and_detach_vmdks.html 
+keywords:  
+summary: Para executar operações de anexação e desconexão de VMDKs usando o plug-in SnapCenter para APIs REST do VMware vSphere, você deve seguir a sequência prescrita de chamadas de API REST. 
+---
+= Workflows de API REST para anexar e separar VMDKs
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Para executar operações de anexação e desconexão de VMDKs usando o plug-in SnapCenter para APIs REST do VMware vSphere, você deve seguir a sequência prescrita de chamadas de API REST.
+
+Para cada API REST, adicione `\https://<server>:<port>` na frente da API REST para formar um endpoint completo.
+
+
+
+== Para anexar VMDKs, siga este fluxo de trabalho:
+
+|===
+| Passo | API REST | Comentários 
+
+
+| 1 | Vá para `\http://<vCenter-IP>/mob` | Encontre a VM moref no URL de objetos gerenciados da VMware. Observe o *moref* para a VM à qual você deseja anexar um VMDK. 
+
+
+| 2 | `/4.1/vm/{moref}/backups` | `Get VM Backups` Obtém uma lista de backups para a VM especificada. Passe o *moref* a partir do passo 1. Observe o *backupId* do backup que você deseja restaurar. 
+
+
+| 3 | `/4.1/vm/{moref}/backups/
+{backupId}/vmdklocations` | `Get VMDK Locations` Obtém uma lista de VMDKs para a VM especificada. Passe o *backupId* do passo 2 e o *moref* do passo 1. Observe as informações *vmdkLocationsList*. 
+
+
+| 4 | `/4.1/vm/{moref}/attachvmdks`  a| 
+`Attach VMDKs` Anexa o VMDK especificado à VM original. Passe o *backupId* do passo 2 e o *moref* do passo 1. Passe o *vmdkLocationsList* da Etapa 3 para o atributo *vmdkLocations*.
+
+
+NOTE: Para anexar um VMDK a uma VM diferente, passe o maisf da VM de destino no atributo alternateVmMoref.
+
+|===
+
+
+== Para separar VMDKs, siga este fluxo de trabalho:
+
+|===
+| Passo | API REST | Comentários 
+
+
+| 1 | Vá para `\http://<vCenter-IP>/mob` | Encontre a VM moref no URL de objetos gerenciados da VMware. Observe o *moref* para a VM na qual você deseja desanexar um VMDK. 
+
+
+| 2 | `/4.1/vm/{moref}/backups` | `Get VM Backups` Obtém uma lista de backups para a VM especificada. Passe o *moref* a partir do passo 1. Observe o *backupId* do backup que você deseja restaurar. 
+
+
+| 3 | `/4.1/vm/{moref}/backups/
+{backupId}/vmdklocations` | `Get VMDK Locations` Obtém uma lista de VMDKs para a VM especificada. Passe o *backupId* do passo 2 e o *moref* do passo 1. Observe as informações *vmdkLocationsList*. 
+
+
+| 4 | `/4.1/vm/{moref}/detachvmdks` | `Detach VMDKs` Destaca o VMDK especificado. Passe o *moref* a partir do passo 1. Passe os detalhes VMDK *vmdkLocationsList* da Etapa 3 para o atributo *vmdksToDetach*. 
+|===

@@ -1,0 +1,157 @@
+---
+sidebar: sidebar 
+permalink: scpivs44_create_backup_policies_for_vms_and_datastores.html 
+keywords:  
+summary: Você deve criar políticas de backup antes de usar o plug-in do SnapCenter para VMware vSphere para fazer backup de VMs e datastores. 
+---
+= Crie políticas de backup para VMs e armazenamentos de dados
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Você deve criar políticas de backup antes de usar o plug-in do SnapCenter para VMware vSphere para fazer backup de VMs e datastores.
+
+.Antes de começar
+* Você deve ter lido os pré-requisitos.
+* Você deve ter relacionamentos de storage secundário configurados.
++
+** Se você estiver replicando snapshots em um storage secundário de espelhamento ou cofre, os relacionamentos devem ser configurados e o administrador do SnapCenter deve ter atribuído as VMs de storage para os volumes de origem e destino.
+** Para transferir snapshots para o armazenamento secundário com êxito para relacionamentos Version-FlexibleMirror em um datastore NFS ou VMFS, certifique-se de que o tipo de política SnapMirror seja espelhamento assíncrono e que a opção "All_source_snapshots" esteja marcada.
+** Quando o número de instantâneos no armazenamento secundário (mirror-Vault) atinge o limite máximo, a atividade para registar o backup e aplicar retenção na operação de cópia de segurança falha com o seguinte erro: `This Snapshot is currently used as a reference Snapshot by one or more SnapMirror relationships. Deleting the Snapshot can cause future SnapMirror operations to fail.`
++
+Para corrigir esse problema, configure a política de retenção do SnapMirror para armazenamento secundário para evitar atingir o limite máximo de snapshots.
+
++
+Para obter informações sobre como os administradores atribuem recursos aos usuários, https://docs.netapp.com/us-en/snapcenter/concept/concept_types_of_role_based_access_control_in_snapcenter.html["Informações do SnapCenter sobre como usar o controle de acesso baseado em função"^] consulte .
+
+
+
+* Se você quiser backups consistentes com VM, precisa ter as ferramentas VMware instaladas e em execução. As ferramentas da VMware são necessárias para silenciar as VMs. Os backups consistentes com VM não são suportados para VMs Vevolve.
+* O SnapMirror active Sync permite que os serviços empresariais continuem operando mesmo em uma falha completa do local, com suporte ao failover de aplicações de forma transparente, usando uma cópia secundária.
++
+
+NOTE: A sincronização ativa do SnapMirror é suportada apenas para armazenamentos de dados VMFS.
+
++
+Para proteger um datastore VMFS em uma implantação de sincronização ativa do SnapMirror, como administrador do SnapCenter, você precisa:
+
++
+** Configurar clusters e mediador conforme descrito no relatório técnico: https://www.netapp.com/pdf.html?item=/media/21888-tr-4878.pdf["TR-4878: SnapMirror ative Sync (anteriormente SMBC)"].
+** Adicione o volume associado ao datastore VMFS ao grupo de consistência e crie uma relação de proteção de dados usando a política de proteção _AutomatedFailOver_ ou _AutomatedFailOverDuplex_ entre dois sistemas de armazenamento ONTAP. A política _AutomatedFailOverDuplex_ é suportada a partir da versão ONTAP 9.15,1 em diante.
++
+
+NOTE: Na configuração fan-out, o grupo de consistência não é compatível com o local terciário.
+
+
+
+
+
+.Sobre esta tarefa
+A maioria dos campos nessas páginas do assistente são auto-explicativos. As informações a seguir descrevem alguns dos campos para os quais você pode precisar de orientação.
+
+.Passos
+. No painel de navegação esquerdo do plug-in SCV, clique em *políticas*.
+. Na página *políticas*, selecione *criar* para iniciar o assistente.
+. Na página *Nova política de backup*, selecione o vCenter Server que usará a política e insira o nome da política e uma descrição.
++
+** Modo ligado
++
+No modo vinculado, cada vCenter tem um dispositivo virtual separado. Portanto, você pode usar nomes duplicados em vCenters. No entanto, você deve criar a política no mesmo vCenter que o grupo de recursos.
+
+** Carateres não suportados
++
+Não use os seguintes carateres especiais em nomes de VM, datastore, cluster, política, backup ou grupo de recursos: % E * / : * ? " > - | ; " , .
+
++
+Um caractere de sublinhado (_) é permitido.
+
+
+
+. Especifique as definições de frequência.
++
+A política especifica apenas a frequência de backup. O cronograma de proteção específico para backup é definido no grupo de recursos. Portanto, dois ou mais grupos de recursos podem compartilhar a mesma política e frequência de backup, mas têm agendas de backup diferentes.
+
+. Marque a caixa de seleção *período de bloqueio* para ativar o bloqueio instantâneo. Pode selecionar o período de bloqueio instantâneo como dias/meses/anos.
+. Especifique as definições de retenção.
++
+
+IMPORTANT: Você deve definir a contagem de retenção para backups de 2 ou superior se quiser habilitar a replicação do SnapVault. Se você definir a contagem de retenção para 1 backup para manter, a operação de retenção pode falhar. Isso ocorre porque o primeiro instantâneo é o instantâneo de referência para o relacionamento do SnapVault até que o instantâneo mais recente seja replicado para o destino.
+
++
+
+NOTE: O valor máximo de retenção é de 1018 backups para recursos no ONTAP 9.4 ou posterior e 254 backups para recursos no ONTAP 9.3 ou anterior. Os backups falharão se a retenção for definida para um valor maior do que o que a versão subjacente do ONTAP suporta. Isso também é verdade para armazenamentos de dados de expansão. Se um armazenamento de dados de expansão incluir recursos no ONTAP 9.3 e anterior e no ONTAP 9.4 e posterior, certifique-se de definir o valor de retenção abaixo de 254.
+
+. Nos campos *replicação*, especifique o tipo de replicação para armazenamento secundário, conforme mostrado na tabela a seguir:
++
+|===
+| Para este campo... | Faça isso... 
+
+
+| Atualize o SnapMirror após a cópia de segurança  a| 
+Selecione esta opção para criar cópias espelhadas de conjuntos de backup em outro volume que tenha uma relação SnapMirror com o volume de backup primário. Se um volume for configurado com uma relação de cofre-espelho, você deve selecionar somente a opção *Atualizar SnapVault após o backup* se quiser que os backups sejam copiados para os destinos do cofre-espelho.
+
+
+NOTE: Essa opção é compatível com datastores no FlexGroup volumes no plug-in do SnapCenter para VMware vSphere 4,5 e posterior.
+
+
+NOTE: Para proteger o armazenamento de dados VMFS na implantação de sincronização ativa do SnapMirror, você precisa concluir os pré-requisitos mencionados na seção _antes de iniciar_ e ativar *Atualizar SnapMirror após o backup*.
+
+
+
+| Atualize o SnapVault após a cópia de segurança  a| 
+Selecione esta opção para executar a replicação de backup de disco para disco em outro volume que tenha uma relação de SnapVault com o volume de backup primário.
+
+
+IMPORTANT: Se um volume estiver configurado com uma relação de cofre-espelho, você deverá selecionar somente essa opção se desejar que os backups sejam copiados para os destinos do cofre-espelho.
+
+
+NOTE: Essa opção é compatível com datastores no FlexGroup volumes no plug-in do SnapCenter para VMware vSphere 4,5 e posterior.
+
+
+
+| Etiqueta do instantâneo  a| 
+Insira um rótulo personalizado opcional a ser adicionado aos instantâneos do SnapVault e do SnapMirror criados com esta política. O rótulo Snapshot ajuda a distinguir os snapshots criados com essa política de outros snapshots no sistema de storage secundário.
+
+
+NOTE: É permitido um máximo de 31 carateres para rótulos instantâneos.
+
+|===
+. Opcional: Nos campos *Avançado*, selecione os campos necessários. Os detalhes do campo Avançado estão listados na tabela a seguir.
++
+|===
+| Para este campo... | Faça isso... 
+
+
+| Consistência da VM  a| 
+Marque esta caixa para silenciar as VMs e criar um snapshot do VMware sempre que a tarefa de backup for executada.
+
+Esta opção não é suportada para vVols. Para VMs Vevolve, apenas backups consistentes com falhas são executados.
+
+
+IMPORTANT: Você precisa ter ferramentas VMware em execução na VM para executar backups consistentes com VMs. Se as ferramentas VMware não estiverem sendo executadas, um backup consistente com falhas será executado.
+
+
+NOTE: Ao marcar a caixa consistência da VM, as operações de backup podem levar mais tempo e exigir mais espaço de armazenamento. Nesse cenário, as VMs são primeiro silenciadas, depois a VMware executa um snapshot consistente da VM, depois a SnapCenter executa sua operação de backup e, em seguida, as operações da VM são retomadas. A memória convidada da VM não está incluída nos instantâneos de consistência da VM.
+
+
+
+| Inclua datastores com discos independentes | Marque esta caixa para incluir no backup todos os datastores com discos independentes que contenham dados temporários. 
+
+
+| Scripts  a| 
+Insira o caminho totalmente qualificado do prescritor ou postscript que você deseja que o plug-in SnapCenter para VMware vSphere seja executado antes ou depois das operações de backup. Por exemplo, você pode executar um script para atualizar traps SNMP, automatizar alertas e enviar logs. O caminho do script é validado no momento em que o script é executado.
+
+
+NOTE: Os Prescripts e postscripts devem estar localizados na VM do dispositivo virtual. Para inserir vários scripts, pressione *Enter* após cada caminho de script para listar cada script em uma linha separada. O caráter ";" não é permitido.
+
+|===
+. Clique em *Add.*
++
+Você pode verificar se a política foi criada e revisar a configuração da política selecionando-a na página políticas.
+
+

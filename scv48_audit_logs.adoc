@@ -1,0 +1,193 @@
+---
+sidebar: sidebar 
+permalink: scv48_audit_logs.html 
+keywords:  
+summary: O log de auditoria fornece rastreabilidade de quem fez o quê e quando. Um log de auditoria é uma coleção de eventos em uma ordem cronológica e é escrito em um arquivo dentro do dispositivo. 
+---
+= Logs de auditoria
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Um log de auditoria é uma coleção de eventos em ordem cronológica, que é gravada em um arquivo dentro do dispositivo. Os arquivos de log de auditoria são gerados no `/var/log/netapp/audit` local e os nomes de arquivo seguem uma das convenções de nomenclatura abaixo:
+
+* Audit.log: Arquivo de log de auditoria ativo que está em uso.
+* Audit-%d.log.gz: Rolado sobre o arquivo de log de auditoria. A data e a hora no nome do arquivo indicam quando o arquivo foi criado, por exemplo: Audit-2022-12-15-16-28-01.log.gz.
+
+
+Na interface do usuário do plug-in SCV, você pode exibir e exportar os detalhes do log de auditoria de *Painel* > *Configurações* > *Logs de auditoria* guia você pode exibir a auditoria de operação nos logs de auditoria. Os logs de auditoria são baixados com o pacote suporte.
+
+Se as configurações de e-mail estiverem configuradas, a SCV enviará uma notificação por e-mail no caso de uma falha na Verificação de integridade do Registro de auditoria. Uma falha na Verificação de integridade do Log de Auditoria pode ocorrer quando um dos arquivos é adulterado ou excluído.
+
+As configurações padrão dos arquivos de auditoria são:
+
+* O arquivo de log de auditoria em uso pode crescer até um máximo de 10 MB
+* Um máximo de 10 arquivos de log de auditoria são mantidos
+
+
+Os logs de auditoria rolados são verificados periodicamente quanto à integridade. O SCV fornece APIs REST para visualizar logs e verificar sua integridade. Uma programação integrada aciona e atribui um dos seguintes Estados de integridade.
+
+|===
+
+
+| Estado | Descrição 
+
+
+| ADULTERADO | O conteúdo do arquivo de log de auditoria foi modificado 
+
+
+| NORMAL | O arquivo de log de auditoria não foi modificado 
+
+
+| ELIMINAÇÃO DE CAPOTAMENTO | - O arquivo de log de auditoria é excluído com base na retenção - por padrão, apenas 10 arquivos são retidos 
+
+
+| ELIMINAÇÃO INESPERADA | O arquivo de log de auditoria é excluído 
+
+
+| ATIVO | - Arquivo de log de auditoria está em uso - apenas aplicável a audit.log 
+|===
+Os eventos são categorizados em três categorias principais:
+
+* Eventos de proteção de dados
+* Eventos da consola de manutenção
+* Eventos do Admin Console
+
+
+
+
+== Eventos de proteção de dados
+
+Os recursos na SCV são:
+
+* Sistema de storage
+* Grupo recursos
+* Política
+* Backup
+* Subscrição
+* Conta
+
+
+A tabela a seguir lista as operações que podem ser executadas em cada recurso:
+
+|===
+
+
+| *Recursos* | *Operações* 
+
+
+| Sistema de storage | Criado, modificado, excluído 
+
+
+| Subscrição | Criado, modificado, excluído 
+
+
+| Conta | Criado, modificado, excluído 
+
+
+| Grupo recursos | Criado, modificado, excluído, suspenso, retomado 
+
+
+| Política | Criado, modificado, excluído 
+
+
+| Backup | Criado, renomeado, excluído, montado, desmontado, restaurado VMDK, restaurado VM, anexar VMDK, desanexar VMDK, Guest File Restore 
+|===
+
+
+== Eventos da consola de manutenção
+
+As operações administrativas no console de manutenção são auditadas. As opções disponíveis do console de manutenção são:
+
+. Iniciar / Parar serviços
+. Alterar nome de utilizador e palavra-passe
+. Altere a senha do MySQL
+. Configure o MySQL Backup
+. Restaure o MySQL Backup
+. Altere a palavra-passe do utilizador 'não'
+. Alterar fuso horário
+. Altere o servidor NTP
+. Desativar o acesso SSH
+. Aumente o tamanho do disco de cadeia
+. Atualização
+. Instalar o VMware Tools (estamos trabalhando para substituir isso por ferramentas Open-vm)
+. Altere as definições do endereço IP
+. Altere as configurações de pesquisa de nome de domínio
+. Alterar rotas estáticas
+. Aceder ao shell de diagnóstico
+. Ative o acesso de diagnóstico remoto
+
+
+
+
+== Eventos do Admin Console
+
+As seguintes operações na IU do Admin Console são auditadas:
+
+* Definições
++
+** Alterar credenciais de administrador
+** Altere o fuso horário
+** Altere o servidor NTP
+** Altere as definições IPv4 / IPv6
+
+
+* Configuração
++
+** Altere as credenciais do vCenter
+** Ativação/desativação do plug-in
+
+
+
+
+
+
+== Configurar servidores syslog
+
+Os logs de auditoria são armazenados no dispositivo e são verificados periodicamente quanto à integridade. O encaminhamento de eventos permite que você obtenha eventos do computador de origem ou encaminhamento e armazene-os em um computador centralizado, que é o servidor Syslog. Os dados são criptografados em trânsito entre a origem e o destino.
+
+.Antes de começar
+Você deve ter Privileges administrador.
+
+.Sobre esta tarefa
+Esta tarefa ajuda você a configurar o servidor syslog.
+
+.Passos
+. Faça login no plug-in do SnapCenter para VMware vSphere.
+. No painel de navegação esquerdo, selecione *Settings* > *Audit Logs* > *Settings*.
+. No painel *Configurações do Registro de auditoria*, selecione *Enviar logs de auditoria para o servidor Syslog*
+. Introduza os seguintes detalhes:
++
+** IP do servidor syslog
+** Porta do servidor syslog
+** Formato de RFC
+** Certificado do servidor syslog
+
+
+. Clique em *SAVE* para salvar as configurações do servidor Syslog.
+
+
+
+
+== Alterar as definições do registo de auditoria
+
+Pode alterar as configurações predefinidas das definições de registo.
+
+.Antes de começar
+Você deve ter Privileges administrador.
+
+.Sobre esta tarefa
+Esta tarefa ajuda-o a alterar as definições de registo de auditoria predefinidas.
+
+.Passos
+. Faça login no plug-in do SnapCenter para VMware vSphere.
+. No painel de navegação esquerdo, selecione *Settings* > *Audit Logs* > *Settings*.
+. No painel *Configurações do Registro de auditoria*, insira o número máximo de arquivos de log de auditoria e o limite de tamanho do arquivo de log de auditoria.
+. Selecione a opção *Enviar logs de auditoria para o servidor Syslog* se você optar por enviar os logs para o servidor syslog. Introduza os detalhes do servidor.
+. Guarde as definições.
+

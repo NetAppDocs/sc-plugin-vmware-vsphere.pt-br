@@ -1,0 +1,83 @@
+---
+sidebar: sidebar 
+permalink: scpivs44_deploy_snapcenter_plug-in_for_vmware_vsphere_01.html 
+keywords:  
+summary:  
+---
+= Implante o plug-in do SnapCenter para VMware vSphere
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Para usar os recursos do SnapCenter para proteger VMs, armazenamentos de dados e bancos de dados consistentes com aplicações em máquinas virtualizadas, é necessário implantar o plug-in do SnapCenter para VMware vSphere. A link:scpivs44_download_the_ova_open_virtual_appliance.html["Baixe o Open Virtual Appliance (OVA)"^] página fornece instruções para baixar os ARQUIVOS OVA.
+
+. Para o VMware vCenter 7.0.3 e versões posteriores, siga as etapas em link:scpivs44_download_the_ova_open_virtual_appliance.html["Baixe o Open Virtual Appliance (OVA)"^] para importar os certificados para o vCenter.
+. No seu navegador, navegue até o VMware vSphere vCenter.
++
+
+NOTE: Para clientes web HTML IPv6, você deve usar o Chrome ou Firefox.
+
+. Faça login na *Página de logon único do VMware vCenter*.
+. No Painel de Navegação, clique com o botão direito do Mouse em qualquer objeto de inventário que seja um objeto pai válido de uma máquina virtual, como um datacenter, pasta, cluster ou host, e selecione *Deploy OVF Template* para iniciar o assistente de implantação do VMware.
+. Na página *Selecione um modelo OVF*, especifique a localização `.ova` do arquivo (conforme listado na tabela a seguir) e clique em *Avançar*.
++
+|===
+| Nesta página do assistente... | Faça isso... 
+
+
+| Selecione um nome e uma pasta | Insira um nome exclusivo para a VM ou vApp e selecione um local de implantação. 
+
+
+| Selecione um recurso | Selecione um recurso no qual você deseja executar o modelo de VM implantado. 
+
+
+| Rever detalhes | Verifique os `.ova` detalhes do modelo. 
+
+
+| Contratos de licença | Marque a caixa de seleção *Aceito todos os contratos de licença*. 
+
+
+| Selecione armazenamento | Defina onde e como armazenar os arquivos para o modelo OVF implantado. 
+
+
+| Selecione redes | Selecione uma rede de origem e mapeie-a para uma rede de destino. 
+
+
+| Personalizar modelo  a| 
+Em *Registe-se no vCenter* existente, introduza as credenciais do vCenter. Em *criar plug-in do SnapCenter para credenciais do VMware vSphere*, insira o plug-in do SnapCenter para credenciais do VMware vSphere.
+
+
+NOTE: Anote o nome de usuário e a senha que você especificar. Você precisa usar essas credenciais se quiser modificar o plug-in do SnapCenter para a configuração do VMware vSphere posteriormente.
+
+Na seção *Setup Network Properties*, insira as informações da rede. Na seção *Setup Date and Time*, selecione o fuso horário em que o vCenter está localizado.
+
+
+
+| Pronto para concluir | Revise a página e clique em *Finish*. 
+|===
++
+
+NOTE: Todos os hosts devem ser configurados com endereços IP (nomes de host FQDN não são suportados). A operação de implantação não valida sua entrada antes de implantar.
+
+. Navegue até a VM onde o plug-in do SnapCenter para VMware vSphere foi implantado, clique na guia *Resumo* e, em seguida, clique na caixa *ligar* para iniciar o plug-in do SnapCenter para VMware vSphere.
+. Enquanto o plug-in do SnapCenter para VMware vSphere estiver sendo ativado, clique com o botão direito do Mouse no plug-in do SnapCenter implantado para VMware vSphere, selecione *SO convidado* e clique em *Instalar ferramentas VMware*.
++
+A implantação pode levar alguns minutos para ser concluída. A implantação bem-sucedida é indicada quando o plug-in do SnapCenter para VMware vSphere é ativado, as ferramentas da VMware são instaladas e a tela solicita que você faça login no plug-in do SnapCenter para VMware vSphere.
+
++
+A tela exibe o endereço IP onde o plug-in do SnapCenter para VMware vSphere é implantado. Anote o endereço IP. Você precisa fazer login na GUI de gerenciamento do plug-in do SnapCenter para VMware vSphere se quiser fazer alterações na configuração do plug-in do SnapCenter para VMware vSphere.
+
+. Faça login na GUI de gerenciamento do plug-in do SnapCenter para VMware vSphere usando o endereço IP exibido na tela de implantação usando as credenciais fornecidas no assistente de implantação e, em seguida, verifique no painel se o plug-in do SnapCenter para VMware vSphere está conetado com êxito ao vCenter e está habilitado.
++
+Use o formato `\https://<appliance-IP-address>:8080` para acessar a GUI de gerenciamento.
+
++
+Faça login com o nome de usuário e senha do administrador definidos no momento da implantação e o token MFA gerado usando o console de manutenção.
+
+. Faça login no cliente vCenter HTML5, clique em *Menu* na barra de ferramentas e selecione *Plug-in SnapCenter para VMware vSphere*
+

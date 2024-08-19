@@ -1,0 +1,35 @@
+---
+sidebar: sidebar 
+permalink: scpivs44_add_a_single_vm_or_datastore_to_a_resource_group.html 
+keywords:  
+summary: Você pode adicionar rapidamente uma única VM ou datastore a qualquer grupo de recursos existente gerenciado pelo plug-in do SnapCenter para VMware vSphere. 
+---
+= Adicione uma única VM ou datastore a um grupo de recursos
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Você pode adicionar rapidamente uma única VM ou datastore a qualquer grupo de recursos existente gerenciado pelo plug-in do SnapCenter para VMware vSphere.
+
+.Sobre esta tarefa
+Você pode adicionar armazenamentos de dados SAN e nas, mas não armazenamentos de dados VSAN ou VVOL.
+
+.Passos
+. Na GUI do cliente vSphere, clique em *Menu* na barra de ferramentas e navegue até a VM ou datastore que você deseja adicionar.
+. No painel do navegador esquerdo, clique com o botão direito do Mouse na VM ou datastore, selecione *Plug-in SnapCenter para VMware vSphere* > *Adicionar ao grupo de recursos* na lista suspensa secundária.
++
+O sistema primeiro verifica se o SnapCenter gerencia e é compatível com o sistema de armazenamento no qual a VM selecionada está localizada e, em seguida, exibe a página *Adicionar ao Grupo de recursos*. Se a mensagem `SnapCenter Compatibility Error` for exibida, a VM selecionada não é compatível com o SnapCenter e você deve primeiro adicionar a VM de armazenamento apropriada ao SnapCenter.
+
+. Na página *Adicionar ao grupo de recursos*, selecione um grupo de recursos e clique em *OK*.
++
+Quando você clica em *OK*, o sistema primeiro verifica se o SnapCenter gerencia e é compatível com o armazenamento no qual as VMs ou datastores selecionados estão localizados.
+
++
+Se a mensagem `Selected <resource-name> is not SnapCenter compatible` for exibida, uma VM ou datastore selecionado não será compatível com o SnapCenter. link:scpivs44_create_resource_groups_for_vms_and_datastores.html#manage-compatibility-check-failures["Gerenciar falhas de verificação de compatibilidade"]Consulte para obter mais informações.
+
+

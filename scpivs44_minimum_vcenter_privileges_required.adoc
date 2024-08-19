@@ -1,0 +1,66 @@
+---
+sidebar: sidebar 
+permalink: scpivs44_minimum_vcenter_privileges_required.html 
+keywords:  
+summary: Antes de iniciar a implantação do plug-in do SnapCenter para VMware vSphere, você deve ter o mínimo necessário do vCenter Privileges. 
+---
+= Mínimo do vCenter Privileges necessário
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Antes de iniciar a implantação do plug-in do SnapCenter para VMware vSphere, você deve ter o mínimo necessário do vCenter Privileges.
+
+
+
+== Função de administrador do Privileges necessário para o vCenter
+
+VirtualMachine.VirtualMachine.VirtualMachine.VirtualMachine.VirtualMachine.VirtualMachine.VirtualMachine.VirtualMachine.VirtualMachine.VirtualMachine.VirtualMachine.VirtualMachine.VirtualMachine.VirtualMachine.VirtualMachine.VirtualMachine.VirtualMachine.VirtualMachine.VirtualMachine.VirtualMachine
+
+
+
+== Necessário Privileges específico para o plug-in SnapCenter para VMware vCenter
+
+|===
+
+
+| *Privileges* | *Etiqueta* 
+
+
+| NetappSCV.Guest.RestoreFile | Restauro de ficheiros convidado 
+
+
+| NetappSCV.Recovery.MountDesmontar | Montar/desmontar 
+
+
+| NetappSCV.Backup.DeleteBackupJob | Eliminar Grupo de recursos/cópia de segurança 
+
+
+| NetappSCV.Configure.ConfigureStorageSystems.Delete | Remova os sistemas de armazenamento 
+
+
+| NetappSCV.View | Vista 
+
+
+| NetappSCV.Recovery.RecoverVM | Recupere a VM 
+
+
+| NetappSCV.Configure.ConfigureStorageSystems.AddUpdate | Adicionar/Modificar sistemas de armazenamento 
+
+
+| NetappSCV.Backup.BackupNow | Faça backup agora 
+
+
+| NetappSCV.Guest.Configure | Configuração do convidado 
+
+
+| NetappSCV.Configure.ConfigureSnapCenterServer | Configure o servidor SnapCenter 
+
+
+| NetappSCV.Backup.BackupScheduled | Criar Grupo recursos 
+|===

@@ -1,0 +1,44 @@
+---
+sidebar: sidebar 
+permalink: scpivs44_predefined_roles_packaged_with_snapcenter.html 
+keywords:  
+summary: Para simplificar o trabalho com o vCenter Server RBAC, o plug-in do SnapCenter para VMware vSphere fornece um conjunto de funções predefinidas que permitem que os usuários executem tarefas do SnapCenter. Há também uma função somente leitura que permite aos usuários visualizar informações do SnapCenter, mas não executar nenhuma tarefa. 
+---
+= Funções predefinidas empacotadas com o plug-in SnapCenter para VMware vSphere
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Para simplificar o trabalho com o vCenter Server RBAC, o plug-in do SnapCenter para VMware vSphere fornece um conjunto de funções predefinidas que permitem que os usuários executem tarefas do SnapCenter. Há também uma função somente leitura que permite aos usuários visualizar informações do SnapCenter, mas não executar nenhuma tarefa.
+
+As funções predefinidas têm o Privileges específico do SnapCenter necessário e o vCenter Server Privileges nativo para garantir que as tarefas sejam concluídas corretamente. Além disso, as funções são configuradas para ter o Privileges necessário em todas as versões com suporte do vCenter Server.
+
+Como administrador, você pode atribuir essas funções aos usuários apropriados.
+
+O plug-in do SnapCenter para VMware vSphere retorna essas funções aos valores padrão (conjunto inicial de Privileges) sempre que você reiniciar o serviço cliente da Web do vCenter ou modificar sua instalação. Se você atualizar o plug-in do SnapCenter para VMware vSphere, as funções predefinidas serão atualizadas automaticamente para funcionar com essa versão do plug-in.
+
+Você pode ver as funções predefinidas na GUI do vCenter clicando em *Menu > Administração > funções*, conforme mostrado na tabela a seguir.
+
+|===
+| Função | Descrição 
+
+
+| Administrador do SCV | Fornece todo o vCenter Server nativo e Privileges específico do SnapCenter necessários para executar todos os plug-in do SnapCenter para tarefas do VMware vSphere. 
+
+
+| Backup da VCR | Fornece todo o vCenter Server nativo e Privileges específico do SnapCenter necessários para fazer backup de objetos vSphere (máquinas virtuais e datastores). O utilizador também tem acesso ao privilégio de configuração. O usuário não pode restaurar backups. 
+
+
+| Restauração do arquivo convidado SCV | Fornece todo o vCenter Server nativo e Privileges específico do SnapCenter necessários para restaurar arquivos e pastas de convidados. O usuário não pode restaurar VMs ou VMDKs. 
+
+
+| Restauração da VCR | Fornece todo o vCenter Server nativo e o Privileges específico do SnapCenter necessários para restaurar objetos vSphere que foram copiados usando o plug-in do SnapCenter para VMware vSphere e para restaurar arquivos e pastas de convidados. O utilizador também tem acesso ao privilégio de configuração. O usuário não pode fazer backup de objetos vSphere. 
+
+
+| Vista SCV | Fornece acesso somente leitura a todos os plug-in do SnapCenter para backups, grupos de recursos e políticas do VMware vSphere. 
+|===

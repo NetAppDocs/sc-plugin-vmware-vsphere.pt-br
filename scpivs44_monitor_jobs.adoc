@@ -1,0 +1,31 @@
+---
+sidebar: sidebar 
+permalink: scpivs44_monitor_jobs.html 
+keywords:  
+summary: Depois de executar qualquer operação de proteção de dados usando o cliente VMware vSphere, você pode monitorar o status da tarefa na guia Monitor de tarefas no Painel e exibir os detalhes da tarefa. 
+---
+= Monitorizar trabalhos
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Depois de executar qualquer operação de proteção de dados usando o cliente VMware vSphere, você pode monitorar o status da tarefa na guia Monitor de tarefas no Painel e exibir os detalhes da tarefa.
+
+.Passos
+. Na página de atalho do cliente vCenter, selecione plug-in do SnapCenter para VMware vSphere (SCV).
+. No painel de navegação esquerdo da SCV, selecione *Dashboard*.
+. Quando dois ou mais vCenters estiverem configurados no modo vinculado, selecione a instância de plug-in SCV e selecione a guia *Monitor de trabalho*. A guia Monitor de trabalhos lista cada tarefa e seu status, hora de início e hora de término. Se os nomes dos trabalhos forem longos, poderá ser necessário deslocar-se para a direita para visualizar os tempos de início e de fim. O visor é atualizado a cada 30 segundos.
++
+** Selecione o ícone Atualizar na barra de ferramentas para atualizar a exibição sob demanda.
+** Selecione o ícone de filtro para escolher o intervalo de tempo, o tipo, a etiqueta e o estado dos trabalhos que pretende visualizar. O filtro é sensível a maiúsculas e minúsculas.
+** Selecione o ícone Atualizar na janela Detalhes do trabalho para atualizar o visor enquanto o trabalho está em execução.
+
+
+
+
+Se o Painel de instrumentos não apresentar as informações do trabalho, https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/SnapCenter_vSphere_web_client_dashboard_does_not_display_jobs["Artigo da KB: O painel do cliente do SnapCenter vSphere não exibe trabalhos"^] consulte a .

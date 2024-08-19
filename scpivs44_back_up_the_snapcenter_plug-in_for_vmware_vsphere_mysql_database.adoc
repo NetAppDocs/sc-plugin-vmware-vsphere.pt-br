@@ -1,0 +1,41 @@
+---
+sidebar: sidebar 
+permalink: scpivs44_back_up_the_snapcenter_plug-in_for_vmware_vsphere_mysql_database.html 
+keywords:  
+summary: 'O plug-in do SnapCenter para VMware vSphere inclui um banco de dados MySQL (também chamado de banco de dados NSM) que contém os metadados de todas as tarefas executadas pelo plug-in.' 
+---
+= Faça backup do plug-in do SnapCenter para o banco de dados MySQL do VMware vSphere
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+O plug-in do SnapCenter para VMware vSphere inclui um banco de dados MySQL (também chamado de banco de dados NSM) que contém os metadados de todas as tarefas executadas pelo plug-in.
+
+Você também deve fazer backup do repositório antes de executar migrações ou atualizações.
+
+.Antes de começar
+Não inicie um trabalho para fazer backup do banco de dados MySQL quando um trabalho de backup sob demanda já estiver em execução.
+
+.Passos
+. No cliente VMware vSphere, selecione a VM onde o plug-in do SnapCenter para VMware vSphere está localizado.
+. Na guia *Summary* do dispositivo virtual, clique em *Launch Remote Console* *or Launch Web Console* para abrir uma janela do console de manutenção.
++
+image:scpivs44_image21.png["janela do console de manutenção"]
+
+. A partir do Menu Principal, introduza a opção *1) Configuração da aplicação.*
+. No menu Configuração da aplicação, introduza a opção *6) cópia de segurança e restauro do MySQL.*
+. No menu Configuração de Backup e Restauração do MySQL, digite a opção *1) Configurar backup do MySQL*.
+. No prompt, insira o local de backup para o repositório, o número de backups a serem mantidos e a hora em que o backup deve ser iniciado.
++
+Todas as entradas são guardadas quando as introduz. Quando o número de retenção de backup é atingido, backups mais antigos são excluídos quando novos backups são executados.
+
++
+
+TIP: Os backups do repositório são chamados de "backup-<date>". Como a função de restauração do repositório procura o prefixo "backup", você não deve alterá-lo.
+
+

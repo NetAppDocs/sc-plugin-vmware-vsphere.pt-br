@@ -1,0 +1,267 @@
+---
+sidebar: sidebar 
+permalink: scpivs44_create_resource_groups_for_vms_and_datastores.html 
+keywords:  
+summary: Um grupo de recursos é o contentor para VMs, datastores, Tags vSphere e pastas de VM vSphere que você deseja proteger. 
+---
+= Criar grupos de recursos
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Um grupo de recursos é o contentor para VMs, datastores, Tags vSphere e pastas de VM vSphere que você deseja proteger.
+
+Um grupo de recursos pode conter o seguinte:
+
+* VMs e armazenamentos de dados tradicionais
++
+Qualquer combinação de VMs tradicionais, armazenamentos de dados SAN tradicionais e armazenamentos de dados nas tradicionais. As VMs tradicionais não podem ser combinadas com as VMs VVol.
+
+* Armazenamentos de dados FlexGroup
++
+Um único armazenamento de dados do FlexGroup. Armazenamentos de dados spanning FlexGroup não são suportados. Um datastore FlexGroup não pode ser combinado com VMs ou armazenamentos de dados tradicionais.
+
+* Armazenamentos de dados FlexVol
++
+Um ou mais datastores FlexVol. Spanning datastores são suportados.
+
+* VMs VVol
++
+Uma ou mais VMs da Vevolve não podem ser combinadas com VMs ou armazenamentos de dados tradicionais.
+
+* Etiqueta vSphere
++
+Todas as VMs e armazenamentos de dados, exceto os armazenamentos de dados da Vevolve, que têm a tag vSphere especificada.
+
+* VMs VVol em uma pasta
++
+Todos os vVols em uma única pasta específica da vVol. Se a pasta contiver uma combinação de VMs Vevolve e VMs tradicionais, o plug-in do SnapCenter para VMware vSphere fará backup das VMs Vevolve e ignora as VMs tradicionais.
+
+
+
+Para todos os grupos de recursos:
+
+
+IMPORTANT: Se você estiver usando o serviço de cluster do VMware vSphere (VCLs), não inclua VMs gerenciadas por VCLs no plug-in do SnapCenter para grupos de recursos do VMware vSphere.
+
+
+TIP: O plug-in do SnapCenter para VMware vSphere 4,5 e posterior oferece suporte a datastores em grandes LUNs e arquivos de até 128 TB com volumes de até 300 TB. Se você estiver protegendo LUNs grandes, use somente LUNs provisionados de espessura para evitar a latência.
+
+
+IMPORTANT: Não adicione VMs que estão em um estado inacessível. Embora seja possível criar um grupo de recursos que contenha VMs inacessíveis, os backups desse grupo de recursos falharão.
+
+.Antes de começar
+As ferramentas do ONTAP para VMware devem ser implantadas antes de criar um grupo de recursos que contenha VMs da Vevolve.
+
+Para obter mais informações, https://docs.netapp.com/us-en/ontap-tools-vmware-vsphere/index.html["Ferramentas do ONTAP para VMware vSphere"^] consulte .
+
+.Sobre esta tarefa
+Você pode adicionar ou remover recursos de um grupo de recursos a qualquer momento.
+
+* Fazer backup de um único recurso
++
+Para fazer backup de um único recurso (por exemplo, uma única VM), você deve criar um grupo de recursos que contenha esse único recurso.
+
+* Fazer backup de vários recursos
++
+Para fazer backup de vários recursos, você deve criar um grupo de recursos que contenha vários recursos.
+
+* Grupos de recursos que contêm volumes do FlexGroup em ambientes MetroCluster
++
+Se você estiver executando no ONTAP 9.8 ou ONTAP 9.9, depois de um switchover ou switchback, reinicie o serviço do plug-in do SnapCenter para VMware vSphere e ressincronize as relações do SnapMirror antes de fazer backup dos grupos de recursos em ambientes MetroCluster.
+
++
+No ONTAP 9.8, os backups são suspensos após o switchback. Este problema foi corrigido no ONTAP 9.9.
+
+* Otimização de instantâneos
++
+Para otimizar snapshots, você deve agrupar as VMs e armazenamentos de dados associados ao mesmo volume em um grupo de recursos.
+
+* Políticas de backup
++
+Embora você possa criar um grupo de recursos sem uma política de backup, as operações de proteção de dados só são possíveis quando pelo menos uma política é anexada ao grupo de recursos. Você tem a opção de usar uma política existente ou criar uma nova durante o processo de criação do grupo de recursos.
+
++
+
+NOTE: Se estiver selecionando uma política de backup com período de bloqueio instantâneo, você precisará selecionar ONTAP 9.12,1 ou versão posterior.
+
+
+
+* Verificações de compatibilidade
++
+O SnapCenter executa verificações de compatibilidade quando você cria um grupo de recursos.
+
++
+<<Gerenciar falhas de verificação de compatibilidade>>
+
+
+
+.Passos
+. No painel de navegação esquerdo do plug-in SCV, clique em *grupos de recursos* e selecione *criar* para iniciar o assistente.
+
+
+Esta é a maneira mais fácil de criar um grupo de recursos. No entanto, você também pode criar um grupo de recursos com um recurso executando um dos seguintes procedimentos:
+
+* Para criar um grupo de recursos para uma VM, na página de atalhos, selecione *hosts e clusters*, em seguida, clique com o botão direito do Mouse em uma VM, selecione *Plug-in SnapCenter para VMware vSphere* > *criar grupo de recursos*.
+* Para criar um grupo de recursos para um datastore, na página de atalhos, selecione *hosts e clusters* e clique com o botão direito em um datastore, selecione *Plug-in SnapCenter para VMware vSphere* > *criar grupo de recursos*.
++
+.. Na página *informações gerais e notificação* no assistente, faça o seguinte:
++
+|===
+| Para este campo... | Faça isso... 
+
+
+| VCenter Server | Selecione um servidor vCenter. 
+
+
+| Nome | Introduza um nome para o grupo de recursos. Não use os seguintes carateres especiais em nomes de VM, datastore, política, backup ou grupo de recursos: % E * / : * ? " > - [barra vertical] ; " , . Um caractere de sublinhado (_) é permitido. Nomes de VM ou datastore com carateres especiais são truncados, o que dificulta a pesquisa de um backup específico. No modo vinculado, cada vCenter tem um plug-in SnapCenter separado para o repositório VMware vSphere. Portanto, você pode usar nomes duplicados em vCenters. 
+
+
+| Descrição | Introduza uma descrição do grupo de recursos. 
+
+
+| Notificação | Selecione quando você deseja receber notificações sobre operações neste grupo de recursos: Erro ou avisos: Enviar notificação para erros e avisos somente erros: Enviar notificação para erros somente sempre: Enviar notificação para todos os tipos de mensagens nunca: Não enviar notificação 
+
+
+| Enviar e-mail de | Insira o endereço de e-mail do qual deseja que a notificação seja enviada. 
+
+
+| Enviar e-mail para | Introduza o endereço de correio eletrónico da pessoa que pretende receber a notificação. Para vários destinatários, use uma vírgula para separar os endereços de e-mail. 
+
+
+| Assunto do e-mail | Introduza o assunto que pretende para os e-mails de notificação. 
+
+
+| Último nome de instantâneo  a| 
+Se você quiser que o sufixo "_recent" seja adicionado ao instantâneo mais recente, marque esta caixa. O sufixo "_recent" substitui a data e o timestamp.
+
+
+NOTE: Um `_recent` backup é criado para cada política anexada a um grupo de recursos. Portanto, um grupo de recursos com várias políticas terá vários `_recent` backups. Não renomeie manualmente `_recent` os backups.
+
+
+
+| Formato instantâneo personalizado  a| 
+Se você quiser usar um formato personalizado para os nomes das capturas instantâneas, marque essa caixa e insira o formato do nome.
+
+*** Por padrão, esse recurso está desativado.
+*** No entanto, os nomes de instantâneos padrão usam o formato `<ResourceGroup>_<Date-TimeStamp>`, você pode especificar um formato personalizado usando as variáveis Use a lista suspensa no campo de nome personalizado para selecionar quais variáveis você deseja usar e a ordem em que elas são usadas. Se você selecionar CustomText, o formato do nome será `<CustomName>_<Date-TimeStamp>`. Insira o texto personalizado na caixa adicional fornecida. [NOTA]: Se você também selecionar o sufixo "_recente", você deve certificar-se de que os nomes personalizados do Snapshot serão exclusivos no datastore, portanto, você deve adicionar as variáveis Grupo de recursos e Política de recursos ao nome.
+*** Carateres especiais para carateres especiais em nomes, siga as mesmas diretrizes dadas para o campo Nome.
+
+
+|===
+.. Na página *recursos*, faça o seguinte:
++
+|===
+| Para este campo... | Faça isso... 
+
+
+| Âmbito de aplicação | Selecione o tipo de recurso que você deseja proteger: * Datastores (todas as VMs tradicionais em um ou mais datastores especificados). Não é possível selecionar um datastore vVol. * Máquinas virtuais (VMs individuais tradicionais ou Vevolve; no campo você deve navegar para o datastore que contém as VMs ou VMs Vevolve). Não é possível selecionar VMs individuais em um datastore do FlexGroup. * Tags a proteção de datastore baseada em tags é suportada apenas para datastores NFS e VMFS, bem como para máquinas virtuais e máquinas virtuais vVol. * Pasta de VM (todas as VMs vVol em uma pasta especificada; no campo pop-up você deve navegar para o data center no qual a pasta está localizada) 
+
+
+| Data center | Navegue até as VMs ou armazenamentos de dados ou pasta que você deseja adicionar. Os nomes de VM e datastore em um grupo de recursos devem ser exclusivos. 
+
+
+| Entidades disponíveis | Selecione os recursos que deseja proteger e clique em *>* para mover suas seleções para a lista entidades selecionadas. 
+|===
++
+Quando você clica em *Next*, o sistema verifica primeiro se o SnapCenter gerencia e é compatível com o armazenamento no qual os recursos selecionados estão localizados.
+
++
+Se a mensagem `Selected <resource-name> is not SnapCenter compatible` for exibida, um recurso selecionado não é compatível com o SnapCenter.
+
++
+Para excluir globalmente um ou mais datastores dos backups, você deve especificar o(s) nome(s) do datastore na `global.ds.exclusion.pattern` propriedade no `scbr.override` arquivo de configuração. link:scpivs44_properties_you_can_override.html["Propriedades que você pode substituir"]Consulte a .
+
+.. Na página *Spanning Disks*, selecione uma opção para VMs com vários VMDKs em vários datastores:
++
+*** Sempre exclua todos os armazenamentos de dados spanning (esse é o padrão para armazenamentos de dados).
+*** Sempre inclua todos os armazenamentos de dados de abrangência (esse é o padrão para VMs.)
+*** Selecione manualmente os armazenamentos de dados de abrangência a serem incluídos
++
+A expansão de VMs não é suportada para armazenamentos de dados FlexGroup e VVol.
+
+
+
+.. Na página *políticas*, selecione ou crie uma ou mais políticas de backup, conforme mostrado na tabela a seguir:
++
+|===
+| Para usar... | Faça isso... 
+
+
+| Uma política existente | Selecione uma ou mais políticas na lista. 
+
+
+| Uma nova política  a| 
+... Selecione *criar*.
+... Conclua o assistente Nova Política de Backup para retornar ao assistente criar Grupo de recursos.
+
+
+|===
++
+No modo vinculado, a lista inclui políticas em todos os vCenters vinculados. Você deve selecionar uma política que esteja no mesmo vCenter que o grupo de recursos.
+
+.. Na página *horários*, configure o agendamento de backup para cada política selecionada.
++
+image:scpivs44_image18.png["Janela criar grupo de recursos"]
+
++
+No campo hora de início, introduza uma data e uma hora diferentes de zero. A data deve estar no formato `day/month/year`.
+
++
+Quando você seleciona um número de dias em cada campo, os backups são executados no dia 1 do mês e, em seguida, em cada intervalo especificado. Por exemplo, se você selecionar a opção *a cada 2 dias*, os backups serão executados no dia 1, 3, 5, 7 e assim por diante durante todo o mês, independentemente de a data de início ser par ou ímpar.
+
++
+Você deve preencher cada campo. O plug-in do SnapCenter para VMware vSphere cria programações no fuso horário em que o plug-in do SnapCenter para VMware vSphere é implantado. Você pode modificar o fuso horário usando o plug-in do SnapCenter para a GUI do VMware vSphere.
+
++
+link:scpivs44_modify_the_time_zones.html["Modifique os fusos horários para backups"].
+
+.. Revise o resumo e clique em *Finish*.
++
+Antes de clicar em *Finish*, você pode voltar para qualquer página do assistente e alterar as informações.
+
++
+Depois de clicar em *Finish*, o novo grupo de recursos é adicionado à lista de grupos de recursos.
+
++
+
+NOTE: Se a operação do quiesce falhar em qualquer uma das VMs no backup, o backup será marcado como não consistente com VM, mesmo que a política selecionada tenha a consistência da VM selecionada. Neste caso, é possível que algumas das VMs tenham sido silenciadas com sucesso.
+
+
+
+
+
+
+
+== Gerenciar falhas de verificação de compatibilidade
+
+O SnapCenter executa verificações de compatibilidade quando você tenta criar um grupo de recursos.
+
+Razões para incompatibilidade podem ser:
+
+* Os VMDKs estão em armazenamento não suportado; por exemplo, em um sistema ONTAP executado no modo 7 ou em um dispositivo que não seja ONTAP.
+* Um datastore está no storage NetApp executando o Clustered Data ONTAP 8.2,1 ou anterior.
++
+O SnapCenter versão 4.x suporta ONTAP 8.3.1 e posterior.
+
++
+O plug-in do SnapCenter para VMware vSphere não executa verificações de compatibilidade para todas as versões do ONTAP; somente para o ONTAP versões 8.2.1 e anteriores. Portanto, consulte sempre https://imt.netapp.com/matrix/imt.jsp?components=121034;&solution=1517&isHWU&src=IMT["Ferramenta de Matriz de interoperabilidade NetApp (IMT)"^] para obter as informações mais recentes sobre o suporte SnapCenter.
+
+* Um dispositivo PCI compartilhado é conetado a uma VM.
+* O endereço IP preferido não está configurado no SnapCenter.
+* Você não adicionou o endereço IP de gerenciamento da VM de storage (SVM) ao SnapCenter.
+* A VM de storage está inativa.
+
+
+Para corrigir um erro de compatibilidade, execute o seguinte:
+
+. Certifique-se de que a VM de storage está em execução.
+. Verifique se o sistema de storage no qual as VMs estão localizadas foi adicionado ao plug-in do SnapCenter para o inventário do VMware vSphere.
+. Certifique-se de que a VM de armazenamento é adicionada ao SnapCenter. Use a opção Adicionar sistema de armazenamento na GUI do cliente VMware vSphere.
+. Se houver VMs que tenham VMDKs em datastores NetApp e não NetApp, mova os VMDKs para armazenamentos de dados NetApp.
+

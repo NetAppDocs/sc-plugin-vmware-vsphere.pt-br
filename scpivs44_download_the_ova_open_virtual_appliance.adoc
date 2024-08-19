@@ -1,0 +1,43 @@
+---
+sidebar: sidebar 
+permalink: scpivs44_download_the_ova_open_virtual_appliance.html 
+keywords:  
+summary: O arquivo .tar inclui OVA, que é um conjunto de microsserviços para proteção de dados VM e datastore e o arquivo de certificado. 
+---
+= Baixe o Open Virtual Appliance (OVA)
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Antes de instalar o Open Virtual Appliance (OVA), adicione o certificado ao vCenter. O arquivo .tar contém os certificados OVA e Entrust root e intermediário, os certificados podem ser encontrados na pasta certificados. A implantação DO OVA é suportada no VMware vCenter 7U1 e superior.
+
+Nas versões do VMware vCenter 7.0.3 e posteriores, o OVA assinado pelo certificado Entrust não é mais confiável. Você precisa executar o procedimento a seguir para resolver o problema.
+
+.Passos
+. Para fazer o download do plug-in do SnapCenter para VMware:
++
+** Faça login no site de suporte da NetApp ( https://mysupport.netapp.com/products/index.html["https://mysupport.netapp.com/products/index.html"^] ).
+** Na lista de produtos, selecione *Plug-in SnapCenter para VMware vSphere* e clique no botão *Download da versão mais recente*.
+** Baixe o plug-in do SnapCenter para o arquivo VMware vSphere para `.tar` qualquer local.
+
+
+. Extraia o conteúdo do arquivo tar. O arquivo tar contém a pasta OVA e certs. A pasta certs contém os certificados raiz Entrust e intermédios.
+. Faça login com o vSphere Client no vCenter Server.
+. Navegue até *Administration > Certificates > Certificate Management* (Administração > certificados > Gestão de certificados).
+. Ao lado de *certificados raiz confiáveis*, clique em *Adicionar*
++
+** Vá para a pasta _certs_.
+** Selecione os certificados raiz e intermédios Entrust.
+** Instale cada certificado um de cada vez.
+
+
+. Os certificados são adicionados a um painel em *certificados raiz confiáveis*. Uma vez que os certificados são instalados, OVA pode ser verificado e implantado.
+
+
+
+NOTE: Se o OVA baixado não for adulterado, a coluna *Publisher* exibirá *certificado confiável*.

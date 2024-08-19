@@ -1,0 +1,31 @@
+---
+sidebar: sidebar 
+permalink: scpivs44_restore_the_most_recent_backup_of_the_mysql_database.html 
+keywords:  
+summary: 'Você pode usar o console de manutenção para restaurar o backup mais recente do banco de dados MySQL (também chamado de banco de dados NSM) para o plug-in SnapCenter para VMware vSphere.' 
+---
+= Restaure o backup mais recente do banco de dados MySQL
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Você pode usar o console de manutenção para restaurar o backup mais recente do banco de dados MySQL (também chamado de banco de dados NSM) para o plug-in SnapCenter para VMware vSphere.
+
+.Passos
+. Abra uma janela do console de manutenção.
++
+link:scpivs44_access_the_maintenance_console.html["Acesse o console de manutenção"^].
+
+. A partir do Menu Principal, introduza a opção *1) Configuração da aplicação*.
+. No menu Configuração da aplicação, introduza a opção *6) cópia de segurança e restauro do MySQL*.
+. No menu Configuração de Backup e Restauração do MySQL, digite a opção *4) Restaurar backup do MySQL*.
+. No prompt "Restaurar usando o backup mais recente", digite *y* e pressione *Enter*.
++
+O banco de dados MySQL de backup é restaurado para sua localização original.
+
+

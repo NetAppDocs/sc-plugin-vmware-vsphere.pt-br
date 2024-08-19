@@ -1,0 +1,67 @@
+---
+sidebar: sidebar 
+permalink: scpivs44_access_reports.html 
+keywords:  
+summary: Pode solicitar relatórios para um ou mais trabalhos a partir do painel de instrumentos. 
+---
+= Acesse relatórios
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Pode solicitar relatórios para um ou mais trabalhos a partir do painel de instrumentos.
+
+O separador relatórios contém informações sobre os trabalhos selecionados na página trabalhos no Painel de instrumentos. Se não forem selecionados trabalhos, o separador relatórios fica em branco.
+
+.Passos
+. Na página de atalho do cliente vCenter, selecione plug-in do SnapCenter para VMware vSphere (SCV).
+. No painel de navegação esquerdo da SCV, selecione *Painel* > *relatórios* guia.
+. Para relatórios de backup, você pode fazer o seguinte:
++
+.. Modifique o relatório
++
+Selecione o ícone de filtro para modificar o intervalo de tempo, o tipo de estado da tarefa, os grupos de recursos e as políticas a serem incluídas no relatório.
+
+.. Gerar um relatório detalhado
++
+Clique duas vezes em qualquer tarefa para gerar um relatório detalhado para esse trabalho.
+
+
+
+. Opcional: Na guia relatórios, clique em *Download* e selecione o formato (HTML ou CSV).
++
+Também pode clicar no ícone de transferência para transferir registos de plug-in.
+
+
+
+
+
+== Tipos de relatórios do cliente VMware vSphere
+
+O cliente VMware vSphere para SnapCenter oferece opções de relatório personalizáveis que fornecem detalhes sobre suas tarefas de proteção de dados e status do recurso de plug-in. Você pode gerar relatórios apenas para proteção primária.
+
+
+NOTE: As programações de backup são executadas no fuso horário em que o plug-in do SnapCenter para VMware vSphere é implantado. O vCenter relata dados no fuso horário em que o vCenter está localizado. Portanto, se o plug-in do SnapCenter para VMware vSphere e o vCenter estiverem em fusos horários diferentes, os dados no painel do cliente do VMware vSphere podem não ser os mesmos que os dados nos relatórios.
+
+O Dashboard exibe informações sobre backups migrados somente após a realização dos backups após a migração.
+
+|===
+| Tipo de relatório | Descrição 
+
+
+| Relatório de cópia de segurança | Apresenta dados gerais sobre trabalhos de cópia de segurança. Clique em uma seção/status no gráfico para ver uma lista de tarefas com esse status na guia *relatórios*. Para cada tarefa, o relatório lista o ID do trabalho, o grupo de recursos correspondente, a política de backup, a hora e a duração do início, o status e os detalhes do trabalho, que incluem o nome do trabalho (nome instantâneo) se o trabalho foi concluído e quaisquer mensagens de aviso ou erro. Você pode fazer o download da tabela Relatório em formato HTML ou CSV. Também pode transferir os registos de trabalhos do Monitor de trabalhos para todos os trabalhos (não apenas os trabalhos do relatório). Os backups excluídos não estão incluídos no relatório. 
+
+
+| Relatório de montagem | Apresenta dados de visão geral sobre trabalhos de montagem. Clique numa secção/estado no gráfico para ver uma lista de trabalhos com esse estado no separador relatórios. Para cada trabalho, o relatório lista a ID do trabalho, o estado do trabalho, o nome do trabalho e as horas de início e fim do trabalho. O nome da tarefa inclui o nome da captura instantânea. Por exemplo: `Mount Backup <snapshot-copy-name>` Você pode baixar a tabela Relatório em formato HTML ou CSV. Também pode transferir os registos de trabalhos do Monitor de trabalhos para todos os trabalhos (não apenas os trabalhos do relatório). 
+
+
+| Restaurar relatório | Apresenta informações de estado geral sobre os trabalhos de restauro. Clique numa secção/estado no gráfico para ver uma lista de trabalhos com esse estado no separador relatórios. Para cada trabalho, o relatório lista a ID do trabalho, o estado do trabalho, o nome do trabalho e as horas de início e fim do trabalho. O nome da tarefa inclui o nome da captura instantânea. Por exemplo: `Restore Backup <snapshot-copy-name>` Você pode baixar a tabela Relatório em formato HTML ou CSV. Também pode transferir os registos de trabalhos do Monitor de trabalhos para todos os trabalhos (não apenas os trabalhos do relatório). 
+
+
+| Último Status de proteção de VMs ou relatórios de datastores | Exibe informações gerais sobre o status de proteção, durante o número configurado de dias, para VMs e datastores gerenciados pelo plug-in SnapCenter para VMware vSphere. O padrão é de 7 dias. Para modificar o valor no arquivo de propriedades, link:scpivs44_modify_configuration_default_values.html["Modifique os valores padrão de configuração"]consulte . Clique em uma seção/status no gráfico de proteção primária para ver uma lista de VMs ou datastores com esse status na guia *relatórios*. O Relatório de Status da proteção de VM ou datastores para VMs e datastores protegidos exibe os nomes das VMs ou datastores que foram copiados durante o número de dias configurado, o nome da Snapshot mais recente e os horários de início e término da execução mais recente do backup. O Relatório de Status de proteção de VM ou datastores para VMs ou datastores desprotegidos exibe os nomes de VMs ou datastores que não têm backups bem-sucedidos durante o número de dias configurado. Você pode fazer o download da tabela Relatório em formato HTML ou CSV. Também pode transferir os registos de trabalhos do Monitor de trabalhos para todos os trabalhos (não apenas os trabalhos do relatório). Este relatório é atualizado a cada hora quando o cache do plug-in é atualizado. Portanto, o relatório pode não exibir VMs ou armazenamentos de dados que foram recentemente copiados. 
+|===

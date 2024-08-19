@@ -1,0 +1,39 @@
+---
+sidebar: sidebar 
+permalink: scpivs44_download_job_logs.html 
+keywords:  
+summary: Você pode fazer o download dos logs de tarefas na guia Monitor de tarefas no Painel do cliente VMware vSphere do SnapCenter. 
+---
+= Transferir registos de trabalhos
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Você pode fazer o download dos logs de tarefas na guia Monitor de tarefas no Painel do cliente VMware vSphere do SnapCenter.
+
+Se você encontrar um comportamento inesperado ao usar o cliente VMware vSphere, poderá usar os arquivos de log para identificar a causa e resolver o problema.
+
+
+NOTE: O valor predefinido para reter registos de trabalhos é de 30 dias; o valor predefinido para trabalhos de retenção é de 90 dias. Os registos de trabalhos e os trabalhos que são mais antigos do que a retenção configurada são purgados a cada seis horas. Você pode usar as APIs REST de configuração `jobs/cleanup` para modificar por quanto tempo as tarefas e os logs de tarefas são retidos. Não é possível modificar o agendamento de purga.
+
+.Passos
+. Na página de atalho do cliente vCenter, selecione plug-in do SnapCenter para VMware vSphere (SCV).
+. No painel de navegação esquerdo da VCR, selecione *Painel* > *Monitor de trabalho*.
+. Selecione o ícone de transferência na barra de título do Monitor de trabalhos.
++
+Talvez seja necessário rolar para a direita para ver o ícone.
+
++
+Você também pode clicar duas vezes em um trabalho para acessar a janela Detalhes do trabalho e clicar em *Download de logs de trabalho*.
+
+
+
+.Resultado
+Os logs de tarefa estão localizados no host de VM Linux onde o plug-in do SnapCenter para VMware vSphere é implantado. A localização predefinida do registo de trabalhos é `/var/log/netapp`.
+
+Se você tentou fazer o download de logs de trabalho, mas o arquivo de log nomeado na mensagem de erro foi excluído, você pode encontrar o seguinte erro: `HTTP ERROR 500 Problem accessing /export-scv-logs`. Para corrigir esse erro, verifique o status de acesso ao arquivo e as permissões para o arquivo nomeado na mensagem de erro e corrija o problema de acesso.

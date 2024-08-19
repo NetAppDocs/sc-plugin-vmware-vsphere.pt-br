@@ -1,0 +1,42 @@
+---
+sidebar: sidebar 
+permalink: scpivs44_detach_a_virtual_disk.html 
+keywords:  
+summary: Depois de conetar um disco virtual para restaurar arquivos individuais, você pode desanexar o disco virtual da VM pai. 
+---
+= Separe um disco virtual
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Depois de conetar um disco virtual para restaurar arquivos individuais, você pode desanexar o disco virtual da VM pai.
+
+.Passos
+. Na GUI do cliente do VMware vSphere, clique em *Menu* na barra de ferramentas e selecione *VMs e modelos* na lista suspensa.
+. No painel do navegador esquerdo, selecione uma VM.
+. No painel de navegação esquerdo, clique com o botão direito do Mouse na VM, selecione *Plug-in SnapCenter para VMware vSphere* na lista suspensa e selecione *Desanexar disco virtual* na lista suspensa secundária.
+. Na tela *Desanexar disco Virtual*, selecione um ou mais discos que deseja desanexar e, em seguida, marque a caixa de seleção *Desanexar o(s) disco(s) selecionado(s) e clique em *DESANEXAR*.
++
+
+IMPORTANT: Certifique-se de que seleciona o disco virtual correto. Selecionar o disco errado pode afetar o trabalho de produção.
+
+. Opcional: Monitore o progresso da operação na seção *Recent Tasks*.
++
+Atualize a tela para exibir informações atualizadas.
+
+. Verifique se o disco virtual está separado executando o seguinte:
++
+.. Clique em *Menu* na barra de ferramentas e selecione *VMs e modelos* na lista suspensa.
+.. No painel do navegador esquerdo, clique com o botão direito do Mouse em uma VM e selecione *Editar configurações* na lista suspensa.
+.. Na janela *Editar configurações*, expanda a lista de cada disco rígido para ver a lista de arquivos de disco.
++
+A página *Editar configurações* lista os discos na VM. Você pode expandir os detalhes de cada disco rígido para ver a lista de discos virtuais anexados.
+
+
+
+

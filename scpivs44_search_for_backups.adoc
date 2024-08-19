@@ -1,0 +1,37 @@
+---
+sidebar: sidebar 
+permalink: scpivs44_search_for_backups.html 
+keywords:  
+summary: Você pode pesquisar e localizar um backup específico de uma VM ou datastore usando o assistente Restaurar. Depois de localizar um backup, você pode restaurá-lo. 
+---
+= PESQUISE backups
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Você pode pesquisar e localizar um backup específico de uma VM ou datastore usando o assistente Restaurar. Depois de localizar um backup, você pode restaurá-lo.
+
+.Passos
+. Na GUI do cliente do VMware vSphere, clique em *Menu* na barra de ferramentas e execute um dos seguintes procedimentos:
++
+|===
+| Para exibir backups para... | Faça o seguinte... 
+
+
+| VMs | Clique na opção de menu *hosts and clusters*, selecione uma VM, clique na guia *Configurar* e, em seguida, clique em *backups* na seção *Plug-in SnapCenter para VMware vSphere*. 
+
+
+| Armazenamentos de dados | Clique na opção de menu *armazenamento*, selecione um datastore, clique na guia *Configurar* e, em seguida, clique em *backups* na seção *Plug-in SnapCenter para VMware vSphere*. 
+|===
+. No painel do navegador esquerdo, expanda o data center que contém a VM ou o datastore.
+. Opcional: Clique com o botão direito do Mouse em uma VM ou datastore, selecione *Plug-in SnapCenter para VMware vSphere* na lista suspensa e, em seguida, selecione *Restaurar* na lista suspensa secundária.
+. No assistente *Restore*, insira um nome de pesquisa e clique em *Search*.
++
+Você pode filtrar a lista de backup selecionando o ícone de filtro e selecionando um intervalo de data e hora, selecionando se deseja backups que contenham snapshots VMware, se deseja backups montados e o local. Clique em *OK*.
+
+

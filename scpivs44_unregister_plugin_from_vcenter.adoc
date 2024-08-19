@@ -1,0 +1,25 @@
+---
+sidebar: sidebar 
+permalink: scpivs44_unregister_plugin_from_vcenter.html 
+keywords:  
+summary: Se você interromper o serviço do plug-in do SnapCenter para VMware vSphere em um vCenter que esteja no modo vinculado, os grupos de recursos não estarão disponíveis em todos os vCenters vinculados, mesmo quando o serviço do plug-in do SnapCenter para VMware vSphere estiver sendo executado nos outros vCenters vinculados. Você deve cancelar o Registro do plug-in do SnapCenter para extensões do VMware vSphere manualmente. 
+---
+= Anule o Registro do plug-in do SnapCenter para VMware vSphere no vCenter
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Se você interromper o serviço do plug-in do SnapCenter para VMware vSphere em um vCenter que esteja no modo vinculado, os grupos de recursos não estarão disponíveis em todos os vCenters vinculados, mesmo quando o serviço do plug-in do SnapCenter para VMware vSphere estiver sendo executado nos outros vCenters vinculados.
+
+Você deve cancelar o Registro do plug-in do SnapCenter para extensões do VMware vSphere manualmente.
+
+.Passos
+. No vCenter vinculado que tem o plug-in do SnapCenter para o serviço VMware vSphere interrompido, navegue até o gerenciador de referência de objeto gerenciado (MOB).
+. Na opção Propriedades, selecione *Content* na coluna valor e, na próxima tela, selecione *ExtensionManager* na coluna valor para exibir uma lista das extensões registradas.
+. Anule o registo das extensões `com.netapp.scv.client` e `com.netapp.aegis`.
+

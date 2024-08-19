@@ -1,0 +1,19 @@
+---
+sidebar: sidebar 
+permalink: scpivs44_deployment_workflow_for_existing_users.html 
+keywords:  
+summary: Você pode usar esse fluxo de trabalho se você for um usuário do SnapCenter e tiver backups do SnapCenter. 
+---
+= Fluxo de trabalho de implantação para usuários existentes
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Se você é um usuário do SnapCenter e tem backups do SnapCenter, use o seguinte fluxo de trabalho para começar.
+
+image:scpivs44_image3.png["Fluxo de trabalho de implantação"]
