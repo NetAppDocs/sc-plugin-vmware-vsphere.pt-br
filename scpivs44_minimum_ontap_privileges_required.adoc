@@ -57,6 +57,8 @@ Todos os plug-ins do SnapCenter exigem o seguinte Privileges mínimo.
 
 | a identidade do cluster mostra a interface de rede mostra vserver vserver peer vserver show 
 |===
+Você pode ignorar o comando _cluster identity show_ cluster level ao criar uma função para associar ao data SVM.
+
 
 NOTE: Você pode ignorar as mensagens de aviso sobre os comandos SVM não suportados.
 

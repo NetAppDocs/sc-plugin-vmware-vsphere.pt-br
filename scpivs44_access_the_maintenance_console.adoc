@@ -50,14 +50,14 @@ Reinicializar máquina virtual Desligar máquina virtual alterar senha do usuár
 
 NOTE: O MFA está sempre ativado, não é possível desativar o MFA.
 
-
-
-
-
-* Opção 3: Configuração de rede
-
+** Opção 3: Configuração de rede
++
 Exibir ou alterar configurações de endereço IP Exibir ou alterar configurações de pesquisa de nome de domínio Exibir ou alterar rotas estáticas confirmar alterações Ping um host
 
-* Opção 4: Suporte e Diagnóstico
+** Opção 4: Suporte e Diagnóstico
++
+Gerar shell de diagnóstico de acesso ao pacote de suporte Ativar acesso de diagnóstico remoto gerar pacote de despejo de núcleo
 
-Gerar shell de diagnóstico de acesso ao pacote de suporte habilitar acesso de diagnóstico remoto gerar pacote de despejo de núcleo
+
+
+

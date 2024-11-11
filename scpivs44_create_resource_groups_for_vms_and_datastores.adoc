@@ -49,6 +49,8 @@ Para todos os grupos de recursos:
 
 IMPORTANT: Se você estiver usando o serviço de cluster do VMware vSphere (VCLs), não inclua VMs gerenciadas por VCLs no plug-in do SnapCenter para grupos de recursos do VMware vSphere.
 
+Para obter mais informações, consulte https://kb.netapp.com/data-mgmt/SnapCenter/SC_KBs/SCV_unable_to_backup_vCLS_VMs_after_updating_vCenter_to_7.0.x["O SCV não conseguiu fazer backup das VMs VCLs após atualizar o vCenter para 7,0.x."]
+
 
 TIP: O plug-in do SnapCenter para VMware vSphere 4,5 e posterior oferece suporte a datastores em grandes LUNs e arquivos de até 128 TB com volumes de até 300 TB. Se você estiver protegendo LUNs grandes, use somente LUNs provisionados de espessura para evitar a latência.
 
@@ -58,7 +60,7 @@ IMPORTANT: Não adicione VMs que estão em um estado inacessível. Embora seja p
 .Antes de começar
 As ferramentas do ONTAP para VMware devem ser implantadas antes de criar um grupo de recursos que contenha VMs da Vevolve.
 
-Para obter mais informações, https://docs.netapp.com/us-en/ontap-tools-vmware-vsphere/index.html["Ferramentas do ONTAP para VMware vSphere"^] consulte .
+Para obter mais informações, consulte as ferramentas do ONTAP para a documentação do VMware vSphere. Além disso, https://imt.netapp.com/matrix/imt.jsp?components=121034;&solution=1517&isHWU&src=IMT["Ferramenta de Matriz de interoperabilidade do NetApp"^] consulte para obter informações mais recentes sobre as versões suportadas nas ferramentas do ONTAP.
 
 .Sobre esta tarefa
 Você pode adicionar ou remover recursos de um grupo de recursos a qualquer momento.
