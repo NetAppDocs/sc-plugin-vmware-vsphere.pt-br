@@ -82,7 +82,7 @@ Você deve fazer login como `vsadmin` ou com uma função que tenha o Privileges
 ** Você precisa do ONTAP 9.12,1 e versões posteriores para NFS
 
 
-* Para o protocolo NVMe sobre TCP, você precisa do ONTAP 9.10,1 e posterior.
+* Para NVMe em TCP e NVMe em protocolo FC, você precisa do ONTAP 9.10,1 e posterior.
 
 
 

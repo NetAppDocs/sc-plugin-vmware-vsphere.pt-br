@@ -67,7 +67,7 @@ Embora o dispositivo virtual precise ser instalado como uma VM Linux, o plug-in 
 
 
 
-Além desses principais recursos, o plug-in do SnapCenter para VMware vSphere também oferece suporte a iSCSI, Fibre Channel, FCoE, NFS 3,0/4,1, VMFS 5,0/6,0 e NVMe sobre TCP.
+Além desses principais recursos, o plug-in do SnapCenter para VMware vSphere também oferece suporte a iSCSI, Fibre Channel, FCoE, NFS 3,0/4,1, VMFS 5,0/6,0, NVMe sobre FC e NVMe sobre TCP.
 
 Para obter as informações mais recentes sobre versões suportadas, https://imt.netapp.com/matrix/imt.jsp?components=121034;&solution=1517&isHWU&src=IMT["Ferramenta de Matriz de interoperabilidade do NetApp"^] consulte (IMT).
 

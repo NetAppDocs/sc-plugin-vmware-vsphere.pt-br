@@ -128,9 +128,9 @@ Para obter as informações mais recentes sobre versões suportadas, https://imt
 
 
 
-==== Requisitos para o protocolo NVMe sobre TCP
+==== Requisitos para NVMe sobre protocolos TCP e NVMe sobre FC
 
-Os requisitos mínimos de software para suporte ao protocolo NVMe sobre TCP são:
+Os requisitos mínimos de software para suporte a protocolos NVMe em TCP e NVMe em FC são:
 
 * VCenter vSphere 7.0U3
 * ESXi 7.0U3
