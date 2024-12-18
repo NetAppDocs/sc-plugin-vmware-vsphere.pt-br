@@ -2118,5 +2118,46 @@
   <block id="f6599049db87ec18cb4b8b124bbae9bb" category="admonition">Durante uma operação de restauração, você pode encontrar o erro<block ref="8bca5bf79dc6a0592d8b28b7fc9c19a9" prefix=" " category="inline-code"></block> ou<block ref="9e17d1b629230b07cfa91237bf97bfc3" prefix=" " category="inline-code"></block> isso ocorre quando o plug-in do SnapCenter para VMware vSphere tenta reassinar o clone. Devido às restrições da VMware, o plug-in do SnapCenter para VMware vSphere não pode controlar o valor de reassinatura automática em configurações avançadas de host ESXi. Para NVMe em TCP e NVMe em FC storage, a SCV não pode adicionar controladoras dinamicamente quando um novo subsistema é adicionado. Você deve fazer o mapeamento necessário antes da operação de montagem.</block>
   <block id="c2ad807051aed38647dbaf48da9bc4e7" category="list-text">Para NVMe em TCP e NVMe em protocolo FC, você precisa do ONTAP 9.10,1 e posterior.</block>
   <block id="ec1055ea33266617a541d92dfa6e5b67" category="inline-link">Plug-in do SnapCenter para VMware vSphere 6,0 e 6.0.1 Notas de versão</block>
-  <block id="23ea4d7ccec896acdd587b616d6cc4ee" category="paragraph">As notas de versão fornecem informações importantes sobre esta versão do plug-in do SnapCenter para VMware vSphere, incluindo requisitos de licenciamento, problemas conhecidos, precauções, limitações e quaisquer atualizações ou correções de documentação. Para obter mais informações, consulte<block ref="1433bf204e910686ea87dd6be31fd4c0" category="inline-link-rx"></block></block>
+  <block id="2233cc73f35f4d66a36bbbeebab35281" category="doc">Notas de versão do plug-in do SnapCenter para VMware vSphere</block>
+  <block id="297142e178601173053624e9ef12f108" category="paragraph">Saiba mais sobre os novos e aprimorados recursos disponíveis no plug-in do SnapCenter para VMware vSphere 6.0.1 e 6,0.</block>
+  <block id="3b3c714cc3d97185d38b7de5a06604eb" category="paragraph">Para obter detalhes sobre problemas conhecidos, limitações e problemas corrigidos,<block ref="1433bf204e910686ea87dd6be31fd4c0" category="inline-link-rx"></block> consulte . Você deve entrar com sua conta do NetApp ou criar uma conta para acessar as Notas de versão.</block>
+  <block id="c5dcd35af16918a17ee9c3a5c153f0af" category="inline-link">IMT</block>
+  <block id="2d15261526cfe20309636c59ec64f54e" category="paragraph">Para obter as informações mais recentes sobre versões suportadas, consulte a ferramenta de Matriz de interoperabilidade do NetApp <block ref="b3ca33d6c3d8c65c6db17cc2a6a779f0" category="inline-link-rx"></block>).</block>
+  <block id="ccbdf0b4f3977d9d972b8053561475b1" category="summary">Saiba mais sobre os novos recursos disponíveis no plug-in do SnapCenter para VMware vSphere 6,0.</block>
+  <block id="4ab6fdda3b84dfae82088c2bc01040ec" category="doc">Novidades do plug-in do SnapCenter para VMware vSphere 6.0.1</block>
+  <block id="06933067aafd48425d67bcb01bba5cb6" category="cell">Atualização</block>
+  <block id="42740cd9317367a2589caeffd362cff0" category="inline-link">Suporte para protocolo NVMe em FC</block>
+  <block id="50be082c76f5c49324bb5bd7608ae3b2" category="paragraph"><block ref="50be082c76f5c49324bb5bd7608ae3b2" category="inline-link-rx"></block></block>
+  <block id="5ba878c4a46b0a8571800aaa6e8445a7" category="paragraph">O plug-in do SnapCenter vSphere 6.0.1 agora oferece suporte ao protocolo NVMe sobre FC para datastores VMFS para otimizar a performance, reduzir custos e garantir performance contínua.</block>
+  <block id="1c7703c1d060b65ce6fd3a75ba50400e" category="inline-link">Integração de ferramentas do ONTAP para VMware vSphere 10.x com a SCV 6.0.1</block>
+  <block id="0d1fedc1c92b2bac1ad8d29266340940" category="paragraph"><block ref="0d1fedc1c92b2bac1ad8d29266340940" category="inline-link-rx"></block></block>
+  <block id="41d114a9720ad1ac299b2dffec2f7186" category="paragraph">As ferramentas do ONTAP para VMware vSphere 10.x ajudam a configurar volumes virtuais do VMware vSphere. Com essa Intergration, você pode configurar, fazer backup e restaurar máquinas virtuais que residem em datastores vVols baseados em NFS.</block>
+  <block id="704fc5c8ea6982e3179f495b7b832121" category="doc">Novidades do plug-in do SnapCenter para VMware vSphere 6,0</block>
+  <block id="05355694c1b9a07fdbe4cd953d66f950" category="inline-link">Suporte para protocolo NVMe sobre TCP</block>
+  <block id="537b09dbac250171d06580c68b67b2f2" category="paragraph"><block ref="537b09dbac250171d06580c68b67b2f2" category="inline-link-rx"></block></block>
+  <block id="a629ec953583fe39117309ef9a508a81" category="paragraph">O plug-in do SnapCenter para VMware vSphere 6,0 agora oferece suporte ao protocolo NVMe sobre TCP para datastores VMFS.</block>
+  <block id="ead1e4398d30de28a2a5ea2f82cb8d47" category="paragraph">Você não precisa de nenhum hardware adicional para implantar o NVMe sobre o protocolo TCP, o que o torna mais simples e econômico para você.</block>
+  <block id="b154808e6bcc13034e613c359731ad79" category="paragraph">Como iSCSI, os armazenamentos de dados VMFS com protocolo NVMe sobre TCP podem usar qualquer NICs e switches ethernet e dar suporte a todas as operações padrão, como backup, restauração, montagem, conexão e desconexão.</block>
+  <block id="4f53b479c6b47d73b1fdb28f399b1301" category="inline-link">Suporte para sincronização ativa do SnapMirror</block>
+  <block id="a3dde13a3e6b0437cbcc67d81b0b023f" category="paragraph"><block ref="a3dde13a3e6b0437cbcc67d81b0b023f" category="inline-link-rx"></block></block>
+  <block id="88ae2479bcea5ca16281e31626f2f8d8" category="paragraph">Agora você pode usar o plug-in do SnapCenter para VMware vSphere para configurar recursos de sincronização ativa do SnapMirror, como objetivo de ponto de recuperação zero (RPO), objetivo de tempo de recuperação (rto) e failover transparente de aplicativos.</block>
+  <block id="6884e6f09d7d01f963a72f6d4b4dee73" category="paragraph">A sincronização ativa do SnapMirror é suportada apenas para armazenamentos de dados VMFS.</block>
+  <block id="ee8f5755a6e1671a63e8da1209dc860f" category="paragraph">A versão do plug-in do SnapCenter para VMware vSphere (SCV) para a qual você pode atualizar depende da versão em execução no momento.</block>
+  <block id="4181b34482469dce169449ef3b643b27" category="paragraph">A atualização para o plug-in do SnapCenter para VMware vSphere (SCV) 4,8 e posterior é suportada apenas na atualização 1 do VMware vCenter Server 7 e versões posteriores. Para o VMware vCenter Server anterior à atualização 1 da versão 7, você deve continuar usando o SCV 4,7.</block>
+  <block id="e369a7ee41a72fa8a44419a1129cc575" category="cell">Se você estiver na versão SCV...</block>
+  <block id="189db0c09008fdcd0e2cc9be6b313231" category="cell">Você pode atualizar diretamente SCV para...</block>
+  <block id="1ad22725dc59b3f21bd032fe84861bc1" category="paragraph">SCV 6,0</block>
+  <block id="f4448feccabcefa77ecd89689a4f8422" category="paragraph">VCS 5,0 e VCS 6,0</block>
+  <block id="f7223e4d64308089fc60a4ed6aef55f1" category="paragraph">VCS 4,9 e VCS 5,0</block>
+  <block id="b29558d756ecb0469c1e18fb8ffb2428" category="paragraph">VCS 4,8 e VCS 4,9</block>
+  <block id="36112713b4999c5619fad06e104ac585" category="paragraph">Para bancos de dados virtualizados e sistemas de arquivos integrados ao SnapCenter, este é o caminho de atualização:</block>
+  <block id="a8167c30d181002ec48569e2d6c3ceb1" category="cell">Se você estiver usando</block>
+  <block id="204326f9ae1f832298654cd349f16dcc" category="cell">Se o seu plug-in VMware for...</block>
+  <block id="d63b9d0523105aa499fd355a5431da08" category="cell">Você pode atualizar diretamente para...</block>
+  <block id="13c1ef900fc885a20b94324d41ba496e" category="paragraph">SnapCenter 6,0</block>
+  <block id="8e07dd0a7cef005f474929f3ccd8ab15" category="paragraph">SnapCenter 5,0</block>
+  <block id="07d190428eb856174f602dfb1555b388" category="paragraph">SnapCenter 4,9</block>
+  <block id="7e35de6c484fe702e7c4fe21538ac2a4" category="paragraph">SnapCenter 4,8</block>
+  <block id="9fb9e3e27a3792a16059036c9b877598" category="sidebar">Novidades do plug-in do SnapCenter para VMware vSphere 6.0.1</block>
+  <block id="43e9871fb2ac1e50ad02c9c15dce6a93" category="sidebar">Novidades do plug-in do SnapCenter para VMware vSphere 6,0</block>
 </blocks>
