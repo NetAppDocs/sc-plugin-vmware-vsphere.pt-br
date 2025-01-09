@@ -2131,7 +2131,6 @@
   <block id="5ba878c4a46b0a8571800aaa6e8445a7" category="paragraph">O plug-in do SnapCenter vSphere 6.0.1 agora oferece suporte ao protocolo NVMe sobre FC para datastores VMFS para otimizar a performance, reduzir custos e garantir performance contínua.</block>
   <block id="1c7703c1d060b65ce6fd3a75ba50400e" category="inline-link">Integração de ferramentas do ONTAP para VMware vSphere 10.x com a SCV 6.0.1</block>
   <block id="0d1fedc1c92b2bac1ad8d29266340940" category="paragraph"><block ref="0d1fedc1c92b2bac1ad8d29266340940" category="inline-link-rx"></block></block>
-  <block id="41d114a9720ad1ac299b2dffec2f7186" category="paragraph">As ferramentas do ONTAP para VMware vSphere 10.x ajudam a configurar volumes virtuais do VMware vSphere. Com essa Intergration, você pode configurar, fazer backup e restaurar máquinas virtuais que residem em datastores vVols baseados em NFS.</block>
   <block id="704fc5c8ea6982e3179f495b7b832121" category="doc">Novidades do plug-in do SnapCenter para VMware vSphere 6,0</block>
   <block id="05355694c1b9a07fdbe4cd953d66f950" category="inline-link">Suporte para protocolo NVMe sobre TCP</block>
   <block id="537b09dbac250171d06580c68b67b2f2" category="paragraph"><block ref="537b09dbac250171d06580c68b67b2f2" category="inline-link-rx"></block></block>
@@ -2140,7 +2139,6 @@
   <block id="b154808e6bcc13034e613c359731ad79" category="paragraph">Como iSCSI, os armazenamentos de dados VMFS com protocolo NVMe sobre TCP podem usar qualquer NICs e switches ethernet e dar suporte a todas as operações padrão, como backup, restauração, montagem, conexão e desconexão.</block>
   <block id="4f53b479c6b47d73b1fdb28f399b1301" category="inline-link">Suporte para sincronização ativa do SnapMirror</block>
   <block id="a3dde13a3e6b0437cbcc67d81b0b023f" category="paragraph"><block ref="a3dde13a3e6b0437cbcc67d81b0b023f" category="inline-link-rx"></block></block>
-  <block id="88ae2479bcea5ca16281e31626f2f8d8" category="paragraph">Agora você pode usar o plug-in do SnapCenter para VMware vSphere para configurar recursos de sincronização ativa do SnapMirror, como objetivo de ponto de recuperação zero (RPO), objetivo de tempo de recuperação (rto) e failover transparente de aplicativos.</block>
   <block id="6884e6f09d7d01f963a72f6d4b4dee73" category="paragraph">A sincronização ativa do SnapMirror é suportada apenas para armazenamentos de dados VMFS.</block>
   <block id="ee8f5755a6e1671a63e8da1209dc860f" category="paragraph">A versão do plug-in do SnapCenter para VMware vSphere (SCV) para a qual você pode atualizar depende da versão em execução no momento.</block>
   <block id="4181b34482469dce169449ef3b643b27" category="paragraph">A atualização para o plug-in do SnapCenter para VMware vSphere (SCV) 4,8 e posterior é suportada apenas na atualização 1 do VMware vCenter Server 7 e versões posteriores. Para o VMware vCenter Server anterior à atualização 1 da versão 7, você deve continuar usando o SCV 4,7.</block>
@@ -2160,4 +2158,6 @@
   <block id="7e35de6c484fe702e7c4fe21538ac2a4" category="paragraph">SnapCenter 4,8</block>
   <block id="9fb9e3e27a3792a16059036c9b877598" category="sidebar">Novidades do plug-in do SnapCenter para VMware vSphere 6.0.1</block>
   <block id="43e9871fb2ac1e50ad02c9c15dce6a93" category="sidebar">Novidades do plug-in do SnapCenter para VMware vSphere 6,0</block>
+  <block id="2c1653c7d21f34b83ac4f6c2e6d95617" category="paragraph">As ferramentas do ONTAP para VMware vSphere 10.x ajudam a configurar volumes virtuais do VMware vSphere. Com essa integração, você pode configurar, fazer backup e restaurar máquinas virtuais que residem em datastores vVols baseados em NFS.</block>
+  <block id="260461e32230b11c5e5f1e46e498eb6d" category="paragraph">Agora você pode usar o plug-in do SnapCenter para VMware vSphere para configurar recursos de sincronização ativa do SnapMirror, como objetivo de ponto de recuperação zero (RPO), objetivo de tempo de recuperação (rto) e failover transparente de aplicações.</block>
 </blocks>

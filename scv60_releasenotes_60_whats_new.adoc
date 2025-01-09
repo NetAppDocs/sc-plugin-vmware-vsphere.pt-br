@@ -27,7 +27,7 @@ Como iSCSI, os armazenamentos de dados VMFS com protocolo NVMe sobre TCP podem u
  a| 
 https://docs.netapp.com/us-en/sc-plugin-vmware-vsphere/scpivs44_create_backup_policies_for_vms_and_datastores.html["Suporte para sincronização ativa do SnapMirror"]
  a| 
-Agora você pode usar o plug-in do SnapCenter para VMware vSphere para configurar recursos de sincronização ativa do SnapMirror, como objetivo de ponto de recuperação zero (RPO), objetivo de tempo de recuperação (rto) e failover transparente de aplicativos.
+Agora você pode usar o plug-in do SnapCenter para VMware vSphere para configurar recursos de sincronização ativa do SnapMirror, como objetivo de ponto de recuperação zero (RPO), objetivo de tempo de recuperação (rto) e failover transparente de aplicações.
 
 A sincronização ativa do SnapMirror é suportada apenas para armazenamentos de dados VMFS.
 
