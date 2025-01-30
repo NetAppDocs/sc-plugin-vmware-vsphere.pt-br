@@ -134,7 +134,7 @@ As seguintes operações na IU do Admin Console são auditadas:
 ** Alterar credenciais de administrador
 ** Altere o fuso horário
 ** Altere o servidor NTP
-** Altere as definições IPv4 / IPv6
+** Altere as configurações de endereço IPv4/IPv6
 
 
 * Configuração

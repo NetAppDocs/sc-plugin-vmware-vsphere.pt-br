@@ -16,6 +16,9 @@ summary: Você pode renomear o storage usando a API REST.
 [role="lead"]
 Quando o armazenamento é renomeado, os fluxos de trabalho usando backups feitos antes do nome usado para falhar. Com a introdução do recurso de backup de renomeação, que é exclusivamente acessível por meio da API REST, agora é possível usar os backups que foram feitos antes da renomeação de armazenamento. O fluxo de trabalho e o uso da API REST são descritos abaixo.
 
+
+NOTE: O sistema de armazenamento ASA R2 não suporta o recurso de nomeação de instantâneo _recente.
+
 .Passos
 . Adicione ou atualize a nova conexão de storage, garantindo que o novo nome do cluster ou SVM seja refletido na VCR.
 . Reinicie o serviço para atualizar os caches conforme descrito no artigo da KB: https://kb.netapp.com/mgmt/SnapCenter/SCV_backups_fail_after_SVM_rename["Os backups das VCS falham após o nome da SVM"]

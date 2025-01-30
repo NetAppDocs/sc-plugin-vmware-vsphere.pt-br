@@ -139,7 +139,7 @@ Os requisitos mínimos de software para suporte a protocolos NVMe em TCP e NVMe 
 
 
 
-== Requisitos de espaço e dimensionamento
+== Requisitos de espaço, dimensionamento e dimensionamento
 
 |===
 | Item | Requisitos 
@@ -148,13 +148,16 @@ Os requisitos mínimos de software para suporte a protocolos NVMe em TCP e NVMe 
 | Sistema operacional | Linux 
 
 
-| Contagem mínima de CPU | 4 núcleos 
+| Contagem de CPU recomendada | 8 núcleos 
 
 
-| RAM mínima | Mínimo: 12GB recomendado: 16GB 
+| RAM recomendada | 24 GB 
 
 
 | Espaço mínimo no disco rígido para o plug-in SnapCenter para VMware vSphere, logs e banco de dados MySQL | 100 GB 
+
+
+| Tamanho máximo de heap do serviço vmcontrol no dispositivo | 8 GB 
 |===
 
 

@@ -150,7 +150,7 @@ Os arquivos e pastas a serem restaurados são listados na tabela Arquivo(s) sele
 | Opção | Descrição 
 
 
-| Restaurar para o caminho | Introduza o caminho de partilha UNC para o convidado onde os ficheiros selecionados serão restaurados. IPv4 exemplo `\\10.60.136.65\c$`: IPv6 exemplo: `\\fd20-8b1e-b255-832e--61.ipv6-literal.net\C\restore` 
+| Restaurar para o caminho | Introduza o caminho de partilha UNC para o convidado onde os ficheiros selecionados serão restaurados. Exemplo de endereço IPv4: `\\10.60.136.65\c$` Exemplo de endereço IPv6: `\\fd20-8b1e-b255-832e--61.ipv6-literal.net\C\restore` 
 
 
 | Se existirem ficheiros originais  a| 

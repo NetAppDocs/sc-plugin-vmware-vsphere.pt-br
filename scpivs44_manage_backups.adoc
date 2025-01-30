@@ -22,6 +22,9 @@ Você pode renomear e excluir backups executados pelo plug-in SnapCenter para VM
 
 Você pode renomear o plug-in do SnapCenter para backups do VMware vSphere se quiser fornecer um nome melhor para melhorar a capacidade de pesquisa.
 
+
+NOTE: O sistema de storage ASA R2 não oferece suporte à renomeação de backups.
+
 .Passos
 . Clique em *Menu* e selecione a opção de menu *hosts e clusters*, em seguida, selecione uma VM, selecione a guia *Configurar* e, em seguida, clique em *backups* na seção *Plug-in SnapCenter para VMware vSphere*.
 +

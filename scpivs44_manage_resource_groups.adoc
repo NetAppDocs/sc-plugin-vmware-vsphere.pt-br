@@ -52,7 +52,7 @@ Um caractere de sublinhado (_) é permitido.
 . No painel de navegação esquerdo do plug-in SCV, clique em *grupos de recursos*, selecione um grupo de recursos e clique em *Editar*.
 . Na lista à esquerda do assistente *Editar grupo de recursos*, clique na categoria que deseja modificar e insira suas alterações.
 +
-Você pode fazer alterações em várias categorias.
+Você pode fazer alterações em várias categorias. Você também pode editar recursos protegidos secundários nesta opção.
 
 . Clique em *Next* até ver a página Summary (Resumo) e, em seguida, clique em *Finish* (concluir).
 

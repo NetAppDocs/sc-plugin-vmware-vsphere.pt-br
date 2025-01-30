@@ -20,7 +20,7 @@ Para usar os recursos do SnapCenter para proteger VMs, armazenamentos de dados e
 . No seu navegador, navegue até o VMware vSphere vCenter.
 +
 
-NOTE: Para clientes web HTML IPv6, você deve usar o Chrome ou Firefox.
+NOTE: Para clientes web HTML de endereço IPv6, você deve usar o Chrome ou Firefox.
 
 . Faça login na *Página de logon único do VMware vCenter*.
 . No Painel de Navegação, clique com o botão direito do Mouse em qualquer objeto de inventário que seja um objeto pai válido de uma máquina virtual, como um datacenter, pasta, cluster ou host, e selecione *Deploy OVF Template* para iniciar o assistente de implantação do VMware.

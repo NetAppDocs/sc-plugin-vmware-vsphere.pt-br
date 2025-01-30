@@ -16,6 +16,9 @@ summary: As operações de backup são executadas em todos os recursos definidos
 [role="lead"]
 As operações de backup são executadas em todos os recursos definidos em um grupo de recursos. Se um grupo de recursos tiver uma política anexada e uma programação configurada, os backups ocorrerão automaticamente de acordo com a programação.
 
+
+NOTE: O backup do ASA R2 cria snapshots de grupo de consistência e provisiona o grupo de consistência primário se o recurso fornecido ainda não o tiver.
+
 .Antes de começar
 Você deve ter criado um grupo de recursos com uma política anexada.
 

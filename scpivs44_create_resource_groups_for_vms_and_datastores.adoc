@@ -42,6 +42,10 @@ Todas as VMs e armazenamentos de dados, exceto os armazenamentos de dados da Vev
 +
 Todos os vVols em uma única pasta específica da vVol. Se a pasta contiver uma combinação de VMs Vevolve e VMs tradicionais, o plug-in do SnapCenter para VMware vSphere fará backup das VMs Vevolve e ignora as VMs tradicionais.
 
+* VMs e datastores no ASA R2
++
+Não é possível combinar VMs e datastores do ASA R2 com outras VMs e datastores.
+
 
 
 Para todos os grupos de recursos:
@@ -92,8 +96,6 @@ Embora você possa criar um grupo de recursos sem uma política de backup, as op
 
 NOTE: Se estiver selecionando uma política de backup com período de bloqueio instantâneo, você precisará selecionar ONTAP 9.12,1 ou versão posterior.
 
-
-
 * Verificações de compatibilidade
 +
 O SnapCenter executa verificações de compatibilidade quando você cria um grupo de recursos.
@@ -101,7 +103,13 @@ O SnapCenter executa verificações de compatibilidade quando você cria um grup
 +
 <<Gerenciar falhas de verificação de compatibilidade>>
 
+* Crie proteção secundária para um grupo de recursos
++
+A proteção secundária cuida da criação de relacionamento de replicação para os recursos adicionados no grupo de recursos. É necessário criar uma relação de SnapMirror baseada em grupo de consistência no cluster preferido e na SVM usando uma política especificada do primário. A proteção secundária é suportada apenas para o armazenamento de dados e máquinas virtuais baseadas no sistema ASA R2. O peering de cluster e o peering SVM devem ser pré-configurados. A proteção secundária permite somente políticas assíncronas do SnapMirror. Você precisa fornecer sufixo de grupo de consistência ao criar a proteção secundária.
 
+
+
+A proteção secundária cuida da criação de relacionamento de replicação para os recursos adicionados no grupo de recursos.
 
 .Passos
 . No painel de navegação esquerdo do plug-in SCV, clique em *grupos de recursos* e selecione *criar* para iniciar o assistente.
@@ -144,6 +152,9 @@ Se você quiser que o sufixo "_recent" seja adicionado ao instantâneo mais rece
 
 
 NOTE: Um `_recent` backup é criado para cada política anexada a um grupo de recursos. Portanto, um grupo de recursos com várias políticas terá vários `_recent` backups. Não renomeie manualmente `_recent` os backups.
+
+
+NOTE: O sistema de armazenamento ASA R2 não suporta a renomeação de instantâneos e, como resultado, o backup de renomeação da SCV e os recursos de nomeação de instantâneo _recentes não são suportados.
 
 
 
@@ -195,7 +206,7 @@ A expansão de VMs não é suportada para armazenamentos de dados FlexGroup e VV
 | Para usar... | Faça isso... 
 
 
-| Uma política existente | Selecione uma ou mais políticas na lista. 
+| Uma política existente | Selecione uma ou mais políticas na lista. A proteção secundária é aplicável às políticas novas e existentes nas quais você selecionou as atualizações do SnapMirror e do SnapVault. 
 
 
 | Uma nova política  a| 
@@ -207,10 +218,32 @@ A expansão de VMs não é suportada para armazenamentos de dados FlexGroup e VV
 +
 No modo vinculado, a lista inclui políticas em todos os vCenters vinculados. Você deve selecionar uma política que esteja no mesmo vCenter que o grupo de recursos.
 
-.. Na página *horários*, configure o agendamento de backup para cada política selecionada.
-+
-image:scpivs44_image18.png["Janela criar grupo de recursos"]
+.. Na página *proteção secundária*, a lista de recursos selecionados é exibida com seu status de proteção. Para proteger os recursos não protegidos, selecione o tipo de política de replicação, o sufixo do grupo de consistência, o cluster de destino e o SVM de destino no menu suspenso. Na criação do grupo de recursos, um trabalho separado é criado para proteção secundária e você pode vê-lo na janela do monitor de trabalho.
 
+
+
+
+|===
+| Campos | Descrição 
+
+
+| Nome da política de replicação | Nome da política SnapMirror. Somente as políticas secundárias *assíncronas* e *Mirror e Vault* são suportadas. 
+
+
+| Sufixo do grupo de consistência | Uma configuração de destino usada para anexar ao grupo de consistência primária para formar o nome do grupo de consistência de destino. Por exemplo: Se o nome do grupo de consistência primária for sccg_2024-11-28_120918 e você digitar _dest como sufixo, o grupo de consistência secundário será criado como sccg_2024-11-28_120918_dest. O sufixo é aplicável apenas para grupos de consistência desprotegidos. 
+
+
+| Cluster de destino | Para todas as unidades de armazenamento desprotegidas, a SCV exibe nomes de cluster(s) em espiral no menu suspenso. Se o armazenamento adicionado à SCV estiver no escopo da SVM, então, devido à limitação do ONTAP, o ID do cluster será exibido em vez do nome. 
+
+
+| SVM de destino | Para todas as unidades de storage não protegidas, a VCR exibe os nomes dos SVM(s) com peering. O cluster e o SVM são escolhidos automaticamente quando uma das unidades de storage que faz parte do grupo de consistência é selecionada. O mesmo é aplicado a todas as outras unidades de armazenamento no mesmo grupo de consistência. 
+
+
+| Recursos protegidos secundários | Para todas as unidades de storage protegidas dos recursos adicionados à página recursos, os detalhes do relacionamento secundário, incluindo cluster, SVM e tipo de replicação, são exibidos. 
+|===
+image:secondary_protection.png["Janela criar grupo de recursos"]
+
+. Na página *horários*, configure o agendamento de backup para cada política selecionada.
 +
 No campo hora de início, introduza uma data e uma hora diferentes de zero. A data deve estar no formato `day/month/year`.
 
@@ -223,7 +256,7 @@ Você deve preencher cada campo. O plug-in do SnapCenter para VMware vSphere cri
 +
 link:scpivs44_modify_the_time_zones.html["Modifique os fusos horários para backups"].
 
-.. Revise o resumo e clique em *Finish*.
+. Revise o resumo e clique em *Finish*. A partir da proteção secundária da VCR 6,1 para os recursos dos sistemas ASA R2 estão visíveis na página de resumo.
 +
 Antes de clicar em *Finish*, você pode voltar para qualquer página do assistente e alterar as informações.
 
@@ -233,8 +266,6 @@ Depois de clicar em *Finish*, o novo grupo de recursos é adicionado à lista de
 +
 
 NOTE: Se a operação do quiesce falhar em qualquer uma das VMs no backup, o backup será marcado como não consistente com VM, mesmo que a política selecionada tenha a consistência da VM selecionada. Neste caso, é possível que algumas das VMs tenham sido silenciadas com sucesso.
-
-
 
 
 

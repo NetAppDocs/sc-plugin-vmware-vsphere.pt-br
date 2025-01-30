@@ -27,6 +27,7 @@ Você pode usar o plug-in do SnapCenter para APIs REST do VMware vSphere para ex
 ** Montar e desmontar datastores
 ** Transfira trabalhos e gere relatórios
 ** Modificar programações incorporadas
+** Configurar a proteção secundária para o ASA R2
 
 
 * Operações que não são suportadas pelas REST APIs para VMware vSphere

@@ -43,13 +43,12 @@ Para proteger um datastore VMFS em uma implantação de sincronização ativa do
 +
 ** Configurar clusters e mediador conforme descrito no relatório técnico: https://www.netapp.com/pdf.html?item=/media/21888-tr-4878.pdf["TR-4878: SnapMirror ative Sync (anteriormente SMBC)"].
 ** Adicione o volume associado ao datastore VMFS ao grupo de consistência e crie uma relação de proteção de dados usando a política de proteção _AutomatedFailOver_ ou _AutomatedFailOverDuplex_ entre dois sistemas de armazenamento ONTAP. A política _AutomatedFailOverDuplex_ é suportada a partir da versão ONTAP 9.15,1 em diante.
-+
+
+
+
+
 
 NOTE: Na configuração fan-out, o grupo de consistência não é compatível com o local terciário.
-
-
-
-
 
 .Sobre esta tarefa
 A maioria dos campos nessas páginas do assistente são auto-explicativos. As informações a seguir descrevem alguns dos campos para os quais você pode precisar de orientação.

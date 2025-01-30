@@ -46,16 +46,22 @@ Todos os plug-ins do SnapCenter exigem o seguinte Privileges mínimo.
 | Versão 
 
 
-| clone de volume criar clone de volume show de volume show de volume split start volume split stop volume criar volume excluir volume destruir clone de arquivo de volume criar volume show-disco-uso volume off-line volume off-line modificar volume criar volume excluir volume excluir volume qtree alterar volume qtree alterar volume qtree mostrar volume restringir volume instantâneo criar volume eliminar volume instantâneo modificar volume instantâneo alterar volume instantâneo alterar volume restaurar volume instantâneo volume instantâneo volume restaurar volume instantâneo volume instantâneo mostrar volume instantâneo desmontar 
+| Clone de volume criar clone de volume show de volume show de volume split start volume clone split status volume split stop volume criar volume excluir volume destruir clone de arquivo de volume criar arquivo de volume show-disco-uso volume off-line volume gerenciado-recurso volume modificar volume criar volume excluir volume qtree modificar volume apagar volume qtree modificar volume SnapLock alterar volume alterar volume alterar volume instantâneo volume alterar volume instantâneo volume alterar volume ampliar volume ampliar volume ampliar volume 
 
 
-| servidor vnsub servidor vnme sub servidor vnme sub servidor vnme sub servidor vnme sub servidor vnme sub servidor vnvme sub servidor servidor vnvme sub-server sub vserver subsystem vserver subsystem vnvserver subsystem servidor vnvme sub servidor vnvme sub-serme subsystem servidor vnvnvnvserver subsystem servidor vrme sub 
+| servidor vnvserver subsystem vnvme servidor vnvme servidor servidor vnvme servidor servidor vnvme servidor servidor vnvme servidor servidor 
 |===
 |===
 | Comandos somente leitura: Privileges mínimo necessário para o ONTAP 8,3 e posterior 
 
 
 | a identidade do cluster mostra a interface de rede mostra vserver vserver peer vserver show 
+|===
+|===
+| Comandos All-Access: Privileges mínimo necessário para o ONTAP 9 e posterior. 
+
+
+| mostra a unidade de armazenamento do grupo de consistência 
 |===
 Você pode ignorar o comando _cluster identity show_ cluster level ao criar uma função para associar ao data SVM.
 

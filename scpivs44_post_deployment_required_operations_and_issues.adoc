@@ -28,7 +28,7 @@ Se você é um novo usuário do SnapCenter, deve adicionar VMs de storage ao Sna
 
 * Depois de implantar o dispositivo virtual, a guia *Backup jobs* no Dashboard pode não ser carregada nos seguintes cenários:
 +
-** Você está executando o IPv4 e tem dois endereços IP para o host VMware vSphere do SnapCenter. Como resultado, a solicitação de tarefa é enviada para um endereço IP que não é reconhecido pelo servidor SnapCenter. Para evitar esse problema, adicione o endereço IP que você deseja usar, da seguinte forma:
+** Você está executando o endereço IPv4 e tem dois endereços IP para o host VMware vSphere do SnapCenter. Como resultado, a solicitação de tarefa é enviada para um endereço IP que não é reconhecido pelo servidor SnapCenter. Para evitar esse problema, adicione o endereço IP que você deseja usar, da seguinte forma:
 +
 ... Navegue até o local onde o plug-in do SnapCenter para VMware vSphere é implantado: `/opt/netapp/scvservice/standalone_aegis/etc`
 ... Abra a rede de arquivos- interface.properties.

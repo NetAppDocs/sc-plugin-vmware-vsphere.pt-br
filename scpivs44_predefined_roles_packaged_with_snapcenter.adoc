@@ -28,10 +28,10 @@ Você pode ver as funções predefinidas na GUI do vCenter clicando em *Menu > A
 | Função | Descrição 
 
 
-| Administrador do SCV | Fornece todo o vCenter Server nativo e Privileges específico do SnapCenter necessários para executar todos os plug-in do SnapCenter para tarefas do VMware vSphere. 
+| Administrador do SCV | Fornece todo o vCenter Server nativo e Privileges específico do SnapCenter necessários para executar todos os plug-in do SnapCenter para tarefas do VMware vSphere. A partir da versão da VCR 6,1, um novo privilégio para criar proteção secundária é adicionado a essa função. 
 
 
-| Backup da VCR | Fornece todo o vCenter Server nativo e Privileges específico do SnapCenter necessários para fazer backup de objetos vSphere (máquinas virtuais e datastores). O utilizador também tem acesso ao privilégio de configuração. O usuário não pode restaurar backups. 
+| Backup da VCR | Fornece todo o vCenter Server nativo e Privileges específico do SnapCenter necessários para fazer backup de objetos vSphere (máquinas virtuais e datastores). O utilizador também tem acesso ao privilégio de configuração. O usuário não pode restaurar backups. A partir da versão da VCR 6,1, um novo privilégio para criar proteção secundária é adicionado a essa função. 
 
 
 | Restauração do arquivo convidado SCV | Fornece todo o vCenter Server nativo e Privileges específico do SnapCenter necessários para restaurar arquivos e pastas de convidados. O usuário não pode restaurar VMs ou VMDKs. 
