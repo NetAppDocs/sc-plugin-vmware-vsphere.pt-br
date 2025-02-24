@@ -14,7 +14,7 @@ summary: Você deve estar ciente dos requisitos de implantação antes de implan
 
 
 [role="lead"]
-Você deve estar ciente dos requisitos de implantação antes de implantar o dispositivo virtual. Os requisitos de implantação estão listados nas tabelas a seguir.
+Você deve estar familiarizado com os seguintes requisitos antes de começar a implantar o plug-in do SnapCenter para VMware vSphere (SCV).
 
 
 
@@ -22,21 +22,21 @@ Você deve estar ciente dos requisitos de implantação antes de implantar o dis
 
 Antes de iniciar a implantação do plug-in do SnapCenter para VMware vSphere (SCV), você deve estar familiarizado com os requisitos do host.
 
-* O plug-in do SnapCenter para VMware vSphere é implantado como uma VM Linux, independentemente de você usar o plug-in para proteger dados em sistemas Windows ou Linux.
+* O plug-in do SnapCenter para VMware vSphere é implantado como uma VM Linux, independentemente de ser usado para proteger dados em sistemas Windows ou Linux.
 * Você deve implantar o plug-in do SnapCenter para VMware vSphere no vCenter Server.
 +
-As programações de backup são executadas no fuso horário em que o plug-in do SnapCenter para VMware vSphere é implantado. O vCenter relata dados no fuso horário em que o vCenter está localizado. Portanto, se o plug-in do SnapCenter para VMware vSphere e vCenter estiverem em fusos horários diferentes, os dados do plug-in do SnapCenter para o painel do VMware vSphere podem não ser os mesmos que os dados nos relatórios.
+As programações de backup são executadas no fuso horário em que o plug-in do SnapCenter para VMware vSphere é implantado, e o vCenter relata dados no fuso horário em que ele está localizado. Portanto, se o plug-in do SnapCenter para VMware vSphere e vCenter estiverem em fusos horários diferentes, os dados do plug-in do SnapCenter para o painel do VMware vSphere podem não ser os mesmos que os dados nos relatórios.
 
-* Você não deve implantar o plug-in do SnapCenter para VMware vSphere em uma pasta que tenha um nome com carateres especiais.
+* Você não deve implantar o plug-in do SnapCenter para VMware vSphere em uma pasta com um nome que contenha carateres especiais.
 +
 O nome da pasta não deve conter os seguintes carateres especiais
 
 * Você deve implantar e Registrar uma instância separada e exclusiva do plug-in do SnapCenter para VMware vSphere para cada vCenter Server.
 +
-** Cada vCenter Server, esteja ou não no modo vinculado, deve ser emparelhado com uma instância separada do plug-in do SnapCenter para VMware vSphere.
+** Cada vCenter Server, no modo vinculado ou não, deve ser emparelhado com uma instância separada do plug-in do SnapCenter para VMware vSphere.
 ** Cada instância do plug-in do SnapCenter para VMware vSphere deve ser implantada como uma VM Linux separada.
 +
-Por exemplo, se você quiser executar backups de seis instâncias diferentes do vCenter Server, você deve implantar o plug-in do SnapCenter para VMware vSphere em seis hosts e cada vCenter Server deve ser emparelhado com uma instância exclusiva do plug-in do SnapCenter para VMware vSphere.
+Por exemplo, suponha que você queira executar backups de seis instâncias diferentes do vCenter Server. Nesse caso, você deve implantar o plug-in do SnapCenter para VMware vSphere em seis hosts e cada vCenter Server deve ser emparelhado com uma instância exclusiva do plug-in do SnapCenter para VMware vSphere.
 
 
 
@@ -88,7 +88,7 @@ Restaurar uma VM completa quando um ou mais VMDKs estão em um datastore VMFS.
 | ONTAP | Um destes: SnapMirror ou SnapVault (para proteção de dados secundária, independentemente do tipo de relacionamento) 
 
 
-| Produtos adicionais | VSphere Standard, Enterprise ou Enterprise Plus é necessária Uma licença vSphere para executar operações de restauração que usam o Storage vMotion. As licenças vSphere Essentials ou Essentials Plus não incluem o Storage vMotion. 
+| Produtos adicionais | VSphere Standard, Enterprise ou Enterprise Plus é necessária Uma licença vSphere para executar operações de restauração usando o Storage vMotion. As licenças vSphere Essentials ou Essentials Plus não incluem o Storage vMotion. 
 
 
 | Principais destinos | Padrão do SnapCenter: Necessário para executar a proteção baseada em aplicações sobre o VMware SnapRestore: Necessário para executar operações de restauração somente para VMs e datastores VMware FlexClone: Usado para montar e anexar operações apenas em VMs e datastores VMware 
@@ -145,9 +145,6 @@ Os requisitos mínimos de software para suporte a protocolos NVMe em TCP e NVMe 
 | Item | Requisitos 
 
 
-| Sistema operacional | Linux 
-
-
 | Contagem de CPU recomendada | 8 núcleos 
 
 
@@ -180,13 +177,13 @@ Observação: A porta personalizada para adição do host SCV ao SnapCenter é s
 | Porta do VMware vSphere vCenter Server | Você deve usar a porta 443 se estiver protegendo as VMs da VVol. 
 
 
-| Cluster de storage ou porta de VM de storage | 443 (HTTPS), 80 bidirecional (HTTP), bidirecional a porta é usada para comunicação entre o dispositivo virtual e a VM de armazenamento ou o cluster que contém a VM de armazenamento. 
+| Cluster de storage ou porta de VM de storage | 443 (HTTPS), 80 bidirecional (HTTP), bidirecional a porta é usada para se comunicar entre o dispositivo virtual e a VM de armazenamento ou o cluster que contém a VM de armazenamento. 
 |===
 
 
 == Configurações compatíveis
 
-Cada instância de plug-in suporta apenas um vCenter Server. Os vCenters no modo vinculado são suportados. Várias instâncias de plug-in podem suportar o mesmo servidor SnapCenter, como mostrado na figura a seguir.
+Cada instância de plug-in suporta apenas um vCenter Server, que está no modo vinculado. No entanto, várias instâncias de plug-in podem suportar o mesmo servidor SnapCenter, como mostrado na figura a seguir.
 
 image:scpivs44_image4.png["Representação gráfica de configuração suportada"]
 
@@ -194,7 +191,7 @@ image:scpivs44_image4.png["Representação gráfica de configuração suportada"
 
 == Necessário RBAC Privileges
 
-A conta de administrador do vCenter deve ter o vCenter Privileges necessário, conforme listado na tabela a seguir.
+A conta de administrador do vCenter deve ter o vCenter Privileges necessário listado na tabela a seguir.
 
 |===
 | Para fazer esta operação... | Você precisa ter esses vCenter Privileges... 

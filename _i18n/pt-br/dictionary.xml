@@ -669,18 +669,12 @@
   <block id="05f682de80179c0aadcfd997d1abae48" category="list-text">Faça login no cliente vCenter HTML5, clique em *Menu* na barra de ferramentas e selecione *Plug-in SnapCenter para VMware vSphere*</block>
   <block id="3a3bfcea804c014276e7672b06f18879" category="summary">Você deve estar ciente dos requisitos de implantação antes de implantar o dispositivo virtual.</block>
   <block id="d3520107017d5a966a91cb89b0a1057f" category="doc">Planejamento e requisitos de implantação</block>
-  <block id="db2aeb24ed12922fe15bc09cfd1f528b" category="paragraph">Você deve estar ciente dos requisitos de implantação antes de implantar o dispositivo virtual. Os requisitos de implantação estão listados nas tabelas a seguir.</block>
   <block id="fc076765cbc4aef219c970ffdd93f443" category="section-title">Requisitos de host</block>
   <block id="59d59b410909e6449498dfd7dabe204b" category="paragraph">Antes de iniciar a implantação do plug-in do SnapCenter para VMware vSphere (SCV), você deve estar familiarizado com os requisitos do host.</block>
-  <block id="d4ff2a4ba3e5af06f352373f50430bce" category="list-text">O plug-in do SnapCenter para VMware vSphere é implantado como uma VM Linux, independentemente de você usar o plug-in para proteger dados em sistemas Windows ou Linux.</block>
   <block id="5897423e9fe4df49061445b3104d9dbb" category="list-text">Você deve implantar o plug-in do SnapCenter para VMware vSphere no vCenter Server.</block>
-  <block id="77e6a5095dbf7f9171bcc524ed6e1476" category="paragraph">As programações de backup são executadas no fuso horário em que o plug-in do SnapCenter para VMware vSphere é implantado. O vCenter relata dados no fuso horário em que o vCenter está localizado. Portanto, se o plug-in do SnapCenter para VMware vSphere e vCenter estiverem em fusos horários diferentes, os dados do plug-in do SnapCenter para o painel do VMware vSphere podem não ser os mesmos que os dados nos relatórios.</block>
-  <block id="5d7c1f071b8bebdb7a96ab764852bb32" category="list-text">Você não deve implantar o plug-in do SnapCenter para VMware vSphere em uma pasta que tenha um nome com carateres especiais.</block>
   <block id="a7c99fa4270e567a328e88618380eaa4" category="paragraph">O nome da pasta não deve conter os seguintes carateres especiais</block>
   <block id="43685458a1d84184e89d6917bc3f3a30" category="list-text">Você deve implantar e Registrar uma instância separada e exclusiva do plug-in do SnapCenter para VMware vSphere para cada vCenter Server.</block>
-  <block id="18ddbf443f973a535ca1b5fb7410cf19" category="list-text">Cada vCenter Server, esteja ou não no modo vinculado, deve ser emparelhado com uma instância separada do plug-in do SnapCenter para VMware vSphere.</block>
   <block id="a893739e55ea1f12f5171b7f54a73977" category="list-text">Cada instância do plug-in do SnapCenter para VMware vSphere deve ser implantada como uma VM Linux separada.</block>
-  <block id="6475183430549d8c41dcdf49b6e454d9" category="paragraph">Por exemplo, se você quiser executar backups de seis instâncias diferentes do vCenter Server, você deve implantar o plug-in do SnapCenter para VMware vSphere em seis hosts e cada vCenter Server deve ser emparelhado com uma instância exclusiva do plug-in do SnapCenter para VMware vSphere.</block>
   <block id="f69439260ecee7ac85f815e8701071d9" category="list-text">Para proteger as VMs da VVol (VMs nos datastores VMware vVol), você deve primeiro implantar as ferramentas do ONTAP para o VMware vSphere. As ferramentas do ONTAP provisionam e configuram o storage para vVols no ONTAP e no cliente da Web VMware.</block>
   <block id="ce5825ca299ec1e545f124bbf257a2c7" category="list-text">O plug-in SnapCenter para VMware vSphere fornece suporte limitado a dispositivos PCI ou PCIe compartilhados (por exemplo, GPU de grade NVIDIA) devido a uma limitação das máquinas virtuais no suporte ao vMotion de armazenamento. Para obter mais informações, consulte o documento do fornecedor Guia de implantação para VMware.</block>
   <block id="2ea5568824b820ba2bfad023e6bb3573" category="list-text">O que é suportado:</block>
@@ -700,7 +694,6 @@
   <block id="253b40ae359ba25b56231803430c4873" category="cell">ONTAP</block>
   <block id="3560c7ef415d0e13191c33fa995b7005" category="cell">Um destes: SnapMirror ou SnapVault (para proteção de dados secundária, independentemente do tipo de relacionamento)</block>
   <block id="2b5932460c4f1e726c2fe5eb4c84cf64" category="cell">Produtos adicionais</block>
-  <block id="9f7e37bd05b30c134ff1660c6d52c186" category="cell">VSphere Standard, Enterprise ou Enterprise Plus é necessária Uma licença vSphere para executar operações de restauração que usam o Storage vMotion. As licenças vSphere Essentials ou Essentials Plus não incluem o Storage vMotion.</block>
   <block id="6c1ccb0198e251b6df82fd2d169fdcf0" category="cell">Principais destinos</block>
   <block id="9c864fe971ea9ba615c7a517d7552160" category="cell">Padrão do SnapCenter: Necessário para executar a proteção baseada em aplicações sobre o VMware SnapRestore: Necessário para executar operações de restauração somente para VMs e datastores VMware FlexClone: Usado para montar e anexar operações apenas em VMs e datastores VMware</block>
   <block id="5be74f1e9c3cdce99e50c0e439ec19b3" category="cell">Destinos secundários</block>
@@ -726,28 +719,21 @@
   <block id="83796d186e6e678e53d65b677d9068ca" category="list-text">ESXi 7.0U3</block>
   <block id="ab8296c5ef7a7b056b384680f89a9379" category="list-text">ONTAP 9.10,1</block>
   <block id="5a2ebfb8baa378cfcfcba58bbb1380c2" category="cell">Requisitos</block>
-  <block id="696c660ff8d9323e55146a6dbd4e4088" category="cell">Sistema operacional</block>
-  <block id="edc9f0a5a5d57797bf68e37364743831" category="cell">Linux</block>
   <block id="3cb874290f06f3c2d44ce2e858bb041f" category="cell">Espaço mínimo no disco rígido para o plug-in SnapCenter para VMware vSphere, logs e banco de dados MySQL</block>
   <block id="dcfebc6fbca2c5316f55c914e6593d2d" category="cell">100 GB</block>
   <block id="9a0980e2d2a75eb076f41f7a4d439162" category="section-title">Requisitos de conexão e porta</block>
   <block id="3672cca688eb0474cd3fee2add1a2067" category="cell">Tipo de porta</block>
-  <block id="1af12a0ed126e7e6b194370c0c0be5eb" category="cell">Porta pré-configurada</block>
   <block id="2cb2843b629d315325aac076907ec4b9" category="cell">Porta do VMware ESXi Server</block>
   <block id="ad676153bac7535311261fab671b77b9" category="cell">443 (HTTPS), bidirecional o recurso de restauração de arquivo convidado usa essa porta.</block>
   <block id="926bafe6b6d4e07892751c7ca73ad20d" category="cell">Plug-in do SnapCenter para a porta VMware vSphere</block>
-  <block id="ea35a5ceed1579f5b902ce081cd9eba5" category="paragraph">8144 (HTTPS), bidirecional a porta é usada para comunicações do cliente VMware vSphere e do servidor SnapCenter. 8080 bidirecional esta porta é usada para gerenciar dispositivos virtuais.</block>
   <block id="716306984040e1bf7dc3b8c1b0a05422" category="paragraph">Observação: A porta personalizada para adição do host SCV ao SnapCenter é suportada.</block>
   <block id="7c1239972879fe0b69b4bb6d5c9a743e" category="cell">Porta do VMware vSphere vCenter Server</block>
   <block id="1f5ccbd5c3e6d6be1c440296630a5678" category="cell">Você deve usar a porta 443 se estiver protegendo as VMs da VVol.</block>
   <block id="131b9f1c14d26ba7a0cce7389e7679a9" category="cell">Cluster de storage ou porta de VM de storage</block>
-  <block id="4ebb46027adb5b26fc62dffc3aab358e" category="cell">443 (HTTPS), 80 bidirecional (HTTP), bidirecional a porta é usada para comunicação entre o dispositivo virtual e a VM de armazenamento ou o cluster que contém a VM de armazenamento.</block>
   <block id="bd6873be6e44dbd5504531679d8ca1ef" category="section-title">Configurações compatíveis</block>
-  <block id="f377fb769eb12fc39f5abb7af2a27054" category="paragraph">Cada instância de plug-in suporta apenas um vCenter Server. Os vCenters no modo vinculado são suportados. Várias instâncias de plug-in podem suportar o mesmo servidor SnapCenter, como mostrado na figura a seguir.</block>
   <block id="cf0ab757341ba6d3dc7ba387b7608080" category="inline-image-macro">Representação gráfica de configuração suportada</block>
   <block id="9dfe68c8c0e7d63c6014f412ad6f64f4" category="paragraph"><block ref="9dfe68c8c0e7d63c6014f412ad6f64f4" category="inline-image-macro-rx" type="image"></block></block>
   <block id="44245d918ad9aae8ea6514501fcfa0e8" category="section-title">Necessário RBAC Privileges</block>
-  <block id="59e5a4ee48160cd7955828dd0c4db401" category="paragraph">A conta de administrador do vCenter deve ter o vCenter Privileges necessário, conforme listado na tabela a seguir.</block>
   <block id="3226b4d551073b03b6999f2db6d26c26" category="cell">Para fazer esta operação...</block>
   <block id="ebbed56187bf88c2773b58885cb13924" category="cell">Você precisa ter esses vCenter Privileges...</block>
   <block id="246180f43b6fb5d5b8945e640f176b32" category="cell">Implante e Registre o plug-in do SnapCenter para VMware vSphere no vCenter</block>
@@ -2181,4 +2167,16 @@
   <block id="06f856f616715d0e20b174cd2c7fb47a" category="sidebar">O plug-in do SnapCenter para VMware vSphere (SCV) é um dispositivo virtual baseado em Linux. Como autônomo, ele oferece operações de backup e restauração rápidas, com uso eficiente de espaço, consistentes com falhas e consistentes com VM para VMs, armazenamentos de dados e VMDKs. Ele também funciona com o servidor SnapCenter para dar suporte a operações de backup e restauração baseadas em aplicativos em ambientes VMware para plug-ins específicos de aplicativos do SnapCenter. Esta biblioteca de documentação descreve o plug-in do SnapCenter para VMware vSphere versões 6,1.</block>
   <block id="94e8421982a2fb673cf72156837a22d4" category="sidebar">Plug-in do SnapCenter para VMware vSphere 6,1</block>
   <block id="a90ceefdbe215fb84520872833bfb5a2" category="sidebar">Novidades do plug-in do SnapCenter para VMware vSphere 6,1</block>
+  <block id="7ba297bc556c4bd891e83b1943e116d5" category="paragraph">Você deve estar familiarizado com os seguintes requisitos antes de começar a implantar o plug-in do SnapCenter para VMware vSphere (SCV).</block>
+  <block id="ca7b78e6e086f02d5ea9e3c5f9719822" category="list-text">O plug-in do SnapCenter para VMware vSphere é implantado como uma VM Linux, independentemente de ser usado para proteger dados em sistemas Windows ou Linux.</block>
+  <block id="ea84ccf1b1b24d5d18322d9bcac320d5" category="paragraph">As programações de backup são executadas no fuso horário em que o plug-in do SnapCenter para VMware vSphere é implantado, e o vCenter relata dados no fuso horário em que ele está localizado. Portanto, se o plug-in do SnapCenter para VMware vSphere e vCenter estiverem em fusos horários diferentes, os dados do plug-in do SnapCenter para o painel do VMware vSphere podem não ser os mesmos que os dados nos relatórios.</block>
+  <block id="c8ab109ee626a90547277ef790b2ecc5" category="list-text">Você não deve implantar o plug-in do SnapCenter para VMware vSphere em uma pasta com um nome que contenha carateres especiais.</block>
+  <block id="b8d538e51a79520b3157b17c50b7394d" category="list-text">Cada vCenter Server, no modo vinculado ou não, deve ser emparelhado com uma instância separada do plug-in do SnapCenter para VMware vSphere.</block>
+  <block id="bfd5317e73c9442ee1915a6588c0366c" category="paragraph">Por exemplo, suponha que você queira executar backups de seis instâncias diferentes do vCenter Server. Nesse caso, você deve implantar o plug-in do SnapCenter para VMware vSphere em seis hosts e cada vCenter Server deve ser emparelhado com uma instância exclusiva do plug-in do SnapCenter para VMware vSphere.</block>
+  <block id="94065d09aa28da13308f15b08c2c3e89" category="cell">VSphere Standard, Enterprise ou Enterprise Plus é necessária Uma licença vSphere para executar operações de restauração usando o Storage vMotion. As licenças vSphere Essentials ou Essentials Plus não incluem o Storage vMotion.</block>
+  <block id="99ddf0e823c1be51589f68696f62cf56" category="cell">Porta pré-configurada</block>
+  <block id="f96e5ffe0e86002fbdb3cab444ac57b9" category="paragraph">8144 (HTTPS), bidirecional a porta é usada para comunicações do cliente VMware vSphere e do servidor SnapCenter. 8080 bidirecional esta porta é usada para gerenciar dispositivos virtuais.</block>
+  <block id="ffa5dd2af4873dbfd89f9ae07a815104" category="cell">443 (HTTPS), 80 bidirecional (HTTP), bidirecional a porta é usada para se comunicar entre o dispositivo virtual e a VM de armazenamento ou o cluster que contém a VM de armazenamento.</block>
+  <block id="822926837c6e218e71716b72e1a7017f" category="paragraph">Cada instância de plug-in suporta apenas um vCenter Server, que está no modo vinculado. No entanto, várias instâncias de plug-in podem suportar o mesmo servidor SnapCenter, como mostrado na figura a seguir.</block>
+  <block id="1c0894625a89e433ba87d14aebdc6088" category="paragraph">A conta de administrador do vCenter deve ter o vCenter Privileges necessário listado na tabela a seguir.</block>
 </blocks>
