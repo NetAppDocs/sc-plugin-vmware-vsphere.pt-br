@@ -64,10 +64,10 @@ Você pode fazer alterações em várias categorias. Você também pode editar r
 Você pode excluir um grupo de recursos no vCenter se não precisar mais proteger os recursos no grupo de recursos. Você deve garantir que todos os grupos de recursos sejam excluídos antes de remover o plug-in do SnapCenter vSphere do vCenter.
 
 .Sobre esta tarefa
-Todas as operações de exclusão do grupo de recursos são executadas como exclusões de força. A operação de exclusão descompacta todas as políticas do grupo de recursos do vCenter, remove o grupo de recursos do plug-in do SnapCenter para VMware vSphere e exclui todos os backups e snapshots do grupo de recursos.
+Todas as operações de exclusão do grupo de recursos são executadas como exclusões de força. A operação de exclusão separa todas as políticas do grupo de recursos do vCenter, remove o grupo de recursos do plug-in do SnapCenter para VMware vSphere e exclui todos os backups e snapshots do grupo de recursos.
 
 
-NOTE: Em um relacionamento SnapVault, a última captura Instantânea não pode ser excluída; portanto, o grupo de recursos não pode ser excluído. Antes de excluir um grupo de recursos que faz parte de um relacionamento do SnapVault, use o OnCommand System Manager ou a CLI do ONTAP para remover o relacionamento do SnapVault e exclua o último snapshot.
+NOTE: Em um relacionamento SnapVault, o último snapshot não pode ser excluído; portanto, o grupo de recursos não pode ser excluído. Antes de excluir um grupo de recursos que faz parte de um relacionamento do SnapVault, use o OnCommand System Manager ou a CLI do ONTAP para remover o relacionamento do SnapVault e, em seguida, exclua o último snapshot.
 
 .Passos
 . No painel de navegação esquerdo do plug-in SCV, clique em *grupos de recursos*, selecione um grupo de recursos e clique em *Excluir*.

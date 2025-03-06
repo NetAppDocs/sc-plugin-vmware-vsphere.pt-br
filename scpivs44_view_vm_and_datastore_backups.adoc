@@ -14,15 +14,20 @@ summary: Quando você estiver se preparando para fazer backup ou restaurar uma V
 
 
 [role="lead"]
-Quando você estiver se preparando para fazer backup ou restaurar uma VM ou um datastore, talvez queira ver todos os backups disponíveis para esse recurso e exibir os detalhes desses backups.
+Ao se preparar para fazer backup ou restauração de uma VM ou datastore, você pode querer ver todos os backups disponíveis para esse recurso e exibir os detalhes desses backups.
 
 .Sobre esta tarefa
-Procurar pastas de ficheiros grandes, por exemplo, pastas de ficheiros 10k, pode demorar um ou mais minutos pela primeira vez. As sessões de navegação subsequentes demoram menos tempo.
+A navegação em pastas de ficheiros grandes, como pastas de ficheiros 10k, pode demorar um ou mais minutos pela primeira vez. As sessões de navegação subsequentes demoram menos tempo.
 
 .Passos
-. Clique em *Menu* e selecione a opção de menu *hosts e clusters*, em seguida, selecione uma VM, selecione a guia *Configurar* e, em seguida, clique em *backups* na seção *Plug-in SnapCenter para VMware vSphere*.
+. Faça login no vCenter Server.
+. Navegue até a página *Inventory* e selecione um datastore ou uma VM.
+. No painel direito, selecione *Configurar* > *Plug-in SnapCenter para VMware vSphere* > *backups*.
 +
-image:scv50_image1.png["IU do vSphere Client"]
+image:backup-view.png["Vista de backups"]
 
-. Clique no backup que você deseja exibir.
++
+Se a opção *Enable Secondary Snapshot Locking* (Ativar bloqueio instantâneo secundário) não estiver selecionada durante a fase de criação da política, ela assumirá o valor definido para a opção *Enable Primary Snapshot Locking* (Ativar bloqueio instantâneo primário) por padrão. Na lista backups, o hífen no campo *expiração de bloqueio secundário* indica que os períodos de bloqueio primário e secundário são os mesmos.
+
+. Selecione a cópia de segurança que pretende visualizar.
 

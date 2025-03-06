@@ -56,7 +56,7 @@ Você pode pesquisar um nome de backup específico ou um nome de backup parcial 
 
 | Um datastore alternativo em um local alternativo | Clique no datastore de destino e selecione um datastore diferente na lista. 
 |===
-. Na página *Selecionar local*, selecione a captura Instantânea que deseja restaurar (primária ou secundária).
+. Na página *Selecionar local*, selecione o instantâneo que deseja restaurar (primário ou secundário).
 . Revise a página Resumo e clique em *Finish*.
 . Opcional: Monitore o progresso da operação clicando em *Recent Tasks* na parte inferior da tela.
 . Atualize a tela para exibir informações atualizadas.

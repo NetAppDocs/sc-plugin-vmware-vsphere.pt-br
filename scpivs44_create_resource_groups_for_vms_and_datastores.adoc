@@ -94,7 +94,7 @@ Embora você possa criar um grupo de recursos sem uma política de backup, as op
 
 +
 
-NOTE: Se estiver selecionando uma política de backup com período de bloqueio instantâneo, você precisará selecionar ONTAP 9.12,1 ou versão posterior.
+NOTE: Se você estiver selecionando uma política de backup com período de bloqueio de instantâneos, você precisará selecionar ONTAP 9.12.1 ou versão posterior.
 
 * Verificações de compatibilidade
 +
@@ -147,22 +147,22 @@ Esta é a maneira mais fácil de criar um grupo de recursos. No entanto, você t
 | Assunto do e-mail | Introduza o assunto que pretende para os e-mails de notificação. 
 
 
-| Último nome de instantâneo  a| 
-Se você quiser que o sufixo "_recent" seja adicionado ao instantâneo mais recente, marque esta caixa. O sufixo "_recent" substitui a data e o timestamp.
+| Último nome do instantâneo  a| 
+Se você quiser que o sufixo "_recent" seja adicionado ao snapshot mais recente, marque esta caixa. O sufixo "_recent" substitui a data e o timestamp.
 
 
 NOTE: Um `_recent` backup é criado para cada política anexada a um grupo de recursos. Portanto, um grupo de recursos com várias políticas terá vários `_recent` backups. Não renomeie manualmente `_recent` os backups.
 
 
-NOTE: O sistema de armazenamento ASA R2 não suporta a renomeação de instantâneos e, como resultado, o backup de renomeação da SCV e os recursos de nomeação de instantâneo _recentes não são suportados.
+NOTE: O sistema de armazenamento ASA R2 não suporta a renomeação de instantâneos e, como resultado, o backup de renomeação da SCV e os recursos de nomeação de snapshot _recentes não são suportados.
 
 
 
-| Formato instantâneo personalizado  a| 
-Se você quiser usar um formato personalizado para os nomes das capturas instantâneas, marque essa caixa e insira o formato do nome.
+| Formato de instantâneo personalizado  a| 
+Se pretender utilizar um formato personalizado para os nomes de instantâneos, assinale esta caixa e introduza o formato do nome.
 
 *** Por padrão, esse recurso está desativado.
-*** No entanto, os nomes de instantâneos padrão usam o formato `<ResourceGroup>_<Date-TimeStamp>`, você pode especificar um formato personalizado usando as variáveis Use a lista suspensa no campo de nome personalizado para selecionar quais variáveis você deseja usar e a ordem em que elas são usadas. Se você selecionar CustomText, o formato do nome será `<CustomName>_<Date-TimeStamp>`. Insira o texto personalizado na caixa adicional fornecida. [NOTA]: Se você também selecionar o sufixo "_recente", você deve certificar-se de que os nomes personalizados do Snapshot serão exclusivos no datastore, portanto, você deve adicionar as variáveis Grupo de recursos e Política de recursos ao nome.
+*** No entanto, os nomes de snapshot padrão usam o formato `<ResourceGroup>_<Date-TimeStamp>`, você pode especificar um formato personalizado usando as variáveis Use a lista suspensa no campo de nome personalizado para selecionar quais variáveis você deseja usar e a ordem em que elas são usadas. Se você selecionar CustomText, o formato do nome será `<CustomName>_<Date-TimeStamp>`. Insira o texto personalizado na caixa adicional fornecida. [NOTA]: Se você também selecionar o sufixo "_recente", você deve certificar-se de que os nomes de snapshot personalizados serão exclusivos no datastore, portanto, você deve adicionar as variáveis Grupo de recursos e Política ao nome.
 *** Carateres especiais para carateres especiais em nomes, siga as mesmas diretrizes dadas para o campo Nome.
 
 

@@ -38,7 +38,7 @@ Você também pode adicionar uma política ao grupo de recursos marcando a polí
 
 == Modificar políticas
 
-Você pode modificar políticas para um grupo de recursos do SnapCenter Plug-in para VMware vSphere. Você pode modificar a frequência, as opções de replicação, as configurações de retenção de instantâneos ou as informações de scripts enquanto uma política é anexada a um grupo de recursos.
+Você pode modificar políticas para um grupo de recursos do SnapCenter Plug-in para VMware vSphere. Você pode modificar a frequência, as opções de replicação, as configurações de retenção de snapshot ou as informações de scripts enquanto uma política é anexada a um grupo de recursos.
 
 .Sobre esta tarefa
 Modificar o plug-in do SnapCenter para políticas de backup do VMware vSphere difere de modificar políticas de backup para plug-ins baseados em aplicativos do SnapCenter. Não é necessário separar políticas de grupos de recursos quando você modifica as políticas de plug-in.

@@ -23,3 +23,7 @@ O plug-in do SnapCenter para a versão do VMware vSphere 6,1 agora oferece supor
 NOTE: A proteção secundária é suportada apenas no ONTAP 9.16.1 e versões posteriores
 
 
+
+*Suporte para instantâneos secundários à prova de violações (TPS)*
+
+O plug-in do SnapCenter para VMware vSphere introduz suporte para TPS secundário, garantindo que cópias snapshot secundárias sejam protegidas contra exclusão ou alteração por invasores de ransomware ou administradores desonestos e tornando-as disponíveis mesmo após um ataque.

@@ -65,9 +65,9 @@ Para obter as informações mais recentes sobre versões suportadas, https://imt
 
 IMPORTANT: Se você precisar usar uma conta que não seja a conta de administrador integrada, mas tiver Privileges administrativo na VM, será necessário desativar o UAC na VM convidada.
 
-* Você precisa conhecer o Snapshot de backup e o VMDK para restaurar.
+* Você deve conhecer o snapshot de backup e o VMDK para restaurar.
 +
-O plug-in do SnapCenter para VMware vSphere não oferece suporte à pesquisa de arquivos ou pastas para restaurar. Portanto, antes de começar, você deve saber a localização dos arquivos ou pastas com relação ao Snapshot e ao VMDK correspondente.
+O plug-in do SnapCenter para VMware vSphere não oferece suporte à pesquisa de arquivos ou pastas para restaurar. Portanto, antes de começar, você deve saber a localização dos arquivos ou pastas com relação ao instantâneo e ao VMDK correspondente.
 
 * O disco virtual a ser conetado deve estar em um backup do SnapCenter.
 +

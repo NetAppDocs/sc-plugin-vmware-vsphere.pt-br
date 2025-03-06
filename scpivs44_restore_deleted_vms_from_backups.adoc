@@ -69,7 +69,7 @@ Você pode pesquisar um nome de backup específico ou um nome de backup parcial 
 
 . Na página *Selecionar escopo*, selecione *Máquina virtual inteira* no campo *Restaurar escopo*, selecione o local de restauração e insira as informações do host ESXi de destino onde o backup deve ser montado.
 +
-O destino de restauração pode ser qualquer host ESXi que tenha sido adicionado ao SnapCenter. Essa opção restaura o conteúdo do backup selecionado no qual a VM residia de uma captura Instantânea com a hora e a data especificadas. A caixa de seleção *Restart VM* está marcada se você selecionar essa opção e a VM será ligada.
+O destino de restauração pode ser qualquer host ESXi que tenha sido adicionado ao SnapCenter. Esta opção restaura o conteúdo do backup selecionado no qual a VM residiu de um instantâneo com a hora e a data especificadas. A caixa de seleção *Restart VM* está marcada se você selecionar essa opção e a VM será ligada.
 
 +
 Se você estiver restaurando uma VM em um datastore NFS em um host ESXi alternativo que esteja em um cluster ESXi, depois que a VM for restaurada, ela será registrada no host alternativo.

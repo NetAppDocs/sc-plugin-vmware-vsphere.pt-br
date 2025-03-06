@@ -20,9 +20,9 @@ Você deve criar políticas de backup antes de usar o plug-in do SnapCenter para
 * Você deve ter lido os pré-requisitos.
 * Você deve ter relacionamentos de storage secundário configurados.
 +
-** Se você estiver replicando snapshots em um storage secundário de espelhamento ou cofre, os relacionamentos devem ser configurados e o administrador do SnapCenter deve ter atribuído as VMs de storage para os volumes de origem e destino.
+** Se você estiver replicando snapshots em um storage secundário de espelhamento ou cofre, os relacionamentos devem ser configurados e o administrador do SnapCenter deve ter atribuído as VMs de storage aos volumes de origem e destino.
 ** Para transferir snapshots para o armazenamento secundário com êxito para relacionamentos Version-FlexibleMirror em um datastore NFS ou VMFS, certifique-se de que o tipo de política SnapMirror seja espelhamento assíncrono e que a opção "All_source_snapshots" esteja marcada.
-** Quando o número de instantâneos no armazenamento secundário (mirror-Vault) atinge o limite máximo, a atividade para registar o backup e aplicar retenção na operação de cópia de segurança falha com o seguinte erro: `This Snapshot is currently used as a reference Snapshot by one or more SnapMirror relationships. Deleting the Snapshot can cause future SnapMirror operations to fail.`
+** Quando o número de instantâneos no storage secundário (espelho-cofre) atinge o limite máximo, a atividade para Registrar backup e aplicar retenção na operação de backup falha com o seguinte erro: `This snapshot is currently used as a reference snapshot by one or more SnapMirror relationships. Deleting the snapshot can cause future SnapMirror operations to fail.`
 +
 Para corrigir esse problema, configure a política de retenção do SnapMirror para armazenamento secundário para evitar atingir o limite máximo de snapshots.
 
@@ -56,7 +56,7 @@ A maioria dos campos nessas páginas do assistente são auto-explicativos. As in
 .Passos
 . No painel de navegação esquerdo do plug-in SCV, clique em *políticas*.
 . Na página *políticas*, selecione *criar* para iniciar o assistente.
-. Na página *Nova política de backup*, selecione o vCenter Server que usará a política e insira o nome da política e uma descrição.
+. Na página *Nova Política de backup*, digite o nome da política e uma descrição.
 +
 ** Modo ligado
 +
@@ -75,11 +75,15 @@ Um caractere de sublinhado (_) é permitido.
 +
 A política especifica apenas a frequência de backup. O cronograma de proteção específico para backup é definido no grupo de recursos. Portanto, dois ou mais grupos de recursos podem compartilhar a mesma política e frequência de backup, mas têm agendas de backup diferentes.
 
-. Marque a caixa de seleção *período de bloqueio* para ativar o bloqueio instantâneo. Pode selecionar o período de bloqueio instantâneo como dias/meses/anos.
+. Selecione a caixa de verificação *período de bloqueio* para ativar o bloqueio instantâneo. Você pode selecionar os períodos de bloqueio de snapshot primário e secundário como dias/meses/anos.
++
+
+NOTE: Independentemente do valor de retenção definido na política ONTAP SnapMirror, a cópia Snapshot secundária não é eliminada antes do período de bloqueio secundário de instantâneos especificado.
+
 . Especifique as definições de retenção.
 +
 
-IMPORTANT: Você deve definir a contagem de retenção para backups de 2 ou superior se quiser habilitar a replicação do SnapVault. Se você definir a contagem de retenção para 1 backup para manter, a operação de retenção pode falhar. Isso ocorre porque o primeiro instantâneo é o instantâneo de referência para o relacionamento do SnapVault até que o instantâneo mais recente seja replicado para o destino.
+IMPORTANT: Você deve definir a contagem de retenção para backups de 2 ou superior se quiser habilitar a replicação do SnapVault. Se você definir a contagem de retenção para 1 backup para manter, a operação de retenção pode falhar. Isso ocorre porque o primeiro snapshot é o snapshot de referência para o relacionamento SnapVault até que o snapshot mais recente seja replicado para o destino.
 
 +
 
@@ -114,10 +118,10 @@ NOTE: Essa opção é compatível com datastores no FlexGroup volumes no plug-in
 
 
 | Etiqueta do instantâneo  a| 
-Insira um rótulo personalizado opcional a ser adicionado aos instantâneos do SnapVault e do SnapMirror criados com esta política. O rótulo Snapshot ajuda a distinguir os snapshots criados com essa política de outros snapshots no sistema de storage secundário.
+Insira um rótulo personalizado opcional a ser adicionado aos snapshots do SnapVault e do SnapMirror criados com esta política. O rótulo do snapshot ajuda a distinguir os snapshots criados com essa política de outros snapshots no sistema de storage secundário.
 
 
-NOTE: É permitido um máximo de 31 carateres para rótulos instantâneos.
+NOTE: É permitido um máximo de 31 carateres para etiquetas de instantâneos.
 
 |===
 . Opcional: Nos campos *Avançado*, selecione os campos necessários. Os detalhes do campo Avançado estão listados na tabela a seguir.

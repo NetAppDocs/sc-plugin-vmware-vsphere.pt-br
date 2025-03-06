@@ -41,11 +41,11 @@ Você pode usar a GUI do SnapCenter e os plug-ins apropriados da aplicação Sna
 O SnapCenter aproveita de forma nativa o plug-in do SnapCenter para VMware vSphere para todas as operações de proteção de dados em VMDKs, mapeamentos de dispositivos brutos (RDMs) e armazenamentos de dados NFS. Depois que o dispositivo virtual é implantado, o plug-in manipula todas as interações com o vCenter. O plug-in do SnapCenter vSphere é compatível com todos os plug-ins baseados em aplicativos do SnapCenter.
 
 +
-O SnapCenter não oferece suporte a snapshots únicos de bancos de dados e VMs juntos. Os backups de VMs e bancos de dados devem ser agendados e executados de forma independente, o que cria snapshots separados, mesmo que os bancos de dados e as VMs estejam hospedados no mesmo volume. Programe os backups dos aplicativos de banco de dados usando a GUI do SnapCenter; programe os backups da VM e do datastore usando a GUI do cliente VMware vSphere.
+O SnapCenter não oferece suporte a snapshots únicos de bancos de dados e VMs juntos. Os backups de VMs e bancos de dados devem ser programados e executados de forma independente, o que cria snapshots separados, mesmo que os bancos de dados e as VMs estejam hospedados no mesmo volume. Programe os backups dos aplicativos de banco de dados usando a GUI do SnapCenter; programe os backups da VM e do datastore usando a GUI do cliente VMware vSphere.
 
 * As ferramentas VMware são necessárias para snapshots consistentes com VM
 +
-Se as ferramentas VMware não estiverem instaladas e em execução, o sistema de arquivos não será encerrado e um Snapshot consistente com falhas será criado.
+Se as ferramentas VMware não estiverem instaladas e em execução, o sistema de arquivos não será encerrado e um snapshot consistente com falhas será criado.
 
 * O VMware Storage vMotion é necessário para operações de restauração em ambientes SAN (VMFS)
 +

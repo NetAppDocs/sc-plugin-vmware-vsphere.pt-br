@@ -29,7 +29,7 @@ Para cada API REST, adicione `\https://<server>:<port>` na frente da API REST pa
 
 
 | 3 | `/4.1/vm/backups/{backupId}/
-snapshotlocations` | `Get snapshot locations` Obtém o local do instantâneo para o backup especificado. Passe o *backupId* do passo 2. Observe as informações *snapshotLocationsList*. 
+snapshotlocations` | `Get snapshot locations` obtém a localização do instantâneo para o backup especificado. Passe o *backupId* do passo 2. Observe as informações *snapshotLocationsList*. 
 
 
 | 4 | `/4.1/vm/{moref}/backups/

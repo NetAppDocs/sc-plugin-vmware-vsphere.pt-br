@@ -67,7 +67,7 @@ O número total de cada tipo de objeto gerenciado pelo plug-in SnapCenter para V
  a| 
 Armazenamento
  a| 
-O número total de snapshots, SnapVault e SnapMirror snapshots, gerado e a quantidade de storage usada para snapshots primários e secundários. O gráfico de linha traça separadamente o consumo de storage primário e secundário diariamente durante um período contínuo de 90 dias. As informações de storage são atualizadas a cada 24 horas às 1:08:00, a economia de storage é a taxa de capacidade lógica (economia de Snapshot e storage consumido) para a capacidade física do storage primário. O gráfico de barras ilustra a economia de armazenamento.
+O número total de snapshots, SnapVault e SnapMirror snapshots, gerados e a quantidade de storage usada para snapshots primários e secundários. O gráfico de linha traça separadamente o consumo de storage primário e secundário diariamente durante um período contínuo de 90 dias. As informações de storage são atualizadas a cada 24 horas às 1:08:00. A economia de storage é a taxa de capacidade lógica (economia de snapshot e armazenamento consumido) para a capacidade física do storage primário. O gráfico de barras ilustra a economia de armazenamento.
 
 Passe o cursor sobre uma linha no gráfico para ver os resultados detalhados do dia a dia.
 
