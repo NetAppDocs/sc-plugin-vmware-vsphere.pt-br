@@ -73,9 +73,9 @@ Essa opção usa as configurações de e-mail configuradas quando você configur
 
 
 
-. Revise o resumo e clique em *Finish*.
+. Revise o resumo e selecione *Finish*.
 +
-Antes de clicar em *Finish*, você pode voltar para qualquer página do assistente e alterar as informações.
+Antes de selecionar *Finish*, você pode voltar para qualquer página do assistente e alterar as informações.
 
 . Aguarde até que a operação de ligação seja concluída.
 +
@@ -90,9 +90,9 @@ Na tabela Monitor de sessão do convidado, você pode exibir informações adici
 +
 Todas as partições recebem uma letra de unidade, incluindo partições reservadas do sistema. Se um VMDK tiver várias partições, você poderá selecionar uma unidade específica selecionando a unidade na lista suspensa no campo da unidade na parte superior da página de navegação do arquivo convidado.
 
-. Clique no ícone *Procurar ficheiros* para ver uma lista de ficheiros e pastas no disco virtual.
+. Selecione o ícone *Procurar ficheiros* para ver uma lista de ficheiros e pastas no disco virtual.
 +
-Quando você clica duas vezes em uma pasta para procurar e selecionar arquivos individuais, pode haver uma latência de tempo ao buscar a lista de arquivos porque a operação de busca é executada no tempo de execução.
+Quando você seleciona duas vezes uma pasta para procurar e selecionar arquivos individuais, pode haver uma latência de tempo ao buscar a lista de arquivos porque a operação de busca é executada no tempo de execução.
 
 +
 Para uma navegação mais fácil, você pode usar filtros em sua string de pesquisa. Os filtros são expressões Perl sensíveis a maiúsculas e minúsculas sem espaços. A cadeia de pesquisa padrão é `.`*. A tabela a seguir mostra alguns exemplos de expressões de pesquisa Perl.
@@ -140,7 +140,7 @@ Para uma navegação mais fácil, você pode usar filtros em sua string de pesqu
 +
 A página de navegação de arquivo convidado exibe todos os arquivos e pastas ocultos, além de todos os outros arquivos e pastas.
 
-. Selecione um ou mais arquivos ou pastas que você deseja restaurar e clique em *Selecionar local de restauração*.
+. Selecione um ou mais ficheiros ou pastas que pretende restaurar e, em seguida, selecione *Selecionar local de restauro*.
 +
 Os arquivos e pastas a serem restaurados são listados na tabela Arquivo(s) selecionado(s).
 
@@ -163,7 +163,7 @@ NOTE: Se a pasta já existir, o conteúdo da pasta será mesclado com a pasta ex
 
 | Desconetar sessão de convidado após a restauração bem-sucedida | Selecione esta opção se desejar que a sessão de restauração de arquivo convidado seja excluída quando a operação de restauração for concluída. 
 |===
-. Clique em *Restaurar*.
+. Selecione *Restaurar*.
 +
 Pode ver o progresso da operação de restauro no monitor de trabalhos do painel de instrumentos ou pode aguardar a notificação por correio eletrónico. O tempo necessário para que a notificação por e-mail seja enviada depende do tempo que a operação de restauração leva para ser concluída.
 

@@ -54,7 +54,7 @@ NOTE: Na configuração fan-out, o grupo de consistência não é compatível co
 A maioria dos campos nessas páginas do assistente são auto-explicativos. As informações a seguir descrevem alguns dos campos para os quais você pode precisar de orientação.
 
 .Passos
-. No painel de navegação esquerdo do plug-in SCV, clique em *políticas*.
+. No painel de navegação esquerdo do plug-in SCV, selecione *Policies*.
 . Na página *políticas*, selecione *criar* para iniciar o assistente.
 . Na página *Nova Política de backup*, digite o nome da política e uma descrição.
 +
@@ -153,7 +153,7 @@ Insira o caminho totalmente qualificado do prescritor ou postscript que você de
 NOTE: Os Prescripts e postscripts devem estar localizados na VM do dispositivo virtual. Para inserir vários scripts, pressione *Enter* após cada caminho de script para listar cada script em uma linha separada. O caráter ";" não é permitido.
 
 |===
-. Clique em *Add.*
+. Selecione *Adicionar.*
 +
 Você pode verificar se a política foi criada e revisar a configuração da política selecionando-a na página políticas.
 

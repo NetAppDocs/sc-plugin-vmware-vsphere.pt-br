@@ -32,12 +32,12 @@ Você deve saber o endereço IP e as credenciais de login do plug-in do SnapCent
 +
 Utilize o formato `\https://<appliance-IP-address>:8080`
 
-. Clique no ícone Configurações na barra de ferramentas superior.
+. Selecione o ícone Configurações na barra de ferramentas superior.
 +
 image:scpivs44_image28.jpg["Plug-in do SnapCenter para VMware vSphere"]
 
-. Na página *Configurações*, na seção *Data e hora*, clique em *Editar*.
-. Selecione o novo fuso horário e clique em *Salvar*.
+. Na página *Configurações*, na seção *Data e hora*, selecione *Editar*.
+. Selecione o novo fuso horário e selecione *Salvar*.
 +
 O novo fuso horário será usado para todos os backups realizados pelo plug-in SnapCenter para VMware vSphere.
 

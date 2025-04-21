@@ -29,7 +29,7 @@ NOTE: O valor predefinido para reter registos de trabalhos é de 30 dias; o valo
 Talvez seja necessário rolar para a direita para ver o ícone.
 
 +
-Você também pode clicar duas vezes em um trabalho para acessar a janela Detalhes do trabalho e clicar em *Download de logs de trabalho*.
+Você também pode clicar duas vezes em um trabalho para acessar a janela Detalhes do trabalho e, em seguida, selecionar *Download de logs de trabalho*.
 
 
 

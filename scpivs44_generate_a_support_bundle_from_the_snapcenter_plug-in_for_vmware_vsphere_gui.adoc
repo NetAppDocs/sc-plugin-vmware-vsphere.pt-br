@@ -27,10 +27,10 @@ Para fazer logon na GUI de gerenciamento do plug-in do SnapCenter para VMware vS
 +
 Utilize o formato `\https://<OVA-IP-address>:8080`.
 
-. Clique no ícone Configurações na barra de ferramentas superior.
+. Selecione o ícone Configurações na barra de ferramentas superior.
 +
 image:scpivs44_image10.png["Plug-in do SnapCenter para a interface do VMware vSphere"]
 
-. Na página *Configurações*, na seção *suporte*, clique em *gerar suporte* Bundle.
-. Depois que o pacote de suporte for gerado, clique no link fornecido para fazer o download do pacote para o NetApp.
+. Na página *Configurações*, na seção *suporte*, selecione *gerar suporte* Bundle.
+. Depois que o pacote de suporte for gerado, selecione o link fornecido para fazer o download do pacote para o NetApp.
 

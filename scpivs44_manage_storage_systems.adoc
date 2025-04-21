@@ -28,9 +28,9 @@ Se você modificar uma VM de storage que foi adicionada automaticamente como par
 IMPORTANT: Se você adicionou VMs de storage para operações de proteção de dados baseadas em aplicações usando a GUI do SnapCenter, precisará usar a mesma GUI para modificar essas VMs de storage.
 
 .Passos
-. No painel de navegação esquerdo do plug-in SCV, clique em *Storage Systems*.
+. No painel de navegação esquerdo do plug-in SCV, selecione *Storage Systems*.
 . Na página *sistemas de armazenamento*, selecione a VM de armazenamento a ser modificada e, em seguida, selecione *Editar*.
-. Na janela *Editar sistema de armazenamento*, insira os novos valores e clique em *Atualizar* para aplicar as alterações.
+. Na janela *Editar sistema de armazenamento*, insira os novos valores e selecione *Atualizar* para aplicar as alterações.
 
 
 
@@ -49,9 +49,9 @@ NOTE: Se você adicionou VMs de storage para operações de proteção de dados 
 Se um grupo de recursos tiver backups que residem em uma VM de storage removida, os backups subsequentes para esse grupo de recursos falharão.
 
 .Passos
-. No painel de navegação esquerdo do plug-in SCV, clique em *Storage Systems*.
-. Na página *Storage Systems*, selecione a VM de armazenamento a ser removida e clique em *Delete*.
-. Na caixa de confirmação *Remover sistema de armazenamento*, marque a caixa *Excluir sistema(s) de armazenamento* e clique em *Sim* para confirmar. *Observação:* somente o host ESXi 7.0U1 e versões posteriores são suportados.
+. No painel de navegação esquerdo do plug-in SCV, selecione *Storage Systems*.
+. Na página *Storage Systems*, selecione a VM de armazenamento a ser removida e selecione *Delete*.
+. Na caixa de confirmação *Remover sistema de armazenamento*, marque a caixa *Excluir sistema(s) de armazenamento* e selecione *Sim* para confirmar. *Observação:* somente o host ESXi 7.0U1 e versões posteriores são suportados.
 +
 link:scpivs44_restart_the_vmware_vsphere_web_client_service.html["Reinicie o serviço cliente VMware vSphere"].
 

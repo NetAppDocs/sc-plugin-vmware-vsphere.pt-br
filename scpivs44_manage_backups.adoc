@@ -26,12 +26,12 @@ Você pode renomear o plug-in do SnapCenter para backups do VMware vSphere se qu
 NOTE: O sistema de storage ASA R2 não oferece suporte à renomeação de backups.
 
 .Passos
-. Clique em *Menu* e selecione a opção de menu *hosts e clusters*, em seguida, selecione uma VM, selecione a guia *Configurar* e, em seguida, clique em *backups* na seção *Plug-in SnapCenter para VMware vSphere*.
+. Selecione *Menu* e selecione a opção de menu *hosts e clusters*, em seguida, selecione uma VM, selecione a guia *Configurar* e, em seguida, selecione *backups* na seção *Plug-in SnapCenter para VMware vSphere*.
 +
 image:scv50_image1.png["Tela do vSphere Client"]
 
-. Na guia Configurar, selecione um backup e clique em *Renomear*.
-. Na caixa de diálogo *Renomear Backup*, digite o novo nome e clique em *OK*.
+. Na guia Configurar, selecione um backup e selecione *Renomear*.
+. Na caixa de diálogo *Renomear Backup*, digite o novo nome e selecione *OK*.
 +
 Não use os seguintes carateres especiais em nomes de VM, datastore, política, backup ou grupo de recursos: / : * ? " > - | ; " , . Um caractere de sublinhado (_) é permitido.
 
@@ -49,14 +49,14 @@ Não é possível eliminar cópias de segurança montadas. Você deve desmontar 
 .Sobre esta tarefa
 Os snapshots no storage secundário são gerenciados pelas configurações de retenção do ONTAP e não pelo plug-in do SnapCenter para VMware vSphere. Portanto, quando você usa o plug-in do SnapCenter para VMware vSphere para excluir um backup, os snapshots no storage primário são excluídos, mas os snapshots no storage secundário não são excluídos. Se um snapshot ainda existir no storage secundário, o plug-in do SnapCenter para VMware vSphere manterá os metadados associados ao backup para dar suporte às solicitações de restauração. Quando o processo de retenção do ONTAP exclui o snapshot secundário, o plug-in do SnapCenter para VMware vSphere exclui os metadados usando uma tarefa de limpeza, que é executada em intervalos regulares.
 
-. Clique em *Menu* e selecione a opção de menu *hosts e clusters*, em seguida, selecione uma VM, selecione a guia *Configurar* e, em seguida, clique em *backups* na seção *Plug-in SnapCenter para VMware vSphere*.
+. Selecione *Menu* e selecione a opção de menu *hosts e clusters*, em seguida, selecione uma VM, selecione a guia *Configurar* e, em seguida, selecione *backups* na seção *Plug-in SnapCenter para VMware vSphere*.
 +
 image:scv50_image1.png["Janela do cliente vSphere"]
 
-. Selecione um ou mais backups e clique em *Excluir*.
+. Selecione um ou mais backups e selecione *Excluir*.
 +
 Pode selecionar um máximo de 40 cópias de segurança para eliminar.
 
-. Clique em *OK* para confirmar a operação de exclusão.
+. Selecione *OK* para confirmar a operação de exclusão.
 . Atualize a lista de backup clicando no ícone de atualização na barra de menu do vSphere à esquerda.
 

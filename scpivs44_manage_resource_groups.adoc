@@ -26,8 +26,8 @@ NOTE: Os grupos de recursos são chamados de tarefas de backup no Virtual Storag
 Você pode desativar temporariamente as operações agendadas a partir de um grupo de recursos. Mais tarde, quando quiser, você pode ativar essas operações.
 
 .Passos
-. No painel de navegação esquerdo do plug-in SCV, clique em *grupos de recursos*, selecione um grupo de recursos e clique em *suspender* (ou clique em *Resume*).
-. Na caixa de confirmação, clique em *OK* para confirmar.
+. No painel de navegação esquerdo do plug-in SCV, selecione *grupos de recursos*, selecione um grupo de recursos e selecione *suspender* (ou selecione *Resume*).
+. Na caixa de confirmação, selecione *OK* para confirmar.
 
 
 .Depois de terminar
@@ -49,12 +49,12 @@ Se você quiser modificar o nome de um grupo de recursos, não use os seguintes 
 Um caractere de sublinhado (_) é permitido.
 
 .Passos
-. No painel de navegação esquerdo do plug-in SCV, clique em *grupos de recursos*, selecione um grupo de recursos e clique em *Editar*.
-. Na lista à esquerda do assistente *Editar grupo de recursos*, clique na categoria que deseja modificar e insira suas alterações.
+. No painel de navegação esquerdo do plug-in SCV, selecione *grupos de recursos*, selecione um grupo de recursos e selecione *Editar*.
+. Na lista à esquerda do assistente *Editar grupo de recursos*, selecione a categoria que deseja modificar e insira suas alterações.
 +
 Você pode fazer alterações em várias categorias. Você também pode editar recursos protegidos secundários nesta opção.
 
-. Clique em *Next* até ver a página Summary (Resumo) e, em seguida, clique em *Finish* (concluir).
+. Selecione *Next* até ver a página Summary (Resumo) e, em seguida, selecione *Finish* (concluir).
 
 
 
@@ -70,6 +70,6 @@ Todas as operações de exclusão do grupo de recursos são executadas como excl
 NOTE: Em um relacionamento SnapVault, o último snapshot não pode ser excluído; portanto, o grupo de recursos não pode ser excluído. Antes de excluir um grupo de recursos que faz parte de um relacionamento do SnapVault, use o OnCommand System Manager ou a CLI do ONTAP para remover o relacionamento do SnapVault e, em seguida, exclua o último snapshot.
 
 .Passos
-. No painel de navegação esquerdo do plug-in SCV, clique em *grupos de recursos*, selecione um grupo de recursos e clique em *Excluir*.
-. Na caixa de confirmação *Excluir grupo de recursos*, clique em *OK* para confirmar.
+. No painel de navegação esquerdo do plug-in SCV, selecione *grupos de recursos*, selecione um grupo de recursos e selecione *Excluir*.
+. Na caixa de confirmação *Excluir grupo de recursos*, selecione *OK* para confirmar.
 

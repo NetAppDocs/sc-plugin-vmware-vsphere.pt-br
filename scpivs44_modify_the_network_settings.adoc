@@ -29,18 +29,18 @@ Você deve saber o endereço IP e as credenciais de logon do plug-in do SnapCent
 +
 Utilize o formato `\https://<appliance-IP-address>:8080`
 
-. Clique no ícone Configurações na barra de ferramentas superior.
+. Selecione o ícone Configurações na barra de ferramentas superior.
 +
 image:scpivs44_image31.png["Plug-in do SnapCenter para GUI de gerenciamento do VMware vSphere"]
 
-. Na página *Configurações*, na seção *Configurações de rede*, clique no endereço *IPv4* ou *IPv6* e, em seguida, clique em *Editar*.
+. Na página *Configurações*, na seção *Configurações de rede*, selecione o endereço *IPv4* ou *IPv6* e, em seguida, selecione *Editar*.
 +
-Insira as novas informações e clique em *Salvar*.
+Insira as novas informações e selecione *Salvar*.
 
 . Se estiver removendo uma configuração de rede, faça o seguinte:
 +
-** IPv4: No campo *Endereço IP*, insira `0.0.0.0` e clique em *Salvar*.
-** IPv6: No campo *Endereço IP*: Digite `: :0` e clique em *Salvar*.
+** IPv4: No campo *Endereço IP*, insira `0.0.0.0` e selecione *Salvar*.
+** IPv6: No campo *Endereço IP*: Digite `: :0` e selecione *Salvar*.
 
 
 

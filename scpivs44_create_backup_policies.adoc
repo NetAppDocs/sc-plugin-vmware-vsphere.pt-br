@@ -16,6 +16,6 @@ summary:
 [role="lead"]
 Siga as instruções abaixo para criar políticas de backup
 
-. No painel de navegação esquerdo do plug-in SCV, clique em *Policies* e selecione *New Policy*.
-. Na página *Nova Política de backup*, insira as informações de configuração da política e clique em *Adicionar*.
+. No painel de navegação esquerdo do plug-in SCV, selecione *Policies* e *New Policy*.
+. Na página *Nova Política de backup*, insira as informações de configuração da política e selecione *Adicionar*.
 

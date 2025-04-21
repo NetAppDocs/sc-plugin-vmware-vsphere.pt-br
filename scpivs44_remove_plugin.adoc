@@ -26,7 +26,7 @@ Se você não precisar mais usar os recursos de proteção de dados do SnapCente
 +
 O endereço IP do plug-in do SnapCenter para VMware vSphere é exibido quando você implementa o plug-in.
 
-. Clique em *Configuração* no painel de navegação esquerdo e, em seguida, desmarque a opção Serviço na seção *Detalhes do plug-in* para desativar o plug-in.
+. Selecione *Configuração* no painel de navegação esquerdo e desmarque a opção Serviço na seção *Detalhes do plug-in* para desativar o plug-in.
 . Faça login no VMware vSphere.
 . Na tela do navegador esquerdo, clique com o botão direito do Mouse na instância do plug-in do SnapCenter para VMware vSphere (o nome do `.tar` arquivo que foi usado quando o dispositivo virtual foi implantado) e selecione *Excluir do disco*.
 . Se você usou o plug-in do SnapCenter para VMware vSphere para oferecer suporte a outros plug-ins do SnapCenter para backups consistentes com aplicativos, faça login no SnapCenter e remova o host vSphere.

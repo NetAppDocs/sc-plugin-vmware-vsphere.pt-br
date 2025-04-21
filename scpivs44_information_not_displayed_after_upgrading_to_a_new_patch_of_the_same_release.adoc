@@ -44,7 +44,7 @@ O cache está nos seguintes locais, com base no tipo de sistema operacional do s
 +
 O endereço IP é exibido quando você implementa o plug-in do SnapCenter para VMware vSphere.
 
-. Clique em *Configuração* no painel de navegação esquerdo e, em seguida, clique na opção Serviço na seção *Detalhes do plug-in* para desativar o plug-in.
+. Selecione *Configuração* no painel de navegação esquerdo e, em seguida, selecione a opção Serviço na seção *Detalhes do plug-in* para desativar o plug-in.
 +
 O plug-in do SnapCenter para o serviço VMware vSphere está desativado e a extensão não está registrada no vCenter.
 
@@ -54,7 +54,7 @@ O nome da pasta muda para cada versão.
 
 . Reinicie o vCenter Server.
 . Faça login no cliente VMware vSphere.
-. Clique em *Configuração* no painel de navegação esquerdo e, em seguida, clique na opção Serviço na seção *Detalhes do plug-in* para ativar o plug-in.
+. Selecione *Configuração* no painel de navegação esquerdo e, em seguida, selecione a opção Serviço na seção *Detalhes do plug-in* para ativar o plug-in.
 +
 O plug-in do SnapCenter para o serviço VMware vSphere está ativado e a extensão é registrada no vCenter.
 

@@ -169,7 +169,7 @@ Esta tarefa ajuda você a configurar o servidor syslog.
 ** Certificado do servidor syslog
 
 
-. Clique em *SAVE* para salvar as configurações do servidor Syslog.
+. Selecione *SAVE* para salvar as configurações do servidor Syslog.
 
 
 

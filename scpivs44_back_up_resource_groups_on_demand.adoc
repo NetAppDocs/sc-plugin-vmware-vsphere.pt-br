@@ -29,9 +29,9 @@ IMPORTANT: Não inicie uma tarefa de backup sob demanda quando uma tarefa para f
 Em versões anteriores do Virtual Storage Console (VSC), você pode executar um backup sob demanda sem ter uma tarefa de backup configurada para uma VM ou datastore. No entanto, para o plug-in do SnapCenter para VMware vSphere, as VMs e os datastores devem estar em um grupo de recursos antes que você possa executar os backups.
 
 .Passos
-. No painel de navegação esquerdo do plug-in SCV, clique em *grupos de recursos*, selecione um grupo de recursos e selecione image:scpivs44_image38.png["Ícone de reprodução"] *Executar agora* para iniciar o backup.
+. No painel de navegação esquerdo do plug-in SCV, selecione *grupos de recursos*, selecione um grupo de recursos e, em seguida, image:scpivs44_image38.png["Ícone de reprodução"] selecione *Executar agora* para iniciar o backup.
 . Se o grupo de recursos tiver várias políticas configuradas, na caixa de diálogo *Backup Now*, selecione a política que deseja usar para essa operação de backup.
-. Clique em *OK* para iniciar a cópia de segurança.
+. Selecione *OK* para iniciar a cópia de segurança.
 . Opcional: Monitore o progresso da operação clicando em *tarefas recentes* na parte inferior da janela ou no painel *Monitor de tarefas* para obter mais detalhes. .Resultado
 
 

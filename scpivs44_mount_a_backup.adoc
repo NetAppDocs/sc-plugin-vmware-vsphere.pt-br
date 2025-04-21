@@ -41,10 +41,10 @@ Uma operação de montagem pode falhar se a camada de storage do FabricPool onde
 .Passos
 . Na página atalhos de cliente do VMware vSphere, selecione *Storage*.
 . Clique com o botão direito do Mouse em um datastore e selecione *Plug-in SnapCenter para VMware vSphere* > *montar backup*.
-. Na página *Mount datastore*, selecione um local de backup e um local de backup (primário ou secundário) e clique em *Finish*.
+. Na página *Mount datastore*, selecione um local de backup e um local de backup (primário ou secundário) e, em seguida, selecione *Finish*.
 . Opcional: Para verificar se o datastore está montado, execute o seguinte:
 +
-.. Clique em *Menu* na barra de ferramentas e selecione *armazenamento* na lista suspensa.
+.. Selecione *Menu* na barra de ferramentas e, em seguida, selecione *armazenamento* na lista suspensa.
 .. O painel do navegador esquerdo exibe o datastore montado na parte superior da lista.
 +
 Se você executar uma operação de conexão ou montagem em um volume de destino do SnapVault protegido por programações do SnapVault e estiver executando o ONTAP 8,3, poderá ver um snapshot adicional listado na tela de diálogo Anexar ou montar. Isso ocorre porque a operação de conexão ou montagem clona o volume de destino do SnapVault e o ONTAP atualiza o volume criando um novo snapshot.

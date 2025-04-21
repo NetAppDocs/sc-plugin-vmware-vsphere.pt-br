@@ -20,8 +20,8 @@ Por padrão, um VMDK de Restauração de arquivos convidado anexado está dispon
 Talvez você queira estender uma sessão de restauração de arquivo convidado se desejar restaurar arquivos ou pastas adicionais do VMDK anexado posteriormente. No entanto, como as sessões de restauração de arquivos Guest usam muitos recursos, estender o tempo da sessão deve ser realizado apenas ocasionalmente.
 
 .Passos
-. No cliente VMware vSphere, clique em *Restauração de arquivo convidado*.
-. Selecione uma sessão de restauração de arquivo convidado e clique no ícone estender sessão de convidado selecionada na barra de título do Monitor de sessão convidado.
+. No cliente VMware vSphere, selecione *Guest File Restore*.
+. Selecione uma sessão de restauração de arquivo convidado e, em seguida, selecione o ícone estender sessão de convidado selecionada na barra de título do Monitor de sessão convidado.
 +
 A sessão é prolongada por mais 24 horas.
 

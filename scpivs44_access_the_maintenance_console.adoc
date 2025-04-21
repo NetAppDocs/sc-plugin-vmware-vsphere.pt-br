@@ -29,7 +29,7 @@ Para obter a permissão de usuário root para executar o comando, use o sudo <co
 
 .Passos
 . No cliente VMware vSphere, selecione a VM onde o plug-in do SnapCenter para VMware vSphere está localizado.
-. Na guia *Summary* do dispositivo virtual, clique em *Launch Remote Console* (Iniciar console remoto) para abrir uma janela do console de manutenção.
+. Na guia *Summary* do dispositivo virtual, selecione *Launch Remote Console* (Iniciar console remoto) para abrir uma janela do console de manutenção.
 +
 Faça login usando o nome de usuário e a senha padrão do console de manutenção `maint` que você definiu no momento da instalação.
 

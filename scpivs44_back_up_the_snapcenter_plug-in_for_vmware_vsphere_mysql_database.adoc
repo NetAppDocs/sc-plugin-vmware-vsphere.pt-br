@@ -23,7 +23,7 @@ Não inicie um trabalho para fazer backup do banco de dados MySQL quando um trab
 
 .Passos
 . No cliente VMware vSphere, selecione a VM onde o plug-in do SnapCenter para VMware vSphere está localizado.
-. Na guia *Summary* do dispositivo virtual, clique em *Launch Remote Console* *or Launch Web Console* para abrir uma janela do console de manutenção.
+. Na guia *Summary* do dispositivo virtual, selecione *Launch Remote Console* *or Launch Web Console* para abrir uma janela do console de manutenção.
 +
 image:scpivs44_image21.png["janela do console de manutenção"]
 

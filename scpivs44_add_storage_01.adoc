@@ -29,7 +29,7 @@ O plug-in do SnapCenter para VMware vSphere 4,5 e posterior oferece suporte a da
 Você deve adicionar clusters de storage ao plug-in do SnapCenter para as ferramentas VMware vSphere e ONTAP para o VMware vSphere para o vVol DataProtection funcionar.
 
 +
-Para obter mais informações, consulte as ferramentas do ONTAP para a documentação do VMware vSphere. Além disso, https://imt.netapp.com/matrix/imt.jsp?components=121034;&solution=1517&isHWU&src=IMT["Ferramenta de Matriz de interoperabilidade do NetApp"^] consulte para obter informações mais recentes sobre as versões suportadas nas ferramentas do ONTAP.
+Para obter mais informações, consulte as ferramentas do ONTAP para a documentação do VMware vSphere. Além disso, https://imt.netapp.com/matrix/imt.jsp?components=134348;&solution=1517&isHWU&src=IMT["Ferramenta de Matriz de interoperabilidade do NetApp"^] consulte para obter informações mais recentes sobre as versões suportadas nas ferramentas do ONTAP.
 
 
 
@@ -101,7 +101,7 @@ Se você adicionar uma VM de armazenamento com um nome que não pode ser resolvi
 
 | Enviar notificação AutoSupport para operação com falha ao sistema de armazenamento | Marque a caixa se desejar notificação do AutoSupport para trabalhos de proteção de dados com falha. Você também deve ativar o AutoSupport na VM de armazenamento e configurar as configurações de e-mail do AutoSupport. 
 |===
-. Clique em *Add*.
+. Selecione *Adicionar*.
 +
 Se você adicionou um cluster de storage, todas as VMs de armazenamento nesse cluster serão adicionadas automaticamente. As VMs de armazenamento adicionadas automaticamente (às vezes chamadas de VMs de armazenamento "implícitas") são exibidas na página de resumo do cluster com um hífen (-) em vez de um nome de usuário. Os nomes de usuário são exibidos apenas para entidades de armazenamento explícitas.
 

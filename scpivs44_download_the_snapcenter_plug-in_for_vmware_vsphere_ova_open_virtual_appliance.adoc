@@ -22,13 +22,13 @@ Nas versões do VMware vCenter 7.0.3 e posteriores, o OVA assinado pelo certific
 . Para fazer o download do plug-in do SnapCenter para VMware:
 +
 ** Faça login no site de suporte da NetApp ( https://mysupport.netapp.com/products/index.html["https://mysupport.netapp.com/products/index.html"^] ).
-** Na lista de produtos, selecione *Plug-in SnapCenter para VMware vSphere* e clique no botão *Download da versão mais recente*.
+** Na lista de produtos, selecione *Plug-in SnapCenter para VMware vSphere* e, em seguida, selecione o botão *Download da versão mais recente*.
 ** Baixe o plug-in do SnapCenter para o arquivo VMware vSphere para `.tar` qualquer local.
 
 
 . Faça login com o vSphere Client no vCenter Server.
 . Navegue até *Administration > Certificates > Certificate Management* (Administração > certificados > Gestão de certificados).
-. Ao lado de *Trusted Root Store*, clique em *Add*
+. Ao lado de *Trusted Root Store*, selecione *Add*
 . Procure e selecione a localização dos certificados raiz e intermédios Entrust. O certificado é adicionado em um painel em *certificados raiz confiáveis*. Uma vez que os certificados são instalados, OVA pode ser verificado e implantado.
 
 

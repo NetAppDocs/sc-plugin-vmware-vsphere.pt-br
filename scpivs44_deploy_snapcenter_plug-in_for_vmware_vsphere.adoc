@@ -32,7 +32,7 @@ NOTE: A implantação DO OVA é suportada no VMware vCenter 7U1 e superior.
 * Você deve ter desconetado e fechado todas as sessões do navegador do cliente vSphere e excluído o cache do navegador para evitar qualquer problema de cache do navegador durante a implantação do plug-in do SnapCenter para VMware vSphere.
 * Você deve ter habilitado o TLS (Transport Layer Security) no vCenter. Consulte a documentação da VMware.
 * Se você planeja executar backups em vCenters diferentes daquele em que o plug-in do SnapCenter para VMware vSphere é implantado, o servidor ESXi, o plug-in do SnapCenter para VMware vSphere e cada vCenter devem ser sincronizados ao mesmo tempo.
-* Para proteger as VMs em datastores da vVol, você deve primeiro implantar as ferramentas do ONTAP para o VMware vSphere. Para obter as informações mais recentes sobre versões suportadas das ferramentas do ONTAP, https://imt.netapp.com/matrix/imt.jsp?components=121034;&solution=1517&isHWU&src=IMT["Ferramenta de Matriz de interoperabilidade do NetApp"^] consulte . As ferramentas do ONTAP provisionam e configuram o storage no ONTAP e no cliente da Web VMware.
+* Para proteger as VMs em datastores da vVol, você deve primeiro implantar as ferramentas do ONTAP para o VMware vSphere. Para obter as informações mais recentes sobre versões suportadas das ferramentas do ONTAP, https://imt.netapp.com/matrix/imt.jsp?components=134348;&solution=1517&isHWU&src=IMT["Ferramenta de Matriz de interoperabilidade do NetApp"^] consulte . As ferramentas do ONTAP provisionam e configuram o storage no ONTAP e no cliente da Web VMware.
 
 
 Implante o plug-in do SnapCenter para VMware vSphere no mesmo fuso horário do vCenter. As programações de backup são executadas no fuso horário em que o plug-in do SnapCenter para VMware vSphere é implantado. O vCenter relata dados no fuso horário em que o vCenter está localizado. Portanto, se o plug-in do SnapCenter para VMware vSphere e vCenter estiverem em fusos horários diferentes, os dados do plug-in do SnapCenter para o painel do VMware vSphere podem não ser os mesmos que os dados nos relatórios.
@@ -47,16 +47,16 @@ NOTE: Para clientes web HTML de endereço IPv6, você deve usar o Chrome ou Fire
 . Inicie sessão na página *Início de sessão único do VMware vCenter*.
 . No painel do navegador, clique com o botão direito em qualquer objeto de inventário que seja um objeto pai válido de uma máquina virtual, como um datacenter, cluster ou host, e selecione *Deploy OVF Template* para iniciar o assistente de implantação do VMware.
 . Extraia o arquivo .tar, que contém o arquivo .ova em seu sistema local. Na página *Selecione um modelo OVF*, especifique a localização `.ova` do arquivo dentro da pasta extraída .tar.
-. Clique em *seguinte*.
-. Na página *Selecione um nome e pasta*, insira um nome exclusivo para a VM ou vApp e selecione um local de implantação e clique em *Avançar*.
+. Selecione *seguinte*.
+. Na página *Selecione um nome e pasta*, insira um nome exclusivo para a VM ou vApp, selecione um local de implantação e, em seguida, selecione *Next*.
 +
 Esta etapa especifica onde importar o `.tar` arquivo para o vCenter. O nome padrão para a VM é o mesmo que o nome do arquivo selecionado `.ova`. Se você alterar o nome padrão, escolha um nome exclusivo em cada pasta VM do vCenter Server.
 
 +
 O local de implantação padrão para a VM é o objeto de inventário onde você iniciou o assistente.
 
-. Na página *Selecione um recurso*, selecione o recurso onde deseja executar o modelo de VM implantado e clique em *Avançar*.
-. Na página *Review details*, verifique os `.tar` detalhes do modelo e clique em *Next*.
+. Na página *Selecione um recurso*, selecione o recurso no qual deseja executar o modelo de VM implantado e selecione *Avançar*.
+. Na página *Review details*, verifique os `.tar` detalhes do modelo e selecione *Next*.
 . Na página *contratos de licença*, marque a caixa de seleção *Aceito todos os contratos de licença*.
 . Na página *Select storage*, defina onde e como armazenar os arquivos para o modelo OVF implantado.
 +
@@ -80,7 +80,7 @@ Selecione um datastore grande o suficiente para acomodar a máquina virtual ou v
 +
 A coluna rede de origem lista todas as redes definidas no modelo OVA.
 
-.. Na seção *IP Allocation Settings*, selecione o protocolo de endereço IP necessário e clique em *Next*.
+.. Na seção *IP Allocation Settings*, selecione o protocolo de endereço IP necessário e, em seguida, selecione *Next*.
 +
 O plug-in do SnapCenter para VMware vSphere é compatível com uma interface de rede. Se você precisar de vários adaptadores de rede, você deve configurá-lo manualmente. Consulte a https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/How_to_create_additional_network_adapters_in_NDB_and_SCV_4.3["Artigo da KB: Como criar adaptadores de rede adicionais"^].
 
@@ -117,7 +117,7 @@ IMPORTANT: Pode ignorar estas etapas e deixar as entradas em branco na secção 
 .. Em *Setup Date and Time*, selecione o fuso horário em que o vCenter está localizado.
 
 
-. Na página *Pronto para concluir*, revise a página e clique em *concluir*.
+. Na página *Pronto para concluir*, revise a página e selecione *concluir*.
 +
 Todos os hosts devem ser configurados com endereços IP (nomes de host FQDN não são suportados). A operação de implantação não valida sua entrada antes de implantar.
 
@@ -127,8 +127,8 @@ Você pode exibir o andamento da implantação na janela tarefas recentes enquan
 +
 Quando o plug-in do SnapCenter para VMware vSphere é implantado com sucesso, ele é implantado como uma VM Linux, registrado no vCenter e um cliente VMware vSphere é instalado.
 
-. Navegue até a VM onde o plug-in do SnapCenter para VMware vSphere foi implantado, clique na guia *Resumo* e, em seguida, clique na caixa *ligar* para iniciar o dispositivo virtual.
-. Enquanto o plug-in do SnapCenter para VMware vSphere estiver sendo ativado, clique com o botão direito do Mouse no plug-in do SnapCenter implantado para VMware vSphere, selecione *SO convidado* e clique em *Instalar ferramentas VMware*.
+. Navegue até a VM onde o plug-in do SnapCenter para VMware vSphere foi implantado, selecione a guia *Resumo* e, em seguida, marque a caixa *ligar* para iniciar o dispositivo virtual.
+. Enquanto o plug-in do SnapCenter para VMware vSphere está sendo ativado, clique com o botão direito do Mouse no plug-in do SnapCenter implantado para VMware vSphere, selecione *SO convidado* e, em seguida, selecione *Instalar ferramentas VMware*.
 +
 As ferramentas VMware são instaladas na VM onde o plug-in SnapCenter para VMware vSphere é implantado. Para obter mais informações sobre a instalação de ferramentas VMware, consulte a documentação da VMware.
 

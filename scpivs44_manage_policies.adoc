@@ -26,12 +26,12 @@ Você pode separar políticas de um grupo de recursos do plug-in do SnapCenter p
 As diretrizes para separar políticas do plug-in do SnapCenter para grupos de recursos do VMware vSphere diferem das diretrizes para grupos de recursos do SnapCenter. Para um grupo de recursos do cliente VMware vSphere, é possível separar todas as políticas, o que deixa o grupo de recursos sem nenhuma política. No entanto, para executar quaisquer operações de proteção de dados nesse grupo de recursos, é necessário anexar pelo menos uma política.
 
 .Passos
-. No painel de navegação esquerdo do plug-in SCV, clique em *grupos de recursos*, selecione um grupo de recursos e clique em *Editar*.
+. No painel de navegação esquerdo do plug-in SCV, selecione *grupos de recursos*, selecione um grupo de recursos e selecione *Editar*.
 . Na página *Policies* do assistente *Edit Resource Group*, desmarque a marca de seleção ao lado das políticas que você deseja desanexar.
 +
 Você também pode adicionar uma política ao grupo de recursos marcando a política.
 
-. Faça quaisquer modificações adicionais ao grupo de recursos no restante do assistente e clique em *Finish*.
+. Faça quaisquer modificações adicionais ao grupo de recursos no restante do assistente e selecione *Finish*.
 
 
 
@@ -59,9 +59,9 @@ Os backups em excesso da nova configuração são excluídos quando o próximo b
 NOTE: Para modificar um agendamento de política do SnapCenter Plug-in para VMware vSphere, você deve modificar a programação no grupo de recursos do plug-in.
 
 .Passos
-. No painel de navegação esquerdo do plug-in SCV, clique em *Policies*, selecione uma política e clique em *Edit*.
+. No painel de navegação esquerdo do plug-in SCV, selecione *Policies*, depois selecione uma política e selecione *Edit*.
 . Modifique os campos da política.
-. Quando terminar, clique em *Atualizar*.
+. Quando terminar, selecione *Atualizar*.
 
 
 As alterações entram em vigor quando o próximo backup programado é executado.
@@ -76,6 +76,6 @@ Se você não precisar mais de uma política de backup configurada para o plug-i
 Você deve ter separado a política de todos os grupos de recursos no dispositivo virtual para SnapCenter antes de excluí-la.
 
 .Passos
-. No painel de navegação esquerdo do plug-in SCV, clique em *políticas*, selecione uma política e clique em *Remover*.
-. Na caixa de diálogo de confirmação, clique em *OK*.
+. No painel de navegação esquerdo do plug-in SCV, selecione *Policies*, depois selecione uma política e selecione *Remove*.
+. Na caixa de diálogo de confirmação, selecione *OK*.
 

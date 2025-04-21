@@ -27,5 +27,5 @@ Se você tentar montar uma cópia de backup de um armazenamento de dados NFS em 
 
 IMPORTANT: Certifique-se de selecionar o datastore correto para desmontar. Caso contrário, você pode causar um impactos no trabalho de produção.
 
-. Na caixa de diálogo *Unmount cloned datastore*, selecione um datastore, marque a caixa de seleção *Unmount the cloned datastore* e clique em *Unmount*.
+. Na caixa de diálogo *Unmount cloned datastore*, selecione um datastore, marque a caixa de seleção *Unmount the cloned datastore* e selecione *Unmount*.
 

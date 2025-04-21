@@ -16,7 +16,7 @@ summary: Você pode gerar um pacote de suporte a partir do console de manutenç�
 .Passos
 [role="lead"]
 . No cliente VMware vSphere, selecione a VM onde o plug-in do SnapCenter para VMware vSphere está localizado.
-. Na guia *Summary* do dispositivo virtual, clique em *Launch Remote Console ou Launch Web Console* para abrir uma janela do console de manutenção e, em seguida, faça logon.
+. Na guia *Summary* do dispositivo virtual, selecione *Launch Remote Console ou Launch Web Console* para abrir uma janela do console de manutenção e, em seguida, faça logon.
 +
 Para obter informações sobre como acessar e fazer logon no console de manutenção, link:scpivs44_access_the_maintenance_console.html["Acesse o console de manutenção"^]consulte .
 

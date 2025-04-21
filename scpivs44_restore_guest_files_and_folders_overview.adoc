@@ -58,7 +58,7 @@ O SnapCenter usa informações das ferramentas VMware para estabelecer uma conex
 
 * O sistema operacional convidado do Windows deve estar executando o Windows Server 2008 R2 ou posterior.
 +
-Para obter as informações mais recentes sobre versões suportadas, https://imt.netapp.com/matrix/imt.jsp?components=121034;&solution=1517&isHWU&src=IMT["Ferramenta de Matriz de interoperabilidade NetApp (IMT)"^] consulte .
+Para obter as informações mais recentes sobre versões suportadas, https://imt.netapp.com/matrix/imt.jsp?components=134348;&solution=1517&isHWU&src=IMT["Ferramenta de Matriz de interoperabilidade NetApp (IMT)"^] consulte .
 
 * As credenciais para a VM de destino devem especificar a conta de administrador de domínio incorporada ou a conta de administrador local incorporada. O nome de usuário deve ser "Administrador". Antes de iniciar a operação de restauração, as credenciais devem ser configuradas para a VM à qual você deseja anexar o disco virtual. As credenciais são necessárias para a operação de conexão e para a operação de restauração subsequente. Os usuários do grupo de trabalho podem usar a conta de administrador local integrada.
 +
@@ -83,7 +83,7 @@ Você pode restaurar arquivos com nomes não alfabéticos, como Kanji japonês, 
 
 * A restauração a partir de um sistema operacional convidado Linux não é suportada
 +
-Não é possível restaurar arquivos e pastas de uma VM que esteja executando o sistema operacional convidado Linux. No entanto, você pode anexar um VMDK e, em seguida, restaurar manualmente os arquivos e pastas. Para obter as informações mais recentes sobre o SO convidado suportado, https://imt.netapp.com/matrix/imt.jsp?components=121034;&solution=1517&isHWU&src=IMT["Ferramenta de Matriz de interoperabilidade NetApp (IMT)"^] consulte .
+Não é possível restaurar arquivos e pastas de uma VM que esteja executando o sistema operacional convidado Linux. No entanto, você pode anexar um VMDK e, em seguida, restaurar manualmente os arquivos e pastas. Para obter as informações mais recentes sobre o SO convidado suportado, https://imt.netapp.com/matrix/imt.jsp?components=134348;&solution=1517&isHWU&src=IMT["Ferramenta de Matriz de interoperabilidade NetApp (IMT)"^] consulte .
 
 
 
@@ -98,7 +98,7 @@ Antes de restaurar um arquivo ou pasta de um SO convidado, você deve estar cien
 * A página de navegação de arquivo convidado exibe os arquivos e a pasta ocultos, que você não pode filtrar.
 * Você não pode restaurar a partir de um sistema operacional convidado Linux.
 +
-Não é possível restaurar arquivos e pastas de uma VM que esteja executando o sistema operacional convidado Linux. No entanto, você pode anexar um VMDK e, em seguida, restaurar manualmente os arquivos e pastas. Para obter as informações mais recentes sobre o SO convidado suportado, consulte o https://imt.netapp.com/matrix/imt.jsp?components=121034;&solution=1517&isHWU&src=IMT["Ferramenta de Matriz de interoperabilidade NetApp (IMT)"^].
+Não é possível restaurar arquivos e pastas de uma VM que esteja executando o sistema operacional convidado Linux. No entanto, você pode anexar um VMDK e, em seguida, restaurar manualmente os arquivos e pastas. Para obter as informações mais recentes sobre o SO convidado suportado, consulte o https://imt.netapp.com/matrix/imt.jsp?components=134348;&solution=1517&isHWU&src=IMT["Ferramenta de Matriz de interoperabilidade NetApp (IMT)"^].
 
 * Não é possível restaurar de um sistema de ficheiros NTFS para um sistema de ficheiros FAT.
 +

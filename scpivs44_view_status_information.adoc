@@ -19,7 +19,7 @@ Você pode exibir informações de status no painel do cliente vSphere. As infor
 .Passos
 . Na página de atalho do cliente vCenter, selecione plug-in do SnapCenter para VMware vSphere (SCV).
 . No painel de navegação esquerdo da SCV, selecione *Painel* > *Status*.
-. Veja informações de status da visão geral ou clique em um link para obter mais detalhes, conforme listado na tabela a seguir.
+. Veja as informações de status da visão geral ou selecione um link para obter mais detalhes, conforme listado na tabela a seguir.
 +
 |===
 | Este painel de instrumentos... | Exibe as seguintes informações... 
@@ -30,8 +30,8 @@ Atividades de trabalho recentes
  a| 
 Os três a cinco trabalhos mais recentes de backup, restauração e montagem.
 
-** Clique em um ID de trabalho para ver mais detalhes sobre esse trabalho.
-** Clique em *See All* (Ver tudo) para aceder ao separador Job Monitor (Monitor de trabalhos) para obter mais detalhes sobre todos os trabalhos.
+** Selecione em uma ID de trabalho para ver mais detalhes sobre esse trabalho.
+** Selecione *See All* (Ver tudo) para aceder ao separador Job Monitor (Monitor de trabalhos) para obter mais detalhes sobre todos os trabalhos.
 
 
 
@@ -48,7 +48,7 @@ Resumo de proteção mais recente
  a| 
 Resumos do status de proteção de dados de VMs primárias e secundárias ou armazenamentos de dados na janela de tempo selecionada.
 
-** Clique no menu suspenso para selecionar *VMs* ou *datastores*.
+** Selecione o menu suspenso para selecionar *VMs* ou *datastores*.
 ** Para armazenamento secundário, selecione *SnapVault* ou *SnapMirror*.
 ** Passe o cursor sobre uma seção de um gráfico para ver a contagem de VMs ou datastores nessa categoria. Na categoria bem-sucedida, o backup mais recente é listado para cada recurso.
 ** Você pode alterar a janela de tempo editando o arquivo de configuração. O padrão é de 7 dias. Para obter mais informações, link:scpivs44_customize_your_configuration.html["Personalize sua configuração"]consulte .
