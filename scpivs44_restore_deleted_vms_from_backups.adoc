@@ -60,12 +60,13 @@ Você não pode restaurar um datastore, mas pode restaurar qualquer VM no datast
 Uma operação de restauração pode falhar se a camada de storage do FabricPool onde a VM está localizada não estiver disponível.
 
 .Passos
-. Selecione *Menu* e selecione a opção de menu *armazenamento*, depois selecione um datastore, depois selecione a guia *Configurar* e, em seguida, selecione *backups* na seção *Plug-in SnapCenter para VMware vSphere*.
+. No vCenter Server, navegue até *Inventory* > *datastores* e selecione um datastore.
+. Selecione *Configurar* > *backups* na seção Plug-in do SnapCenter para VMware vSphere.
 . Clique duas vezes em um backup para ver uma lista de todas as VMs incluídas no backup.
 . Selecione a VM excluída da lista de backup e selecione *Restaurar*.
 . No assistente *Restore*, na página *Select Backup*, selecione a cópia de backup da qual deseja restaurar.
 +
-Você pode pesquisar um nome de backup específico ou um nome de backup parcial ou filtrar a lista de backup clicando no ícone de filtro e selecionando um intervalo de data e hora, selecionando se deseja backups que contenham snapshots VMware, se deseja backups montados e o local. Selecione *OK* para retornar ao assistente.
+Você pode pesquisar um nome de backup específico ou um nome de backup parcial ou filtrar a lista de backup selecionando o ícone de filtro e um intervalo de data e hora, selecionando se deseja backups que contenham snapshots VMware, se deseja backups montados e o local. Selecione *OK* para retornar ao assistente.
 
 . Na página *Selecionar escopo*, selecione *Máquina virtual inteira* no campo *Restaurar escopo*, selecione o local de restauração e insira as informações do host ESXi de destino onde o backup deve ser montado.
 +

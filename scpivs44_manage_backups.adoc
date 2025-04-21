@@ -58,5 +58,5 @@ image:scv50_image1.png["Janela do cliente vSphere"]
 Pode selecionar um máximo de 40 cópias de segurança para eliminar.
 
 . Selecione *OK* para confirmar a operação de exclusão.
-. Atualize a lista de backup clicando no ícone de atualização na barra de menu do vSphere à esquerda.
+. Atualize a lista de backup selecionando o ícone de atualização na barra de menu do vSphere à esquerda.
 

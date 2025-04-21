@@ -32,7 +32,7 @@ Em versões anteriores do Virtual Storage Console (VSC), você pode executar um 
 . No painel de navegação esquerdo do plug-in SCV, selecione *grupos de recursos*, selecione um grupo de recursos e, em seguida, image:scpivs44_image38.png["Ícone de reprodução"] selecione *Executar agora* para iniciar o backup.
 . Se o grupo de recursos tiver várias políticas configuradas, na caixa de diálogo *Backup Now*, selecione a política que deseja usar para essa operação de backup.
 . Selecione *OK* para iniciar a cópia de segurança.
-. Opcional: Monitore o progresso da operação clicando em *tarefas recentes* na parte inferior da janela ou no painel *Monitor de tarefas* para obter mais detalhes. .Resultado
+. Opcional: Monitore o progresso da operação selecionando *tarefas recentes* na parte inferior da janela ou no painel *Monitor de trabalho* para obter mais detalhes. .Resultado
 
 
 Se a operação do quiesce falhar em qualquer uma das VMs no backup, o backup será concluído com um aviso e será marcado como não consistente VM, mesmo que a diretiva selecionada tenha a consistência da VM selecionada. Neste caso, é possível que algumas das VMs tenham sido silenciadas com sucesso. No monitor de trabalhos, os detalhes da VM com falha mostrarão o quiesce como falhou.

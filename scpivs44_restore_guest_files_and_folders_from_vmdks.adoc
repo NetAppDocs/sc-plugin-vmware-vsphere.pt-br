@@ -84,7 +84,7 @@ Pode ver o progresso da operação no monitor de trabalhos do Painel de instrume
 . Para localizar os arquivos que você deseja restaurar a partir do disco virtual anexado, selecione *Plug-in SnapCenter para VMware vSphere* na janela atalhos do cliente vSphere.
 . No painel do navegador esquerdo selecione *Restauração de arquivo convidado* > *Configuração de convidado*.
 +
-Na tabela Monitor de sessão do convidado, você pode exibir informações adicionais sobre uma sessão clicando em *... *na coluna direita.
+Na tabela Monitor de sessão do convidado, você pode exibir informações adicionais sobre uma sessão selecionando *... *na coluna direita.
 
 . Selecione a sessão de restauração de arquivo convidado para o disco virtual listado no e-mail de notificação.
 +

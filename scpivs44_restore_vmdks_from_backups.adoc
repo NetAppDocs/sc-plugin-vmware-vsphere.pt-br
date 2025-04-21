@@ -43,7 +43,7 @@ A VM que você deseja restaurar não deve estar em um estado de vMotion ou Stora
 . No painel do navegador esquerdo, clique com o botão direito do Mouse em uma VM, selecione *Plug-in SnapCenter para VMware vSphere* na lista suspensa e selecione *Restaurar* na lista suspensa secundária.
 . No assistente *Restaurar*, na página Selecionar cópia de segurança, selecione a cópia de segurança da qual pretende restaurar.
 +
-Você pode pesquisar um nome de backup específico ou um nome de backup parcial ou filtrar a lista de backup clicando no ícone de filtro e selecionando um intervalo de data e hora, selecionando se deseja backups que contenham snapshots VMware, se deseja backups montados e local primário ou secundário. Selecione *OK* para retornar ao assistente.
+Você pode pesquisar um nome de backup específico ou um nome de backup parcial ou filtrar a lista de backup selecionando o ícone de filtro e um intervalo de data e hora, selecionando se deseja backups que contenham snapshots VMware, se deseja backups montados e local primário ou secundário. Selecione *OK* para retornar ao assistente.
 
 . Na página *Selecionar escopo*, selecione o destino de restauração.
 +
@@ -58,6 +58,6 @@ Você pode pesquisar um nome de backup específico ou um nome de backup parcial 
 |===
 . Na página *Selecionar local*, selecione o instantâneo que deseja restaurar (primário ou secundário).
 . Revise a página Resumo e selecione *Finish*.
-. Opcional: Monitore o progresso da operação clicando em *Recent Tasks* na parte inferior da tela.
+. Opcional: Monitore o progresso da operação selecionando *Recent Tasks* na parte inferior da tela.
 . Atualize a tela para exibir informações atualizadas.
 

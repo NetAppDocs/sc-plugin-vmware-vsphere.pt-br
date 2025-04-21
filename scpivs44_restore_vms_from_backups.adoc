@@ -105,7 +105,7 @@ NOTE: Se você estiver restaurando uma VM excluída, as credenciais de VM de sto
 . No painel do navegador esquerdo, clique com o botão direito do Mouse em uma VM, selecione *Plug-in SnapCenter para VMware vSphere* na lista suspensa e selecione *Restaurar* na lista suspensa secundária para iniciar o assistente.
 . No assistente *Restore*, na página *Select Backup*, selecione o instantâneo de backup que deseja restaurar.
 +
-Você pode pesquisar um nome de backup específico ou um nome de backup parcial ou filtrar a lista de backup clicando no ícone de filtro e selecionando um intervalo de data e hora, selecionando se deseja backups que contenham snapshots VMware, se deseja backups montados e o local. Selecione *OK* para retornar ao assistente.
+Você pode pesquisar um nome de backup específico ou um nome de backup parcial ou filtrar a lista de backup selecionando o ícone de filtro e um intervalo de data e hora, selecionando se deseja backups que contenham snapshots VMware, se deseja backups montados e o local. Selecione *OK* para retornar ao assistente.
 
 . Na página *Selecionar escopo*, selecione *Máquina virtual inteira* no campo *Restaurar escopo*, selecione o local de restauração e insira as informações de destino onde o backup deve ser montado.
 +
@@ -119,7 +119,7 @@ Ao restaurar backups parciais, a operação de restauração ignora a página *S
 No plug-in do SnapCenter para VMware vSphere 4,5 e posterior, é possível selecionar o storage secundário para o FlexGroup volumes.
 
 . Revise a página Resumo e selecione *Finish*.
-. Opcional: Monitore o progresso da operação clicando em *Recent Tasks* na parte inferior da tela.
+. Opcional: Monitore o progresso da operação selecionando *Recent Tasks* na parte inferior da tela.
 +
 Atualize a tela para exibir informações atualizadas.
 
