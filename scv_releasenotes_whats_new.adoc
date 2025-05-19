@@ -11,7 +11,7 @@ summary: Saiba mais sobre os novos recursos disponíveis no plug-in do SnapCente
 [role="lead"]
 *Suporte para VMs e datastore VMFS em sistemas ASA R2*
 
-O plug-in do SnapCenter para a versão do VMware vSphere 6,1 agora oferece suporte ao provisionamento de máquinas virtuais (VMs) e armazenamento de dados VMFS em sistemas ASA R2. Os sistemas ASA R2 fornecem uma solução unificada de hardware e software que cria uma experiência simplificada específica para as necessidades dos clientes somente de SAN. Os recursos compatíveis com o plug-in do SnapCenter para VMware vSphere 6,1 para VMs, armazenamentos de dados e VMDK (Virtual Machine Disk Format) em sistemas ASA R2 incluem:
+O plug-in do SnapCenter para a versão do VMware vSphere 6,1 oferece suporte ao provisionamento de máquinas virtuais (VMs) e armazenamento de dados VMFS em sistemas ASA R2. Os sistemas ASA R2 fornecem uma solução unificada de hardware e software que cria uma experiência simplificada específica para as necessidades dos clientes somente de SAN. Os recursos compatíveis com o plug-in do SnapCenter para VMware vSphere 6,1 para VMs, armazenamentos de dados e VMDK (Virtual Machine Disk Format) em sistemas ASA R2 incluem:
 
 * Provisionamento de grupo de consistência para proteção primária
 * Backup baseado em grupo de consistência

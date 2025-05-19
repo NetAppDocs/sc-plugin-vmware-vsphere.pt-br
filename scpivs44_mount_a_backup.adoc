@@ -47,9 +47,6 @@ Uma operação de montagem pode falhar se a camada de storage do FabricPool onde
 .. Selecione *Menu* na barra de ferramentas e, em seguida, selecione *armazenamento* na lista suspensa.
 .. O painel do navegador esquerdo exibe o datastore montado na parte superior da lista.
 +
-Se você executar uma operação de conexão ou montagem em um volume de destino do SnapVault protegido por programações do SnapVault e estiver executando o ONTAP 8,3, poderá ver um snapshot adicional listado na tela de diálogo Anexar ou montar. Isso ocorre porque a operação de conexão ou montagem clona o volume de destino do SnapVault e o ONTAP atualiza o volume criando um novo snapshot.
-
-+
 Para evitar que novos snapshots sejam criados quando você clonar o volume, desative a programação do ONTAP para o volume do SnapVault. Os instantâneos existentes anteriormente não são eliminados.
 
 

@@ -41,7 +41,7 @@ NOTE: A sincronização ativa do SnapMirror é suportada apenas para armazenamen
 Para proteger um datastore VMFS em uma implantação de sincronização ativa do SnapMirror, como administrador do SnapCenter, você precisa:
 
 +
-** Configurar clusters e mediador conforme descrito no relatório técnico: https://www.netapp.com/pdf.html?item=/media/21888-tr-4878.pdf["TR-4878: SnapMirror ative Sync (anteriormente SMBC)"].
+** Configurar clusters e mediador conforme descrito no relatório técnico: https://docs.netapp.com/us-en/ontap/snapmirror-active-sync/mediator-install-task.html["Configure o Mediador e os clusters do ONTAP para a sincronização ativa do SnapMirror"].
 ** Adicione o volume associado ao datastore VMFS ao grupo de consistência e crie uma relação de proteção de dados usando a política de proteção _AutomatedFailOver_ ou _AutomatedFailOverDuplex_ entre dois sistemas de armazenamento ONTAP. A política _AutomatedFailOverDuplex_ é suportada a partir da versão ONTAP 9.15,1 em diante.
 
 
@@ -87,7 +87,9 @@ IMPORTANT: Você deve definir a contagem de retenção para backups de 2 ou supe
 
 +
 
-NOTE: O valor máximo de retenção é de 1018 backups para recursos no ONTAP 9.4 ou posterior e 254 backups para recursos no ONTAP 9.3 ou anterior. Os backups falharão se a retenção for definida para um valor maior do que o que a versão subjacente do ONTAP suporta. Isso também é verdade para armazenamentos de dados de expansão. Se um armazenamento de dados de expansão incluir recursos no ONTAP 9.3 e anterior e no ONTAP 9.4 e posterior, certifique-se de definir o valor de retenção abaixo de 254.
+NOTE: O valor máximo de retenção é de 1018 backups. Os backups falharão se a retenção for definida para um valor maior do que o que a versão subjacente do ONTAP suporta. Isso também é verdade para armazenamentos de dados de expansão.
+
+
 
 . Nos campos *replicação*, especifique o tipo de replicação para armazenamento secundário, conforme mostrado na tabela a seguir:
 +

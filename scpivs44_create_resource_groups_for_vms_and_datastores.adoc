@@ -273,17 +273,7 @@ NOTE: Se a operação do quiesce falhar em qualquer uma das VMs no backup, o bac
 
 == Gerenciar falhas de verificação de compatibilidade
 
-O SnapCenter executa verificações de compatibilidade quando você tenta criar um grupo de recursos.
-
-Razões para incompatibilidade podem ser:
-
-* Os VMDKs estão em armazenamento não suportado; por exemplo, em um sistema ONTAP executado no modo 7 ou em um dispositivo que não seja ONTAP.
-* Um datastore está no storage NetApp executando o Clustered Data ONTAP 8.2,1 ou anterior.
-+
-O SnapCenter versão 4.x suporta ONTAP 8.3.1 e posterior.
-
-+
-O plug-in do SnapCenter para VMware vSphere não executa verificações de compatibilidade para todas as versões do ONTAP; somente para o ONTAP versões 8.2.1 e anteriores. Portanto, consulte sempre https://imt.netapp.com/matrix/imt.jsp?components=134348;&solution=1517&isHWU&src=IMT["Ferramenta de Matriz de interoperabilidade NetApp (IMT)"^] para obter as informações mais recentes sobre o suporte SnapCenter.
+O SnapCenter executa verificações de compatibilidade quando você tenta criar um grupo de recursos. Consulte sempre https://imt.netapp.com/matrix/imt.jsp?components=134348;&solution=1517&isHWU&src=IMT["Ferramenta de Matriz de interoperabilidade NetApp (IMT)"^] para obter as informações mais recentes sobre o suporte SnapCenter. Razões para incompatibilidade podem ser:
 
 * Um dispositivo PCI compartilhado é conetado a uma VM.
 * O endereço IP preferido não está configurado no SnapCenter.

@@ -105,7 +105,6 @@ Não é possível restaurar arquivos e pastas de uma VM que esteja executando o 
 Quando tenta restaurar do formato NTFS para o formato FAT, o descritor de segurança NTFS não é copiado porque o sistema de ficheiros FAT não suporta atributos de segurança do Windows.
 
 * Não é possível restaurar arquivos de convidado de um VMDK clonado ou de um VMDK não inicializado.
-* Não é possível restaurar a partir de backups secundários se o backup tiver sido executado em um sistema executando o ONTAP 9.2 ou posterior e se a opção de consistência VMware estiver ativada.
 * Não é possível restaurar a estrutura de diretórios para um ficheiro.
 +
 Se um arquivo em um diretório aninhado for selecionado para ser restaurado, o arquivo não será restaurado com a mesma estrutura de diretório. A árvore de diretórios não é restaurada, apenas o arquivo. Se você quiser restaurar uma árvore de diretórios, você pode copiar o próprio diretório na parte superior da estrutura.
