@@ -286,7 +286,6 @@
   <block id="1d92d0cbfdf6166c05997268d3378fe0" category="list-text">Modo ligado</block>
   <block id="35f1c688325b0062756b2d7b0d00be28" category="paragraph">No modo vinculado, cada vCenter tem um dispositivo virtual separado. Portanto, você pode usar nomes duplicados em vCenters. No entanto, você deve criar a política no mesmo vCenter que o grupo de recursos.</block>
   <block id="9efc9e0c08da510b5195bb9dc4b1b7c2" category="list-text">Carateres não suportados</block>
-  <block id="69a02b2d668a0ebee1d9ac100a00074c" category="paragraph">Não use os seguintes carateres especiais em nomes de VM, datastore, cluster, política, backup ou grupo de recursos: % E * / : * ? " &gt; - | ; " , .</block>
   <block id="a051f3eeac4a83ec1f5d55c7aeba6f06" category="paragraph">Um caractere de sublinhado (_) é permitido.</block>
   <block id="6e0b19728555d1c2b7bc98ce7895aced" category="list-text">Especifique as definições de frequência.</block>
   <block id="52b19e85e6a29b6fe5690f47944f859f" category="paragraph">A política especifica apenas a frequência de backup. O cronograma de proteção específico para backup é definido no grupo de recursos. Portanto, dois ou mais grupos de recursos podem compartilhar a mesma política e frequência de backup, mas têm agendas de backup diferentes.</block>
@@ -355,7 +354,6 @@
   <block id="c4436d4a190778b7ec1e9461f6454bdd" category="cell">VCenter Server</block>
   <block id="df86b612dee850ddbf3bd636d14cd09e" category="cell">Selecione um servidor vCenter.</block>
   <block id="49ee3087348e8d44e1feda1917443987" category="cell">Nome</block>
-  <block id="b6f45f1c26b5dc8cfcdcf884b55437e0" category="cell">Introduza um nome para o grupo de recursos. Não use os seguintes carateres especiais em nomes de VM, datastore, política, backup ou grupo de recursos: % E * / : * ? " &gt; - [barra vertical] ; " , . Um caractere de sublinhado (_) é permitido. Nomes de VM ou datastore com carateres especiais são truncados, o que dificulta a pesquisa de um backup específico. No modo vinculado, cada vCenter tem um plug-in SnapCenter separado para o repositório VMware vSphere. Portanto, você pode usar nomes duplicados em vCenters.</block>
   <block id="b1358d1843f648e7ea781a21a690cdd0" category="cell">Introduza uma descrição do grupo de recursos.</block>
   <block id="96d008db67fc0b5551a926842bbb6a71" category="cell">Notificação</block>
   <block id="3a703c8a96e830eedbe6543218be1f6d" category="cell">Selecione quando você deseja receber notificações sobre operações neste grupo de recursos: Erro ou avisos: Enviar notificação para erros e avisos somente erros: Enviar notificação para erros somente sempre: Enviar notificação para todos os tipos de mensagens nunca: Não enviar notificação</block>
@@ -848,7 +846,6 @@
   <block id="b069e722ad8d29f7eec823ae5a4a95a6" category="paragraph">Você pode renomear o plug-in do SnapCenter para backups do VMware vSphere se quiser fornecer um nome melhor para melhorar a capacidade de pesquisa.</block>
   <block id="92e8ef430f5d51426882bb12bbf5e047" category="inline-image-macro">Tela do vSphere Client</block>
   <block id="e3c333b91de412cbe4acc72a0b293a5f" category="paragraph"><block ref="e3c333b91de412cbe4acc72a0b293a5f" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="f8ffb952d62ac560c6adb8ac7e15a58e" category="paragraph">Não use os seguintes carateres especiais em nomes de VM, datastore, política, backup ou grupo de recursos: / : * ? " &gt; - | ; " , . Um caractere de sublinhado (_) é permitido.</block>
   <block id="de00c1e27be1485dd099e4cd2aaa554d" category="section-title">Eliminar cópias de segurança</block>
   <block id="811a38ca6a4a37270419c2834515cf5c" category="paragraph">Você pode excluir o plug-in do SnapCenter para backups do VMware vSphere se não precisar mais do backup para outras operações de proteção de dados. Você pode excluir um backup ou excluir vários backups simultaneamente.</block>
   <block id="4b3cb5948249f5d59292e97ced52522d" category="paragraph">Não é possível eliminar cópias de segurança montadas. Você deve desmontar um backup antes de excluí-lo.</block>
@@ -885,7 +882,6 @@
   <block id="86f5d700774abd1b4b1161e6afcd312e" category="section-title">Modificar grupos de recursos</block>
   <block id="1850764f60496630a671ed4a4ca36a90" category="paragraph">Você pode remover ou adicionar recursos em grupos de recursos no vCenter, desanexar ou anexar políticas, modificar programações ou modificar qualquer outra opção de grupo de recursos.</block>
   <block id="683a572529e7ee01c3f3b2f6e84ee453" category="paragraph">Se você quiser modificar o nome de um grupo de recursos, não use os seguintes carateres especiais em nomes de VM, datastore, política, backup ou grupo de recursos:</block>
-  <block id="bf6bb853aafb837a490acb97d9acbf87" category="paragraph">% E * / : * ? " &gt; - | ; " , .</block>
   <block id="ad9a47e46e4ad7c3e60285f394572957" category="section-title">Eliminar grupos de recursos</block>
   <block id="16b1a35ba7401a13d918126c70a9b4e4" category="paragraph">Você pode excluir um grupo de recursos no vCenter se não precisar mais proteger os recursos no grupo de recursos. Você deve garantir que todos os grupos de recursos sejam excluídos antes de remover o plug-in do SnapCenter vSphere do vCenter.</block>
   <block id="8c37da7815ca25f5e4e2da4009856294" category="summary">Antes de fazer backup ou restaurar VMs ou armazenamentos de dados usando o cliente VMware vSphere, você deve adicionar o armazenamento.</block>
@@ -2172,4 +2168,9 @@
   <block id="4058334ba125181f863f2828e9159ff3" category="admonition">Se você estiver restaurando uma VM excluída, as credenciais de VM de storage que foram adicionadas ao plug-in do SnapCenter para VMware vSphere devem ser<block ref="6173aa5206484b5224450952747c7148" prefix=" " category="inline-code"></block> ou uma conta de usuário que tenha todas as mesmas Privileges que<block ref="6173aa5206484b5224450952747c7148" prefix=" " category="inline-code"></block>.</block>
   <block id="f1ff6215662f12b3f0d4d8fe8c57e63e" category="summary">O plug-in do SnapCenter para VMware vSphere fornece um nível adicional de RBAC para gerenciar recursos virtualizados. O plug-in é compatível com o vCenter Server RBAC e o ONTAP RBAC.</block>
   <block id="ea4dc37a86a15ab44286e88df44656ea" category="paragraph">O plug-in do SnapCenter para a versão do VMware vSphere 6,1 oferece suporte ao provisionamento de máquinas virtuais (VMs) e armazenamento de dados VMFS em sistemas ASA R2. Os sistemas ASA R2 fornecem uma solução unificada de hardware e software que cria uma experiência simplificada específica para as necessidades dos clientes somente de SAN. Os recursos compatíveis com o plug-in do SnapCenter para VMware vSphere 6,1 para VMs, armazenamentos de dados e VMDK (Virtual Machine Disk Format) em sistemas ASA R2 incluem:</block>
+  <block id="2c6c18c9ea36047e0562b8c63f8cdc3b" category="paragraph">Não use os seguintes carateres especiais em nomes de VM, datastore, cluster, política, backup ou grupo de recursos: % E * / : * ? " &lt; &gt; - | ; ' , e espaço.</block>
+  <block id="f064264a00ed4e40241d8bc78838f677" category="cell">Introduza um nome para o grupo de recursos. Não use os seguintes carateres especiais em nomes de VM, datastore, política, backup ou grupo de recursos: % E * / : * ? " &lt; &gt; - [barra vertical] ; ' , e espaço. Um caractere de sublinhado (_) é permitido. Nomes de VM ou datastore com carateres especiais são truncados, o que dificulta a pesquisa de um backup específico. No modo vinculado, cada vCenter tem um plug-in SnapCenter separado para o repositório VMware vSphere. Portanto, você pode usar nomes duplicados em vCenters.</block>
+  <block id="88464b0f22e28142bc76c51bba424a64" category="cell">Ambientes NFS: ONTAP SnapMirror Restore Ambientes VMFS: Clonar e montar com Storage VMotion</block>
+  <block id="12b816ebabce7bea08d953072a6f5d5b" category="paragraph">Não use os seguintes carateres especiais em nomes de VM, datastore, política, backup ou grupo de recursos: / : * ? " &lt; &gt; - | ; ' , e espaço. Um caractere de sublinhado (_) é permitido.</block>
+  <block id="8651a2d0c6ade87f04ae0bca90386289" category="paragraph">% E * / : * ? " &lt; &gt; - | ; ' , e espaço. Um caractere de sublinhado (_) é permitido.</block>
 </blocks>

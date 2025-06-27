@@ -33,7 +33,7 @@ image:scv50_image1.png["Tela do vSphere Client"]
 . Na guia Configurar, selecione um backup e selecione *Renomear*.
 . Na caixa de diálogo *Renomear Backup*, digite o novo nome e selecione *OK*.
 +
-Não use os seguintes carateres especiais em nomes de VM, datastore, política, backup ou grupo de recursos: / : * ? " > - | ; " , . Um caractere de sublinhado (_) é permitido.
+Não use os seguintes carateres especiais em nomes de VM, datastore, política, backup ou grupo de recursos: / : * ? " < > - | ; ' , e espaço. Um caractere de sublinhado (_) é permitido.
 
 
 
