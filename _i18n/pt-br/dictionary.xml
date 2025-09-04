@@ -274,7 +274,6 @@
   <block id="271beae8f11b01c3f45767fc1bd5c1a9" category="list-text">Você deve ter lido os pré-requisitos.</block>
   <block id="020c68712d58d0c6ae79d6422851ae45" category="list-text">Você deve ter relacionamentos de storage secundário configurados.</block>
   <block id="585f74b2337dcf50d5f84248087dbc7a" category="inline-link">Informações do SnapCenter sobre como usar o controle de acesso baseado em função</block>
-  <block id="6371946f7a59bb407f5608582531db43" category="paragraph">Para obter informações sobre como os administradores atribuem recursos aos usuários,<block ref="3c6a9a14d0d13aed475a45101fc3cc00" category="inline-link-rx"></block> consulte .</block>
   <block id="ddad3ed39c11da21249f852ea88d160e" category="list-text">Se você quiser backups consistentes com VM, precisa ter as ferramentas VMware instaladas e em execução. As ferramentas da VMware são necessárias para silenciar as VMs. Os backups consistentes com VM não são suportados para VMs Vevolve.</block>
   <block id="e90ae72a4d203cde9c1d660d983bec13" category="list-text">O SnapMirror active Sync permite que os serviços empresariais continuem operando mesmo em uma falha completa do local, com suporte ao failover de aplicações de forma transparente, usando uma cópia secundária.</block>
   <block id="c2bc8f54778a0e6f72a8fa3f9c96aae7" category="admonition">A sincronização ativa do SnapMirror é suportada apenas para armazenamentos de dados VMFS.</block>
@@ -2173,4 +2172,5 @@
   <block id="88464b0f22e28142bc76c51bba424a64" category="cell">Ambientes NFS: ONTAP SnapMirror Restore Ambientes VMFS: Clonar e montar com Storage VMotion</block>
   <block id="12b816ebabce7bea08d953072a6f5d5b" category="paragraph">Não use os seguintes carateres especiais em nomes de VM, datastore, política, backup ou grupo de recursos: / : * ? " &lt; &gt; - | ; ' , e espaço. Um caractere de sublinhado (_) é permitido.</block>
   <block id="8651a2d0c6ade87f04ae0bca90386289" category="paragraph">% E * / : * ? " &lt; &gt; - | ; ' , e espaço. Um caractere de sublinhado (_) é permitido.</block>
+  <block id="32ac8d4494e62d5a13c33b3927b542bb" category="paragraph">Para obter informações sobre como os administradores atribuem recursos aos usuários, consulte<block ref="d818f211a7449f29082596280ad483fa" category="inline-link-rx"></block> .</block>
 </blocks>

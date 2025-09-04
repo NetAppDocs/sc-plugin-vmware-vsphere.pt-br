@@ -27,7 +27,7 @@ Você deve criar políticas de backup antes de usar o plug-in do SnapCenter para
 Para corrigir esse problema, configure a política de retenção do SnapMirror para armazenamento secundário para evitar atingir o limite máximo de snapshots.
 
 +
-Para obter informações sobre como os administradores atribuem recursos aos usuários, https://docs.netapp.com/us-en/snapcenter/concept/concept_types_of_role_based_access_control_in_snapcenter.html["Informações do SnapCenter sobre como usar o controle de acesso baseado em função"^] consulte .
+Para obter informações sobre como os administradores atribuem recursos aos usuários, consulte https://docs.netapp.com/us-en/snapcenter/get-started/rbac-snapcenter.html["Informações do SnapCenter sobre como usar o controle de acesso baseado em função"^] .
 
 
 
