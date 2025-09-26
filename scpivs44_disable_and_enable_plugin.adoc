@@ -31,7 +31,7 @@ Quando você ativa o plug-in do SnapCenter para VMware vSphere, o plug-in é reg
 +
 link:scpivs44_back_up_the_snapcenter_plug-in_for_vmware_vsphere_mysql_database.html["Faça backup do plug-in do SnapCenter para o banco de dados MySQL do VMware vSphere"].
 
-. Faça login na GUI de gerenciamento do plug-in do SnapCenter para VMware vSphere usando o formato `\https://<OVA-IP-address>:8080`. Faça login com o nome de usuário e senha do administrador definidos no momento da implantação e o token MFA gerado usando o console de manutenção.
+. Efetue login na interface de usuário de gerenciamento do SnapCenter Plug-in for VMware vSphere usando o formato `\https://<OVA-IP-address>:8080` .  Efetue login com o nome de usuário e a senha do administrador definidos no momento da implantação e o token MFA gerado usando o console de manutenção.
 +
 O endereço IP do plug-in do SnapCenter para VMware vSphere é exibido quando você implementa o plug-in.
 

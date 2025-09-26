@@ -39,7 +39,7 @@ A VM que você deseja restaurar não deve estar em um estado de vMotion ou Stora
 
 
 .Passos
-. Na GUI do cliente VMware vSphere, selecione *Menu* na barra de ferramentas e selecione *VMs e modelos* na lista suspensa.
+. Na interface de usuário do cliente VMware vSphere, selecione *Menu* na barra de ferramentas e, em seguida, selecione *VMs e modelos* na lista suspensa.
 . No painel do navegador esquerdo, clique com o botão direito do Mouse em uma VM, selecione *Plug-in SnapCenter para VMware vSphere* na lista suspensa e selecione *Restaurar* na lista suspensa secundária.
 . No assistente *Restaurar*, na página Selecionar cópia de segurança, selecione a cópia de segurança da qual pretende restaurar.
 +

@@ -17,7 +17,7 @@ summary: Você pode pesquisar e localizar um backup específico de uma VM ou dat
 Você pode pesquisar e localizar um backup específico de uma VM ou datastore usando o assistente Restaurar. Depois de localizar um backup, você pode restaurá-lo.
 
 .Passos
-. Na GUI do cliente do VMware vSphere, selecione *Menu* na barra de ferramentas e execute um dos seguintes procedimentos:
+. Na interface de usuário do cliente VMware vSphere, selecione *Menu* na barra de ferramentas e faça um dos seguintes:
 +
 |===
 | Para exibir backups para... | Faça o seguinte... 

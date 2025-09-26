@@ -35,7 +35,7 @@ Clique duas vezes em qualquer tarefa para gerar um relatório detalhado para ess
 
 . Opcional: Na guia relatórios, selecione *Download* e selecione o formato (HTML ou CSV).
 +
-Também pode selecionar o ícone de transferência para transferir registos de plug-in.
+Você pode selecionar o ícone de download para baixar os logs do plug-in.
 
 
 

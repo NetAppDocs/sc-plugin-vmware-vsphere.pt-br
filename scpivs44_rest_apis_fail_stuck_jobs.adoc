@@ -24,5 +24,5 @@ Use a seguinte API REST na seção tarefas para alterar tarefas que estão presa
 | API REST | Comentários 
 
 
-| `/4.1/jobs/{id}/failJobs` | Quando você passar as IDs de trabalhos que estão presos em um estado em execução, `failJobs` marca essas tarefas como falhadas. Para identificar trabalhos que estão presos em um estado em execução, use a GUI do monitor de trabalhos para ver o estado de cada trabalho e a ID do trabalho. 
+| `/4.1/jobs/{id}/failJobs` | Quando você passa os IDs de trabalhos que estão presos em um estado de execução, `failJobs` marca esses trabalhos como fracassados.  Para identificar trabalhos que estão travados em estado de execução, use a interface de usuário do monitor de trabalhos para ver o estado de cada trabalho e o ID do trabalho. 
 |===

@@ -97,7 +97,7 @@ Mesmo que um snapshot de consistência do VMware para uma VM falhe, a VM é, no 
 
 
 .Passos
-. Na GUI do cliente VMware vSphere, selecione *Menu* na barra de ferramentas e selecione *VMs e modelos* na lista suspensa.
+. Na interface de usuário do cliente VMware vSphere, selecione *Menu* na barra de ferramentas e, em seguida, selecione *VMs e modelos* na lista suspensa.
 +
 
 NOTE: Se você estiver restaurando uma VM excluída, as credenciais de VM de storage que foram adicionadas ao plug-in do SnapCenter para VMware vSphere devem ser `vsadmin` ou uma conta de usuário que tenha todas as mesmas Privileges que `vsadmin`.

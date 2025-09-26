@@ -22,7 +22,7 @@ Como administrador, você pode atribuir essas funções aos usuários apropriado
 
 O plug-in do SnapCenter para VMware vSphere retorna essas funções aos valores padrão (conjunto inicial de Privileges) sempre que você reiniciar o serviço cliente da Web do vCenter ou modificar sua instalação. Se você atualizar o plug-in do SnapCenter para VMware vSphere, as funções predefinidas serão atualizadas automaticamente para funcionar com essa versão do plug-in.
 
-Você pode ver as funções predefinidas na GUI do vCenter selecionando *Menu > Administração > funções*, conforme mostrado na tabela a seguir.
+Você pode ver as funções predefinidas na interface do usuário do vCenter selecionando *Menu > Administração > Funções*, conforme mostrado na tabela a seguir.
 
 |===
 | Função | Descrição 

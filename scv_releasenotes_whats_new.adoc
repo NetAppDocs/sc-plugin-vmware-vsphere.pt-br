@@ -1,29 +1,22 @@
 ---
 permalink: scv_releasenotes_whats_new.html 
 sidebar: sidebar 
-keywords: 'what"s new, release notes, scv, 6.1' 
-summary: Saiba mais sobre os novos recursos disponíveis no plug-in do SnapCenter para VMware vSphere 6,1. 
+keywords: 'what"s new, release notes, scv, 6.2' 
+summary: Saiba mais sobre os novos recursos disponíveis no SnapCenter Plug-in for VMware vSphere 6.2. 
 ---
-= Novidades do plug-in do SnapCenter para VMware vSphere 6,1
+= Novidades no SnapCenter Plug-in for VMware vSphere 6.2
 :allow-uri-read: 
 
 
 [role="lead"]
-*Suporte para VMs e datastore VMFS em sistemas ASA R2*
+Saiba mais sobre os novos recursos disponíveis no SnapCenter Plug-in for VMware vSphere 6.2.
 
-O plug-in do SnapCenter para a versão do VMware vSphere 6,1 oferece suporte ao provisionamento de máquinas virtuais (VMs) e armazenamento de dados VMFS em sistemas ASA R2. Os sistemas ASA R2 fornecem uma solução unificada de hardware e software que cria uma experiência simplificada específica para as necessidades dos clientes somente de SAN. Os recursos compatíveis com o plug-in do SnapCenter para VMware vSphere 6,1 para VMs, armazenamentos de dados e VMDK (Virtual Machine Disk Format) em sistemas ASA R2 incluem:
+A versão SnapCenter Plug-in for VMware vSphere 6.2 adiciona suporte para backup e recuperação de máquinas virtuais (VMs) em datastores VMFS para sistemas ASA r2 executando ONTAP 9.17.1 ou posterior.  Com esta versão, você pode executar as seguintes operações para VMs, armazenamentos de dados e formato de disco de máquina virtual (VMDK) em sistemas ASA r2:
 
-* Provisionamento de grupo de consistência para proteção primária
-* Backup baseado em grupo de consistência
-* Clonar fluxos de trabalho
-* Restaurar fluxos de trabalho
-* Provisionamento de proteção secundária ao criar ou modificar o grupo de recursos.
-+
+* Provisão de grupos de consistência para proteção primária
+* Executar backups baseados em grupos de consistência
+* Use grupos de consistência hierárquicos (disponíveis com o ONTAP 9.17.1 e versões posteriores)
+* Executar fluxos de trabalho de clone
+* Executar fluxos de trabalho de restauração
+* Provisionar proteção secundária ao criar ou modificar grupos de recursos (disponível com o ONTAP 9.16.1 e versões posteriores)
 
-NOTE: A proteção secundária é suportada apenas no ONTAP 9.16.1 e versões posteriores
-
-
-
-*Suporte para instantâneos secundários à prova de violações (TPS)*
-
-O plug-in do SnapCenter para VMware vSphere introduz suporte para TPS secundário, garantindo que cópias snapshot secundárias sejam protegidas contra exclusão ou alteração por invasores de ransomware ou administradores desonestos e tornando-as disponíveis mesmo após um ataque.

@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: scpivs44_overview_of_different_snapcenter_guis.html 
 keywords:  
-summary: O plug-in do SnapCenter para VMware vSphere é um plug-in autônomo que é diferente de outros plug-ins do SnapCenter. Você deve usar a GUI do cliente do VMware vSphere no vCenter para todas as operações de backup e restauração de VMs, VMDKs e datastores. 
+summary: O SnapCenter Plug-in for VMware vSphere é um plug-in independente diferente de outros plug-ins do SnapCenter .  Você deve usar a interface de usuário do cliente VMware vSphere no vCenter para todas as operações de backup e restauração de VMs, VMDKs e armazenamentos de dados. 
 ---
-= Visão geral dos diferentes GUIs SnapCenter
+= Visão geral das diferentes interfaces de usuário do SnapCenter
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,31 +14,31 @@ summary: O plug-in do SnapCenter para VMware vSphere é um plug-in autônomo que
 
 
 [role="lead"]
-No seu ambiente SnapCenter, você precisa usar a GUI apropriada para executar operações de gerenciamento e proteção de dados.
+No seu ambiente SnapCenter , você deve usar a interface de usuário apropriada para executar operações de proteção e gerenciamento de dados.
 
-O plug-in do SnapCenter para VMware vSphere é um plug-in autônomo que é diferente de outros plug-ins do SnapCenter. Você deve usar a GUI do cliente do VMware vSphere no vCenter para todas as operações de backup e restauração de VMs, VMDKs e datastores. Você também usa o Dashboard da GUI do cliente da Web para monitorar a lista de VMs protegidas e desprotegidas. Para todas as outras operações de plug-in do SnapCenter (plug-ins baseados em aplicativos), como backup e restauração e monitoramento de tarefas, você usa a GUI do SnapCenter.
+O SnapCenter Plug-in for VMware vSphere é um plug-in independente diferente de outros plug-ins do SnapCenter .  Você deve usar a interface de usuário do cliente VMware vSphere no vCenter para todas as operações de backup e restauração de VMs, VMDKs e armazenamentos de dados.  Você também pode usar o Painel da interface de usuário do cliente web para monitorar a lista de VMs protegidas e desprotegidas.  Para todas as outras operações do plug-in SnapCenter (plug-ins baseados em aplicativos), como backup, restauração e monitoramento de tarefas, use a interface de usuário do SnapCenter .
 
-Para proteger VMs e armazenamentos de dados, use a interface de cliente do VMware vSphere. A GUI do cliente da Web se integra à tecnologia NetApp snapshot no sistema de storage. Isso permite que você faça backup de VMs e armazenamentos de dados em segundos e restaure VMs sem colocar um host ESXi offline.
+Para proteger VMs e armazenamentos de dados, use a interface do cliente VMware vSphere.  A interface do usuário do cliente web integra-se à tecnologia de snapshot da NetApp no ​​sistema de armazenamento.  Isso permite que você faça backup de VMs e armazenamentos de dados em segundos e restaure VMs sem deixar um host ESXi offline.
 
-Há também uma GUI de gerenciamento para executar operações administrativas no plug-in do SnapCenter para VMware vSphere.
+Há também uma interface de usuário de gerenciamento para executar operações administrativas no SnapCenter Plug-in for VMware vSphere.
 
-A tabela a seguir mostra as operações que a GUI do SnapCenter executa.
+A tabela a seguir mostra as operações que a interface do usuário do SnapCenter executa.
 
 |===
-| Use esta GUI... | Para realizar estas operações... | E para acessar esses backups... 
+| Use esta interface de usuário… | Para realizar estas operações... | E para acessar esses backups... 
 
 
-| GUI do cliente SnapCenter vSphere | Backup de VM e datastore VMDK anexe e e separe a montagem do datastore e desmonte a restauração de arquivos e pastas de VM e VMDK | Backups de VMs e armazenamentos de dados usando a GUI do cliente VMware vSphere. 
+| Interface de usuário do cliente SnapCenter vSphere | Backup de VM e datastore VMDK anexe e e separe a montagem do datastore e desmonte a restauração de arquivos e pastas de VM e VMDK | Backups de VMs e datastores usando a interface de usuário do cliente VMware vSphere. 
 
 
-| GUI do SnapCenter | Backup e restauração de bancos de dados e aplicativos em VMs, incluindo proteção de bancos de dados para Microsoft SQL Server, Microsoft Exchange e Oracle. Clone de banco de dados | Backups realizados usando a GUI do SnapCenter. 
+| Interface de usuário do SnapCenter | Backup e restauração de bancos de dados e aplicativos em VMs, incluindo proteção de bancos de dados para Microsoft SQL Server, Microsoft Exchange e Oracle. Clone de banco de dados | Backups realizados usando a interface de usuário do SnapCenter . 
 
 
-| Plug-in do SnapCenter para GUI de gerenciamento do VMware vSphere | Modificar a configuração de rede gerar um pacote de suporte Modificar configurações do servidor NTP Desativar/Ativar o plug-in | N.A. 
+| SnapCenter Plug-in for VMware vSphere | Modificar a configuração de rede gerar um pacote de suporte Modificar configurações do servidor NTP Desativar/Ativar o plug-in | N.A. 
 
 
-| GUI do vCenter | Adicione funções SCV aos usuários do vCenter ative Directory Adicione acesso a recursos a usuários ou grupos | N.A. 
+| Interface de usuário do vCenter | Adicione funções SCV aos usuários do vCenter ative Directory Adicione acesso a recursos a usuários ou grupos | N.A. 
 |===
-Para operações de backup e restauração consistentes com VM, você deve usar a GUI do cliente VMware vSphere. Embora seja possível executar algumas operações usando ferramentas VMware, por exemplo, montar ou renomear um datastore, essas operações não serão registradas no repositório SnapCenter e não serão reconhecidas.
+Para operações de backup e restauração consistentes com VM, você deve usar a interface de usuário do cliente VMware vSphere.  Embora seja possível executar algumas operações usando ferramentas VMware, por exemplo, montar ou renomear um armazenamento de dados, essas operações não serão registradas no repositório SnapCenter e não serão reconhecidas.
 
-O SnapCenter não oferece suporte a snapshots únicos de bancos de dados e VMs juntos. Os backups de VMs e bancos de dados devem ser programados e executados de forma independente, o que cria snapshots separados, mesmo que os bancos de dados e VMs estejam hospedados no mesmo volume. Os backups baseados em aplicativos devem ser programados usando a GUI do SnapCenter; os backups consistentes com VM devem ser agendados usando a GUI do cliente VMware vSphere.
+O SnapCenter não oferece suporte a snapshots únicos de bancos de dados e VMs juntos.  Os backups de VMs e bancos de dados devem ser agendados e executados de forma independente, o que cria instantâneos separados, mesmo que os bancos de dados e as VMs estejam hospedados no mesmo volume.  Os backups baseados em aplicativos devem ser agendados usando a interface de usuário do SnapCenter ; os backups consistentes com VM devem ser agendados usando a interface de usuário do cliente VMware vSphere.

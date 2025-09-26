@@ -70,11 +70,11 @@ NOTE: Todos os hosts devem ser configurados com endereços IP (nomes de host FQD
 A implantação pode levar alguns minutos para ser concluída. A implantação bem-sucedida é indicada quando o plug-in do SnapCenter para VMware vSphere é ativado, as ferramentas da VMware são instaladas e a tela solicita que você faça login no plug-in do SnapCenter para VMware vSphere.
 
 +
-A tela exibe o endereço IP onde o plug-in do SnapCenter para VMware vSphere é implantado. Anote o endereço IP. Você precisa fazer login na GUI de gerenciamento do plug-in do SnapCenter para VMware vSphere se quiser fazer alterações na configuração do plug-in do SnapCenter para VMware vSphere.
+A tela exibe o endereço IP onde o SnapCenter Plug-in for VMware vSphere está implantado.  Anote o endereço IP.  Você precisa fazer login na interface de usuário de gerenciamento do SnapCenter Plug-in for VMware vSphere se quiser fazer alterações na configuração do SnapCenter Plug-in for VMware vSphere .
 
-. Faça login na GUI de gerenciamento do plug-in do SnapCenter para VMware vSphere usando o endereço IP exibido na tela de implantação usando as credenciais fornecidas no assistente de implantação e, em seguida, verifique no painel se o plug-in do SnapCenter para VMware vSphere está conetado com êxito ao vCenter e está habilitado.
+. Efetue login na interface de usuário de gerenciamento do SnapCenter Plug-in for VMware vSphere usando o endereço IP exibido na tela de implantação usando as credenciais fornecidas no assistente de implantação e, em seguida, verifique no Painel se o SnapCenter Plug-in for VMware vSphere está conectado com sucesso ao vCenter e está habilitado.
 +
-Use o formato `\https://<appliance-IP-address>:8080` para acessar a GUI de gerenciamento.
+Use o formato `\https://<appliance-IP-address>:8080` para acessar a interface do usuário de gerenciamento.
 
 +
 Faça login com o nome de usuário e senha do administrador definidos no momento da implantação e o token MFA gerado usando o console de manutenção.

@@ -20,7 +20,7 @@ Você pode adicionar rapidamente uma única VM ou datastore a qualquer grupo de 
 Você pode adicionar armazenamentos de dados SAN e nas, mas não armazenamentos de dados VSAN ou VVOL.
 
 .Passos
-. Na GUI do cliente vSphere, selecione *Menu* na barra de ferramentas e navegue até a VM ou datastore que você deseja adicionar.
+. Na interface de usuário do cliente vSphere, selecione *Menu* na barra de ferramentas e navegue até a VM ou o armazenamento de dados que deseja adicionar.
 . No painel do navegador esquerdo, clique com o botão direito do Mouse na VM ou datastore, selecione *Plug-in SnapCenter para VMware vSphere* > *Adicionar ao grupo de recursos* na lista suspensa secundária.
 +
 O sistema primeiro verifica se o SnapCenter gerencia e é compatível com o sistema de armazenamento no qual a VM selecionada está localizada e, em seguida, exibe a página *Adicionar ao Grupo de recursos*. Se a mensagem `SnapCenter Compatibility Error` for exibida, a VM selecionada não é compatível com o SnapCenter e você deve primeiro adicionar a VM de armazenamento apropriada ao SnapCenter.

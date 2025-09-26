@@ -35,7 +35,7 @@ O administrador do vSphere configura o vCenter Server RBAC fazendo o seguinte:
 * Definir as permissões do vCenter Server no objeto raiz (também conhecido como pasta raiz). Em seguida, você pode refinar a segurança restringindo entidades filhas que não precisam dessas permissões.
 * Atribuindo as funções SCV aos usuários do ative Directory.
 +
-No mínimo, todos os usuários devem poder visualizar objetos do vCenter. Sem esse privilégio, os usuários não podem acessar a GUI do cliente do VMware vSphere.
+No mínimo, todos os usuários devem poder visualizar objetos do vCenter.  Sem esse privilégio, os usuários não podem acessar a interface de usuário do cliente VMware vSphere.
 
 
 

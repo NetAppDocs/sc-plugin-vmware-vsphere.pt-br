@@ -14,7 +14,7 @@ summary: Se você estiver usando o plug-in do SnapCenter para o dispositivo virt
 
 
 
-NOTE: A atualização para o SCV 6,1 é suportada somente no VMware vCenter Server 7 atualização 1 e versões posteriores, para o VMware vCenter Server anterior à versão 7 atualização 1, você deve continuar usando o SCV 4,7. A atualização causa interrupções em versões não suportadas do VMware vCenter Server.
+NOTE: A atualização para o SCV 6.2 é suportada apenas no VMware vCenter Server 7 atualização 1 e versões posteriores. Para o VMware vCenter Server anterior à versão 7 atualização 1, você deve continuar a usar o SCV 4.7.  A atualização é prejudicial em versões não suportadas do servidor VMware vCenter.
 
 Se você estiver usando o plug-in do SnapCenter para o dispositivo virtual VMware vSphere, poderá fazer o upgrade para uma versão mais recente. O processo de atualização desRegistra o plug-in existente e implanta um plug-in compatível apenas com o vSphere 7.0U1 e versões posteriores.
 
@@ -28,7 +28,10 @@ Se você estiver usando o plug-in do SnapCenter para o dispositivo virtual VMwar
 | Se você estiver no plug-in do SnapCenter para a versão do VMware vSphere (SCV)... | Você pode atualizar diretamente o plug-in do SnapCenter para... 
 
 
-| SCV 6,0 | Atualize para a VCR 6,1 
+| SCV 6,1 | Atualizar para SCV 6.2 
+
+
+| SCV 6,0 | Atualize para SCV 6.1 e SCV 6.2 
 
 
 | SCV 5,0 | Atualize para VCS 6,0 e VCS 6,1 
@@ -56,7 +59,7 @@ Para obter as informações mais recentes sobre versões suportadas, https://imt
 .Passos
 . Prepare-se para a atualização desativando o plug-in SnapCenter para VMware vSphere.
 +
-.. Faça login na GUI de gerenciamento do plug-in do SnapCenter para VMware vSphere. O endereço IP é exibido quando você implementa o plug-in do SnapCenter para VMware vSphere.
+.. Efetue login na interface de usuário de gerenciamento do SnapCenter Plug-in for VMware vSphere .  O endereço IP é exibido quando você implanta o SnapCenter Plug-in for VMware vSphere.
 .. Selecione *Configuração* no painel de navegação esquerdo e, em seguida, selecione a opção *Serviço* na seção Detalhes do plug-in para desativar o plug-in.
 
 
@@ -70,7 +73,7 @@ Para obter as informações mais recentes sobre versões suportadas, https://imt
 . Instale a atualização.
 +
 .. No seu navegador, navegue até o VMware vSphere vCenter.
-.. Na GUI do vCenter, selecione *vSphere client (HTML)*.
+.. Na interface do usuário do vCenter, selecione *cliente vSphere (HTML)*.
 .. Inicie sessão na página *Início de sessão único do VMware vCenter*.
 .. No painel do navegador, selecione a VM que deseja atualizar e, em seguida, selecione a guia *Resumo*.
 .. No painel *objetos relacionados*, selecione em qualquer datastore na lista e selecione a guia *Resumo*.

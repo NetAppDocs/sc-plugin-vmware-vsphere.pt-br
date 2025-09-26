@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: scpivs44_generate_a_support_bundle_from_the_snapcenter_plug-in_for_vmware_vsphere_gui.html 
 keywords:  
-summary: Você pode gerar um pacote de suporte a partir do plug-in do SnapCenter para a GUI do VMware vSphere. 
+summary: Você pode gerar um pacote de suporte a partir da interface de usuário do SnapCenter Plug-in for VMware vSphere . 
 ---
-= Gere um pacote de suporte a partir do plug-in do SnapCenter para a GUI do VMware vSphere
+= Gerar um pacote de suporte a partir da interface de usuário do SnapCenter Plug-in for VMware vSphere
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -15,7 +15,7 @@ summary: Você pode gerar um pacote de suporte a partir do plug-in do SnapCenter
 
 .Antes de começar
 [role="lead"]
-Para fazer logon na GUI de gerenciamento do plug-in do SnapCenter para VMware vSphere, você deve saber o endereço IP e as credenciais de login. Você também deve anotar o token MFA gerado a partir do console de manutenção.
+Para fazer logon na interface de usuário de gerenciamento do SnapCenter Plug-in for VMware vSphere , você precisa saber o endereço IP e as credenciais de logon.  Você também deve anotar o token MFA gerado pelo console de manutenção.
 
 * O endereço IP foi exibido quando o plug-in do SnapCenter para VMware vSphere foi implantado.
 * Use as credenciais de login fornecidas durante a implantação do plug-in do SnapCenter para VMware vSphere ou conforme modificado posteriormente.
@@ -23,7 +23,7 @@ Para fazer logon na GUI de gerenciamento do plug-in do SnapCenter para VMware vS
 
 
 .Passos
-. Faça login no plug-in do SnapCenter para a GUI do VMware vSphere.
+. Efetue login na interface de usuário do SnapCenter Plug-in for VMware vSphere .
 +
 Utilize o formato `\https://<OVA-IP-address>:8080`.
 

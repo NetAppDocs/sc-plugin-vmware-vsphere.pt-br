@@ -25,7 +25,7 @@ Você pode usar o cliente VMware vSphere para modificar as configurações de cl
 Se você modificar uma VM de storage que foi adicionada automaticamente como parte de um cluster (às vezes chamada de VM de storage implícita), essa VM de storage será alterada para uma VM de storage explícita e poderá ser excluída separadamente sem alterar o restante das VMs de storage nesse cluster. Na página sistemas de armazenamento, o nome de usuário é exibido como N/A quando o método de autenticação é através do certificado; os nomes de usuário são exibidos apenas para VMs de armazenamento explícitas na lista de cluster e têm o sinalizador ExplicitSVM definido como verdadeiro. Todas as VMs de armazenamento são sempre listadas no cluster associado.
 
 
-IMPORTANT: Se você adicionou VMs de storage para operações de proteção de dados baseadas em aplicações usando a GUI do SnapCenter, precisará usar a mesma GUI para modificar essas VMs de storage.
+IMPORTANT: Se você adicionou VMs de armazenamento para operações de proteção de dados baseadas em aplicativos usando a interface de usuário do SnapCenter , deverá usar a mesma interface de usuário para modificar essas VMs de armazenamento.
 
 .Passos
 . No painel de navegação esquerdo do plug-in SCV, selecione *Storage Systems*.
@@ -40,7 +40,7 @@ IMPORTANT: Se você adicionou VMs de storage para operações de proteção de d
 Você pode usar o cliente VMware vSphere para remover VMs de armazenamento do inventário no vCenter.
 
 
-NOTE: Se você adicionou VMs de storage para operações de proteção de dados baseadas em aplicações usando a GUI do SnapCenter, precisará usar a mesma GUI para modificar essas VMs de storage.
+NOTE: Se você adicionou VMs de armazenamento para operações de proteção de dados baseadas em aplicativos usando a interface de usuário do SnapCenter , deverá usar a mesma interface de usuário para modificar essas VMs de armazenamento.
 
 .Antes de começar
 É necessário desmontar todos os armazenamentos de dados na VM de storage antes de remover a VM de storage.

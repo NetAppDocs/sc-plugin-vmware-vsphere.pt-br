@@ -17,7 +17,7 @@ summary: Depois de conetar um disco virtual para restaurar arquivos individuais,
 Depois de conetar um disco virtual para restaurar arquivos individuais, você pode desanexar o disco virtual da VM pai.
 
 .Passos
-. Na GUI do cliente VMware vSphere, selecione *Menu* na barra de ferramentas e selecione *VMs e modelos* na lista suspensa.
+. Na interface de usuário do cliente VMware vSphere, selecione *Menu* na barra de ferramentas e, em seguida, selecione *VMs e modelos* na lista suspensa.
 . No painel do navegador esquerdo, selecione uma VM.
 . No painel de navegação esquerdo, clique com o botão direito do Mouse na VM, selecione *Plug-in SnapCenter para VMware vSphere* na lista suspensa e selecione *Desanexar disco virtual* na lista suspensa secundária.
 . Na tela *Desanexar disco Virtual*, selecione um ou mais discos que deseja desanexar e, em seguida, marque a caixa de seleção *DESANEXAR o(s) disco(s) selecionado(s) e selecione *DESANEXAR*.

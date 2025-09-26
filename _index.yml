@@ -8,19 +8,18 @@ indexpage:
     SnapCenter para dar suporte a operações de backup e restauração baseadas em aplicativos
     em ambientes VMware para plug-ins específicos de aplicativos do SnapCenter.
   keywords: SnapCenter Plug-in for VMware vSphere, SCV
-  lead: O plug-in do SnapCenter para VMware vSphere (SCV) é um dispositivo virtual
-    baseado em Linux. Como autônomo, ele oferece operações de backup e restauração
-    rápidas, com uso eficiente de espaço, consistentes com falhas e consistentes com
-    VM para VMs, armazenamentos de dados e VMDKs. Ele também funciona com o servidor
-    SnapCenter para dar suporte a operações de backup e restauração baseadas em aplicativos
-    em ambientes VMware para plug-ins específicos de aplicativos do SnapCenter. Esta
-    biblioteca de documentação descreve o plug-in do SnapCenter para VMware vSphere
-    versões 6,1.
+  lead: O SnapCenter Plug-in for VMware vSphere (SCV) é um dispositivo virtual baseado
+    em Linux.  Como autônomo, ele fornece operações de backup e restauração rápidas,
+    com eficiência de espaço, consistentes em caso de falhas e consistentes com VMs,
+    datastores e VMDKs.  Ele também funciona com o SnapCenter Server para dar suporte
+    a operações de backup e restauração baseadas em aplicativos em ambientes VMware
+    para plug-ins específicos de aplicativos SnapCenter .  Esta biblioteca de documentação
+    descreve o SnapCenter Plug-in for VMware vSphere versões 6.2.
   tiles:
   - title: Comece agora
     links:
     - title: Notas de versão
-      url: https://library.netapp.com/ecm/ecm_download_file/ECMLP3337464
+      url: https://library.netapp.com/ecm/ecm_download_file/ECMLP3359464
     - title: Saiba mais sobre SCV
       url: "/scpivs44_concepts_overview.html"
     - title: Requisitos de implantação

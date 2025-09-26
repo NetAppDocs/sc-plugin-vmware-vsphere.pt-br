@@ -14,7 +14,7 @@ summary: Para executar operações de restauração de backups de VM usando o pl
 
 
 [role="lead"]
-Para executar operações de restauração de backups de VM usando o plug-in do SnapCenter para APIs REST do VMware vSphere, você deve seguir a sequência prescrita de chamadas de API REST.
+Para restaurar backups de VM com o SnapCenter Plug-in for VMware vSphere , siga a sequência necessária de chamadas de API REST, conforme descrito abaixo.
 
 Para cada API REST, adicione `\https://<server>:<port>` na frente da API REST para formar um endpoint completo.
 

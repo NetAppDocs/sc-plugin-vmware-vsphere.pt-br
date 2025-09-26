@@ -22,9 +22,16 @@ A atualização para o plug-in do SnapCenter para VMware vSphere (SCV) 4,8 e pos
 
 
  a| 
+SCV 6,1
+ a| 
+SCV 6.2
+
+
+
+ a| 
 SCV 6,0
  a| 
-SCV 6,1
+SCV 6.1 e SCV 6.2
 
 
 
@@ -40,26 +47,21 @@ SCV 4,9
  a| 
 VCS 5,0 e VCS 6,0
 
-
-
- a| 
-SCV 4,8
- a| 
-VCS 4,9 e VCS 5,0
-
-
-
- a| 
-SCV 4,7
- a| 
-VCS 4,8 e VCS 4,9
-
 |===
 Para bancos de dados virtualizados e sistemas de arquivos integrados ao SnapCenter, este é o caminho de atualização:
 
 [cols="30%,30%,40%"]
 |===
 | Se você estiver usando | Se o seu plug-in VMware for... | Você pode atualizar diretamente para... 
+
+
+ a| 
+SnapCenter 6.2
+ a| 
+SCV 6,1
+ a| 
+SCV 6.2
+
 
 
  a| 

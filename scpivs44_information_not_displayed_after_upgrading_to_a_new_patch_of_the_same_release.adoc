@@ -40,7 +40,7 @@ O cache está nos seguintes locais, com base no tipo de sistema operacional do s
 
 == Solução alternativa se você já atualizou antes de limpar o cache
 
-. Faça login na GUI de gerenciamento do plug-in do SnapCenter para VMware vSphere.
+. Efetue login na interface de usuário de gerenciamento do SnapCenter Plug-in for VMware vSphere .
 +
 O endereço IP é exibido quando você implementa o plug-in do SnapCenter para VMware vSphere.
 
