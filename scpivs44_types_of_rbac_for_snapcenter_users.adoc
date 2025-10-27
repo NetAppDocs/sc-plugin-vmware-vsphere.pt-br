@@ -32,6 +32,7 @@ O plug-in do SnapCenter para a implantação do VMware vSphere cria as seguintes
 
 O administrador do vSphere configura o vCenter Server RBAC fazendo o seguinte:
 
+* Você pode associar usuários a funções predefinidas em permissões globais.
 * Definir as permissões do vCenter Server no objeto raiz (também conhecido como pasta raiz). Em seguida, você pode refinar a segurança restringindo entidades filhas que não precisam dessas permissões.
 * Atribuindo as funções SCV aos usuários do ative Directory.
 +

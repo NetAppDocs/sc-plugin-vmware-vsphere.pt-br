@@ -2163,4 +2163,6 @@
   <block id="90a8886635ee0da0c4b0c0f9f05014c9" category="sidebar">SnapCenter Plug-in for VMware vSphere 6.2</block>
   <block id="62889a042309a4c109020af336b64d80" category="sidebar">Novidades no SnapCenter Plug-in for VMware vSphere 6.2</block>
   <block id="5f9632818cc0b2ae9e72f12df491a0d9" category="sidebar">Gerar um pacote de suporte a partir da interface de usuário do SnapCenter Plug-in for VMware vSphere</block>
+  <block id="d6ede90a002c3b83d155e427efb5f090" category="admonition">O suporte para o Amazon FSx for NetApp ONTAP está disponível a partir da versão SCV 6.2.</block>
+  <block id="7b373df72819a720b694167ed282840b" category="list-text">Você pode associar usuários a funções predefinidas em permissões globais.</block>
 </blocks>
