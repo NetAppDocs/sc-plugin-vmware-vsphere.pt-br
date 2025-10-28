@@ -41,7 +41,7 @@ IMPORTANT: Não adicione VMs que estão em um estado inacessível. Embora seja p
 .Antes de começar
 As ferramentas do ONTAP para VMware devem ser implantadas antes de criar um grupo de recursos que contenha VMs da Vevolve.
 
-Para obter mais informações, consulte a documentação das ONTAP tools for VMware vSphere .  Para versões suportadas, visite https://imt.netapp.com/matrix/imt.jsp?components=134348;&solution=1517&isHWU&src=IMT["Ferramenta de Matriz de interoperabilidade do NetApp"^] .
+Para obter mais informações, consulte a documentação das ONTAP tools for VMware vSphere . Para versões suportadas, visite https://imt.netapp.com/imt/imt.jsp?components=180121;&solution=1517&isHWU&src=IMT["Ferramenta de Matriz de interoperabilidade do NetApp"^] .
 
 .Sobre esta tarefa
 * Você pode adicionar ou remover recursos de um grupo de recursos a qualquer momento.
@@ -222,7 +222,7 @@ NOTE: Se a operação de inatividade falhar para qualquer uma das VMs no backup,
 
 == Gerenciar falhas de verificação de compatibilidade
 
-O SnapCenter executa verificações de compatibilidade quando você tenta criar um grupo de recursos. Consulte sempre https://imt.netapp.com/matrix/imt.jsp?components=134348;&solution=1517&isHWU&src=IMT["Ferramenta de Matriz de interoperabilidade NetApp (IMT)"^] para obter as informações mais recentes sobre o suporte SnapCenter. Razões para incompatibilidade podem ser:
+O SnapCenter executa verificações de compatibilidade quando você tenta criar um grupo de recursos. Consulte sempre https://imt.netapp.com/imt/imt.jsp?components=180121;&solution=1517&isHWU&src=IMT["Ferramenta de Matriz de interoperabilidade NetApp (IMT)"^] para obter as informações mais recentes sobre o suporte do SnapCenter . Os motivos para incompatibilidade podem ser:
 
 * Um dispositivo PCI compartilhado é conetado a uma VM.
 * O endereço IP preferido não está configurado no SnapCenter.
