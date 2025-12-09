@@ -20,3 +20,5 @@ A versão SnapCenter Plug-in for VMware vSphere 6.2 adiciona suporte para backup
 * Executar fluxos de trabalho de restauração
 * Provisionar proteção secundária ao criar ou modificar grupos de recursos (disponível com o ONTAP 9.16.1 e versões posteriores)
 
+
+A partir desta versão, o SnapCenter Plug-in for VMware vSphere oferece suporte ao Amazon FSxN para sistemas de armazenamento NetApp ONTAP executando a versão 9.10 ou posterior.

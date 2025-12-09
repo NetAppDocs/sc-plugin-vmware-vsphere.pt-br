@@ -1792,8 +1792,6 @@
   <block id="856e1714b1d49f0d567463f553ef9120" category="cell">8 núcleos</block>
   <block id="2a9f9ccc193010032b655ecfc76e40c8" category="cell">RAM recomendada</block>
   <block id="dde8b54fa4a91beedb7b736869c08569" category="cell">24 GB</block>
-  <block id="f8bce6aa95f5621d608c29e258b620d2" category="cell">Tamanho máximo de heap do serviço vmcontrol no dispositivo</block>
-  <block id="af5700014f646d2567efa6288d85ab2b" category="cell">8 GB</block>
   <block id="4fa7e925220267d7b768f4b3a78c6148" category="admonition">O sistema de storage ASA R2 não oferece suporte à renomeação de backups.</block>
   <block id="d106abcc28b08528e977427482cfc257" category="paragraph">Você pode fazer alterações em várias categorias. Você também pode editar recursos protegidos secundários nesta opção.</block>
   <block id="875b0302744a0f026125fde0002031ee" category="cell">Clone de volume criar clone de volume show de volume show de volume split start volume clone split status volume split stop volume criar volume excluir volume destruir clone de arquivo de volume criar arquivo de volume show-disco-uso volume off-line volume gerenciado-recurso volume modificar volume criar volume excluir volume qtree modificar volume apagar volume qtree modificar volume SnapLock alterar volume alterar volume alterar volume instantâneo volume alterar volume instantâneo volume alterar volume ampliar volume ampliar volume ampliar volume</block>
@@ -2163,4 +2161,7 @@
   <block id="95477275bd206a7fb98bf4a8ec799a0b" category="paragraph">Para obter as informações mais recentes sobre as versões suportadas, consulte<block ref="dd731ea0dfaa7ba4b5325a39b353b5a2" category="inline-link-rx"></block> .</block>
   <block id="65d35124c2bde72fba0fccdd4037d284" category="paragraph">Não é possível restaurar arquivos e pastas de uma VM que esteja executando um sistema operacional convidado Linux. No entanto, você pode anexar um VMDK e restaurar manualmente os arquivos e pastas. Para obter as informações mais recentes sobre o sistema operacional convidado compatível, consulte<block ref="dd731ea0dfaa7ba4b5325a39b353b5a2" category="inline-link-rx"></block> .</block>
   <block id="eccd74f81ec87affcad9c90ed7e1c714" category="paragraph">Não é possível restaurar arquivos e pastas de uma VM que esteja executando um sistema operacional convidado Linux. No entanto, você pode anexar um VMDK e restaurar manualmente os arquivos e pastas. Para obter as informações mais recentes sobre o sistema operacional convidado compatível, consulte o<block ref="dd731ea0dfaa7ba4b5325a39b353b5a2" category="inline-link-rx"></block> .</block>
+  <block id="dcd97a739116b3e37a21b24d1b1d508d" category="cell">Amazon FSxN para armazenamento NetApp ONTAP</block>
+  <block id="b6e6ac3bc87c50849332d71bd687f2ee" category="cell">9.10 e acima</block>
+  <block id="af6ccd5ef578462110c3f8bfdb7d3622" category="paragraph">A partir desta versão, o SnapCenter Plug-in for VMware vSphere oferece suporte ao Amazon FSxN para sistemas de armazenamento NetApp ONTAP executando a versão 9.10 ou posterior.</block>
 </blocks>
