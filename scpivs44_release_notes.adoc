@@ -4,7 +4,7 @@ permalink: scpivs44_release_notes.html
 keywords:  
 summary: As notas de versão fornecem informações importantes sobre esta versão do plug-in do SnapCenter para VMware vSphere, incluindo requisitos de licenciamento, problemas conhecidos, precauções, limitações e quaisquer atualizações ou correções de documentação. 
 ---
-= Notas de versão do plug-in do SnapCenter para VMware vSphere
+= Notas de versão do SnapCenter Plug-in para VMware vSphere
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

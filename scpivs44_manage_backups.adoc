@@ -4,7 +4,7 @@ permalink: scpivs44_manage_backups.html
 keywords:  
 summary: Você pode renomear e excluir backups executados pelo plug-in SnapCenter para VMware vSphere. Você também pode excluir vários backups simultaneamente. 
 ---
-= Gerenciar backups
+= Gerencie backups no SnapCenter Plug-in for VMware vSphere
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

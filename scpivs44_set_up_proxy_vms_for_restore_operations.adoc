@@ -4,7 +4,7 @@ permalink: scpivs44_set_up_proxy_vms_for_restore_operations.html
 keywords:  
 summary: Se você quiser usar uma VM proxy para anexar um disco virtual para operações de restauração de arquivos convidados, configure a VM proxy antes de iniciar a operação de restauração. Embora você possa configurar uma VM proxy a qualquer momento, pode ser mais conveniente configurá-la imediatamente após a conclusão da implantação do plug-in. 
 ---
-= Configurar VMs proxy para operações de restauração
+= Configure VMs proxy para operações de restauração no SCV
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

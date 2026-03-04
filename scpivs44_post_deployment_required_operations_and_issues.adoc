@@ -4,7 +4,7 @@ permalink: scpivs44_post_deployment_required_operations_and_issues.html
 keywords:  
 summary: Depois de implantar o plug-in do SnapCenter para VMware vSphere, você deve concluir a instalação. 
 ---
-= Após a implantação, as operações e os problemas necessários
+= Operações e problemas pós-implantação necessários para o SCV
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

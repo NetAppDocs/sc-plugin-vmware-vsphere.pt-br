@@ -4,7 +4,7 @@ permalink: scpivs44_monitor_jobs.html
 keywords:  
 summary: Depois de executar qualquer operação de proteção de dados usando o cliente VMware vSphere, você pode monitorar o status da tarefa na guia Monitor de tarefas no Painel e exibir os detalhes da tarefa. 
 ---
-= Monitorizar trabalhos
+= Monitore os trabalhos no SnapCenter Plug-in for VMware vSphere
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

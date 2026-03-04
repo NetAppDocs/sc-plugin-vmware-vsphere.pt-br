@@ -4,7 +4,7 @@ permalink: scpivs44_rest_api_workflow__restore_deleted_vms.html
 keywords:  
 summary: Para executar operações de restauração de backups de VM usando o plug-in do SnapCenter para APIs REST do VMware vSphere, você deve seguir a sequência prescrita de chamadas de API REST. 
 ---
-= Fluxo de trabalho da API REST para restaurar VMs excluídas
+= Fluxo de trabalho da API REST para restaurar VMs excluídas usando o SCV
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

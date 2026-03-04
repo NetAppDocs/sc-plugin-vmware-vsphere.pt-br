@@ -4,7 +4,7 @@ permalink: scpivs44_deployment_planning_and_requirements.html
 keywords:  
 summary: Você deve estar ciente dos requisitos de implantação antes de implantar o dispositivo virtual. 
 ---
-= Planejamento e requisitos de implantação
+= Planejamento e requisitos de implantação para o SCV
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

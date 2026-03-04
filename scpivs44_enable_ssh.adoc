@@ -4,7 +4,7 @@ permalink: scpivs44_enable_ssh.html
 keywords:  
 summary: Quando o plug-in do SnapCenter para VMware vSphere é implantado, o SSH é desativado por padrão. 
 ---
-= Ative o SSH para o plug-in SnapCenter para VMware vSphere
+= Habilite o SSH para o SnapCenter Plug-in for VMware vSphere
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

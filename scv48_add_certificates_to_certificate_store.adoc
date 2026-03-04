@@ -4,7 +4,7 @@ permalink: scv48_add_certificates_to_certificate_store.html
 keywords:  
 summary: Adicione os certificados raiz e intermediário da Autoridade de certificação ao VMware vCenter para confiar no certificado e nos artefatos assinados com ele. 
 ---
-= Adicione certificados ao VMware Certificate Store
+= Adicione certificados ao repositório de certificados da VMware para o SCV
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

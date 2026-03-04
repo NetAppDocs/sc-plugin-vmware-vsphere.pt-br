@@ -4,7 +4,7 @@ permalink: scpivs44_detach_a_virtual_disk.html
 keywords:  
 summary: Depois de conetar um disco virtual para restaurar arquivos individuais, você pode desanexar o disco virtual da VM pai. 
 ---
-= Separe um disco virtual
+= Desanexar um disco virtual no SnapCenter Plug-in for VMware vSphere
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

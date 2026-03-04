@@ -4,7 +4,7 @@ permalink: scpivs44_mount_a_backup.html
 keywords:  
 summary: Você pode montar um datastore tradicional a partir de um backup se quiser acessar arquivos no backup. Você pode montar o backup no mesmo host ESXi em que o backup foi criado ou em um host ESXi alternativo que tenha o mesmo tipo de VM e configurações de host. Você pode montar um datastore várias vezes em um host. 
 ---
-= Monte uma cópia de segurança
+= Monte um backup usando o SnapCenter Plug-in for VMware vSphere
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

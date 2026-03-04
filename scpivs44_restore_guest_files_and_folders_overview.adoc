@@ -4,7 +4,7 @@ permalink: scpivs44_restore_guest_files_and_folders_overview.html
 keywords:  
 summary: 'Você pode restaurar arquivos ou pastas de um disco de máquina virtual (VMDK) em um sistema operacional convidado do Windows.' 
 ---
-= Fluxo de trabalho, pré-requisitos e limitações
+= Fluxo de trabalho de restauração de arquivos do convidado, pré-requisitos e limitações no SCV
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

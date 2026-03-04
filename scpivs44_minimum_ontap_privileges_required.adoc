@@ -4,7 +4,7 @@ permalink: scpivs44_minimum_ontap_privileges_required.html
 keywords:  
 summary: Os ONTAP Privileges mínimos necessários variam de acordo com os plug-ins do SnapCenter que você está usando para proteção de dados. 
 ---
-= ONTAP Privileges necessário
+= Privilégios mínimos do ONTAP necessários para o SCV
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

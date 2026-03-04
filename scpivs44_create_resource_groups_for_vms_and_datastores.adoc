@@ -4,7 +4,7 @@ permalink: scpivs44_create_resource_groups_for_vms_and_datastores.html
 keywords:  
 summary: Um grupo de recursos é o contentor para VMs, datastores, Tags vSphere e pastas de VM vSphere que você deseja proteger. 
 ---
-= Criar grupos de recursos
+= Crie grupos de recursos para VMs e datastores no SCV
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

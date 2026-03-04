@@ -4,7 +4,7 @@ permalink: scpivs44_quick_start_overview.html
 keywords:  
 summary: A documentação de início rápido fornece um conjunto condensado de instruções para implantar o plug-in do SnapCenter para o dispositivo virtual VMware vSphere e ativar o plug-in do SnapCenter para VMware vSphere. Estas instruções destinam-se a clientes que não têm o SnapCenter já instalado e que desejam proteger apenas VMs e armazenamentos de dados. 
 ---
-= Visão geral
+= Guia rápido para o SnapCenter Plug-in para VMware vSphere
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

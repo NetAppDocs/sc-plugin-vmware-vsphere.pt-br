@@ -4,7 +4,7 @@ permalink: scpivs44_view_status_information.html
 keywords:  
 summary: Você pode exibir informações de status no painel do cliente vSphere. As informações de status são atualizadas uma vez por hora. 
 ---
-= Exibir informações de status
+= Visualize as informações de status no SnapCenter Plug-in for VMware vSphere
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

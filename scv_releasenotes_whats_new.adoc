@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: 'what"s new, release notes, scv, 6.2' 
 summary: Saiba mais sobre os novos recursos disponíveis no SnapCenter Plug-in for VMware vSphere 6.2. 
 ---
-= Novidades no SnapCenter Plug-in for VMware vSphere 6.2
+= O que há de novo no SnapCenter Plug-in para VMware vSphere 6.2
 :allow-uri-read: 
 
 

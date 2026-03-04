@@ -4,7 +4,7 @@ permalink: scpivs44_generate_a_support_bundle_from_the_maintenance_console.html
 keywords:  
 summary: Você pode gerar um pacote de suporte a partir do console de manutenção. 
 ---
-= Gere um pacote de suporte a partir do console de manutenção
+= Gerar um pacote de suporte a partir do console de manutenção do SCV
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

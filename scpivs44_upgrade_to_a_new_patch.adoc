@@ -4,7 +4,7 @@ permalink: scpivs44_upgrade_to_a_new_patch.html
 keywords:  
 summary: Se você estiver atualizando para um novo patch da mesma versão, desmarque o plug-in do SnapCenter para o cache do VMware vSphere no vCenter Web Server e reinicie o servidor antes da atualização ou Registro. 
 ---
-= Atualize para um novo patch da mesma versão do plug-in do SnapCenter para o VMware vSphere
+= Atualize para um novo patch da mesma versão do SCV
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

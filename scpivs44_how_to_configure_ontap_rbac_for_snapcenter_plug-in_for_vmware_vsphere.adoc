@@ -4,7 +4,7 @@ permalink: scpivs44_how_to_configure_ontap_rbac_for_snapcenter_plug-in_for_vmwar
 keywords:  
 summary: 'O ONTAP RBAC aplica-se apenas a tarefas consistentes com aplicativos do servidor SnapCenter (aplicativo em VMDK).' 
 ---
-= Como configurar o plug-in do ONTAP RBAC para SnapCenter para VMware vSphere
+= Configure o controle de acesso baseado em função (RBAC) do ONTAP para o SnapCenter Plug-in for VMware vSphere
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

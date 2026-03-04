@@ -4,7 +4,7 @@ permalink: scpivs44_modify_storage_timeout.html
 keywords:  
 summary: Mesmo que os backups tenham sido executados com sucesso no passado, eles podem começar a falhar durante o tempo em que o plug-in do SnapCenter para VMware vSphere deve esperar que o sistema de armazenamento exceda o período de tempo limite configurado. Se esta condição ocorrer, você pode aumentar o tempo limite configurado. 
 ---
-= Modifique o tempo limite de armazenamento configurado
+= Modifique o tempo limite de armazenamento no SCV
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

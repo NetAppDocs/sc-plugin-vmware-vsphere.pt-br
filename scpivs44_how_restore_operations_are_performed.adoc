@@ -4,7 +4,7 @@ permalink: scpivs44_how_restore_operations_are_performed.html
 keywords:  
 summary: 'Para ambientes VMFS, o plug-in do SnapCenter para VMware vSphere usa operações de clonagem e montagem com o Storage VMotion para executar operações de restauração. Para ambientes NFS, o plug-in usa o ONTAP Single File SnapRestore (SFSR) nativo para fornecer mais eficiência para a maioria das operações de restauração. Para VMs Vevolve, o plug-in usa a Restauração de instantâneos de arquivos únicos do ONTAP e a Restauração do SnapMirror para operações de restauração.' 
 ---
-= Como as operações de restauração são executadas
+= Como o SCV realiza operações de restauração
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

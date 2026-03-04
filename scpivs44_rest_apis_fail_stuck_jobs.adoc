@@ -4,7 +4,7 @@ permalink: scpivs44_rest_apis_fail_stuck_jobs.html
 keywords:  
 summary: Para encontrar IDs de tarefa para tarefas de cliente VMware vSphere usando o plug-in SnapCenter para APIs REST VMware vSphere, você deve usar as chamadas de API REST para VMware vSphere. 
 ---
-= API REST para marcar trabalhos presos como falhados
+= API REST para marcar tarefas travadas como falhas no SCV
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

@@ -4,7 +4,7 @@ permalink: scpivs44_restore_deleted_vms_from_backups.html
 keywords:  
 summary: É possível restaurar uma VM excluída de um backup primário ou secundário do datastore para um host ESXi selecionado. 
 ---
-= Restaurar VMs excluídas dos backups
+= Restaurar VMs excluídas de backups usando o SCV
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

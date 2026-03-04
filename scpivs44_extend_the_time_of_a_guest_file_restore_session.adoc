@@ -4,7 +4,7 @@ permalink: scpivs44_extend_the_time_of_a_guest_file_restore_session.html
 keywords:  
 summary: Por padrão, um VMDK de Restauração de arquivos convidado anexado está disponível por 24 horas e, em seguida, ele é automaticamente desconetado. Você pode estender o tempo na página Configuração do convidado. 
 ---
-= Estenda o tempo de uma sessão de restauração de arquivos convidados
+= Prolongue o tempo de uma sessão de restauração de arquivos de convidado no SCV
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

@@ -4,7 +4,7 @@ permalink: scpivs44_unmount_a_backup.html
 keywords:  
 summary: Você pode desmontar um backup quando não precisar mais acessar os arquivos no datastore. 
 ---
-= Desmonte um backup
+= Desmonte um backup usando o SnapCenter Plug-in para VMware vSphere
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

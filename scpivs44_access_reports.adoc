@@ -4,7 +4,7 @@ permalink: scpivs44_access_reports.html
 keywords:  
 summary: Pode solicitar relatórios para um ou mais trabalhos a partir do painel de instrumentos. 
 ---
-= Acesse relatórios
+= Acesse os relatórios no SnapCenter Plug-in for VMware vSphere
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

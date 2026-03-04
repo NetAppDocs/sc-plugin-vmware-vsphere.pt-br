@@ -4,7 +4,7 @@ permalink: scpivs44_unregister_plugin_from_vcenter.html
 keywords:  
 summary: Se você interromper o serviço do plug-in do SnapCenter para VMware vSphere em um vCenter que esteja no modo vinculado, os grupos de recursos não estarão disponíveis em todos os vCenters vinculados, mesmo quando o serviço do plug-in do SnapCenter para VMware vSphere estiver sendo executado nos outros vCenters vinculados. Você deve cancelar o Registro do plug-in do SnapCenter para extensões do VMware vSphere manualmente. 
 ---
-= Anule o Registro do plug-in do SnapCenter para VMware vSphere no vCenter
+= Cancele o registro do SnapCenter Plug-in para VMware vSphere de vCenter
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

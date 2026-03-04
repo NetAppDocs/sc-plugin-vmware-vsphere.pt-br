@@ -4,7 +4,7 @@ permalink: scpivs44_restore_vms_from_backups.html
 keywords:  
 summary: Ao restaurar uma VM, você pode substituir o conteúdo existente pela cópia de backup selecionada ou fazer uma cópia da VM. 
 ---
-= Restaure VMs de backups
+= Restaurar VMs de backups usando o SCV
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

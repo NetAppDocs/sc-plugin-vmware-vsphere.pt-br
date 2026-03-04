@@ -4,7 +4,7 @@ permalink: scpivs44_back_up_resource_groups_on_demand.html
 keywords:  
 summary: As operações de backup são executadas em todos os recursos definidos em um grupo de recursos. Se um grupo de recursos tiver uma política anexada e uma programação configurada, os backups ocorrerão automaticamente de acordo com a programação. 
 ---
-= Faça backup de grupos de recursos sob demanda
+= Faça backup dos grupos de recursos sob demanda no SCV
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

@@ -4,7 +4,7 @@ permalink: scv48_audit_logs.html
 keywords:  
 summary: O log de auditoria fornece rastreabilidade de quem fez o quê e quando. Um log de auditoria é uma coleção de eventos em uma ordem cronológica e é escrito em um arquivo dentro do dispositivo. 
 ---
-= Logs de auditoria
+= Registros de auditoria para o SnapCenter Plug-in for VMware vSphere
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

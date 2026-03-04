@@ -4,7 +4,7 @@ permalink: scpivs44_remove_plugin.html
 keywords:  
 summary: Se você não precisar mais usar os recursos de proteção de dados do SnapCenter, desative o plug-in do SnapCenter para o VMware vSphere para desregistrá-lo do vCenter, remova o plug-in do SnapCenter para VMware vSphere do vCenter e exclua manualmente os arquivos que sobrarem. 
 ---
-= Remova o plug-in do SnapCenter para VMware vSphere
+= Remova o SnapCenter Plug-in para VMware vSphere
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

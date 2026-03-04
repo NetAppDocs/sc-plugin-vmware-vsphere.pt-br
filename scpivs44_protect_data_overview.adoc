@@ -4,7 +4,7 @@ permalink: scpivs44_protect_data_overview.html
 keywords:  
 summary: Todas as operações de backup são executadas em grupos de recursos, que podem conter qualquer combinação de uma ou mais VMs e datastores. Você pode fazer backup sob demanda ou de acordo com um cronograma de proteção definido. 
 ---
-= Fluxo de trabalho de proteção de dados
+= Fluxo de trabalho de proteção de dados para o SnapCenter Plug-in for VMware vSphere
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

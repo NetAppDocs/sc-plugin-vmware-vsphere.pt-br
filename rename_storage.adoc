@@ -4,7 +4,7 @@ permalink: rename_storage.html
 keywords:  
 summary: Você pode renomear o storage usando a API REST. 
 ---
-= Restaure o backup do armazenamento renomeado
+= Restaurar backups de armazenamento renomeado usando o SCV
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

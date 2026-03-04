@@ -4,7 +4,7 @@ permalink: scpivs44_view_vm_and_datastore_backups.html
 keywords:  
 summary: Quando você estiver se preparando para fazer backup ou restaurar uma VM ou um datastore, talvez queira ver todos os backups disponíveis para esse recurso e exibir os detalhes desses backups. 
 ---
-= Visualize backups de VM e datastore
+= Visualize backups de VMs e datastores no SCV
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

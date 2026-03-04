@@ -4,7 +4,7 @@ permalink: scpivs44_guest_file_restore_scenarios_you_might_encounter.html
 keywords:  
 summary: Ao tentar restaurar um arquivo convidado, você pode encontrar cenários em que a sessão de restauração de arquivo convidado está em branco, a operação de anexação de restauração de arquivo convidado falha ou os backups não são desanexados após a sessão de restauração de arquivo convidado ser descontinuada. 
 ---
-= Cenários de restauração de arquivos convidados que você pode encontrar
+= Cenários de restauração de arquivos de convidado no SCV
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

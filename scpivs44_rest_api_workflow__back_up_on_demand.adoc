@@ -4,7 +4,7 @@ permalink: scpivs44_rest_api_workflow__back_up_on_demand.html
 keywords:  
 summary: Para executar operações de backup sob demanda usando o plug-in do SnapCenter para APIs REST do VMware vSphere, você deve seguir a sequência prescrita de chamadas de API REST. 
 ---
-= Fluxo de trabalho da API REST para fazer backup sob demanda
+= Fluxo de trabalho da API REST para backup sob demanda usando o SCV
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

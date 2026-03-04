@@ -4,7 +4,7 @@ permalink: scpivs44_information_not_displayed_after_upgrading_to_a_new_patch_of_
 keywords:  
 summary: Depois de atualizar o plug-in do SnapCenter para o VMware vSphere para um novo patch da mesma versão, as tarefas recentes ou outras informações podem não ser exibidas no painel e no monitor de tarefas. 
 ---
-= Informações não exibidas após a atualização para um novo patch da mesma versão
+= Informação não exibida após a atualização para um novo patch do SCV
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

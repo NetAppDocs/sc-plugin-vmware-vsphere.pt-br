@@ -4,7 +4,7 @@ permalink: scpivs44_restore_from_backups_overview.html
 keywords:  
 summary: É possível restaurar VMs, VMDKs, arquivos e pastas de backups primários ou secundários. 
 ---
-= Visão geral da restauração
+= Opções de restauração para o SnapCenter Plug-in for VMware vSphere
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

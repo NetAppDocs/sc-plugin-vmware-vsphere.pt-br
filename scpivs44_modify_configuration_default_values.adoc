@@ -4,7 +4,7 @@ permalink: scpivs44_modify_configuration_default_values.html
 keywords:  
 summary: 'Para melhorar a eficiência operacional, você pode modificar o `scbr.override` arquivo de configuração para alterar os valores padrão.' 
 ---
-= Modifique os valores padrão de configuração
+= Modificar os valores padrão de configuração para o SCV
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
