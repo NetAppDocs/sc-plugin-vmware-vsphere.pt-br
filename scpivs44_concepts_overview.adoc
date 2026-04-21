@@ -15,11 +15,16 @@ summary: 'O plug-in do SnapCenter vSphere é um dispositivo virtual autônomo (f
 :author: [.lead]
 :authorinitials: [
 :authors: [.lead]
-:revnumber: 
-:revdate: and supports data protection services for SnapCenter application-based plug-ins. This document describes how to deploy and use SnapCenter Plug-in for VMware vSphere and includes quick start information.
+:revdate: SnapCenter Plug-in for VMware vSphere
 
 
-O plug-in do SnapCenter para VMware vSphere é implantado como um dispositivo virtual baseado em Linux.
+[]
+====
+
+NOTE: Aprimore a proteção do VMware usando NetApp Backup and Recovery, que oferece backup 3-2-1, proteção contra ransomware, gerenciamento automatizado de backup, escalabilidade aprimorada, custos reduzidos e gerenciamento centralizado de backup de datastores e VMs em várias instâncias vCenter a partir de uma única interface. Você pode migrar políticas, snapshots e agendamentos do SCV para NetApp Backup and Recovery e gerenciar toda a proteção de VMs a partir de um único console. Para mais informações, consulte link:https://docs.netapp.com/us-en/data-services-backup-recovery/["NetApp Backup and Recovery documentação"].
+
+====
+SnapCenter Plug-in for VMware vSphere é um dispositivo virtual independente (formato Open Virtual Appliance) que fornece serviços de proteção de dados para máquinas virtuais e datastores, e oferece suporte a serviços de proteção de dados para plug-ins baseados em aplicativos do SnapCenter. Este documento descreve como implantar e usar o SnapCenter Plug-in for VMware vSphere e inclui informações de início rápido. SnapCenter Plug-in for VMware vSphere é implantado como um dispositivo virtual baseado em Linux.
 
 O plug-in do SnapCenter para VMware vSphere adiciona a seguinte funcionalidade ao seu ambiente:
 

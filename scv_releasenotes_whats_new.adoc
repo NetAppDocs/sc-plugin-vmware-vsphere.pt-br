@@ -22,3 +22,32 @@ A versão SnapCenter Plug-in for VMware vSphere 6.2 adiciona suporte para backup
 
 
 A partir desta versão, o SnapCenter Plug-in for VMware vSphere oferece suporte ao Amazon FSxN para sistemas de armazenamento NetApp ONTAP executando a versão 9.10 ou posterior.
+
+[NOTE]
+====
+Agora você pode realizar uma migração perfeita, com um único clique e sem interrupções, do SnapCenter Plug-in for VMware para NetApp Backup and Recovery. NetApp Backup and Recovery oferece recursos aprimorados de proteção e gerenciamento de dados, incluindo:
+
+* Suporte para a estratégia de backup e arquivamento 3-2-1
+* Proteção contra ransomware com SnapLock e backups lógicos isolados da internet usando bloqueio de objetos
+* Remediação automatizada durante varreduras de ransomware
+* Criação automatizada de relação do SnapMirror para destinos de armazenamento secundário e storage de objetos, gerenciamento simplificado de retenção de backup e fluxos de trabalho de backup de aplicativos e VMs simplificados
+* Escalabilidade e desempenho aprimorados para acomodar volumes de dados crescentes
+* Redução de custos operacionais e custo de propriedade com um serviço de backup totalmente gerenciado
+* Gerenciamento centralizado de backup de datastores e VMs em múltiplas vCenter instances a partir de uma única interface
+* Restauração rápida de arquivos e pastas de sistemas operacionais convidados Windows e Linux
+
+
+====
+Consulte os seguintes links para obter mais informações:
+
+* https://docs.netapp.com/us-en/data-services-backup-recovery/["NetApp Backup and Recovery documentação"].
+* https://docs.netapp.com/us-en/data-services-backup-recovery/br-use-vmware-discovery.html["Descubra cargas de trabalho VMware com NetApp Backup and Recovery"]
+* https://docs.netapp.com/us-en/data-services-backup-recovery/br-start-login.html["Inicie sessão em NetApp Backup and Recovery"]
+* https://console.netapp.com/unified-backup-restore["Acesse o serviço NetApp Backup and Recovery"]
+
+
+
+
+== Proteja seu ambiente VMware usando NetApp Backup and Recovery
+
+video::UeT9yFssTug[youtube,width=848,height=480]
