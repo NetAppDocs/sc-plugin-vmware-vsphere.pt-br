@@ -259,7 +259,6 @@
   <block id="110328d238985c18e0a7947b09b1ff0f" category="summary">O plug-in do SnapCenter para VMware vSphere emprega criptografia SSL para comunicação segura com o navegador cliente. Embora isso permita dados criptografados por cabo, criar um novo certificado autoassinado ou usar sua própria infraestrutura de Autoridade de Certificação (CA) ou uma AC de terceiros, garante que o certificado seja exclusivo para o seu ambiente.</block>
   <block id="8fbcd736aac5b9c6baba8f4db349f50e" category="doc">Criar e importar certificados</block>
   <block id="9668b00eae1748d51afb7f725a15301a" category="inline-link">Artigo da KB: Como criar e/ou importar um certificado SSL para o plug-in SnapCenter para VMware vSphere</block>
-  <block id="6886be2ac69a368a307204ccfa1e00d9" category="paragraph"><block ref="bf84a7958c466b4ea912f7e396459ac9" category="inline-link-rx"></block>Consulte para obter mais informações.</block>
   <block id="0a4a3719bc7519d1162060e0f0e08f8a" category="doc">Criar políticas de backup</block>
   <block id="a70216f52adf1eb56f9c607820ec2859" category="paragraph">Siga as instruções abaixo para criar políticas de backup</block>
   <block id="f3a07562dfcba402848f7481f951cabf" category="summary">Você deve criar políticas de backup antes de usar o plug-in do SnapCenter para VMware vSphere para fazer backup de VMs e datastores.</block>
@@ -2265,4 +2264,5 @@
   <block id="6aa30740f7e61daa6dbeb98d1762ef2e" category="inline-link">Acesse o serviço NetApp Backup and Recovery</block>
   <block id="938c2a8ffc581d610f5a993251309046" category="list-text"><block ref="938c2a8ffc581d610f5a993251309046" category="inline-link-rx"></block></block>
   <block id="36fabaf7f4604c508ea56a9df930fef3" category="section-title">Proteja seu ambiente VMware usando NetApp Backup and Recovery</block>
+  <block id="04bc8505634cea728bd42022dbbe2763" category="paragraph">Consulte <block ref="3cc65228ae073aa630520717edc687a9" category="inline-link-rx"></block> para mais informações.</block>
 </blocks>
