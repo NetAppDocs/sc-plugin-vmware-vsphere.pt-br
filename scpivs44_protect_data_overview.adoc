@@ -27,7 +27,7 @@ As operações de backup e restauração não podem ser executadas simultaneamen
 
 Você deve analisar as informações sobre o que o plug-in do SnapCenter para VMware vSphere faz e não oferece suporte. link:scpivs44_deployment_planning_and_requirements.html["Planejamento e requisitos de implantação"]
 
-Nas configurações do MetroCluster:
+Em NetApp MetroCluster configurações:
 
 * O plug-in do SnapCenter para VMware vSphere pode não ser capaz de detetar uma relação de proteção após um failover.  https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/Unable_to_detect_SnapMirror_or_SnapVault_relationship_after_MetroCluster_failover["Artigo da KB: Não é possível detetar a relação SnapMirror ou SnapVault após o failover do MetroCluster"^]Consulte para obter mais informações.
 * Se os backups falharem com o erro `Unable to discover resources on SCV: <xxx>…` das VMs NFS e VMFS após o switchover/troca de volta, reinicie os serviços SnapCenter VMware a partir do console de manutenção.
