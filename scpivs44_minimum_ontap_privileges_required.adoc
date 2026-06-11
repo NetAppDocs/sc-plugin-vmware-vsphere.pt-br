@@ -49,19 +49,19 @@ Todos os plug-ins do SnapCenter exigem o seguinte Privileges mínimo.
 | Clone de volume criar clone de volume show de volume show de volume split start volume clone split status volume split stop volume criar volume excluir volume destruir clone de arquivo de volume criar arquivo de volume show-disco-uso volume off-line volume gerenciado-recurso volume modificar volume criar volume excluir volume qtree modificar volume apagar volume qtree modificar volume SnapLock alterar volume alterar volume alterar volume instantâneo volume alterar volume instantâneo volume alterar volume ampliar volume ampliar volume ampliar volume 
 
 
-| servidor vnvserver subsystem vnvme servidor vnvme servidor servidor vnvme servidor servidor vnvme servidor servidor vnvme servidor servidor 
+| vserver cifs vserver export-policy vserver export-policy create vserver export-policy delete vserver export-policy rule create vserver export-policy rule show vserver export-policy show vserver iscsi vserver nvme subsystem controller vserver nvme subsystem controller show vserver nvme subsystem create vserver nvme subsystem delete vserver nvme subsystem host vserver nvme subsystem host show vserver nvme subsystem host add vserver nvme subsystem host remove vserver nvme subsystem map vserver nvme subsystem map show vserver nvme subsystem map add vserver nvme subsystem map remove vserver nvme subsystem modify vserver nvme subsystem show vserver nvme namespace create vserver nvme namespace delete vserver nvme namespace modify vserver nvme namespace show interface de rede 
 |===
 |===
 | Comandos somente leitura: ONTAP Privileges mínimo 
 
 
-| a identidade do cluster mostra a interface de rede mostra vserver vserver peer vserver show 
+| exibir identidade do cluster exibir interface de rede exibir vserver 
 |===
 |===
 | Comandos All-Access: Mínimo ONTAP Privileges 
 
 
-| mostra a unidade de armazenamento do grupo de consistência 
+| vserver consistency-group 
 |===
 Você pode ignorar o comando _cluster identity show_ cluster level ao criar uma função para associar ao data SVM.
 

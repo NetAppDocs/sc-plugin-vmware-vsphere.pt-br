@@ -1,0 +1,126 @@
+---
+sidebar: sidebar 
+permalink: reregister-scv-vcenter.html 
+keywords: re-register SCV with vCenter, recover SCV registration, SCV not connected to vCenter, update vCenter credentials in SCV, unregister SCV extension 
+summary: Utilize esta tarefa para recuperar o registro SCV com o vCenter após alterações de credencial, rede ou appliance. 
+---
+= Recupere a conexão e o registro do SCV com vCenter
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+SnapCenter Plug-in para VMware vSphere (SCV) se registra no vCenter automaticamente quando você implanta o appliance. Se o registro for interrompido, por exemplo, após uma alteração de senha do vCenter, uma alteração no endereço IP ou nome do host do SCV, uma interrupção de conectividade ou uma implantação parcialmente falha, use esta tarefa para recuperar a conexão e o registro e confirmar que estão íntegros.
+
+Caso o cadastro não seja concluído com sucesso, tente novamente utilizando uma das seguintes ações:
+
+* O serviço do cliente VMware vSphere (`scvservice` foi reiniciado.
+* O endereço IP ou o nome do host do appliance SCV é alterado.
+* As credenciais do vCenter são salvas novamente no SCV.
+
+
+.Antes de começar
+* Você precisa saber o endereço IP da interface de usuário do SCV e as credenciais de logon.
+* Se a autenticação multifator (MFA) estiver ativada, gere um novo token MFA de 6 dígitos no console de manutenção.
+* Verifique se a conta vCenter usada pelo SCV possui os privilégios necessários atribuídos na raiz do vCenter.
++
+Para mais informações, consulte link:scpivs44_minimum_vcenter_privileges_required.html["Privilégios mínimos do vCenter exigidos para o SCV"].
+
+
+
+
+
+== Etapas de recuperação
+
+. Reinicie o serviço do cliente VMware vSphere.
++
+Reiniciar repete o registro da extensão automaticamente. Para mais informações, consulte link:scpivs44_restart_the_vmware_vsphere_web_client_service.html["Reinicie o serviço do cliente VMware vSphere para o SCV"].
+
+. Se reiniciar não resolver o problema, siga os passos abaixo:
++
+.. Faça login na interface de usuário de gerenciamento do SnapCenter Plug-in for VMware vSphere usando o formato  `\https://<appliance-IP-address>:8080`.
+.. Selecione *Configuração* > *vCenter* > *Editar*.
+.. Digite a senha atual e selecione *Salvar*.
++
+Para mais informações, consulte link:scpivs44_modify_the_vcenter_logon_credentials.html["Atualize as credenciais do vCenter configuradas no SCV"].
+
+
+
+. Cancele o registro e registre novamente o plug-in.
++
+Se o plug-in ainda não estiver conectado, siga as etapas abaixo:
+
++
+.. Cancelar o registro do SCV em vCenter.
+.. Registre novamente o SCV salvando novamente as credenciais do vCenter ou reiniciando o serviço do cliente VMware vSphere.
++
+Se a extensão registrada apontar para um endereço IP SCV antigo, cancelar o registro e registrar novamente o plug-in atualizará as informações de registro.
+
++
+Para mais informações, consulte link:scpivs44_unregister_plugin_from_vcenter.html["Cancele o registro do SnapCenter Plug-in para VMware vSphere de vCenter"].
+
+
+
+. link:#verify-registration-succeeded["Verifique se o registro foi concluído com sucesso"].
+
+
+
+
+== Verifique se o registro foi concluído com sucesso
+
+Utilize qualquer uma das seguintes verificações para confirmar se o SCV está registrado e conectado.
+
+* *Interface de usuário de gerenciamento*: No *Dashboard*, verifique se o SCV está conectado ao vCenter e habilitado.
+* *vSphere Client*: Verifique se o menu *SnapCenter Plug-in for VMware vSphere* está sendo exibido e se as páginas do plug-in estão carregando.
+* *Registros (dispositivo)*: Em  `/var/log/netapp/vmcontrol/vmcontrol.log`, procure por mensagens de registro como  `Registering Aegis as a Vcenter Extension` e  `Registered com.netapp.aegis extension`. Alterações de credenciais também são registradas em  `/var/log/netapp/audit/audit.log`.
+
+
+[NOTE]
+====
+Utilize as referências a seguir apenas para solução de problemas avançados. A disponibilidade e os valores exatos podem variar conforme a versão e o ambiente.
+
+* No vCenter Extension Manager, você poderá ver as extensões relacionadas ao SCV  `com.netapp.aegis` e  `com.netapp.scv.client`.
+* Em alguns ambientes, você também poderá encontrar a extensão legada do cliente HTML  `com.netapp.scvm.webclient`.
+* Caso o acesso ao log do appliance esteja disponível, você também pode revisar as entradas relacionadas ao registro e à atividade da API mencionadas anteriormente neste tópico.
+
+
+====
+
+
+== Erros comuns de registro e suas soluções
+
+* *Credenciais de login inválidas*
++
+.. Digite novamente o nome de usuário vCenter (`domain\username` e a senha corretos.
+.. Gere um novo token MFA de 6 dígitos no console de manutenção.
+
+
+* *Privilégios insuficientes (RBAC)*: Certifique-se de que a conta vCenter tenha os privilégios exigidos pelo SCV, incluindo o privilégio para registrar uma extensão, atribuídos na raiz do vCenter.
++
+Para mais informações, consulte link:scpivs44_minimum_vcenter_privileges_required.html["Privilégios mínimos do vCenter exigidos para o SCV"].
+
+* *Não foi possível conectar ao vCenter ou a conexão foi recusada*: Verifique o host e a porta do vCenter, a conectividade de rede e do firewall, e se o vCenter está em execução.
+* *Host desconhecido*: Verifique o FQDN ou endereço IP do vCenter e confirme se a resolução de DNS está funcionando a partir do appliance.
+* *Versão não suportada do vCenter*: O SCV é compatível com o vCenter Server 7.0U1 e versões posteriores.
++
+Para mais informações, consulte link:scpivs44_deployment_planning_and_requirements.html["Planejamento e requisitos de implantação para o SCV"].
+
+* *Serviço não está em execução*: Se o serviço cliente vSphere da VMware estiver interrompido, o registro não poderá ser executado.
++
+Reinicie o serviço do cliente VMware vSphere.
+
+
+
+
+
+== Tópicos relacionados
+
+* link:scpivs44_modify_the_vcenter_logon_credentials.html["Atualize as credenciais do vCenter configuradas no SCV"]
+* link:scpivs44_restart_the_vmware_vsphere_web_client_service.html["Reinicie o serviço do cliente VMware vSphere para o SCV"]
+* link:scpivs44_unregister_plugin_from_vcenter.html["Cancele o registro do SnapCenter Plug-in para VMware vSphere de vCenter"]
+* link:scpivs44_minimum_vcenter_privileges_required.html["Privilégios mínimos do vCenter exigidos para o SCV"]
+
