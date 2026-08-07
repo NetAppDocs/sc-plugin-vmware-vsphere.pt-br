@@ -41,6 +41,7 @@ Você pode selecionar o ícone de download para baixar os logs do plug-in.
 
 
 
+[[types-of-reports-from-the-vmware-vsphere-client]]
 == Tipos de relatórios do cliente VMware vSphere
 
 O cliente VMware vSphere para SnapCenter oferece opções de relatório personalizáveis que fornecem detalhes sobre suas tarefas de proteção de dados e status do recurso de plug-in. Você pode gerar relatórios apenas para proteção primária.

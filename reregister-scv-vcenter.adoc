@@ -34,6 +34,7 @@ Para mais informações, consulte link:scpivs44_minimum_vcenter_privileges_requi
 
 
 
+[[recovery-steps]]
 == Etapas de recuperação
 
 . Reinicie o serviço do cliente VMware vSphere.
@@ -70,6 +71,8 @@ Para mais informações, consulte link:scpivs44_unregister_plugin_from_vcenter.h
 
 
 
+[[verify-that-the-registration-succeeded]]
+[[verify-registration-succeeded]]
 == Verifique se o registro foi concluído com sucesso
 
 Utilize qualquer uma das seguintes verificações para confirmar se o SCV está registrado e conectado.
@@ -91,6 +94,7 @@ Utilize as referências a seguir apenas para solução de problemas avançados. 
 ====
 
 
+[[common-registration-errors-and-remediations]]
 == Erros comuns de registro e suas soluções
 
 * *Credenciais de login inválidas*
@@ -117,6 +121,7 @@ Reinicie o serviço do cliente VMware vSphere.
 
 
 
+[[related-topics]]
 == Tópicos relacionados
 
 * link:scpivs44_modify_the_vcenter_logon_credentials.html["Atualize as credenciais do vCenter configuradas no SCV"]

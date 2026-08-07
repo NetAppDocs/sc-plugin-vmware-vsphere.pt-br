@@ -18,12 +18,14 @@ Antes de iniciar a implantação do plug-in do SnapCenter para VMware vSphere, v
 
 
 
+[[required-privileges-for-vcenter-admin-role]]
 == Função de administrador do Privileges necessário para o vCenter
 
 VirtualMachine.VirtualMachine.VirtualMachine.VirtualMachine.VirtualMachine.VirtualMachine.VirtualMachine.VirtualMachine.VirtualMachine.VirtualMachine.VirtualMachine.VirtualMachine.VirtualMachine.VirtualMachine.VirtualMachine.VirtualMachine.VirtualMachine.VirtualMachine.VirtualMachine.VirtualMachine
 
 
 
+[[required-privileges-specific-to-snapcenter-plug-in-for-vmware-vcenter]]
 == Necessário Privileges específico para o plug-in SnapCenter para VMware vCenter
 
 |===

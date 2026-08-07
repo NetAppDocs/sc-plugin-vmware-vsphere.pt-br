@@ -220,6 +220,7 @@ NOTE: Se a operação de inatividade falhar para qualquer uma das VMs no backup,
 
 
 
+[[manage-compatibility-check-failures]]
 == Gerenciar falhas de verificação de compatibilidade
 
 O SnapCenter executa verificações de compatibilidade quando você tenta criar um grupo de recursos. Consulte sempre https://imt.netapp.com/imt/imt.jsp?components=180121;&solution=1517&isHWU&src=IMT["Ferramenta de Matriz de interoperabilidade NetApp (IMT)"^] para obter as informações mais recentes sobre o suporte do SnapCenter . Os motivos para incompatibilidade podem ser:

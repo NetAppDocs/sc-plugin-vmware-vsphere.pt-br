@@ -18,12 +18,14 @@ Você pode usar prescripts e postscripts personalizados como parte de suas opera
 
 
 
+[[supported-script-types]]
 == Tipos de script suportados
 
 Perl e shell scripts são suportados. Os scripts shell devem começar com `!/bin/bash`. (`!/bin/sh` não é suportado.)
 
 
 
+[[script-path-location]]
 == Localização do caminho do script
 
 Os pré-scripts e pós-scripts são executados pelo plug-in SnapCenter para VMware vSphere. Portanto, os scripts devem estar localizados no plug-in do SnapCenter para o VMware vSphere OVA, com permissões executáveis.
@@ -38,6 +40,7 @@ O caminho do script é validado no momento em que o script é executado.
 
 
 
+[[where-to-specify-scripts]]
 == Onde especificar scripts
 
 Os scripts são especificados nas políticas de backup. Quando um trabalho de backup é iniciado, a diretiva associa automaticamente o script aos recursos que estão sendo copiados.
@@ -46,6 +49,7 @@ Para especificar vários scripts, pressione *Enter* após cada caminho de script
 
 
 
+[[when-scripts-are-executed]]
 == Quando os scripts são executados
 
 Os scripts são executados de acordo com o valor definido para backup_PHASE.
@@ -76,6 +80,7 @@ Verifique o seguinte para verificar se os valores do script estão preenchidos:
 
 
 
+[[environment-variables-passed-to-scripts]]
 == Variáveis de ambiente passadas para scripts
 
 Você pode usar as variáveis de ambiente mostradas na tabela a seguir em scripts.
@@ -114,12 +119,14 @@ SUSPENDED`
 |===
 
 
+[[script-timeouts]]
 == Tempos limite de script
 
 O tempo limite para scripts de backup é de 15 minutos e não pode ser modificado.
 
 
 
+[[example-perl-script-1]]
 == Exemplo de SCRIPT PERL nº 1
 
 O exemplo seguinte SCRIPT PERL imprime as variáveis ambientais quando um backup é executado.
@@ -138,6 +145,7 @@ O exemplo seguinte SCRIPT PERL imprime as variáveis ambientais quando um backup
 
 
 
+[[example-perl-script-2]]
 == Exemplo de SCRIPT PERL nº 2
 
 O exemplo a seguir imprime informações sobre o backup.
@@ -167,6 +175,7 @@ O exemplo a seguir imprime informações sobre o backup.
 
 
 
+[[example-shell-script]]
 == Exemplo shell script
 
 

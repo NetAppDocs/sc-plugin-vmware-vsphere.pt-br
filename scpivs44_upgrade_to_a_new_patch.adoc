@@ -24,6 +24,7 @@ Se o cache do plug-in não for limpo, os trabalhos recentes não serão exibidos
 
 
 
+[[steps-for-clearing-the-cache]]
 == Etapas para limpar o cache
 
 . Localize a `vsphere-client-serenity` pasta e, em seguida, localize a `com.netapp.scv.client-<release-number>` pasta e exclua-a.

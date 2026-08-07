@@ -61,6 +61,7 @@ Os eventos são categorizados em três categorias principais:
 
 
 
+[[data-protection-events]]
 == Eventos de proteção de dados
 
 Os recursos na SCV são:
@@ -100,6 +101,7 @@ A tabela a seguir lista as operações que podem ser executadas em cada recurso:
 |===
 
 
+[[maintenance-console-events]]
 == Eventos da consola de manutenção
 
 As operações administrativas no console de manutenção são auditadas. As opções disponíveis do console de manutenção são:
@@ -125,6 +127,7 @@ As operações administrativas no console de manutenção são auditadas. As op�
 
 
 
+[[admin-console-events]]
 == Eventos do Admin Console
 
 As seguintes operações na IU do Admin Console são auditadas:
@@ -147,6 +150,7 @@ As seguintes operações na IU do Admin Console são auditadas:
 
 
 
+[[configure-syslog-servers]]
 == Configurar servidores syslog
 
 Os logs de auditoria são armazenados no dispositivo e são verificados periodicamente quanto à integridade. O encaminhamento de eventos permite que você obtenha eventos do computador de origem ou encaminhamento e armazene-os em um computador centralizado, que é o servidor Syslog. Os dados são criptografados em trânsito entre a origem e o destino.
@@ -174,6 +178,7 @@ Esta tarefa ajuda você a configurar o servidor syslog.
 
 
 
+[[change-audit-log-settings]]
 == Alterar as definições do registo de auditoria
 
 Pode alterar as configurações predefinidas das definições de registo.

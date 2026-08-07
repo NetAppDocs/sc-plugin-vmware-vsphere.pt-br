@@ -18,6 +18,7 @@ Antes de fazer backup ou restaurar VMs ou armazenamentos de dados usando o clien
 
 
 
+[[modify-storage-vms]]
 == Modificar VMs de storage
 
 Você pode usar o cliente VMware vSphere para modificar as configurações de clusters e VMs de storage registradas no plug-in do SnapCenter para VMware vSphere e usadas para operações de proteção de dados de VM.
@@ -35,6 +36,7 @@ IMPORTANT: Se você adicionou VMs de armazenamento para operações de proteçã
 
 
 
+[[remove-storage-vms]]
 == Remova as VMs de storage
 
 Você pode usar o cliente VMware vSphere para remover VMs de armazenamento do inventário no vCenter.

@@ -18,6 +18,7 @@ Se o cliente VMware vSphere do SnapCenter começar a se comportar incorretamente
 
 
 
+[[restart-the-vmware-vsphere-client-service-in-a-linux-vcenter]]
 == Reinicie o serviço cliente VMware vSphere em um Linux vCenter
 
 .Antes de começar

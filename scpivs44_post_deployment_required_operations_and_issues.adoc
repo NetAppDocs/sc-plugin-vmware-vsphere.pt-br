@@ -18,12 +18,14 @@ Depois de implantar o plug-in do SnapCenter para VMware vSphere, você deve conc
 
 
 
+[[required-operations-after-deployment]]
 == Operações necessárias após a implantação
 
 Se você é um novo usuário do SnapCenter, deve adicionar VMs de storage ao SnapCenter antes de executar quaisquer operações de proteção de dados. Ao adicionar VMs de armazenamento, especifique o LIF de gerenciamento. Você também pode adicionar um cluster e especificar o LIF de gerenciamento de cluster. Para obter informações sobre como adicionar armazenamento, link:scpivs44_add_storage_01.html["Adicione armazenamento"^]consulte .
 
 
 
+[[deployment-issues-you-might-encounter]]
 == Problemas de implantação que você pode encontrar
 
 * Depois de implantar o dispositivo virtual, a guia *Backup jobs* no Dashboard pode não ser carregada nos seguintes cenários:
@@ -52,6 +54,7 @@ Se o problema persistir, reinicie o serviço cliente VMware vSphere
 
 
 
+[[manage-authentication-errors]]
 == Gerenciar erros de autenticação
 
 Se você não usar as credenciais de administrador, poderá receber um erro de autenticação após a implantação do plug-in do SnapCenter para VMware vSphere ou após a migração. Se encontrar um erro de autenticação, tem de reiniciar o serviço.
@@ -63,6 +66,7 @@ Se você não usar as credenciais de administrador, poderá receber um erro de a
 
 
 
+[[register-snapcenter-plug-in-for-vmware-vsphere-with-snapcenter-server]]
 == Registre o plug-in do SnapCenter no VMware vSphere com o servidor SnapCenter
 
 Se você quiser executar fluxos de trabalho de aplicação sobre VMDK no SnapCenter (fluxos de trabalho de proteção baseados em aplicações para bancos de dados e sistemas de arquivos virtualizados), Registre o plug-in do SnapCenter para VMware vSphere no servidor SnapCenter.

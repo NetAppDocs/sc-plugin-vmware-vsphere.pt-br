@@ -18,6 +18,7 @@ Você pode restaurar arquivos ou pastas de um disco de máquina virtual (VMDK) e
 
 
 
+[[guest-restore-workflow]]
 == Fluxo de trabalho de restauração de convidado
 
 As operações de restauração do SO convidado incluem as seguintes etapas:
@@ -48,6 +49,7 @@ Restaure os arquivos ou pastas selecionados para um local especificado.
 
 
 
+[[prerequisites-for-restoring-guest-files-and-folders]]
 == Pré-requisitos para restaurar arquivos e pastas convidados
 
 Antes de restaurar um ou mais arquivos ou pastas de um VMDK em um sistema operacional convidado do Windows, você deve estar ciente de todos os requisitos.
@@ -89,6 +91,7 @@ Não é possível restaurar arquivos e pastas de uma VM que esteja executando um
 
 
 
+[[guest-file-restore-limitations]]
 == Limitações de restauração de arquivos convidados
 
 Antes de restaurar um arquivo ou pasta de um SO convidado, você deve estar ciente do que o recurso não suporta.

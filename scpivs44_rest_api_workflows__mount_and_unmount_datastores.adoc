@@ -20,6 +20,7 @@ Para cada API REST, adicione `\https://<server>:<port>` na frente da API REST pa
 
 
 
+[[to-mount-datastores-follow-this-workflow]]
 == Para montar datastores, siga este fluxo de trabalho:
 
 |===
@@ -46,6 +47,7 @@ availableEsxHosts` | `Get the list of Available Esxi Hosts` Obtém a lista de ho
 |===
 
 
+[[to-unmount-datastores-follow-this-workflow]]
 == Para desmontar datastores, siga este fluxo de trabalho:
 
 |===

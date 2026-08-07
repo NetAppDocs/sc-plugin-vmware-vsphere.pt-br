@@ -18,6 +18,7 @@ Você pode criar, modificar, exibir, desanexar e excluir políticas de backup do
 
 
 
+[[detach-policies]]
 == Desanexe políticas
 
 Você pode separar políticas de um grupo de recursos do plug-in do SnapCenter para VMware vSphere quando não quiser mais que essas políticas governem a proteção de dados para os recursos. Você deve desanexar uma política antes de removê-la ou antes de modificar a frequência da programação.
@@ -36,6 +37,7 @@ Você também pode adicionar uma política ao grupo de recursos marcando a polí
 
 
 
+[[modify-policies]]
 == Modificar políticas
 
 Você pode modificar políticas para um grupo de recursos do SnapCenter Plug-in para VMware vSphere. Você pode modificar a frequência, as opções de replicação, as configurações de retenção de snapshot ou as informações de scripts enquanto uma política é anexada a um grupo de recursos.
@@ -68,6 +70,7 @@ As alterações entram em vigor quando o próximo backup programado é executado
 
 
 
+[[delete-policies]]
 == Eliminar políticas
 
 Se você não precisar mais de uma política de backup configurada para o plug-in do SnapCenter para VMware vSphere, talvez queira excluí-la.

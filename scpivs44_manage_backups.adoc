@@ -18,6 +18,7 @@ Você pode renomear e excluir backups executados pelo plug-in SnapCenter para VM
 
 
 
+[[rename-backups]]
 == Renomear backups
 
 Você pode renomear o plug-in do SnapCenter para backups do VMware vSphere se quiser fornecer um nome melhor para melhorar a capacidade de pesquisa.
@@ -39,6 +40,7 @@ Não use os seguintes carateres especiais em nomes de VM, datastore, política, 
 
 
 
+[[delete-backups]]
 == Eliminar cópias de segurança
 
 Você pode excluir o plug-in do SnapCenter para backups do VMware vSphere se não precisar mais do backup para outras operações de proteção de dados. Você pode excluir um backup ou excluir vários backups simultaneamente.

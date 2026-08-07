@@ -19,7 +19,11 @@ NOTE: A atualização para o SCV 6.2 é compatível apenas com o VMware vCenter 
 Se você estiver usando o plug-in do SnapCenter para o dispositivo virtual VMware vSphere, poderá fazer o upgrade para uma versão mais recente. O processo de atualização desRegistra o plug-in existente e implanta um plug-in compatível apenas com o vSphere 7.0U1 e versões posteriores.
 
 
+CAUTION: Antes de atualizar, verifique se seu ambiente atende aos requisitos do sistema. Consulte link:scpivs44_deployment_planning_and_requirements.html["SnapCenter plug-in para VMware vSphere planejamento e requisitos de implantação"] para obter detalhes.
 
+
+
+[[upgrade-paths]]
 == Caminhos de atualização
 
 |===
@@ -54,7 +58,7 @@ TIP: Faça backup do plug-in do SnapCenter para o VMware vSphere OVA antes de in
 
 NOTE: Não é suportada a comutação da configuração da rede de estática para DHCP.
 
-Para obter as informações mais recentes sobre as versões suportadas, consulte https://imt.netapp.com/imt/imt.jsp?components=180121;&solution=1517&isHWU&src=IMT["Ferramenta de Matriz de interoperabilidade do NetApp"^] (IMT).
+Para obter as informações mais recentes sobre as versões compatíveis, consulte link:https://imt.netapp.com/imt/imt.jsp?components=180121;&solution=1517&isHWU&src=IMT["Ferramenta de Matriz de interoperabilidade NetApp (IMT)"^].
 
 .Passos
 . Prepare-se para a atualização desativando o plug-in SnapCenter para VMware vSphere.
@@ -65,7 +69,7 @@ Para obter as informações mais recentes sobre as versões suportadas, consulte
 
 . Transfira o ficheiro de atualização `.iso`.
 +
-.. Faça login no site de suporte da NetApp (https://mysupport.netapp.com/products/index.html[]).
+.. Faça login no link:https://mysupport.netapp.com/products/index.html["Site de suporte da NetApp"^].
 .. Na lista de produtos, selecione *Plug-in SnapCenter para VMware vSphere* e, em seguida, selecione o botão *DOWNLOAD LATEST RELEASE*.
 .. Faça o download do arquivo de atualização do plug-in do SnapCenter para VMware vSphere `.iso` para qualquer local.
 
