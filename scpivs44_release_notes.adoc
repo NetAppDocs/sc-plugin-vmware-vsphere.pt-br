@@ -4,7 +4,7 @@ permalink: scpivs44_release_notes.html
 keywords:  
 summary: As notas de versão fornecem informações importantes sobre esta versão do plug-in do SnapCenter para VMware vSphere, incluindo requisitos de licenciamento, problemas conhecidos, precauções, limitações e quaisquer atualizações ou correções de documentação. 
 ---
-= Notas de versão do SnapCenter Plug-in para VMware vSphere 6.2
+= Notas de versão do SnapCenter Plug-in for VMware vSphere 6.2.1 e 6.2
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,9 +14,9 @@ summary: As notas de versão fornecem informações importantes sobre esta vers�
 
 
 [role="lead"]
-Saiba mais sobre os novos e aprimorados recursos disponíveis no SnapCenter Plug-in for VMware vSphere 6.2.
+Conheça os novos recursos e aprimoramentos disponíveis no SnapCenter Plug-in for VMware vSphere 6.2.1 e 6.2.
 
-Para obter detalhes sobre problemas conhecidos, limitações e problemas corrigidos, consulte https://library.netapp.com/ecm/ecm_download_file/ECMLP3359464["Notas de versão do SnapCenter Plug-in for VMware vSphere 6.2"^] .  Você deve entrar com sua conta NetApp ou criar uma conta para acessar as Notas de Versão.
+Para obter detalhes sobre problemas conhecidos, limitações e problemas corrigidos, consulte  https://library.netapp.com/ecm/ecm_download_file/ECMLP3359464["Notas de versão do SnapCenter Plug-in for VMware vSphere 6.2.1 e 6.2"^]as Notas de Versão. Você precisa fazer login com sua conta NetApp ou criar uma conta para acessar as Notas de Versão.
 
 [NOTE]
 ====
