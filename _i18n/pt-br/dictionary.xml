@@ -2342,17 +2342,6 @@
   <block id="1061da8067873a5bbcf3b13a320008da" category="cell">Debian 13</block>
   <block id="69464e68a5cdd0b54694ac92276fa1a3" category="section-title">Problemas corrigidos</block>
   <block id="4bf7189ca42b78c35cf4f9f936645b31" category="paragraph">É uma boa prática revisar os problemas conhecidos corrigidos em uma versão antes de atualizar para ela.</block>
-  <block id="f1b0557f30f515cd6d2e1aa2e60580b5" category="list-text">VMDP-7072: o ONTAP gerenciado na nuvem no Oracle Cloud pode ser adicionado como um sistema de storage.</block>
-  <block id="7e30746a2e14afbe290955d5099a0827" category="list-text">VMDP-7052: restaurar uma VM em um local diferente mantém a política de storage da VM, portanto, o restore não é mais rejeitado para VMs que usam uma política não padrão.</block>
-  <block id="ffbb81ba0942679379246214302064d0" category="list-text">VMDP-7027: os pacotes de logs de suporte incluem a lista de sistemas de storage configurados.</block>
-  <block id="54df73c8ac14d36d89e624c6bcb25c15" category="list-text">VMDP-6987: anexar ou restaurar um disco virtual não falha mais quando vCenter relata brevemente o datastore como indisponível.</block>
-  <block id="a0d9c0a5825a0a479c3c1abf79736802" category="list-text">VMDP-6965: a página de agendamentos não falha mais ao carregar quando um registro de agendamento está incompleto.</block>
-  <block id="ae1fe0096853dc264aef45e1af3a1c54" category="list-text">VMDP-6952: quando um usuário não tem permissão para excluir um grupo de recursos, a mensagem de permissão é exibida.</block>
-  <block id="807a094ef06af183d78e766a9312e93b" category="list-text">VMDP-6939: o console de manutenção não informa mais que o VMware Tools está ausente.</block>
-  <block id="d10b5064d7908d30ce794457a6f3a36d" category="list-text">VMDP-6935: a navegação em um backup para restaurar arquivos individuais não falha mais.</block>
-  <block id="67edb748ed65475a815d4782acf1f80a" category="list-text">VMDP-6933: a implantação de um novo dispositivo não falha mais durante a configuração inicial.</block>
-  <block id="447fa43309a40a78d5e193fd06081614" category="list-text">VMDP-6931: a limpeza de backups secundários não fica mais aguardando por horas em um volume que não consegue acessar. O processamento dos outros volumes continua.</block>
-  <block id="1aa76d24b907dec4cb76b6d8a77fed05" category="list-text">VMDP-6817: renomear um volume de origem do ONTAP não faz mais com que os backups secundários fiquem presos ao nome antigo nem exibam entradas que não são mais válidas.</block>
   <block id="e5c7cede4b737581cd66c16346d917c5" category="section-title">Versões suportadas do SnapCenter</block>
   <block id="a8873f8f7715ad49732b43f6bdd600b5" category="paragraph">Para obter as informações mais recentes sobre as versões suportadas, consulte<block ref="64fc8efacd4fa13b8c1907c1db527b3d" category="inline-link-rx"></block> (IMT).</block>
   <block id="fdc5680e65fa7898d151f608475ae69c" category="summary">Conheça os novos recursos disponíveis no SnapCenter Plug-in for VMware vSphere 6.2.1 e 6.2.</block>
@@ -2360,4 +2349,27 @@
   <block id="184c7c0c678f365279a40216ed22fe8a" category="paragraph">SCV 6.2 e SCV 6.2.1</block>
   <block id="09e5cb2777291d8cdab464a3f4d035e6" category="paragraph">SCV6.1 e SCV 6.2</block>
   <block id="20afa33773b6c08681241027158bf0c6" category="sidebar">Novidades no SnapCenter Plug-in for VMware vSphere 6.2.1</block>
+  <block id="b066ca6122c9857ad1ee3a44f18cc5e7" category="cell">ID do bug</block>
+  <block id="fbe32e5130ccbbb1ffa89d9f70c1b083" category="cell">VMDP-7072</block>
+  <block id="e53e7d9e47b290851f5322670e9ecb11" category="cell">O ONTAP gerenciado na nuvem no Oracle Cloud pode ser adicionado como um sistema de storage.</block>
+  <block id="db83ccd5ec2a7d5b47fcb16bff367994" category="cell">VMDP-7052</block>
+  <block id="978341053f0d4727fa2d3f60e89ef8d7" category="cell">Restaurar uma VM em um local diferente mantém a política de storage da VM, portanto a restauração não é mais rejeitada para VMs que usam uma política não padrão.</block>
+  <block id="eebb3d78418add83056fa6e98ab314c6" category="cell">VMDP-7027</block>
+  <block id="16f06a0d6af2ec373955e5deebcf1c92" category="cell">Os pacotes de logs de suporte incluem a lista de sistemas de storage configurados.</block>
+  <block id="1ad7bcd66dc23dcde3ce1b6d54e11fa5" category="cell">VMDP-6987</block>
+  <block id="bd60983e3cd2a710b8bf94a4d46be475" category="cell">A conexão ou restauração de um disco virtual não falha mais quando vCenter relata brevemente o datastore como indisponível.</block>
+  <block id="085a21f40a096fe8d421f595412e35c8" category="cell">VMDP-6965</block>
+  <block id="3e8dc69bde1348a24d095a52a5213e68" category="cell">A página de agendamentos não apresenta mais problemas de carregamento quando um registro de agendamento está incompleto.</block>
+  <block id="8ca9bc2edece27e6a5ce2cd1d7869b10" category="cell">VMDP-6952</block>
+  <block id="889a2d10bb7e6f4de708d61ec611b0f2" category="cell">Quando um usuário não tem permissão para excluir um grupo de recursos, a mensagem de permissão é exibida.</block>
+  <block id="d0797b6e14dfa7980b21f2392e2356c8" category="cell">VMDP-6939</block>
+  <block id="47957ac25ad4c0107d64327b8b0ab515" category="cell">O console de manutenção não informa mais que o VMware Tools está ausente.</block>
+  <block id="832101e6141ee84bf7cbb623bf72f8d0" category="cell">VMDP-6935</block>
+  <block id="af16420268fa26529065d82d47ad3490" category="cell">Navegar em um backup para restaurar arquivos individuais não falha mais.</block>
+  <block id="616f6786eb6faab93d9b620f359160b5" category="cell">VMDP-6933</block>
+  <block id="31b56ee5316a09ec641a4086ba471fc7" category="cell">A implantação de um novo dispositivo não falhará mais durante a configuração inicial.</block>
+  <block id="d50f3dfae3474354ad6a0a356d2dd751" category="cell">VMDP-6931</block>
+  <block id="cd02895ddd7c0fa8421749e568bf6763" category="cell">A limpeza de backups secundários não fica mais aguardando horas em um volume que não consegue acessar. O processamento dos outros volumes continua.</block>
+  <block id="0eff747ab0e939a98b87dc30a3d4959d" category="cell">VMDP-6817</block>
+  <block id="49443c787c9ae296da4caa1b641ab418" category="cell">Renomear um volume de origem do ONTAP não deixa mais os backups secundários presos ao nome antigo, nem exibe entradas que não são mais válidas.</block>
 </blocks>
